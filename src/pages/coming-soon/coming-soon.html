@@ -1,0 +1,89 @@
+<ion-header no-border>
+    <ion-grid>
+      <ion-row class="padTitle">
+        <ion-col col-12 col-lg-2 [hidden]="menu" >
+          <ion-navbar align-title="center" transparent >
+            <ion-title>
+              <img src="assets/imgs/netflix-logo.png">
+            </ion-title>   
+          </ion-navbar>
+        </ion-col>
+        <ion-col col-lg-10 [hidden]="menu">
+          <div >
+            <ion-segment [(ngModel)]="menuhead">
+              <ion-segment-button value="home"   class="segmenthead"  (click)="home()"> <ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>
+              <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>
+              <ion-segment-button value="parrilla" class="segmenthead"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>
+              <ion-segment-button value="perfil"   class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>
+              <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>
+            </ion-segment>
+          </div>
+        </ion-col>
+        <ion-col col-12 col-lg-12 class="padTitle"> 
+          <ion-navbar color="netflixRed" >
+            <ion-title>{{title}}</ion-title>
+          </ion-navbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>    
+  </ion-header>
+<ion-content padding >
+
+<calendar 
+[eventSource]="eventSource"
+style="color:#b3b3b3;"
+[allDayLabel]='calendar.labelAllDay'
+formatWeekTitle='MMMM yyyy '
+formatWeekViewDayHeader='EEE'
+startingDayWeek = '1'
+scrollToHour = '8'
+locale = 'es-Es'
+[lockSwipes] = 'calendar.lockSwipes'
+startHour = "8"
+endHour = "19"
+[calendarMode]="calendar.mode"
+[currentDate]="calendar.currentDate"
+(onCurrentDateChanged)="onCurrentDateChanged($event)"
+(onEventSelected)="onEventSelected($event)"
+(onTitleChanged)="onViewTitleChanged($event)"
+(onTimeSelected)="onTimeSelected($event)"
+>
+</calendar>
+<!-- 
+  <ion-list no-lines *ngIf="comingSoonList.length > 0">
+    <ion-item *ngFor="let comingSoon of comingSoonList">
+      <img src="{{ comingSoon.picture }}">
+
+      <ion-row>
+        <ion-col col-8>
+          <p class="item-title">{{ comingSoon.name }}</p>
+        </ion-col>
+
+        <ion-col col-4>
+          <button ion-button clear color="netflixWhite">
+            <ion-icon name='md-add'></ion-icon>
+            <p>My List</p>
+          </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <p class="item-summary line-break">{{ comingSoon.description }}</p>
+      </ion-row>
+
+      <ion-row>
+        <p class="coming-date">{{ comingSoon.releaseDate }}</p>
+      </ion-row>
+
+      <br>
+    </ion-item>
+  </ion-list> -->
+<!-- 
+  <ion-row style="margin-top: 50%;" *ngIf="loaded && comingSoonList.length <= 0">
+    <ion-col text-center>
+      <img class="demo-image" src="assets/netflix-icon.png">
+      <p class="demo-message">There are no items yet.</p>
+      <p class="demo-sub-message">Use the Admin Ion Netflix to add your own coming soon items here!</p>
+    </ion-col>
+  </ion-row> -->
+</ion-content>

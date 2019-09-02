@@ -1,0 +1,70 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "com.moust.cordova.videoplayer": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "719009611775220",
+      "APP_NAME": "ionNetflix",
+      "ANDROID_SDK_VERSION": "4.+",
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-google-analytics": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-speechrecognition": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-streaming-media": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "cun.cvivo.beta"
+    }
+  }
+}

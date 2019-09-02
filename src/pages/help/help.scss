@@ -1,0 +1,64 @@
+page-help {
+    .back-button {
+        color: map_get($colors, netflixWhite);
+    }
+
+    .toolbar-title {
+        text-align: center;
+        margin-right: 48px;
+        color: map_get($colors, netflixWhite);
+    }
+
+    .segmentCreateTicket{
+        ion-item {
+            background-color: map_get($colors, netflixDarkGrey);
+      
+            ion-label {
+              color: map_get($colors, netflixWhite);
+            }
+      
+            ion-input {
+              color: map_get($colors, netflixWhite);
+            }
+          }
+    }
+
+    .cardRed{
+        background: color($colors,netflixRed);
+        border-radius: 20px;
+        color: color($colors,netflixWhite);
+        
+        .item-md{
+            background: color($colors,netflixRed);
+            border-width: 80%;
+           h2{
+            color: color($colors,netflixWhite);
+           }
+           p{
+            color: color($colors,netflixWhite);   
+           }
+        }
+    }
+    .cardWhite{
+        background: color($colors,netflixWhite);
+        border-radius: 20px;
+        .item-md{
+            background: color($colors,netflixWhite);
+        }
+    }
+
+    @media only screen  and (min-width : 993px) and (max-width : 1800px) {
+        .contentLg{
+            width: 50%;
+            margin: 8% 30%;
+        }
+        .content button {
+            margin: 40px auto 50px auto;
+            width: 50%;
+        }
+        .cardLg {
+            width: 50%;
+            margin: 2% auto;
+        }
+    }
+}

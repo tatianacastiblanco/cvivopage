@@ -1,0 +1,27 @@
+page-terms {
+    ion-title {
+        img {
+            max-height: 56px;
+            text-align: center;
+        }
+    }
+
+    .content {
+         color: white;
+         text-align: justify;
+    }
+
+    .content h1 {
+        text-align: center;
+        color: color($colors, netflixRed );
+    }
+    .content h3 {
+        color: color($colors, netflixRed );
+    }
+    .content li {
+        color:#00BCD9;
+    }
+    p{
+        color: white;
+    }
+}

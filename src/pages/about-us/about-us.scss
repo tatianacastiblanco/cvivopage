@@ -1,0 +1,17 @@
+page-about-us {
+    .back-button {
+        color: map_get($colors, netflixWhite);
+    }
+
+    .toolbar-title {
+        text-align: center;
+        margin-right: 48px;
+        color: map_get($colors, netflixWhite);
+    }
+
+   
+
+     h2{
+          color:map_get($colors, netflixRed);
+      }
+}

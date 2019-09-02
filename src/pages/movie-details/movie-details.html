@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen padding>
+  <video [src]=urlPathVideo [autoplay]=false class="video" controls controlsList="nodownload" poster="https://i.vimeocdn.com/portrait/30313759_300x300"></video> 
+  <p class="title">{{title}}</p>
+  <ion-row class="movie-details-row">
+    <!-- <p class="match-percentage">99% Match</p> -->
+    <p style="color: #00aced">2019</p>
+    <!-- <p>25</p> -->
+    <!-- <p>2h 2m</p> -->
+  </ion-row>
+  <ion-row class="movie-summary-row">
+    <p>{{description}}</p>
+  </ion-row>
+  <ion-row class="list-like-download-row">
+    <ion-col text-center col-3>
+      <button *ngIf="!isPartOfMyList" (click)="addToMyList()" ion-button icon-only clear color="netflixBlue">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+      <button class="isPartOfMyList" *ngIf="isPartOfMyList" (click)="removeFromMyList()" ion-button icon-only clear color="netflixWhite">
+        <ion-icon name="md-checkmark"></ion-icon>
+      </button>
+      <p>Mi lista</p>
+    </ion-col>
+    <ion-col col-25></ion-col>
+  </ion-row>
+  <p class="more-like-this-title">Mas como este</p>
+  <ion-row *ngIf="!loaded">
+    <ion-col text-center>
+      <br>
+      <ion-spinner color="netflixRed"></ion-spinner>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="loaded" class="movieLg"> 
+    <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">
+        <img  (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%">
+    </ion-col>    
+  </ion-row>
+</ion-content>

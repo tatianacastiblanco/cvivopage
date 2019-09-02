@@ -1,0 +1,277 @@
+page-coming-soon {
+    ion-content.content-md[padding] .scroll-content, ion-content.content-ios[padding] .scroll-content {
+        padding: 0px !important;
+    }
+    
+    .content {
+        background-color: map_get($colors, netflixDarkGrey);
+
+        .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+            border: 1px solid #2f2f2f;
+        };
+        .weekview-allday-content-table td{
+            border-left: 1px solid #2f2f2f;
+            border-right: 1px solid #2f2f2f;
+        }
+        
+        
+        .item-md.item-block .item-inner, .item-ios.item-block .item-inner {
+            padding: 0px;
+        }
+
+        .label-md, .label-ios {
+            margin: 0px;
+        }
+        
+        ion-item {
+            margin: 0px;
+            padding: 0px;
+            background-color: map_get($colors, netflixDarkGrey);
+
+            ion-row {
+                align-items: center;
+                padding-left: 16px;
+
+                .item-title {
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: map_get($colors, netflixWhite);
+                    vertical-align: middle;
+                }
+    
+                button {
+                    background-color: #292929;
+    
+                    p {
+                        color: map_get($colors, netflixWhite);
+                        margin-left: 5px;
+                    }
+                }
+
+                .item-summary {
+                    font-size: 13px;
+                    color: map_get($colors, netflixLightGrey);
+                }
+
+                .coming-date {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    color: map_get($colors, netflixRed);
+                }
+            }            
+        }
+    }
+
+    ion-title {
+        img {
+            max-height: 56px;
+            text-align: center;
+        }
+    }
+    .padTitle{
+        padding: 0px !important;
+    }
+    .toolbar-title {
+        text-align: center;
+    }
+    .segmenthead{
+        color: white !important;
+    }
+    .iconhead {
+        font-size:  1.9rem !important;
+        color: color($colors, netflixRed) !important;       
+    }
+        /* --------------- Samsung Galaxy S5 portrait ----------- */
+        @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){    
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                border: 1px solid #2f2f2f;
+                height: 48px;
+                width: 90%;
+            };
+            .weekview-allday-table {
+                height: 40px !important;
+                padding: 0px;
+            }
+            .calendar-event-inner[_ngcontent-c0] {
+                height: 140%;
+                width: 100%;
+                padding: 0px;
+                font-size: 10px !important;
+            }
+        }
+    
+        /* --------------- Pixel 2 portrait ----------- */
+        @media only screen and (min-device-width : 411px) and (max-device-height : 731px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {        
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                border: 1px solid #2f2f2f;
+                height: 40px;
+                font-size: 10px;
+            };
+            .calendar-event-inner[_ngcontent-c0] {
+                height: 158%;
+            }
+            .calendar-event-inner[_ngcontent-c0] {
+                height: 140%;
+                width: 100%;
+            }
+
+        }
+    
+        /* --------------- Pixel 2XL portrait ----------- */
+        @media only screen and (min-device-width : 411px) and (max-device-height : 823px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {        
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                border: 1px solid #2f2f2f;
+                width: 100%;
+                height: 80px;
+                font-size: 10px;
+                
+            };           
+            
+            .calendar-event-inner[_ngcontent-c0] {
+                height: 140%;
+                padding: 0px;
+                font-size: 10px;
+            }  
+            
+            .calendar-event-wrap {
+                position: relative;
+                width: 100%;
+                height: 55px;
+            }
+        }   
+        @media only screen and (min-device-width : 411px) and (max-device-height : 823px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {    
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                border: 1px solid #2f2f2f;
+               
+            };
+        }
+    
+        /* ----------------- iphone5/se -------------- */
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){    
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                width: 100%;
+                height: 80px;
+                font-size: 10px;                
+            };           
+            
+            .calendar-event-inner[_ngcontent-c0] {
+                height: 140%;
+                padding: 0px;
+                font-size: 10px;
+            }  
+        
+            .calendar-event-wrap {
+                position: relative;
+                width: 100%;
+                height: 75px;
+            }
+        }
+            
+        @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){    
+            .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+                border: 1px solid #2f2f2f;
+                height: 48px;
+                font-size: 10px;
+            }
+        }
+    
+    //      /* ------------------ iPhone 6, 7, 8 ----------- */
+    //     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 48px;
+    //             width: 53px;
+    //         };
+    //     }
+            
+    //     @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 48px;
+    //             width: 5px;
+    //         };
+    //     }
+            
+    //     /* ----------------- iPhone 6+, 7+, 8+ ----------- */
+    //     @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 56px;
+    //         };
+    //     }
+            
+    //     @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    //     }
+            
+    //     /* ---------------------- iPhone X ----------- */
+    //     @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    //     }
+        
+    //     @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    //     }
+    
+    //     /* ---------------- iPads (landscape) ----------- */
+    //     @media only screen and (min-device-width : 768px) and (max-device-height: 1024px) and (orientation : landscape) {
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };       
+    //     /* --------------------- iPads (portrait) ----------- */
+    //     @media only screen and (min-device-width : 768px) and (max-device-height: 1024px) and (min-device-height: 1365) and (orientation : portrait) {
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    //     }
+    
+    //     /* ---------------------- ipad-pro -------------- */
+    //     @media only screen and (min-device-width : 1024px) and (max-device-height:1366px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    
+    //     }  
+    
+    //     @media only screen and (min-device-width : 1024px) and (max-device-height:1366px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    
+    //     }
+    
+    //     /* ---------------------- ----------- */
+    //     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };
+    //     }
+    
+    //     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {    
+    //         .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+    //             border: 1px solid #2f2f2f;
+    //             height: 58px;
+    //             width: 53px;
+    //         };              
+    //     }
+    // }
+}

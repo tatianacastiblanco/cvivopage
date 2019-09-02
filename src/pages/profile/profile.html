@@ -1,0 +1,103 @@
+<ion-header no-border>
+    <ion-grid>
+      <ion-row class="padTitle">
+        <ion-col col-12 col-lg-4>
+                <ion-navbar>  
+                  <ion-item  no-lines>
+                      <ion-avatar item-start>               
+                        <img [src]="myPhoto">
+                      </ion-avatar>
+                      <h2>{{userName}}</h2>       
+                    </ion-item>
+                </ion-navbar>   
+            
+        </ion-col>
+        <ion-col col-lg-8 [hidden]="menu">
+          <div >
+            <ion-segment [(ngModel)]="menuhead">
+              <ion-segment-button value="home"   class="segmenthead"  (click)="home()"> <ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>
+              <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>
+              <ion-segment-button value="parrilla" class="segmenthead"(click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>
+              <ion-segment-button value="perfil"   class="segmenthead" > <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>
+              <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>
+            </ion-segment>
+          </div>         
+        </ion-col>
+      </ion-row>
+    </ion-grid>    
+  </ion-header>
+<ion-content padding >
+<!-- <ion-header>   
+        <ion-navbar>  
+          <ion-item  no-lines>
+             <ion-avatar item-start>               
+               <img [src]="myPhoto">
+             </ion-avatar>
+             <h2>{{userName}}</h2>       
+           </ion-item>
+       </ion-navbar>   
+</ion-header> -->
+
+<ion-content padding>
+  <ion-list class="top-menu-list">
+    <!-- <ion-item (click)="goToNotifications()">
+      <ion-icon name="md-notifications" item-start></ion-icon>
+      <p>Notifications</p>
+    </ion-item> -->
+
+    <ion-item (click)="goToMyList()">
+      <ion-icon name="list-box" item-start></ion-icon>
+      <p>Mi lista</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-lines class="user-menu-list">
+
+    <!-- Seccion foto de perfil -->
+    <ion-item  (click)="profilePhotobtn(handleError)">
+        <ion-icon name="camera" item-start color="netflixWhite"  ></ion-icon>
+        <p> Foto de perfil</p>
+    </ion-item>
+    
+    <ion-item  [hidden]="!isCordovaWithoutCamera"  >
+        <ion-label>Seleccionar foto de perfil</ion-label>
+        <br>
+        <ion-input type="file" accept="image/*" (change)="changeListener($event)" ></ion-input>
+      </ion-item>
+
+      <ion-item text-center [hidden]="!isCordovaWithCamera">       
+            <video id="gum-local" autoplay playsinline width="200px" height="200px" ></video>  
+            <button ion-button block round (click)="snapshotButton()"><ion-icon name="camera" ></ion-icon></button>       
+      </ion-item>
+
+      <!-- fin seccion foto de perfil -->
+   
+
+    <ion-item (click)="goToAboutUs()">
+        <ion-icon name="body" item-start color="netflixWhite" ></ion-icon>
+      <p>Acerca de nosotros</p>
+    </ion-item>
+
+    <ion-item (click)="terminos()">
+        <ion-icon name="clipboard" item-start color="netflixWhite" ></ion-icon>
+      <p>Términos y condiciones de uso</p>
+    </ion-item>
+
+    <ion-item (click)="goToHelp()">
+        <ion-icon name="help-buoy" item-start color="netflixWhite" ></ion-icon>
+      <p>Ayuda</p>
+    </ion-item>
+    <!-- <ion-item>
+      <p>Términos y condiciones</p>
+    </ion-item> -->
+
+    <ion-item (click)="signOut()">
+        <ion-icon name="log-out" item-start color="netflixWhite" ></ion-icon>
+      <p>Cerrar sesión</p>
+    </ion-item>
+
+  </ion-list>  
+  
+  <canvas #snapShotCanvas [hidden]="true"></canvas>
+
+</ion-content>

@@ -1,0 +1,33 @@
+page-search {
+  ion-navbar {
+    ion-icon {
+      color: map_get($colors, netflixRed);
+      font-size: 30px;
+    }
+    
+  }
+  ion-title {
+    img {
+        max-height: 56px;
+        text-align: center;
+    }
+  }
+  .toolbar-title {
+    text-align: center;
+  }
+  .content {
+    ion-list {
+      ion-item {
+        color: map_get($colors, netflixWhite);
+        background: map_get($colors, netflixBlack);
+      }
+    }
+  }
+  .segmenthead{
+    color: white !important;
+  }
+  .iconhead {
+    font-size:  1.9rem !important;
+    color: color($colors, netflixRed) !important;       
+  }
+}

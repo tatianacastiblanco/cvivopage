@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ayuda</ion-title>  
+  </ion-navbar>
+  <ion-segment [(ngModel)]="segementTickets"   color="netflixRed">
+    <ion-segment-button value="create" >Crear ticket
+    </ion-segment-button>
+    <ion-segment-button value="myTickets" (click)="getTickets()" [disabled]="hideSegment">Mis tickets
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content padding>
+ <ion-grid>
+   <ion-row>
+     <ion-col >
+      <!-- Segmento de creacion de ticket  -->
+      <div class="contentLg" *ngIf="segementTickets === 'create'" >
+        <form [formGroup]="ticketFormGroup" (ngSubmit)="createTicket()" class="segmentCreateTicket">
+          <ion-item>
+            <ion-label>Correo</ion-label>
+            <ion-input formControlName="email" type="email" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Número Celular</ion-label>
+            <ion-input formControlName="phone" type="number" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Asunto</ion-label>
+            <ion-input formControlName="subject"></ion-input>
+          </ion-item>  
+          <ion-item >
+            <ion-select formControlName="type" placeholder="Selecciona una..." style="color:white">
+              <ion-option value="question">Pregunta</ion-option>
+              <ion-option value="problem">Problema</ion-option>
+              <ion-option value="suggest">Sugerencia</ion-option>
+            </ion-select>
+          </ion-item>                
+          <ion-item>
+            <ion-label>Descripción</ion-label>
+            <ion-textarea formControlName="description" style="color:white"></ion-textarea >
+          </ion-item>                      
+          <button ion-button type="submit" [disabled]="!ticketFormGroup.valid" full round>Crear</button>
+        </form>
+      </div> 
+     </ion-col>
+   </ion-row>
+   <ion-row>  <!-- //////////////////////////////////////////// Segmento de mis tickets ////////////////////////////////////////////// -->   
+    <ion-col col-12 col-lg-12 >
+        <div *ngIf="segementTickets === 'myTickets'"  >
+            <ion-refresher 
+                (ionRefresh)="doRefresh($event)"
+                pullMin=200>
+              <ion-refresher-content 
+                pullingIcon="refresh-circle"
+                refreshingSpinner="bubbles">
+              </ion-refresher-content>
+            </ion-refresher>      
+            <ion-card class="cardLg" *ngFor="let ticket of myTickets;let i = index" [ngClass]="(( i % 2) == 0)?'cardRed':'cardWhite'">
+              <ion-item > 
+                <h2><b>{{ticket.subject}}</b></h2>
+                <p>ID:{{ticket.id}}</p>
+              </ion-item>
+                <ion-row>
+                <ion-col>
+                  <button ion-button icon-start clear small color="{{ticket.statusColor}}">
+                    <ion-icon name="disc"></ion-icon>
+                    <div  >{{ticket.statusText}}</div>
+                  </button>
+                </ion-col >
+                <ion-col align-self-center text-center>
+                  <ion-note>
+                    {{ticket.created_at}}
+                  </ion-note>
+                </ion-col>
+              </ion-row>      
+            </ion-card>
+          </div>
+    </ion-col> 
+
+   </ion-row>
+ </ion-grid>
+</ion-content>
