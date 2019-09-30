@@ -203,15 +203,15 @@ getRecentlyAddedMovies() {
 }
 
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
   
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.push('ComingSoonPage')
   }
 
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.push('ProfilePage')
   }
   
   signOut() {
@@ -230,7 +230,7 @@ getRecentlyAddedMovies() {
         .signOut()
         .then(() => {
           this.zone.run(() => {
-            this.app.getRootNav().setRoot(SignInPage);
+            this.app.getRootNav().setRoot('SignInPage');
           });
         });
     }, 500);

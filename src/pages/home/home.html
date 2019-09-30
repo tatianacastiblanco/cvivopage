@@ -23,6 +23,9 @@
   </ion-grid>    
 </ion-header>
 <ion-content class="list-avatar-page"  padding #pageContent >  
+    <ion-fab bottom right >
+        <button ion-fab  (click)="presentProfileModal()"><ion-icon name="ios-chatbubbles"  ></ion-icon></button>      
+      </ion-fab>
   <!-- Refresher para actualizar el video en vivo -->
   <ion-grid>
     <ion-row pull-lg-9>
@@ -48,29 +51,25 @@
             <ion-icon name="chatbubbles"></ion-icon>
           </ion-segment-button>
         </ion-segment>        
-        <div *ngIf="chatEnable == 'true' && segementHome == 'chat'">
-          <ion-scroll  scrollY="true" class="test">            
+        <div *ngIf="chatEnable == true && segementHome == 'chat'" >
+            <page-chat style="height: 100%"></page-chat>
+          <!-- <ion-scroll  scrollY="true" class="test">            
             <ion-list *ngFor="let message of messages ">
               <ion-item no-lines>
-                <ion-avatar item-start>
-                    <!-- Imagen de perfil en el chat solo cuando es Cordova -->
-                    <!-- <img src="{{myPhoto}}" *ngIf="message.from === nickname " > -->
-                    <!-- Imagen por defecto cuando no es el usuario, y cuando es Cordova -->
+                <ion-avatar item-start>           
                     <img [src]="message.picture" >
-                    <!-- Imagen por defecto en chat cuando es web -->
-                    <!-- <img src="assets/imgs/user.png" *ngIf="!iscordova">-->
                 </ion-avatar>
                 <h3>{{message.from}}</h3>
                 <p text-wrap>  <a>  {{message.text}} </a></p>
                 <ion-note item-end>{{message.created | date:' h:mm' }}</ion-note>
               </ion-item>
             </ion-list>   
-          </ion-scroll> 
+          </ion-scroll>  -->
         </div>
-          <div [hidden]="menu" *ngIf="segementHome == 'list' && loaded" >
+          <div  *ngIf="segementHome == 'list' && loaded" >
             <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>   
             <div *ngIf="homeScreenGroups[6]">
-              <div class="item-title">{{homeScreenGroups[0].name}} </div>                      
+              <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      
               <ion-slides *ngIf="homeScreenGroups[0].groupItems && homeScreenGroups[0].groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             
                 <ion-slide *ngFor="let groupItem of homeScreenGroups[0].groupItems" >
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
@@ -139,7 +138,7 @@
     </ion-row>
    </ion-grid>  
   <!--   seccion lista de videos Movil          -->
-    <ion-grid [hidden]="refrescarpag">
+    <!-- <ion-grid [hidden]="refrescarpag">
       <ion-row>
         <ion-col >
           <div  *ngIf="segementHome == 'list' && loaded" >
@@ -149,7 +148,7 @@
                   <div class="item-title">{{homeScreenGroup.name}} </div>  
                   <div class="contentBody">                                                                              
                     <ion-slides slidesPerView="3" spaceBetween=12  [attr.id]="i"  #i page>                                  
-                      <ion-slide *ngFor="let groupItem of homeScreenGroup.groupItems" >
+                      <ion-slide *ngFor="let groupItem of homeScreenGroup.groupItems" >                     
                         <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                       </ion-slide>
                     </ion-slides>                             
@@ -161,15 +160,16 @@
           </div>
         </ion-col>
       </ion-row>
-    </ion-grid>   
+    </ion-grid>    -->
 
     
     
-    <div>
+    <!-- <div>
       <h1>hoa</h1>
-    </div>
+    </div> -->
+  
 </ion-content>
-<ion-footer col-lg-6 offset-lg-6 [hidden]="segementHome !== 'chat'">
+<!-- <ion-footer col-lg-6 offset-lg-6 [hidden]="segementHome !== 'chat'">
   <ion-toolbar>  
     <ion-item>    
       <ion-input [(ngModel)]="message" type="text" placeholder="mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
@@ -180,5 +180,5 @@
       </button> 
     </ion-buttons>              
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->
 

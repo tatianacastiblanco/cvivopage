@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons start>
+        <button ion-button icon-only>
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>  
+      
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+      <div class="chat-message" text-right >
+        <div class="right-bubble">
+          <span class="msg-name">Me</span>
+          <span class="msg-date">05/05/2019</span>
+          <span><img src="assets/imgs/user.png" class="msg-img"></span>
+          <p text-wrap><a > Lorem ipsum dolor </a></p>
+        </div>
+      </div>
+      <div class="chat-message" text-left >
+        <div class="left-bubble">
+          <span><img src="assets/imgs/user.png" class="msg-img"></span>
+          <span class="msg-name">Sergio Velandia</span>
+          <span class="msg-date">05/05/2019</span>                
+          <p text-wrap><a > Lorem ipsum dolor sit </a></p>
+        </div>
+    </div>
+   
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-item class="chat-item">    
+        <ion-input class="chat-input" [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
+      </ion-item>
+      <ion-buttons end>
+        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()">
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

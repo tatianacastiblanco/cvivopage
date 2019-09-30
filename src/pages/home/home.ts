@@ -1,12 +1,11 @@
-import { from } from 'rxjs';
-import { AuthService } from './../../services/AuthService';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { ChatPage } from './../chat/chat';
 
+import { AuthService } from './../../services/AuthService';
 import { VimeoService } from './../../services/VimeoService';
 import { UserInfo } from './../../data/UserInfo';
 import { ChatService } from './../../services/ChatService';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { Component, NgZone,  ElementRef, ContentChildren, ViewChildren,ViewChild, QueryList } from '@angular/core';
+import { Component, NgZone,  ElementRef,ViewChildren, QueryList } from '@angular/core';
 import {
           NavController,
           LoadingController,
@@ -15,6 +14,9 @@ import {
           ToastController,
           Events,
           App,
+          IonicPage,
+          ModalController,
+          ModalOptions
 } from "ionic-angular";
 import { Slides } from 'ionic-angular';
 import { Helper } from "../../data/Helper";
@@ -23,14 +25,8 @@ import { HomeScreenGroup } from "../../data/HomeScreenGroup";
 import {  EmbedVideoService } from 'ngx-embed-video';
 import { NativeStorage } from '@ionic-native/native-storage';
 import {DomSanitizer} from '@angular/platform-browser';
-import { ProfilePage } from '../profile/profile';
-import { ComingSoonPage } from '../coming-soon/coming-soon';
-import { SearchPage } from '../search/search';
-//cierre de sesion
-import { SignInPage } from "../sign-in/sign-in";
 import firebase from "firebase";
-import { TermsPage } from '../terms/terms';
-import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
+@IonicPage()
 
 @Component({
   selector: "page-home",
@@ -43,17 +39,10 @@ export class HomePage {
   sliderOne: any;
   sliderTwo: any;
   sliderThree: any;
- 
- 
-  //Configuration for each Slider
-
-
-  // @ContentChildren(Slides, {descendants: true}) i:Slides; 
-
   homeScreenGroups: HomeScreenGroup[] = [];
   iframe_html: any;
   segementHome = 'list';
-  chatEnable:string;
+  chatEnable:any;
   booleanchatEnable:boolean = false;
   messages = [];
   nickname = '';
@@ -62,10 +51,8 @@ export class HomePage {
   photosArray = new Array;
   loaded:boolean = false;
   out:boolean = true;
-
   iscordova:boolean;
  private event;
-
  private width:number;
  private heigth:number;
  heightFrame:any
@@ -93,8 +80,11 @@ export class HomePage {
     private app: App,
     private zone: NgZone,
     private element: ElementRef,
+    public modalCtrl: ModalController
   ) {
-
+    this.gethomeVideo();
+    this.getChatSection();      
+    
     platform.ready().then(() => {
       this.width = platform.width();
       this.heigth = platform.height();
@@ -112,27 +102,35 @@ export class HomePage {
         this.heightFrame = 650;
       }
       
-    });
+    });      
 
-    this.chatService.getMessages().subscribe(message => {            
-      let prueba = this.getCurrentUserPhoto(message['from']);     
-      message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
-      this.messages.push(message);
-      let objToSave =
-      {
-        created:message['created'],
-        from:message['from'],
-        text:message['text']
+      this.chatService.getMessages().subscribe(message => {            
+        let prueba = this.getCurrentUserPhoto(message['from']);     
+        message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
+        this.messages.push(message);
+        let objToSave =
+        {
+          created:message['created'],
+          from:message['from'],
+          text:message['text']
+        }
+        this.db.collection('chats').doc(this.event).collection('chatLog').doc('chatLog'+message['created']).set(objToSave)    
+      })
+    
+    };
+
+    presentProfileModal() {
+      let options:ModalOptions={
+        showBackdrop:false,
+        enableBackdropDismiss:true
       }
-      this.db.collection('chats').doc(this.event).collection('chatLog').doc('chatLog'+message['created']).set(objToSave)    
-    })
-    this.gethomeVideo();
-    this.getChatSection();   
-  }
+      let profileModal = this.modalCtrl.create('ChatPage',{},options);
+      profileModal.present();
+    }
   
-  ionViewDidEnter() { 
-    this.gethomeVideo();
-    this.getChatSection(); 
+  ionViewWillEnter(){ 
+    // this.gethomeVideo();
+    // this.getChatSection(); 
     this.events.subscribe('user:photoChanged', (imageBase64) => {      
       this.photosArray = [];
       this.messages = [];
@@ -161,7 +159,12 @@ export class HomePage {
    * funcion que utiliza la api de vimeo para traer las categorias de Vimeo
   **/
 
-  getHomeGroups() {    
+  getHomeGroups() { 
+    
+    this.nativeStorage.getItem('homeScreenGroups').then(res=>{
+      console.log(res)
+    })
+    
     this.VimeoService.getHomeScreenGroups().subscribe(res=> {       
       this.homeScreenGroups = []       
       let collection:any = res
@@ -182,7 +185,7 @@ export class HomePage {
             video.name = item.name;
             video.picture = item.files[2].link;
             video.description = item.description;
-            video.detailsPicture = item.pictures.sizes[3].link;
+            video.detailsPicture = item.pictures.sizes[10].link;
             video.movieId = item.uri.split('/')[2];
             element.groupItems.push(video)
             element = Helper.shuffle(element)
@@ -263,8 +266,8 @@ export class HomePage {
     this.db.collection('Config').valueChanges().subscribe(res=> {      
       this.chatEnable =res[0]['Vivo']; 
       this.event = res[0]['chatEvent'];
-      this.segementHome = this.chatEnable === 'true' ? 'chat' : 'list';  
-      if(this.chatEnable === 'true') {
+      this.segementHome = this.chatEnable ? 'chat' : 'list';  
+      if(this.chatEnable === true) {
         this.booleanchatEnable = true;
         if(this.nickname === '') {         
           this.chatService.joinChat().then((nickname: UserInfo) => {                
@@ -317,7 +320,7 @@ export class HomePage {
       this.getHomeGroups()
       setTimeout(() => {     
         loading.dismiss();
-      }, 2000);  
+      }, 1000);  
     },err=> {
       loading.dismiss();
       this.showAlert(err,'Error de conexion')
@@ -527,18 +530,18 @@ export class HomePage {
   // };
 
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
 
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.push('ComingSoonPage')
   }
 
   buscar() {
-    this.navCtrl.push(SearchPage)
+    this.navCtrl.push('SearchPage')
   }
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.push('ProfilePage')
   }
   
   signOut() {
@@ -554,14 +557,14 @@ export class HomePage {
         .signOut()
         .then(() => {
           this.zone.run(() => {
-            this.app.getRootNav().setRoot(SignInPage);
+            this.app.getRootNav().setRoot('SignInPage');
           });
         });
     }, 500);
   };
 
   terminos() {
-    this.navCtrl.push(TermsPage)
+    this.navCtrl.push('TermsPage')
   }
   public moveNext(index: number){     
       

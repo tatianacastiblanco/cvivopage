@@ -35,7 +35,7 @@
     </ion-col>
   </ion-row>
   <ion-row *ngIf="loaded" class="movieLg"> 
-    <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">
+    <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">       
         <img  (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%">
     </ion-col>    
   </ion-row>

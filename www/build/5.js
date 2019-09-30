@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 742:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationsPageModule", function() { return NotificationsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(756);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notifications__ = __webpack_require__(763);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,32 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingsPageModule = /** @class */ (function () {
-    function SettingsPageModule() {
+var NotificationsPageModule = /** @class */ (function () {
+    function NotificationsPageModule() {
     }
-    SettingsPageModule = __decorate([
+    NotificationsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__notifications__["a" /* NotificationsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__notifications__["a" /* NotificationsPage */]),
             ],
         })
-    ], SettingsPageModule);
-    return SettingsPageModule;
+    ], NotificationsPageModule);
+    return NotificationsPageModule;
 }());
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=notifications.module.js.map
 
 /***/ }),
 
-/***/ 756:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,22 +55,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SettingsPage = /** @class */ (function () {
-    function SettingsPage() {
+
+var NotificationsPage = /** @class */ (function () {
+    function NotificationsPage() {
+        this.notifications = [];
+        this.initialiseNotifications();
     }
-    SettingsPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad SettingsPage");
+    NotificationsPage.prototype.initialiseNotifications = function () {
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Play the trailer", "Coming March 5", "assets/imgs/american dream.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("The Hurt Locker", "Now on Netflix for you", "assets/imgs/hurt-locker.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("John Wick: Chapter 2", "New arrival", "assets/imgs/notifications-image1.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Left Behind", "New arrival", "assets/imgs/left-behind.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Vampire Academy", "New arrival", "assets/imgs/vampire-academy.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Standup for Dummies", "New arrival", "assets/imgs/standup-for-dummies.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Damnation", "New arrival", "assets/imgs/damnation-notification.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Almost Banned", "New arrival", "assets/imgs/almost-banned.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Hay gente asi", "New arrival", "assets/imgs/hay-dente-asi.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Riase el Show", "New arrival", "assets/imgs/riase-el-show.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Great America", "New arrival", "assets/imgs/great-america.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Especial de Standup", "New arrival", "assets/imgs/especial-de-standup.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Weeds", "New arrival", "assets/imgs/weeds.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Equanimity", "New arrival", "assets/imgs/equanimity.png", true));
     };
-    SettingsPage = __decorate([
+    NotificationsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad NotificationsPage");
+    };
+    NotificationsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-settings",template:/*ion-inline-start:"C:\Users\leidy_castiblanco\Music\Cvivo\Cvivo2\cvivo\src\pages\settings\settings.html"*/'<ion-header no-border>\n\n  <ion-navbar align-title="center">\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Video playback</ion-list-header>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Cellular Data Usage</p>\n\n      <p class="item-subtitle">Automatic (Default data & quality setting)</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Notifications</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Accept push notifications</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Notifications may include newly-</p>\n\n      <p class="item-subtitle">added movies, TV shows, personalised</p>\n\n      <p class="item-subtitle">suggestions or other notices</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Downloads</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Smart Downloads</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="false" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Completely episodes will be deleted and</p>\n\n      <p class="item-subtitle">replaced with the next episodes, only</p>\n\n      <p class="item-subtitle">on Wi-Fi</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Wi-Fi only</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Video Quality</p>\n\n      <p class="item-subtitle">Standard</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Location</p>\n\n      <p class="item-subtitle">Internal Storage</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Internal Storage</p>\n\n      <p class="item-title" item-end>Default</p>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <div class="light-grey-rectangle"></div>\n\n      <div class="red-rectangle"></div>\n\n      <div class="white-rectangle"></div>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -20px;">\n\n      <ion-row>\n\n        <div class="light-grey-square"></div>\n\n        <p class="used-storage">Used - 10 GB</p>\n\n        <div class="red-square"></div>\n\n        <p class="used-storage">Netflix - 5 GB</p>\n\n        <div class="white-square"></div>\n\n        <p class="used-storage">Free - 15 GB</p>\n\n      </ion-row>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\leidy_castiblanco\Music\Cvivo\Cvivo2\cvivo\src\pages\settings\settings.html"*/
+            selector: "page-notifications",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\notifications\notifications.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Notifications</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-item *ngFor="let notification of notifications">\n\n      <span [class.hidden]="!notification.isNew" class="dot" item-start></span>\n\n\n\n      <img src="{{ notification.picture }}">\n\n\n\n      <div item-end>\n\n        <p class="new-arrival">{{ notification.description }}</p>\n\n        <p class="title">{{ notification.title }}</p>\n\n        <p class="date">{{ notification.dateTime }}</p>\n\n      </div>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\notifications\notifications.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SettingsPage);
-    return SettingsPage;
+    ], NotificationsPage);
+    return NotificationsPage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=notifications.js.map
+
+/***/ }),
+
+/***/ 764:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationItem; });
+var NotificationItem = /** @class */ (function () {
+    function NotificationItem(title, description, picture, isNew) {
+        this.title = title;
+        this.description = description;
+        this.dateTime = "15 Feb.";
+        this.picture = picture;
+        this.isNew = isNew;
+    }
+    return NotificationItem;
+}());
+
+//# sourceMappingURL=NotificationItem.js.map
 
 /***/ })
 

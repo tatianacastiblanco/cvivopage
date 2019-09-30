@@ -22,6 +22,7 @@ import { Movie } from "../../data/Movie";
 import { Helper } from "../../data/Helper";
 import { DownloadService } from "../../services/DownloadService";
 import { HomeScreenGroup } from '../../data/HomeScreenGroup';
+import { ImageLoaderConfig } from 'ionic-image-loader';
 
 @IonicPage()
 @Component({
@@ -58,8 +59,13 @@ export class MovieDetailsPage {
     private alertController: AlertController,
     private platform: Platform,
     private vimeoService:VimeoService,
-    private authService: AuthService
+    private authService: AuthService,
+    private imageLoaderConfig: ImageLoaderConfig
   ) {
+
+    this.imageLoaderConfig.enableDebugMode();
+    this.imageLoaderConfig.setCacheDirectoryName('my-custom-cache-directory-name');
+
     this.authService.afAuth.user.subscribe(user => {
       this.userId = user.uid;
     });
@@ -115,7 +121,7 @@ export class MovieDetailsPage {
           video.name = item.name;
           video.picture = item.files[2].link;
           video.description = item.description;
-          video.detailsPicture = item.pictures.sizes[3].link;
+          video.detailsPicture = item.pictures.sizes[6].link;
           video.movieId = item.uri.split('/')[2];
       
   

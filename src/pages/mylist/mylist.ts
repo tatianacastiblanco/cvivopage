@@ -36,7 +36,7 @@ export class MylistPage {
   }
 
   goHome(){
-    this.navCtrl.setRoot(TabsPage)
+    this.navCtrl.setRoot('TabsPage')
   }
 
   getMoviesAndShowsFromMyList() {

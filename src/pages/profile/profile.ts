@@ -272,7 +272,7 @@ export class ProfilePage {
         options
       );
     } else{
-      this.navCtrl.push(AboutUsPage);
+      this.navCtrl.push('AboutUsPage');
     } 
   };
     
@@ -404,18 +404,18 @@ export class ProfilePage {
    * Slair de sesion en firebase
    */
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
   
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.push('ComingSoonPage')
   }
   
   buscar() {
-    this.navCtrl.push(SearchPage)
+    this.navCtrl.push('SearchPage')
   }
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.push('ProfilePage')
   }
   
 
@@ -435,14 +435,14 @@ export class ProfilePage {
         .signOut()
         .then(() => {
           this.zone.run(() => {
-            this.app.getRootNav().setRoot(SignInPage);
+            this.app.getRootNav().setRoot('SignInPage');
           });
         });
     }, 500);
   };
 
   terminos() {
-    this.navCtrl.push(TermsPage)
+    this.navCtrl.push('TermsPage')
   }
 
 }

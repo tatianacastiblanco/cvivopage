@@ -17,6 +17,6 @@ export class HorizontalListPage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad HorizontalListPage");
+    
   }
 }

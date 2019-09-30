@@ -190,6 +190,6 @@ export class SignUpPage   {
   };
 
   terminos() {
-    this.navCtrl.push(TermsPage)
+    this.navCtrl.push('TermsPage')
   }
 }

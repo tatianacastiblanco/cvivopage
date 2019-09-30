@@ -36,8 +36,8 @@ export class ComingSoonPage {
     {inicio:14,final:15,materia:'Proyecto de vida'},{inicio:16,final:17,materia:''},
   ]
   HorarioJueves = [
-    {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:''},
-    {inicio:14,final:15,materia:'Opción de grado III'},{inicio:16,final:17,materia:'Opción de grado I'},
+    {inicio:8,inicio1:0,final:8,final1:15, materia:'TIPS propuesta de valor por Diego Casas'}, {inicio:8,inicio1:20,final:8,final1:35,materia:'TIPS redes sociales para emprendedores por Jhon Gonzalez'}, {inicio:8,inicio1:40,final:8,final1:55, materia:'TIPS finanzas personales para emprendedores por Miguel Gutierrez'},
+    {inicio:9,inicio1:0, final:9,final1:15, materia:'TIPS objetivos de desarrollo sotenible para emprendedores por German Sarmiento'}
   ]
   HorarioViernes = [
     {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:'Proyecto de vida'},
@@ -47,9 +47,9 @@ export class ComingSoonPage {
   title:string;
 
   calendar={
-    mode:'week',
+    mode:'day',
     currentDate:this.selectedDay,
-    labelAllDay:'',
+    labelAllDay:'Eventos',
     lockSwipes:false
   }
 
@@ -172,8 +172,8 @@ events(index,arrayclasesDia){
         arrayclasesDia.forEach(clase => {
           let obj = {
             title: clase.materia,
-            startTime: new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.inicio,0),
-            endTime : new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.final,0)
+            startTime: new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.inicio,clase.inicio1),
+            endTime : new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.final,clase.final1)
           }
           this.eventSource.push(obj);
         });    

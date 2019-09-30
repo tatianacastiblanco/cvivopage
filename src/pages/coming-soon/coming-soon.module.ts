@@ -14,6 +14,7 @@ registerLocaleData(localeEs);
     NgCalendarModule,
     IonicPageModule.forChild(ComingSoonPage),
   ],
+  exports:[ComingSoonPage],
   providers: [{provide: LOCALE_ID, useValue: 'es'}]
  
 })

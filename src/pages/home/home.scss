@@ -111,15 +111,7 @@ page-home {
         overflow-y: hidden;
     }
 
-    ion-item {
-            background-color: transparent !important;
-        ion-input {
-            color: map_get($colors, netflixWhite);
-            background-color: transparent !important;
-            margin: 0;
-            padding: 0;
-        }
-    }
+  
 
     [col-lg-6] {
         padding: 0px !important;

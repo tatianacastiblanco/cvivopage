@@ -56,7 +56,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Base64 } from '@ionic-native/base64';
-
+import { IonicImageLoader } from 'ionic-image-loader';
 registerLocaleData(localeEs);
 import { from } from 'rxjs';
 import { HelpDeskProvider } from '../providers/help-desk/help-desk';
@@ -80,20 +80,14 @@ firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    SearchPage,
-    ComingSoonPage,
-    DownloadsPage,
-    ProfilePage,
-    TabsPage,
-    AboutUsPage,
-    TermsPage
+    TabsPage,SearchPage
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     EmbedVideo.forRoot(),
+    IonicImageLoader.forRoot(),
     SocketIoModule.forRoot(config),
     IonicModule.forRoot(MyApp, {
       tabsHideOnSubPages: true
@@ -108,19 +102,10 @@ firebase.initializeApp(firebaseConfig);
     NgCalendarModule,
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
+  entryComponents: [ 
     MyApp,
-    HomePage,
-    SearchPage,
-    ComingSoonPage,
-    DownloadsPage,
-    ProfilePage,
     TabsPage,
-    SignUpPage,
-    SignInPage,
-    ForgotPasswordPage,
-    AboutUsPage,
-    TermsPage
+    SearchPage
   ],
   providers: [
     StatusBar,

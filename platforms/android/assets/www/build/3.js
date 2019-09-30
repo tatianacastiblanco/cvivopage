@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 746:
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersPageModule", function() { return UsersPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users__ = __webpack_require__(758);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users__ = __webpack_require__(765);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var UsersPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 758:
+/***/ 765:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,7 +69,7 @@ var UsersPage = /** @class */ (function () {
     };
     UsersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-users",template:/*ion-inline-start:"C:\Users\leidy_castiblanco\Desktop\Cvivo2\cvivo\src\pages\users\users.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n\n\n    <ion-buttons right>\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="!showEditIcon" (click)="editProfiles()">\n\n        <ion-icon name="md-create" item-end></ion-icon>\n\n      </button>\n\n\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="showEditIcon" (click)="cancelEdit()">\n\n        <ion-icon name="md-close-circle" item-end></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" text-center padding>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <p class="who-watching">Who\'s watching?</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/orange-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Mr John Doe</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/blue-user.jpg" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 1</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/yellow-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 2</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/kids-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Kids</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6>\n\n        <ion-icon class="add-profile" name="md-add-circle" color="netflixWhite"></ion-icon>\n\n        <p>Add Profile</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\leidy_castiblanco\Desktop\Cvivo2\cvivo\src\pages\users\users.html"*/
+            selector: "page-users",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\users\users.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n\n\n    <ion-buttons right>\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="!showEditIcon" (click)="editProfiles()">\n\n        <ion-icon name="md-create" item-end></ion-icon>\n\n      </button>\n\n\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="showEditIcon" (click)="cancelEdit()">\n\n        <ion-icon name="md-close-circle" item-end></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" text-center padding>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <p class="who-watching">Who\'s watching?</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/orange-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Mr John Doe</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/blue-user.jpg" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 1</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/yellow-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 2</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/kids-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Kids</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6>\n\n        <ion-icon class="add-profile" name="md-add-circle" color="netflixWhite"></ion-icon>\n\n        <p>Add Profile</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\users\users.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], UsersPage);

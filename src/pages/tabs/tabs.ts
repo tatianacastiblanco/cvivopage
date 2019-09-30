@@ -14,10 +14,10 @@ import { NavController, Platform } from 'ionic-angular';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = 'HomePage';
   tab2Root = SearchPage;
-  tab3Root = ComingSoonPage;
-  tab4Root = ProfilePage;
+  tab3Root = 'ComingSoonPage';
+  tab4Root = 'ProfilePage';
 
   private width:number;
   private height:number;
@@ -27,7 +27,7 @@ export class TabsPage {
       this.width = platform.width();
       console.log(this.width);
       if(this.width >= 992){
-        this.navCtrl.setRoot(HomePage)
+        this.navCtrl.setRoot('HomePage')
         console.log(this.width);
       }
      
