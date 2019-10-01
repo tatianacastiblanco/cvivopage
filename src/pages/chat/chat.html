@@ -1,39 +1,46 @@
+
 <ion-header>
     <ion-navbar color="primary">
       <ion-buttons start>
-        <button ion-button icon-only>
+        <button ion-button icon-only (click)="close()" >
           <ion-icon name="close"></ion-icon>
         </button>
       </ion-buttons>  
+      <ion-title>Chat</ion-title>
       
     </ion-navbar>
   </ion-header>
-<ion-content>
-      <div class="chat-message" text-right >
-        <div class="right-bubble">
-          <span class="msg-name">Me</span>
-          <span class="msg-date">05/05/2019</span>
-          <span><img src="assets/imgs/user.png" class="msg-img"></span>
-          <p text-wrap><a > Lorem ipsum dolor </a></p>
+<ion-content >
+  <div *ngFor="let message of messages">
+      <div class="chat-message" text-right  *ngIf="message?.from === nickname" >
+          <div class="right-bubble">
+            <span class="msg-name">{{message.from}}</span>
+            <span class="msg-date">{{message.created | date:' h:mm' }}</span>
+            <span><img [src]="message.picture" class="msg-img"></span>
+            <p text-wrap><a >  {{message.text}} </a></p>
+          </div>
         </div>
+        <div class="chat-message" text-left  *ngIf="message?.from !== nickname" >
+          <div class="left-bubble">
+              <span class="msg-name">{{message.from}}</span>
+            <span class="msg-date">{{message.created | date:' h:mm' }}</span>
+            <span><img [src]="message.picture" class="msg-img"></span>
+            <p text-wrap><a >  {{message.text}} </a></p>
+          </div>
       </div>
-      <div class="chat-message" text-left >
-        <div class="left-bubble">
-          <span><img src="assets/imgs/user.png" class="msg-img"></span>
-          <span class="msg-name">Sergio Velandia</span>
-          <span class="msg-date">05/05/2019</span>                
-          <p text-wrap><a > Lorem ipsum dolor sit </a></p>
-        </div>
-    </div>
+  </div>
+  <ion-spinner name="bubbles" color="primary" text-center *ngIf="isLoading" ></ion-spinner>
+  
+   
    
   </ion-content>
   <ion-footer>
     <ion-toolbar>
       <ion-item class="chat-item">    
-        <ion-input class="chat-input" [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
+        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
       </ion-item>
       <ion-buttons end>
-        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()">
+        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">
           <ion-icon name="send"></ion-icon>
         </button>
       </ion-buttons>

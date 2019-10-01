@@ -119,3 +119,27 @@ ion-spinner {
  margin: 0;
 }
 
+.custom-modal {
+  position: fixed !important;
+  bottom: 0% !important;
+  left:20% !important;
+  width: 100% !important;
+  padding: 20% 10%  !important;
+  box-shadow: 0 5px 15px rgba(199, 16, 16, 0) !important;
+}
+
+ion-backdrop{
+  background-color:transparent !important;
+}
+
+ion-modal {
+  .modal-wrapper {
+    
+      height: 80%;
+      width: 45%;
+      border-radius: 50%;
+  }
+}
+
+
+

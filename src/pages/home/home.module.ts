@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { IonicImageLoader } from 'ionic-image-loader';
 import { ChatPage } from '../chat/chat';
-
 @NgModule({
   declarations: [
     HomePage,
@@ -12,7 +11,7 @@ import { ChatPage } from '../chat/chat';
   imports: [
     IonicPageModule.forChild(HomePage),
     IonicImageLoader,
-    ChatPageModule
+    ChatPageModule,
     
   ],
   exports:[
@@ -22,4 +21,8 @@ import { ChatPage } from '../chat/chat';
     ChatPage
   ]
 })
-export class MovieDetailsPageModule {}
+export class MovieDetailsPageModule {
+
+
+
+}

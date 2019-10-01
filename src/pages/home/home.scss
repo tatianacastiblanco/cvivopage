@@ -1,4 +1,13 @@
 page-home {
+
+    ion-badge{
+        position: relative;
+        left: 29px;
+        top: 12px;
+        z-index: 99;
+    }
+
+    
     ion-title {
         img {
             max-height: 56px;

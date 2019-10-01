@@ -24,7 +24,11 @@
 </ion-header>
 <ion-content class="list-avatar-page"  padding #pageContent >  
     <ion-fab bottom right >
-        <button ion-fab  (click)="presentProfileModal()"><ion-icon name="ios-chatbubbles"  ></ion-icon></button>      
+        <ion-badge color="netflixBlue">{{badge}}</ion-badge>   
+        <button ion-fab  (click)="presentChatModal()"><ion-icon name="ios-chatbubbles"></ion-icon>
+        
+        </button>   
+        
       </ion-fab>
   <!-- Refresher para actualizar el video en vivo -->
   <ion-grid>
@@ -50,9 +54,11 @@
           <ion-segment-button value="chat" [disabled]='!booleanchatEnable'>
             <ion-icon name="chatbubbles"></ion-icon>
           </ion-segment-button>
-        </ion-segment>        
+        </ion-segment>
+
         <div *ngIf="chatEnable == true && segementHome == 'chat'" >
-            <page-chat style="height: 100%"></page-chat>
+           
+           
           <!-- <ion-scroll  scrollY="true" class="test">            
             <ion-list *ngFor="let message of messages ">
               <ion-item no-lines>
@@ -67,6 +73,7 @@
           </ion-scroll>  -->
         </div>
           <div  *ngIf="segementHome == 'list' && loaded" >
+              
             <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>   
             <div *ngIf="homeScreenGroups[6]">
               <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      

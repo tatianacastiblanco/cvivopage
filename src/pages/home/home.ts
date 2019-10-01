@@ -1,4 +1,4 @@
-import { ChatPage } from './../chat/chat';
+
 
 import { AuthService } from './../../services/AuthService';
 import { VimeoService } from './../../services/VimeoService';
@@ -61,6 +61,8 @@ export class HomePage {
  refrescarpag = false;
  menuhead = 'home';
  cur_segment: any
+ isModalOpen:boolean = false;
+ badge:any;
   //slides: any;
 
   constructor(
@@ -102,50 +104,58 @@ export class HomePage {
         this.heightFrame = 650;
       }
       
-    });      
-
-      this.chatService.getMessages().subscribe(message => {            
-        let prueba = this.getCurrentUserPhoto(message['from']);     
-        message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
+    });   
+    this.chatService.getMessages().subscribe(message => { 
+      if(this.isModalOpen == false){
         this.messages.push(message);
-        let objToSave =
-        {
-          created:message['created'],
-          from:message['from'],
-          text:message['text']
-        }
-        this.db.collection('chats').doc(this.event).collection('chatLog').doc('chatLog'+message['created']).set(objToSave)    
-      })
+        this.badge = this.messages.length;    
+      }else{
+        this.badge = 0;
+      }       
+        
+    })   
+
+
+
+     
     
     };
 
-    presentProfileModal() {
+    presentChatModal() {
       let options:ModalOptions={
         showBackdrop:false,
-        enableBackdropDismiss:true
+        enableBackdropDismiss:true,
+        cssClass: 'custom-modal'
       }
-      let profileModal = this.modalCtrl.create('ChatPage',{},options);
-      profileModal.present();
+      let chatModal = this.modalCtrl.create('ChatPage',{},options);
+      chatModal.present().then(() =>{
+          this.badge = 0;
+      });
+
+      chatModal.onDidDismiss(callback =>{
+        this.isModalOpen = false;
+      })
+      
     }
   
   ionViewWillEnter(){ 
     // this.gethomeVideo();
     // this.getChatSection(); 
-    this.events.subscribe('user:photoChanged', (imageBase64) => {      
-      this.photosArray = [];
-      this.messages = [];
-      this.db.collection('photos').valueChanges().forEach(elem =>{
-      this.photosArray.push(elem);
-        // this.messages = [];
-      })
-      this.loadMessges(); 
-    });
+    // this.events.subscribe('user:photoChanged', (imageBase64) => {      
+    //   this.photosArray = [];
+    //   this.messages = [];
+    //   this.db.collection('photos').valueChanges().forEach(elem =>{
+    //   this.photosArray.push(elem);
+    //     // this.messages = [];
+    //   })
+    //   this.loadMessges(); 
+    // });
 
-    if(this.photosArray.length == 0) {
-      this.db.collection('photos').valueChanges().forEach(elem =>{
-        this.photosArray.push(elem);
-      })
-    }
+    // if(this.photosArray.length == 0) {
+    //   this.db.collection('photos').valueChanges().forEach(elem =>{
+    //     this.photosArray.push(elem);
+    //   })
+    // }
   }
 
   ionViewWillLeave() {

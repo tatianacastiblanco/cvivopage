@@ -1,15 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 608:
+/***/ 604:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieDetailsPageModule", function() { return MovieDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DownloadsPageModule", function() { return DownloadsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movie_details__ = __webpack_require__(761);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_image_loader__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__downloads__ = __webpack_require__(754);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,67 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var MovieDetailsPageModule = /** @class */ (function () {
-    function MovieDetailsPageModule() {
+var DownloadsPageModule = /** @class */ (function () {
+    function DownloadsPageModule() {
     }
-    MovieDetailsPageModule = __decorate([
+    DownloadsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__movie_details__["a" /* MovieDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__downloads__["a" /* DownloadsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__movie_details__["a" /* MovieDetailsPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic_image_loader__["b" /* IonicImageLoader */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__downloads__["a" /* DownloadsPage */]),
             ],
         })
-    ], MovieDetailsPageModule);
-    return MovieDetailsPageModule;
+    ], DownloadsPageModule);
+    return DownloadsPageModule;
 }());
 
-//# sourceMappingURL=movie-details.module.js.map
+//# sourceMappingURL=downloads.module.js.map
 
 /***/ }),
 
-/***/ 620:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Helper; });
-var Helper = /** @class */ (function () {
-    function Helper() {
-    }
-    Helper.shuffle = function (a) {
-        for (var i = a.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            _a = [a[j], a[i]], a[i] = _a[0], a[j] = _a[1];
-        }
-        return a;
-        var _a;
-    };
-    return Helper;
-}());
-
-//# sourceMappingURL=Helper.js.map
-
-/***/ }),
-
-/***/ 761:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MovieDetailsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_streaming_media__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_MoviesService__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_UserService__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_AuthService__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__data_Helper__ = __webpack_require__(620);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_DownloadService__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_image_loader__ = __webpack_require__(341);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DownloadsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_DownloadService__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__ = __webpack_require__(755);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -94,178 +62,199 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
-var MovieDetailsPage = /** @class */ (function () {
-    function MovieDetailsPage(navCtrl, navParams, streamingMedia, moviesService, userService, downloadService, toastController, alertController, platform, vimeoService, authService, imageLoaderConfig) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.streamingMedia = streamingMedia;
-        this.moviesService = moviesService;
-        this.userService = userService;
+var DownloadsPage = /** @class */ (function () {
+    function DownloadsPage(downloadService, alertCtrl, streamingMedia) {
         this.downloadService = downloadService;
-        this.toastController = toastController;
-        this.alertController = alertController;
-        this.platform = platform;
-        this.vimeoService = vimeoService;
-        this.authService = authService;
-        this.imageLoaderConfig = imageLoaderConfig;
-        this.userId = "";
-        this.movieId = "";
-        this.urlPathVideo = "";
-        this.homeScreenGroups = [];
-        this.recentlyAddedMovies = [];
-        this.loaded = false;
-        this.isPartOfMyList = false;
-        this.isDownloading = false;
-        this.isDownloaded = false;
-        this.imageLoaderConfig.enableDebugMode();
-        this.imageLoaderConfig.setCacheDirectoryName('my-custom-cache-directory-name');
-        this.authService.afAuth.user.subscribe(function (user) {
-            _this.userId = user.uid;
-        });
-        this.movie = this.navParams.get("movieId");
-        // if (this.movieId == undefined) {
-        //   this.movieId = "";
-        // } else {
-        //   this.downloadService
-        //     .isMovieDownloaded(this.movieId)
-        //     .then((result: any) => {
-        //       this.isDownloaded = result.isDownloaded;
-        //     });
-        // }
+        this.alertCtrl = alertCtrl;
+        this.streamingMedia = streamingMedia;
+        this.downloadType = "movies";
+        this.hasAnyDownloads = false;
+        this.movieDownloadItems = [];
+        this.episodesDownloadItems = [];
     }
-    MovieDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad MovieDetailsPage");
-        this.getMovie();
-        this.getRecentlyAddedMovies();
+    DownloadsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad DownloadsPage");
     };
-    MovieDetailsPage.prototype.getMovie = function () {
-        this.title = this.movie.name;
-        this.detailsPicture = this.movie.detailsPicture;
-        this.description = this.movie.description;
-        this.urlPathVideo = this.movie.picture;
-        this.movieId = this.movie.movieId;
-        this.getIsPartOfMyList();
+    DownloadsPage.prototype.ionViewDidEnter = function () {
+        console.log("ionViewDidEnter DownloadsPage");
+        this.loadDownloads();
     };
-    MovieDetailsPage.prototype.getCategoryMovies = function () {
+    DownloadsPage.prototype.loadDownloads = function () {
         var _this = this;
-        this.vimeoService.getHomeScreenGroups().subscribe(function (result) {
-            _this.homeScreenGroups = [];
-            var category = result;
-            console.log(category);
+        this.movieDownloadItems = [];
+        this.episodesDownloadItems = [];
+        this.hasAnyDownloads =
+            this.downloadService.moviesDownloaded.length > 0 ||
+                this.downloadService.episodesDownloaded.length > 0;
+        this.downloadService.moviesDownloaded.forEach(function (movie) {
+            var downloadItem = new __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__["a" /* DownloadItem */]();
+            downloadItem.itemId = movie.movieId;
+            downloadItem.name = movie.name;
+            downloadItem.picture = movie.picture;
+            downloadItem.isMovie = true;
+            downloadItem.downloadUrl = movie.downloadUrl;
+            _this.movieDownloadItems.push(downloadItem);
+        });
+        this.downloadService.episodesDownloaded.forEach(function (episode) {
+            var downloadItem = new __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__["a" /* DownloadItem */]();
+            downloadItem.itemId = episode.episodeId;
+            downloadItem.name = episode.name;
+            downloadItem.picture = episode.picture;
+            downloadItem.isMovie = false;
+            downloadItem.downloadUrl = episode.downloadUrl;
+            _this.episodesDownloadItems.push(downloadItem);
         });
     };
-    MovieDetailsPage.prototype.getRecentlyAddedMovies = function () {
-        var _this = this;
-        this.vimeoService.getAllVideos().subscribe(function (result) {
-            var videos = result;
-            videos.forEach(function (item) {
-                if (item.files[2] && item.pictures.sizes[3]) {
-                    var video = new __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
-                    video.name = item.name;
-                    video.picture = item.files[2].link;
-                    video.description = item.description;
-                    video.detailsPicture = item.pictures.sizes[6].link;
-                    video.movieId = item.uri.split('/')[2];
-                    _this.recentlyAddedMovies.push(video);
-                    _this.recentlyAddedMovies = __WEBPACK_IMPORTED_MODULE_8__data_Helper__["a" /* Helper */].shuffle(_this.recentlyAddedMovies);
-                }
+    DownloadsPage.prototype.goToAvailableDownloads = function () {
+        // this.navCtrl.push("HorizontalListPage", { title: "Available Downloads" });
+    };
+    DownloadsPage.prototype.playMovie = function (movieDownloadItem) {
+        if (movieDownloadItem.downloadUrl === "") {
+            var alert_1 = this.alertCtrl.create({
+                title: "This movie has not yet been uploaded!",
+                subTitle: "Use the Admin Ion Netflix to add the movie and watch it here!",
+                buttons: ["Dismiss"]
             });
-            _this.loaded = true;
-        }, function (err) { return console.log(err); });
-        // this.moviesService.getRecentlyAddedMovies().then((result: any) => {
-        //   this.recentlyAddedMovies = Helper.shuffle(result.movies);
-        // 
-        // });
+            alert_1.present();
+            return;
+        }
+        var options = {
+            successCallback: function () {
+                console.log("Video played");
+            },
+            errorCallback: function (e) {
+                console.log("Error streaming");
+            },
+            orientation: "landscape",
+            shouldAutoClose: true,
+            controls: true
+        };
+        this.streamingMedia.playVideo(movieDownloadItem.downloadUrl, options);
     };
-    MovieDetailsPage.prototype.getIsPartOfMyList = function () {
+    DownloadsPage.prototype.playEpisode = function (episodeDownloadItem) {
+        if (episodeDownloadItem.downloadUrl === "") {
+            var alert_2 = this.alertCtrl.create({
+                title: "This episode has not yet been uploaded!",
+                subTitle: "Use the Admin Ion Netflix to add the episode and watch it here!",
+                buttons: ["Dismiss"]
+            });
+            alert_2.present();
+            return;
+        }
+        var options = {
+            successCallback: function () {
+                console.log("Video played");
+            },
+            errorCallback: function (e) {
+                console.log("Error streaming");
+            },
+            orientation: "landscape",
+            shouldAutoClose: true,
+            controls: true
+        };
+        this.streamingMedia.playVideo(episodeDownloadItem.downloadUrl, options);
+    };
+    DownloadsPage.prototype.deleteMovie = function (movieDownloadItem) {
+        this.presentMovieDeleteConfirm(movieDownloadItem);
+    };
+    DownloadsPage.prototype.presentMovieDeleteConfirm = function (movieDownloadItem) {
         var _this = this;
-        console.log('test');
-        this.userService
-            .getIsMoviePartOfMyList(this.userId, this.movieId)
-            .then(function (result) {
-            _this.isPartOfMyList = result.isPartOfMyList;
+        var alert = this.alertCtrl.create({
+            title: "Delete downloaded movie.",
+            message: "Do you want to delete this download?",
+            buttons: [
+                {
+                    text: "No",
+                    role: "cancel",
+                    handler: function () {
+                        console.log("Cancel clicked");
+                    }
+                },
+                {
+                    text: "Yes",
+                    handler: function () {
+                        console.log("Yes clicked");
+                        _this.downloadService
+                            .deleteMovie(movieDownloadItem.itemId)
+                            .then(function (result) {
+                            var index = _this.movieDownloadItems.indexOf(movieDownloadItem);
+                            if (index > -1) {
+                                _this.movieDownloadItems.splice(index, 1);
+                            }
+                            _this.hasAnyDownloads =
+                                _this.downloadService.moviesDownloaded.length > 0 ||
+                                    _this.downloadService.episodesDownloaded.length > 0;
+                        });
+                    }
+                }
+            ]
         });
+        alert.present();
     };
-    MovieDetailsPage.prototype.addToMyList = function () {
+    DownloadsPage.prototype.deleteEpisode = function (episodesDownloadItems) {
+        this.presentEpisodeDeleteConfirm(episodesDownloadItems);
+    };
+    DownloadsPage.prototype.presentEpisodeDeleteConfirm = function (episodeDownloadItem) {
         var _this = this;
-        this.userService
-            .addMovieToMyList(this.userId, this.movie)
-            .then(function (result) {
-            _this.isPartOfMyList = true;
-            _this.showPartOfMyListToast(true);
+        var alert = this.alertCtrl.create({
+            title: "Delete downloaded episode.",
+            message: "Do you want to delete this download?",
+            buttons: [
+                {
+                    text: "No",
+                    role: "cancel",
+                    handler: function () {
+                        console.log("Cancel clicked");
+                    }
+                },
+                {
+                    text: "Yes",
+                    handler: function () {
+                        console.log("Yes clicked");
+                        _this.downloadService
+                            .deleteEpisode(episodeDownloadItem.itemId)
+                            .then(function (result) {
+                            var index = _this.episodesDownloadItems.indexOf(episodeDownloadItem);
+                            if (index > -1) {
+                                _this.episodesDownloadItems.splice(index, 1);
+                            }
+                            _this.hasAnyDownloads =
+                                _this.downloadService.moviesDownloaded.length > 0 ||
+                                    _this.downloadService.episodesDownloaded.length > 0;
+                        });
+                    }
+                }
+            ]
         });
+        alert.present();
     };
-    MovieDetailsPage.prototype.removeFromMyList = function () {
-        var _this = this;
-        this.userService
-            .removeMovieFromMyList(this.userId, this.movieId)
-            .then(function (result) {
-            _this.isPartOfMyList = false;
-            _this.showPartOfMyListToast(false);
-        });
-    };
-    MovieDetailsPage.prototype.showPartOfMyListToast = function (added) {
-        var toast = this.toastController.create({
-            message: added ? "Agregado a mi lista" : "Removido de mi lista",
-            duration: 2000,
-            position: "bottom"
-        });
-        toast.present();
-    };
-    MovieDetailsPage.prototype.goToMovie = function (movie) {
-        var _this = this;
-        //this.navCtrl.push("MovieDetailsPage", { movieId: movie });
-        this.navCtrl.pop().then(function () {
-            _this.navCtrl.push("MovieDetailsPage", { movieId: movie });
-        });
-    };
-    MovieDetailsPage.prototype.newMethod = function () {
-        return "MovieDetailsPage";
-    };
-    MovieDetailsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: "page-movie-details",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\movie-details\movie-details.html"*/'<ion-header no-border>\n\n  <ion-navbar transparent>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content fullscreen padding>\n\n  <video [src]=urlPathVideo [autoplay]=false class="video" controls controlsList="nodownload" poster="https://i.vimeocdn.com/portrait/30313759_300x300"></video> \n\n  <p class="title">{{title}}</p>\n\n  <ion-row class="movie-details-row">\n\n    <!-- <p class="match-percentage">99% Match</p> -->\n\n    <p style="color: #00aced">2019</p>\n\n    <!-- <p>25</p> -->\n\n    <!-- <p>2h 2m</p> -->\n\n  </ion-row>\n\n  <ion-row class="movie-summary-row">\n\n    <p>{{description}}</p>\n\n  </ion-row>\n\n  <ion-row class="list-like-download-row">\n\n    <ion-col text-center col-3>\n\n      <button *ngIf="!isPartOfMyList" (click)="addToMyList()" ion-button icon-only clear color="netflixBlue">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </button>\n\n      <button class="isPartOfMyList" *ngIf="isPartOfMyList" (click)="removeFromMyList()" ion-button icon-only clear color="netflixWhite">\n\n        <ion-icon name="md-checkmark"></ion-icon>\n\n      </button>\n\n      <p>Mi lista</p>\n\n    </ion-col>\n\n    <ion-col col-25></ion-col>\n\n  </ion-row>\n\n  <p class="more-like-this-title">Mas como este</p>\n\n  <ion-row *ngIf="!loaded">\n\n    <ion-col text-center>\n\n      <br>\n\n      <ion-spinner color="netflixRed"></ion-spinner>\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngIf="loaded" class="movieLg"> \n\n    <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">       \n\n        <img  (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%">\n\n    </ion-col>    \n\n  </ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\movie-details\movie-details.html"*/
+    DownloadsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "page-downloads",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\downloads\downloads.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>My Downloads</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-row class="smart-downloads-row">\n\n    <ion-col col-10>\n\n      <ion-row>\n\n        <p class="item-title">Smart Downloads</p>\n\n      </ion-row>\n\n      <ion-row>\n\n        <p class="item-sub-title">Completed episodes will be deleted and replaced with the next episodes, only on Wi-Fi.</p>\n\n      </ion-row>\n\n    </ion-col>\n\n\n\n    <ion-col col-2>\n\n      <ion-toggle checked="false" color="netflixRed"></ion-toggle>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!hasAnyDownloads" class="movies-shows-row">\n\n    <ion-col text-center>\n\n      <button ion-button clear color="netflixWhite">\n\n        <ion-icon name=\'md-download\'></ion-icon>\n\n      </button>\n\n\n\n      <p>Movies and TV show that you download appear here.</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!hasAnyDownloads" class="find-downloads-row">\n\n    <ion-col text-center>\n\n      <button ion-button icon-start color="netflixWhite" (click)="goToAvailableDownloads()">\n\n        FIND SOMETHING TO DOWNLOAD\n\n      </button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <div *ngIf="hasAnyDownloads">\n\n    <div padding>\n\n      <ion-segment color="netflixRed" [(ngModel)]="downloadType">\n\n        <ion-segment-button value="movies">\n\n          Movies\n\n        </ion-segment-button>\n\n\n\n        <ion-segment-button value="tvShows">\n\n          Tv Shows\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n\n\n    <div [ngSwitch]="downloadType">\n\n      <div *ngSwitchCase="\'movies\'">\n\n        <ion-list>\n\n          <ion-item *ngFor="let movieDownloadItem of movieDownloadItems">\n\n            <img item-start src="{{movieDownloadItem.picture}}">\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <p class="ellipsis">{{movieDownloadItem.name}}</p>\n\n              </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <button (click)="playMovie(movieDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-play"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n\n\n              <ion-col text-center>\n\n                <button (click)="deleteMovie(movieDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-trash"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-item>\n\n        </ion-list>\n\n      </div>\n\n\n\n      <div *ngSwitchCase="\'tvShows\'">\n\n        <ion-list>\n\n          <ion-item *ngFor="let episodesDownloadItem of episodesDownloadItems">\n\n            <img item-start src="{{episodesDownloadItem.picture}}">\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <p class="ellipsis">{{episodesDownloadItem.name}}</p>\n\n              </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <button (click)="playEpisode(episodesDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-play"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n\n\n              <ion-col text-center>\n\n                <button (click)="deleteEpisode(episodesDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-trash"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-item>\n\n        </ion-list>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\downloads\downloads.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_streaming_media__["a" /* StreamingMedia */],
-            __WEBPACK_IMPORTED_MODULE_5__services_MoviesService__["a" /* MoviesService */],
-            __WEBPACK_IMPORTED_MODULE_6__services_UserService__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_9__services_DownloadService__["a" /* DownloadService */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["r" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__["a" /* VimeoService */],
-            __WEBPACK_IMPORTED_MODULE_7__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_10_ionic_image_loader__["a" /* ImageLoaderConfig */]])
-    ], MovieDetailsPage);
-    return MovieDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_DownloadService__["a" /* DownloadService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__["a" /* StreamingMedia */]])
+    ], DownloadsPage);
+    return DownloadsPage;
 }());
 
-// showDownloadOnDeviceOnlyToast() {
-//   let toast = this.toastController.create({
-//     message: 'You can only download on a device!',
-//     duration: 2000,
-//     position: "bottom"
-//   });
-//   toast.present();
-// }
-// showDownloadToast(movieName: string) {
-//   let toast = this.toastController.create({
-//     message: 'Movie "' + movieName + '" successfully downloaded!',
-//     duration: 2000,
-//     position: "bottom"
-//   });
-//   toast.present();
-// }
-//# sourceMappingURL=movie-details.js.map
+//# sourceMappingURL=downloads.js.map
+
+/***/ }),
+
+/***/ 755:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DownloadItem; });
+var DownloadItem = /** @class */ (function () {
+    function DownloadItem() {
+    }
+    return DownloadItem;
+}());
+
+//# sourceMappingURL=DownloadItem.js.map
 
 /***/ })
 
