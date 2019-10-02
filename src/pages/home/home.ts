@@ -114,6 +114,10 @@ export class HomePage {
       this.iframe_html = '';
     };
 
+    ionViewWillEnter(){
+      this.gethomeVideo().then(()=> {})
+    }
+
     /**
      *Funcion de ciclo de vida que se ejecuta cuando la vista ha cargado,  
      * ejecuta la funcion gethomeVideo() y posteriormente getHomeGroups() 
@@ -214,10 +218,13 @@ export class HomePage {
  * @memberof HomePage
  */
 presentChatModal() {
+
+    let CcssClass = this.menu == true ?'custom-modal':'';
+
       let options:ModalOptions={
         showBackdrop:false,
         enableBackdropDismiss:true,
-        cssClass: 'custom-modal'
+        cssClass: ''
       }      
       
       let chatModal = this.modalCtrl.create('ChatPage',{},options);

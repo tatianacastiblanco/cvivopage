@@ -70751,12 +70751,6 @@ ion-backdrop {
   background-color: transparent !important;
 }
 
-ion-modal .modal-wrapper {
-  height: 80%;
-  width: 45%;
-  border-radius: 50%;
-}
-
 menu .segmenthead {
   color: white !important;
 }
@@ -71289,32 +71283,6 @@ page-help .cardWhite .item-md {
   }
 }
 
-page-home {
-  /*******************************************************************************************************************************************************************
-*                        --------------------------------------------- Responsive page -----------------------------------------------------                       *
-********************************************************************************************************************************************************************/
-  /* ------------- Samsung Galaxy S3 ----------- */
-  /* -------------- Samsung Galaxy S4 ----------- */
-  /* --------------- Samsung Galaxy S5 landscape ----------- */
-  /* --------------- Samsung Galaxy S5 portrait ----------- */
-  /* --------------- Pixel 2 portrait ----------- */
-  /* --------------- Pixel 2XL portrait ----------- */
-  /* ----------------- iphone5/se -------------- */
-  /* ------------------ iPhone 6, 7, 8 ----------- */
-  /* ----------------- iPhone 6+, 7+, 8+ ----------- */
-  /* ---------------------- iPhone X ----------- */
-  /* ---------------- iPads (landscape) ----------- */
-  /* --------------------- iPads (portrait) ----------- */
-  /* ---------------------- ipad-pro -------------- */
-  /* ---------------------- ----------- */
-  /*******************************************************         desktop  responsive        ************************************************************ */
-  /* ---------------------- 1224px -------------- */
-  /* ---------------------- 1500px -------------- */
-  /* ---------------------- 1824px -------------- */
-  /* ---------------------- 2024px -------------- */
-  /* ---------------------- 4096px -------------- */
-}
-
 page-home ion-badge {
   position: relative;
   left: 29px;
@@ -71351,6 +71319,9 @@ page-home .content .scrollY {
 
 page-home .content .imgCara {
   overflow-y: hidden;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 11px 9px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 11px 9px -2px rgba(0, 0, 0, 0.75);
 }
 
 page-home .content .scroll-container {
@@ -71405,34 +71376,6 @@ page-home .content ion-scroll[scrollX] ion-col img {
 
 page-home .content ::-webkit-scrollbar {
   display: none;
-}
-
-page-home .user_name {
-  color: #afafaf;
-}
-
-page-home .message {
-  padding: 10px !important;
-  -webkit-transition: all 250ms ease-in-out !important;
-  transition: all 250ms ease-in-out !important;
-  border-radius: 10px !important;
-  margin-bottom: 4px !important;
-}
-
-page-home .my_message {
-  background: #CA5F45 !important;
-  color: #000 !important;
-}
-
-page-home .other_message {
-  background: #dcdcdc !important;
-  color: #000 !important;
-}
-
-page-home .time {
-  color: #afafaf;
-  float: right;
-  font-size: small;
 }
 
 page-home .no-scroll .scroll-content {
@@ -71506,269 +71449,6 @@ page-home .swiper-slide:hover {
   box-shadow: 7px -4px 5px -5px rgba(0, 0, 0, 0.53);
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  page-home .test {
-    height: 160px !important;
-    -webkit-scroll-snap-points-y: 100%;
-    -ms-scroll-snap-points-y: 100%;
-    scroll-snap-points-y: 100%;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    height: 90% !important;
-  }
-}
-
-@media only screen and (min-device-width: 411px) and (max-device-height: 731px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 298px !important;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    padding: 0px !important;
-    height: 90%;
-  }
-}
-
-@media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 100px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 411px) and (max-device-height: 823px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 298px !important;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 140px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 140px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-scroll[scrollX] {
-    height: 205px !important;
-  }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 90px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 230px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 90px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    padding: 0px !important;
-    height: 95%;
-  }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 90px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  page-home .test {
-    height: 90px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  page-home .test {
-    height: 380px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: landscape) {
-  page-home .test {
-    height: 560px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (min-device-height: 1365) and (orientation: portrait) {
-  page-home .test {
-    height: 922px !important;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  page-home .test {
-    height: 1180px !important;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    padding: 0px !important;
-    height: 100%;
-  }
-  page-home .content .scrollY {
-    height: 1215px !important;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 100px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  page-home .test {
-    height: 298px !important;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 1224px) {
-  page-home .test {
-    height: 570px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 1500px) {
-  page-home .test {
-    height: 605px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 1824px) {
-  page-home .test {
-    height: 584px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    height: 95% !important;
-  }
-}
-
-@media only screen and (min-width: 1825px) and (max-width: 2024px) {
-  page-home .test {
-    height: 800px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    height: 95% !important;
-  }
-  page-home scroll-content {
-    margin-top: 88px;
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width: 2025px) and (max-width: 4096px) {
-  page-home .test {
-    height: 100px;
-  }
-  page-home .test ion-list, page-home .test ion-item {
-    padding: 0;
-    margin: 0;
-  }
-  page-home ion-content.content-md[padding] .scroll-content, page-home ion-content.content-ios[padding] .scroll-content {
-    height: 95% !important;
-  }
-  page-home scroll-content {
-    margin-top: 88px;
-    height: 105%;
-  }
-}
-
-/* Smartphones (portrait and landscape) ----------- */
-/* desktop  responsive */
 page-horizontal-list .back-button {
   color: #f5f5f1;
 }

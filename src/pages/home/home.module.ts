@@ -13,7 +13,7 @@ import { ComponentsModule } from '../../components/components.module';
     IonicPageModule.forChild(HomePage),
     IonicImageLoader,
     ChatPageModule,
-    ComponentsModule
+    ComponentsModule,
     
   ],
   exports:[
