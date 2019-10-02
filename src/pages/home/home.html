@@ -1,35 +1,15 @@
 <ion-header no-border>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12 col-lg-2 >
-        <ion-navbar align-title="center" transparent >
-          <ion-title>
-            <img src="assets/imgs/netflix-logo.png">
-          </ion-title>   
-        </ion-navbar>
-      </ion-col>
-      <ion-col col-lg-10 [hidden]="menu">
-        <div >
-          <ion-segment [(ngModel)]="menuhead">
-            <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>
-            <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>
-            <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>
-            <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>
-            <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>
-          </ion-segment>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>    
+  <menu  [hidden]="menu"></menu> 
 </ion-header>
+
 <ion-content class="list-avatar-page"  padding #pageContent >  
+
     <ion-fab bottom right >
         <ion-badge color="netflixBlue">{{badge}}</ion-badge>   
-        <button ion-fab  (click)="presentChatModal()"><ion-icon name="ios-chatbubbles"></ion-icon>
-        
-        </button>   
-        
-      </ion-fab>
+        <button ion-fab [disabled]="true" (click)="presentChatModal()"><ion-icon name="ios-chatbubbles"></ion-icon>        
+        </button>         
+    </ion-fab>
+
   <!-- Refresher para actualizar el video en vivo -->
   <ion-grid>
     <ion-row pull-lg-9>
@@ -44,34 +24,14 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 col-lg-6>
-          <div [innerHtml]="iframe_html"></div>
+          <div [innerHtml]="iframe_html" class="iframe"></div>
       </ion-col>
-      <ion-col col-12 col-lg-6>
-        <ion-segment [(ngModel)]="segementHome" color="netflixRed">
-          <ion-segment-button value="list">
-            <ion-icon name="list" ></ion-icon>
-          </ion-segment-button>
-          <ion-segment-button value="chat" [disabled]='!booleanchatEnable'>
-            <ion-icon name="chatbubbles"></ion-icon>
-          </ion-segment-button>
-        </ion-segment>
+      <ion-col col-12 col-lg-6>        
+        <ion-toolbar color="primary"  *ngIf="segementHome == 'list' && loaded">
+            <ion-title color="light">Categorias</ion-title>
+          </ion-toolbar>
+          <br>
 
-        <div *ngIf="chatEnable == true && segementHome == 'chat'" >
-           
-           
-          <!-- <ion-scroll  scrollY="true" class="test">            
-            <ion-list *ngFor="let message of messages ">
-              <ion-item no-lines>
-                <ion-avatar item-start>           
-                    <img [src]="message.picture" >
-                </ion-avatar>
-                <h3>{{message.from}}</h3>
-                <p text-wrap>  <a>  {{message.text}} </a></p>
-                <ion-note item-end>{{message.created | date:' h:mm' }}</ion-note>
-              </ion-item>
-            </ion-list>   
-          </ion-scroll>  -->
-        </div>
           <div  *ngIf="segementHome == 'list' && loaded" >
               
             <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>   
@@ -82,8 +42,8 @@
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides>
-              <button (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-              <button (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+              <button *ngIf="!menu" (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+              <button  *ngIf="!menu" (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
               <div class="item-title">{{homeScreenGroups[1].name}} </div>   
               <ion-slides slidesPerView="3" spaceBetween=12     >                                             
@@ -91,8 +51,8 @@
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
-              <button (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-              <button (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>
+              <button *ngIf="!menu" (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+              <button *ngIf="!menu" (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>
             <hr>
             <div class="item-title">{{homeScreenGroups[2].name}} </div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
@@ -100,8 +60,8 @@
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
-              <button (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-              <button (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+              <button *ngIf="!menu" (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+              <button  *ngIf="!menu" (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
               <div class="item-title">{{homeScreenGroups[3].name}} </div> 
               <ion-slides slidesPerView="3" spaceBetween=15   >                                             
@@ -109,8 +69,8 @@
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
-              <button (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-              <button (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+              <button *ngIf="!menu" (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+              <button *ngIf="!menu" (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
               <div class="item-title">{{homeScreenGroups[4].name}} </div>   
               <ion-slides slidesPerView="3" spaceBetween=12   >                                             
@@ -118,8 +78,8 @@
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
-              <button (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-              <button (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+              <button *ngIf="!menu" (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+              <button *ngIf="!menu" (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
             <div class="item-title">{{homeScreenGroups[5].name}}</div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
@@ -127,8 +87,8 @@
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
               </ion-slide>
             </ion-slides> 
-            <button (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-            <button (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+            <button *ngIf="!menu" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+            <button  *ngIf="!menu" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
             <hr>
             <div class="item-title">{{homeScreenGroups[6].name}} </div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
@@ -136,56 +96,14 @@
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
               </ion-slide>
             </ion-slides>
-            <button (click)="movePrev(6)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
-            <button (click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
+            <button  *ngIf="!menu"(click)="movePrev(6)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
+            <button  *ngIf="!menu"(click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
           </div>  
           </ion-scroll> 
         </div>      
       </ion-col>
     </ion-row>
    </ion-grid>  
-  <!--   seccion lista de videos Movil          -->
-    <!-- <ion-grid [hidden]="refrescarpag">
-      <ion-row>
-        <ion-col >
-          <div  *ngIf="segementHome == 'list' && loaded" >
-            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>
-              <ion-list>      
-                <div *ngFor="let homeScreenGroup of homeScreenGroups; let i = index" >      
-                  <div class="item-title">{{homeScreenGroup.name}} </div>  
-                  <div class="contentBody">                                                                              
-                    <ion-slides slidesPerView="3" spaceBetween=12  [attr.id]="i"  #i page>                                  
-                      <ion-slide *ngFor="let groupItem of homeScreenGroup.groupItems" >                     
-                        <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
-                      </ion-slide>
-                    </ion-slides>                             
-                  </div>  
-                  <hr>
-                </div>    
-              </ion-list>
-            </ion-scroll> 
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>    -->
+  </ion-content>
 
-    
-    
-    <!-- <div>
-      <h1>hoa</h1>
-    </div> -->
-  
-</ion-content>
-<!-- <ion-footer col-lg-6 offset-lg-6 [hidden]="segementHome !== 'chat'">
-  <ion-toolbar>  
-    <ion-item>    
-      <ion-input [(ngModel)]="message" type="text" placeholder="mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
-    </ion-item>       
-    <ion-buttons end>
-      <button ion-button icon-right color="netflixBlue" (click)="sendMessage()">          
-        <ion-icon name="send"></ion-icon>
-      </button> 
-    </ion-buttons>              
-  </ion-toolbar>
-</ion-footer> -->
 

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { IonicImageLoader } from 'ionic-image-loader';
 import { ChatPage } from '../chat/chat';
+import { ComponentsModule } from '../../components/components.module';
 @NgModule({
   declarations: [
     HomePage,
@@ -12,6 +13,7 @@ import { ChatPage } from '../chat/chat';
     IonicPageModule.forChild(HomePage),
     IonicImageLoader,
     ChatPageModule,
+    ComponentsModule
     
   ],
   exports:[

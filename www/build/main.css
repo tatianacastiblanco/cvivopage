@@ -70757,6 +70757,15 @@ ion-modal .modal-wrapper {
   border-radius: 50%;
 }
 
+menu .segmenthead {
+  color: white !important;
+}
+
+menu .iconhead {
+  font-size: 1.9rem !important;
+  color: #CA5F45 !important;
+}
+
 page-chat .test {
   height: 160px !important;
   -webkit-scroll-snap-points-y: 100%;

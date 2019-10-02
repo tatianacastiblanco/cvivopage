@@ -7,6 +7,6 @@ import { AppModule } from './app.module';
 import { disableDebugTools } from '@angular/platform-browser';
 import { enableProdMode } from '@angular/core';
 
-disableDebugTools();
-enableProdMode();
+// disableDebugTools();
+// enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule);

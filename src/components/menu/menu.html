@@ -1,0 +1,22 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-12 col-lg-2 >
+      <ion-navbar align-title="center" transparent >
+        <ion-title>
+          <img src="assets/imgs/netflix-logo.png">
+        </ion-title>   
+      </ion-navbar>
+    </ion-col>
+    <ion-col col-lg-10 >
+      <div >
+        <ion-segment [(ngModel)]="menuhead">
+          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>
+          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>
+          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>
+          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>
+          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>
+        </ion-segment>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid> 
