@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 618:
+/***/ 612:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TermsPageModule", function() { return TermsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__terms__ = __webpack_require__(777);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,43 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ProfilePageModule = /** @class */ (function () {
-    function ProfilePageModule() {
+var TermsPageModule = /** @class */ (function () {
+    function TermsPageModule() {
     }
-    ProfilePageModule = __decorate([
+    TermsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__terms__["a" /* TermsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__terms__["a" /* TermsPage */]),
             ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__terms__["a" /* TermsPage */]
+            ]
         })
-    ], ProfilePageModule);
-    return ProfilePageModule;
+    ], TermsPageModule);
+    return TermsPageModule;
 }());
 
-//# sourceMappingURL=profile.module.js.map
+//# sourceMappingURL=terms.module.js.map
 
 /***/ }),
 
-/***/ 752:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_AuthService__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_streaming_media__ = __webpack_require__(338);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_native_storage__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_base64__ = __webpack_require__(346);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TermsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,442 +57,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
-
-
-
-
-
-
-
-
-
-
-var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, app, loadingCtrl, zone, authService, camera, streamingMedia, Platform, nativeStorage, db, alertCtrl, base64, _DomSanitizationService, events) {
-        var _this = this;
+/**
+ * Generated class for the TermsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TermsPage = /** @class */ (function () {
+    function TermsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.app = app;
-        this.loadingCtrl = loadingCtrl;
-        this.zone = zone;
-        this.authService = authService;
-        this.camera = camera;
-        this.streamingMedia = streamingMedia;
-        this.Platform = Platform;
-        this.nativeStorage = nativeStorage;
-        this.db = db;
-        this.alertCtrl = alertCtrl;
-        this.base64 = base64;
-        this._DomSanitizationService = _DomSanitizationService;
-        this.events = events;
-        this.userName = "";
-        this.userPicture = "";
-        this.uid = '';
-        this.colectionName = '';
-        this.isCordova = false;
-        this.isCordovaWithoutCamera = false;
-        this.isCordovaWithCamera = false;
-        this.menu = true;
-        this.menuhead = 'perfil';
-        Platform.ready().then(function () {
-            _this.width = Platform.width();
-            _this.heigth = Platform.height();
-            console.log(_this.width);
-            console.log(_this.heigth + 'height');
-            if (_this.width <= 992) {
-                _this.menu = true;
-            }
-            else {
-                _this.menu = false;
-            }
-        });
-        this.constraints = window.constraints = {
-            audio: false,
-            video: true
-        };
-        this.authService.afAuth.user.subscribe(function (user) {
-            _this.userName = user.email;
-            _this.uid = user.uid;
-            _this.db.collection('photos').doc(_this.uid).valueChanges().subscribe(function (photo) {
-                _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(photo['base64']);
-            });
-        });
+        this.navParams = navParams;
     }
-    ;
-    ProfilePage.prototype.profilePhotobtn = function (e) {
-        return __awaiter(this, void 0, void 0, function () {
-            var stream, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!!this.Platform.is('cordova')) return [3 /*break*/, 5];
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, navigator.mediaDevices.getUserMedia(this.constraints)];
-                    case 2:
-                        stream = _a.sent();
-                        this.handleSuccess(stream);
-                        e.target.disabled = true;
-                        return [3 /*break*/, 4];
-                    case 3:
-                        e_1 = _a.sent();
-                        if (e_1.name === 'NotFoundError') {
-                            this.isCordovaWithCamera = false;
-                            this.isCordovaWithoutCamera = true;
-                        }
-                        else {
-                            this.handleError(e_1);
-                        }
-                        return [3 /*break*/, 4];
-                    case 4: return [3 /*break*/, 6];
-                    case 5:
-                        this.openCamera();
-                        _a.label = 6;
-                    case 6: return [2 /*return*/];
-                }
-            });
-        });
+    TermsPage.prototype.ionViewDidLoad = function () {
     };
-    /**
-     * if web rtc video media is succes
-     * @param stream
-     */
-    ProfilePage.prototype.handleSuccess = function (stream) {
-        this.isCordova = false;
-        this.canvasref = this.canvast.nativeElement;
-        this.canvasref.width = 480;
-        this.canvasref.height = 360;
-        this.isCordovaWithoutCamera = false;
-        this.isCordovaWithCamera = true;
-        var video = document.querySelector('video');
-        var videoTracks = stream.getVideoTracks();
-        console.log('Got stream with constraints:', this.constraints);
-        console.log("Using video device: " + videoTracks[0].label);
-        window.stream = stream; // make variable available to browser console
-        video.srcObject = stream;
-    };
-    ;
-    /**
-     * take photo button
-     */
-    ProfilePage.prototype.snapshotButton = function () {
-        var _this = this;
-        this.canvasref.getContext('2d').drawImage(this.video, 0, 0, 480, 360);
-        var photoBase64 = this.canvasref.toDataURL();
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cargando..."
-        });
-        loading.present();
-        // Obtener el UID del usuario desde firebase para posteriromente guardar foto en base de datos con el nombre
-        this.db.collection('users').doc(this.uid).get().subscribe(function (doc) {
-            // Guardar en BD la foto {name:'',base64:''} 
-            _this.db.collection('photos').doc(_this.uid).set({ name: doc.data().name, base64: photoBase64 })
-                .then(function (res) {
-                _this.isCordovaWithCamera = false;
-                loading.dismiss();
-                _this.showAlert('Tu foto se ha guardado', 'Bien');
-                _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(photoBase64);
-                _this.events.publish('user:photoChanged', photoBase64);
-            });
-        });
-    };
-    /**
-     *
-     * @param error if web rtc video fail
-     */
-    ProfilePage.prototype.handleError = function (error) {
-        if (error.name === 'ConstraintNotSatisfiedError') {
-            var v = this.constraints.video;
-            this.errorMsg("The resolution " + v.width.exact + "x" + v.height.exact + " px is not supported by your device.", v);
-        }
-        else if (error.name === 'PermissionDeniedError') {
-            this.errorMsg('Permissions have not been granted to use your camera and ' +
-                'microphone, you need to allow the page access to your devices in ' +
-                'order for the demo to work.', error.name);
-        }
-        this.errorMsg("getUserMedia error: " + error.name, error);
-    };
-    /**
-     * function to control de error of web rtc
-     * @param msg
-     * @param error
-     */
-    ProfilePage.prototype.errorMsg = function (msg, error) {
-        var errorElement = document.querySelector('#errorMsg');
-        errorElement.innerHTML += "<p>" + msg + "</p>";
-        if (typeof error !== 'undefined') {
-            console.error(error);
-        }
-    };
-    ;
-    ProfilePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.video = window.video = document.querySelector('video');
-        if (this.Platform.is('cordova')) {
-            this.nativeStorage.getItem('imgSource').then(function (res) {
-                if (res) {
-                    _this.myPhoto;
-                }
-                else {
-                    _this.myPhoto = 'assets/imgs/photo-camera.png';
-                }
-            }, function (err) { return _this.myPhoto = 'assets/imgs/photo-camera.png'; });
-        }
-        else {
-            this.isCordova = true;
-            this.myPhoto = 'assets/imgs/user.png';
-        }
-    };
-    ProfilePage.prototype.goToUsers = function () {
-        this.navCtrl.push("UsersPage");
-    };
-    ProfilePage.prototype.goToHelp = function () {
-        this.navCtrl.push("HelpPage");
-    };
-    ProfilePage.prototype.goToNotifications = function () {
-        this.navCtrl.push("NotificationsPage");
-    };
-    ProfilePage.prototype.goToMyList = function () {
-        this.navCtrl.push("MylistPage");
-    };
-    ProfilePage.prototype.goToSettings = function () {
-        this.navCtrl.push("SettingsPage");
-    };
-    ProfilePage.prototype.goToAboutUs = function () {
-        if (this.Platform.is('cordova')) {
-            var options = {
-                successCallback: function () {
-                    console.log("Video played");
-                },
-                errorCallback: function (e) {
-                    console.log("Error streaming");
-                },
-                orientation: "landscape",
-                shouldAutoClose: true,
-                controls: true
-            };
-            this.streamingMedia.playVideo("https://firebasestorage.googleapis.com/v0/b/cvivo-84315.appspot.com/o/C-VIVO%20introducci%C3%B3n%20v2.mp4?alt=media&token=c3610c01-6b2c-4c47-b009-396c513b4899", options);
-        }
-        else {
-            this.navCtrl.push('AboutUsPage');
-        }
-    };
-    ;
-    ProfilePage.prototype.openCamera = function () {
-        var _this = this;
-        if (this.Platform.is('cordova')) {
-            var loading = this.loadingCtrl.create({
-                spinner: "bubbles",
-                content: "Cargando..."
-            });
-            var options = {
-                quality: 100,
-                destinationType: this.camera.DestinationType.FILE_URI,
-                mediaType: this.camera.MediaType.PICTURE,
-                correctOrientation: true,
-                allowEdit: true,
-                targetWidth: 100,
-                targetHeight: 100
-            };
-            // Abrir camara para tomar foto
-            this.camera.getPicture(options).then(function (imageData) {
-                // Codificar a base64 la foto tomada
-                _this.base64.encodeFile(imageData).then(function (res) {
-                    loading.present();
-                    var imageBase64 = res;
-                    // Obtener el UID del usuario desde firebase para posteriromente guardar foto en base de datos con el nombre
-                    _this.db.collection('users').doc(_this.uid).get().subscribe(function (doc) {
-                        // Guardar en BD la foto {name:'',base64:''} 
-                        _this.db.collection('photos').doc(_this.uid).set({ name: doc.data().name, base64: res })
-                            .then(function (res) {
-                            loading.dismiss();
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(imageBase64);
-                            _this.events.publish('user:photoChanged', imageBase64);
-                        })
-                            .catch(function (err) { return _this.showAlert(err, 'Error'); });
-                    }, function (err) { _this.showAlert(err, 'Error users'); loading.dismiss(); });
-                });
-                _this.nativeStorage.setItem('imgSource', imageData);
-            }, function (err) { _this.showAlert('err', 'Error de camara'); loading.dismiss(); });
-        }
-    };
-    ;
-    /**
-     * Funcion  que se ejecuta cuando se selecciona una imagen desde web en el input file
-     * @param $event recibe el target para obtener el "file"
-     */
-    ProfilePage.prototype.changeListener = function ($event) {
-        this.readThis($event.target);
-    };
-    /**
-     * Funcion que sirve para leer el la foto seleccionada y convertirla en base 64 para poder almacenalra en BD
-     * @param inputValue
-     */
-    ProfilePage.prototype.readThis = function (inputValue) {
-        var _this = this;
-        var file = inputValue.files[0];
-        var myReader = new FileReader();
-        myReader.onloadend = function (e) {
-            _this.image = myReader.result;
-            _this.db.collection('users').doc(_this.uid).get().subscribe(function (doc) {
-                _this.colectionName = doc.data().name;
-                _this.db.collection('photos', function (ref) { return ref.where('name', '==', _this.colectionName); }).stateChanges().subscribe(function (res0) {
-                    if (res0.length > 0) {
-                        _this.db.collection('photos').doc(res0[0].payload.doc.id).set({ base64: _this.image, name: _this.colectionName }).then(function () {
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.events.publish('user:photoChanged', _this.image);
-                            _this.myPhoto = _this.image;
-                            return;
-                        }, function (err) { return _this.showAlert('Tu foto no se guardó ', 'Error'); });
-                    }
-                    else {
-                        _this.db.collection('photos').add({ base64: _this.image, name: _this.colectionName }).then(function () {
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.events.publish('user:photoChanged', _this.image);
-                            _this.myPhoto = _this.image;
-                            return;
-                        }, function (err) { return _this.showAlert('Tu foto no se guardó ', 'Error'); });
-                    }
-                }, function (err) {
-                    console.log(err);
-                });
-            });
-        };
-        myReader.readAsDataURL(file);
-    };
-    ;
-    /**
-     * Alerta personalizada
-     * @param message
-     * @param title
-     */
-    ProfilePage.prototype.showAlert = function (message, title) {
-        var alert = this.alertCtrl.create({
-            title: title,
-            message: message,
-            buttons: [
-                {
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    cssClass: 'btnalert-cancel',
-                    handler: function (data) {
-                        console.log('Cancel clicked');
-                    }
-                },
-                {
-                    text: 'Ok',
-                    cssClass: 'btnalert-ok',
-                    handler: function (data) {
-                    }
-                }
-            ]
-        }).present();
-    };
-    ;
-    /**
-     * Slair de sesion en firebase
-     */
-    ProfilePage.prototype.home = function () {
-        this.navCtrl.setRoot('HomePage');
-    };
-    ProfilePage.prototype.parrilla = function () {
-        this.navCtrl.push('ComingSoonPage');
-    };
-    ProfilePage.prototype.buscar = function () {
-        this.navCtrl.push('SearchPage');
-    };
-    ProfilePage.prototype.perfil = function () {
-        this.navCtrl.push('ProfilePage');
-    };
-    ProfilePage.prototype.signOut = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cerrando sesión..."
-        });
-        loading.present();
-        setTimeout(function () {
-            loading.dismiss();
-            __WEBPACK_IMPORTED_MODULE_4_firebase___default.a
-                .auth()
-                .signOut()
-                .then(function () {
-                _this.zone.run(function () {
-                    _this.app.getRootNav().setRoot('SignInPage');
-                });
-            });
-        }, 500);
-    };
-    ;
-    ProfilePage.prototype.terminos = function () {
-        this.navCtrl.push('TermsPage');
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])('snapShotCanvas'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_core__["ElementRef"])
-    ], ProfilePage.prototype, "canvast", void 0);
-    ProfilePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: "page-profile",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\profile\profile.html"*/'<ion-header no-border>\n\n    <ion-grid>\n\n      <ion-row class="padTitle">\n\n        <ion-col col-12 col-lg-4>\n\n                <ion-navbar>  \n\n                  <ion-item  no-lines>\n\n                      <ion-avatar item-start>               \n\n                        <img [src]="myPhoto">\n\n                      </ion-avatar>\n\n                      <h2>{{userName}}</h2>       \n\n                    </ion-item>\n\n                </ion-navbar>   \n\n            \n\n        </ion-col>\n\n        <ion-col col-lg-8 [hidden]="menu">\n\n          <div >\n\n            <ion-segment [(ngModel)]="menuhead">\n\n              <ion-segment-button value="home"   class="segmenthead"  (click)="home()"> <ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n              <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n              <ion-segment-button value="parrilla" class="segmenthead"(click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n              <ion-segment-button value="perfil"   class="segmenthead" > <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n              <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n            </ion-segment>\n\n          </div>         \n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>    \n\n  </ion-header>\n\n<ion-content padding >\n\n<!-- <ion-header>   \n\n        <ion-navbar>  \n\n          <ion-item  no-lines>\n\n             <ion-avatar item-start>               \n\n               <img [src]="myPhoto">\n\n             </ion-avatar>\n\n             <h2>{{userName}}</h2>       \n\n           </ion-item>\n\n       </ion-navbar>   \n\n</ion-header> -->\n\n\n\n<ion-content padding>\n\n  <ion-list class="top-menu-list">\n\n    <!-- <ion-item (click)="goToNotifications()">\n\n      <ion-icon name="md-notifications" item-start></ion-icon>\n\n      <p>Notifications</p>\n\n    </ion-item> -->\n\n\n\n    <ion-item (click)="goToMyList()">\n\n      <ion-icon name="list-box" item-start></ion-icon>\n\n      <p>Mi lista</p>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-list no-lines class="user-menu-list">\n\n\n\n    <!-- Seccion foto de perfil -->\n\n    <ion-item  (click)="profilePhotobtn(handleError)">\n\n        <ion-icon name="camera" item-start color="netflixWhite"  ></ion-icon>\n\n        <p> Foto de perfil</p>\n\n    </ion-item>\n\n    \n\n    <ion-item  [hidden]="!isCordovaWithoutCamera"  >\n\n        <ion-label>Seleccionar foto de perfil</ion-label>\n\n        <br>\n\n        <ion-input type="file" accept="image/*" (change)="changeListener($event)" ></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item text-center [hidden]="!isCordovaWithCamera">       \n\n            <video id="gum-local" autoplay playsinline width="200px" height="200px" ></video>  \n\n            <button ion-button block round (click)="snapshotButton()"><ion-icon name="camera" ></ion-icon></button>       \n\n      </ion-item>\n\n\n\n      <!-- fin seccion foto de perfil -->\n\n   \n\n\n\n    <ion-item (click)="goToAboutUs()">\n\n        <ion-icon name="body" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Acerca de nosotros</p>\n\n    </ion-item>\n\n\n\n    <ion-item (click)="terminos()">\n\n        <ion-icon name="clipboard" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Términos y condiciones de uso</p>\n\n    </ion-item>\n\n\n\n    <ion-item (click)="goToHelp()">\n\n        <ion-icon name="help-buoy" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Ayuda</p>\n\n    </ion-item>\n\n    <!-- <ion-item>\n\n      <p>Términos y condiciones</p>\n\n    </ion-item> -->\n\n\n\n    <ion-item (click)="signOut()">\n\n        <ion-icon name="log-out" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Cerrar sesión</p>\n\n    </ion-item>\n\n\n\n  </ion-list>  \n\n  \n\n  <canvas #snapShotCanvas [hidden]="true"></canvas>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\profile\profile.html"*/
+    TermsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-terms',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\terms\terms.html"*/'<ion-header no-border>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col col-12 col-lg-2 >\n\n        <ion-navbar align-title="center" transparent >\n\n          <ion-title>\n\n            <img src="assets/imgs/netflix-logo.png">\n\n          </ion-title>   \n\n        </ion-navbar>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-header>\n\n<ion-content padding>\n\n  <div class="content">\n\n    <h1><b>Términos de uso de C-VIVO</b></h1> <br>\n\n\n\n    Bienvenido a C-VIVO proporcionado por C-VIVO ("C-VIVO", "nosotros"). Nos complace ofrecerte acceso a nuestro Servicio (como se define más abajo), sujeto a estos términos y condiciones \n\n    (los "Términos de Servicio") y a la Política de Privacidad correspondiente de C-VIVO. Al acceder y utilizar el Servicio, expresas tu consentimiento, acuerdo y entendimiento de los \n\n    Términos de Servicio y la Política de Privacidad. Si no estás de acuerdo con los Términos de Servicio o la Política de Privacidad, no utilices el Servicio.<br><br>\n\n    \n\n    C-VIVO posee y opera el sitio cvivo.digital y la App C-VIVO. Te ofrecemos la posibilidad de aprender diversos temas a través de nuestros servicios en línea (chat, streamings, etc.) \n\n    y de la funcionalidad del sitio.<br><br>\n\n    \n\n    Lo siguiente es un breve resumen de determinados términos y condiciones que se incluyen en estos Términos de Servicio. No obstante, este resumen se te proporciona únicamente para tu \n\n    comodidad; por lo tanto, debes leer todos los Términos de Servicio antes de aceptarlos.<br><br>\n\n\n\n    <ul type="circle">\n\n      <li><p> El Servicio sólo funciona con tu computadora personal y dispositivos compatibles.</p></li><br>\n\n      <li><p> Para utilizar el Servicio, deberás registrarte y abrir una Cuenta.</p></li><br>\n\n      <li><p> Nos reservamos el derecho a realizar actualizaciones periódicas del Servicio, con o sin previo aviso.</p></li><br>\n\n      <li><p> El Servicio incluye funciones relacionadas con la seguridad y la manipulación indebida que, en caso de activarse, podrían ocasionar que el contenido previamente disponible para tú uso, \n\n        deje de estarlo a partir de entonces.</p></li><br>\n\n      <li><p> Debes brindar información correcta, actual y completa. Usted tiene la responsabilidad de actualizar y mantener la veracidad y exactitud de dicha información. Usted acepta que tomemos \n\n        medidas para verificar la información que nos brinda, incluyendo información de contacto de un padre o tutor.</p></li><br>    \n\n      <li><p>Al utilizar el Servicio, tú autorizas la recopilación, procesamiento y utilización de toda aquella información relacionada con el uso que haces del Servicio, la cual se recopila y\n\n        maneja de conformidad con los términos de nuestra Política de Privacidad. Por lo tanto, comprendes que podrás encontrar contenidos que te resulten objetables.</p></li><br>\n\n    </ul> \n\n\n\n    Nos reservamos el derecho, a nuestra discreción, de cambiar estos Términos de Servicio en cualquier momento, sin previo aviso. En caso de algún cambio sustancial, haremos todos\n\n    los esfuerzos comercialmente razonables para notificártelo y obtener tu consentimiento antes de implementar dichos cambios.<br><br>\n\n    \n\n    C-VIVO renuncia, en la máxima medida permitida por la ley, a determinadas declaraciones y garantías relacionadas con el servicio, y limita su responsabilidad con respecto a las mismas.<br><br>\n\n    \n\n    C-VIVO es un repositorio de contenido educativo que permite a nuestra comunidad acceder a contenido multimedia (el “contenido de C-VIVO”), transmitidos a través de internet a cualquier \n\n    dispositivo conectado a internet. <br><br>\n\n    \n\n    Los presentes Términos de uso rigen la utilización que hagas de nuestro servicio. Según se utilice en estos Términos de uso, las frases “el servicio de C-VIVO”, “nuestro servicio” o \n\n    “el servicio” se refieren al servicio brindado por C-VIVO para descubrir y ver contenido de C-VIVO, incluidas todas las características y funcionalidades, el sitio web y las interfaces \n\n    de usuario, además de todo el contenido y software asociado a nuestro servicio.<br><br>\n\n\n\n    <h3><b>1. Definiciones</b></h3><br>\n\n\n\n    <b>"Afiliadas":</b> significa C-VIVO y sus casas matrices directas e indirectas, agentes, empleados, licenciadores, distribuidores, socios comerciales, proveedores y afiliadas (y cada uno de \n\n    los respectivos ejecutivos, directores, empleados y agentes de las entidades anteriores).<br><br>\n\n    <b>"Cuenta de C-VIVO":</b> significa una cuenta de usuario registrada en el Servicio.<br><br>\n\n    <b>"Contenido de C-VIVO":</b> significa la música, imágenes, texto y otros materiales que puedes obtener o a los cuales puede acceder en forma digital desde el Servicio, cuyo contenido es \n\n    propiedad de C-VIVO o de terceros licenciadores.<br><br>\n\n    <b>"Política de Privacidad":</b> significa la Política de Privacidad de C-VIVO que podrá ser enmendada, modificada o revisada en forma ocasional por C-VIVO como se indica en los términos \n\n    de la Política de Privacidad.<br><br>\n\n    <b>"Información de Registro":</b> significa la información que tú proporcionas a C-VIVO o al Servicio cuando te registras para una cuenta de C-VIVO y durante el proceso de instalación \n\n    que lleva a cabo para utilizar el Servicio (incluyendo un nombre único de miembro (usuario), una contraseña y tu dirección válida de correo electrónico).<br><br>\n\n    \n\n      \n\n    <h3><b>2. Permiso para utilizar el Servicio: reserva de derechos.</b></h3><br><br>\n\n    \n\n    Al aceptar estos Términos de Servicio, se te concede un derecho limitado, no exclusivo, intransferible y no sub-licenciable, para entrar, acceder y utilizar el Servicio exclusivamente\n\n    para uso personal y no comercial. Todos los derechos que no se te conceden expresamente en estos Términos de Servicio, están reservados por C-VIVO y sus licenciadores, según corresponda.\n\n    Aceptas que este permiso es para tu uso personal, no comercial y que nadie más que tú va a utilizar el Servicio. No tienes derechos para copiar o reproducir en todo o en parte alguna \n\n    porción del Servicio, incluyendo sin que ello implique limitación alguna, el contenido de C-VIVO. Aparte de la licencia limitada no tienes ningún otro derecho, título ni participación\n\n    en el Servicio. Entiendes y reconoces que, en todas las circunstancias, tus derechos con respecto al Servicio estarán limitados por los derechos de autor o las leyes de propiedad \n\n    intelectual pertinentes y los presentes Términos de Servicio.<br><br>\n\n\n\n    Los Servicios de C-VIVO pueden incluir contenidos u otros materiales proporcionados por C-VIVO y terceros (“Contenidos”). En las relaciones entre tú y nosotros, nosotros poseemos \n\n    todos los derechos de los Servicios y sus Contenidos. Nada te cede derechos sobre los Servicios de la C-VIVO ni sus Contenidos, excepto según lo establecido en estos Términos, \n\n    incluyendo todos los Términos Adicionales correspondientes.<br><br>\n\n\n\n    <h3><b>3. Acceso</b></h3><br><br>\n\n    Todo acceso deberá hacerse por medio de un correo con dominio “@cun.edu.co”.<br><br>\n\n    \n\n    <h3><b>4. Servicio de C-VIVO</b></h3><br><br>\n\n    \n\n    <b>4.1.</b> El servicio de C-VIVO y todo el contenido visto en él son sólo para uso personal, no comercial, y no debe compartirse con personas que no sean miembros de tu hogar. \n\n    Te otorgamos un derecho limitado, no exclusivo e intransferible para acceder al servicio de C-VIVO con el propósito de ver contenido de C-VIVO a través de nuestro servicio de streaming.\n\n      Más allá de esto, no se te transferirá ningún otro derecho, título o interés. Tú aceptas que no usarás el servicio para presentaciones públicas.<br><br>\n\n    \n\n    <b>4.2.</b> En C-VIVO actualizamos el servicio continuamente, incluido tú catálogo de contenido. Además, probamos regularmente varios aspectos de nuestro servicio, incluidos nuestro sitio web, \n\n    las interfaces de usuario, las funciones promocionales y la disponibilidad de contenido de C-VIVO. <br><br>\n\n    \n\n    <b>4.4.</b> Aceptas usar el servicio de C-VIVO, incluidas todas las características y funcionalidades asociadas con éste, bajo conformidad con todas las leyes, normas y reglamentaciones\n\n    vigentes, o cualquier otra restricción al uso del servicio o sus contenidos. Aceptas no archivar, reproducir, distribuir, modificar, mostrar, ejecutar, publicar, otorgar licencias, \n\n    crear obras derivadas basadas en el servicio, u ofrecer en venta, o usar (a excepción de que se autorice explícitamente en estos Términos de uso) contenido e información contenida \n\n    en u obtenida del servicio de C-VIVO. También aceptas: no evitar, eliminar, alterar, desactivar, interferir o burlar las protecciones de contenido del servicio de C-VIVO; no \n\n    usar ningún robot, spider, scraper u otra forma automatizada para acceder al servicio de C-VIVO; ni descompilar, realizar ingeniería inversa, desarmar el software u otro producto\n\n    o proceso a los que se acceda a través del servicio de C-VIVO; introducir de alguna manera un código o producto o manipular el contenido del servicio de C-VIVO; o usar método \n\n    alguno de análisis, extracción u obtención de datos. Asimismo, te comprometes a no subir, publicar, enviar por email ni transmitir de cualquier otra forma ningún material diseñado \n\n    para interrumpir, destruir o limitar la funcionalidad del software de computación, hardware o equipos de telecomunicaciones asociados con el servicio de C-VIVO, incluido material \n\n    que contenga virus de software o cualquier otro código, archivos o programas. Podríamos terminar o restringir tu uso de nuestro servicio si violas cualesquiera de los Términos de \n\n    uso o usas el servicio de forma ilegal o fraudulenta.<br><br>\n\n\n\n      \n\n    <b>4.5.</b> La calidad de la imagen del contenido de C-VIVO puede variar de dispositivo a dispositivo y puede verse afectada por diversos factores, tales como la ubicación, el ancho de banda \n\n    disponible o la velocidad de la conexión a internet. La disponibilidad del contenido en alta definición (HD), depende de tu servicio de internet y del dispositivo en uso. La velocidad \n\n    mínima de conexión para la calidad SD es de 1 Mbps. Sin embargo, te recomendamos una conexión más rápida para mejorar la calidad de video. Se recomienda una velocidad de descarga de, \n\n    al menos, 5 Mbps por stream para recibir contenido HD (definido como una resolución de 720p o más alta). Todos los cargos de acceso a internet correrán por tu cuenta. Solicita a tu \n\n    proveedor de internet información acerca de los posibles cargos de consumo de datos por uso de internet. El tiempo que lleva comenzar a ver contenido de C-VIVO variará según diversos \n\n    factores, incluido el lugar donde te encuentras, el ancho de banda disponible en ese momento y la configuración de tu dispositivo listo para C-VIVO.<br><br>\n\n    \n\n    <b>4.6.</b> El software de C-VIVO es desarrollado por C-VIVO o a pedido de C-VIVO, y fue diseñado para permitir ver contenido a través de dispositivos listos para C-VIVO. Este software puede \n\n    variar según el dispositivo y el medio, y la funcionalidad y las funciones también pueden variar de un dispositivo a otro. Reconoces que el uso del servicio puede requerir software de\n\n    terceros que esté sujeto a licencias de terceros. Aceptas que puedes recibir automáticamente versiones actualizadas del software de C-VIVO o de terceros relacionados.<br><br>\n\n\n\n    <b>4.7.</b>Verificación de cumplimiento. En C-VIVO nos reservamos el derecho de investigar posibles violaciones de estos Términos de Uso. En C-VIVO también nos reservamos el derecho a negar \n\n    el acceso a cualquier persona que a nuestro criterio haya violado estos Términos de Uso.<br><br>\n\n      \n\n      \n\n    <h3><b>5. Contraseñas y acceso a la cuenta.</b></h3><br><br>\n\n    \n\n    El usuario que creó la cuenta de C-VIVO tiene acceso y control sobre la cuenta de C-VIVO y sobre los dispositivos listos para C-VIVO que se usan para acceder a nuestro servicio y es \n\n    responsable de cualquier actividad que ocurra en la cuenta de C-VIVO. Para mantener el control sobre la cuenta y evitar que alguien acceda a la cuenta, el Titular de la cuenta debería\n\n    mantener el control sobre los dispositivos listos para C-VIVO que se utilizan para acceder al servicio y no revelar a nadie la contraseña. Es tu responsabilidad actualizar y mantener \n\n    la exactitud de la información personal que nos brindas respecto de tu cuenta. Podemos decidir cancelar tu cuenta o suspenderla para protegerte a ti, o a C-VIVO contra el robo de \n\n    identidad u otra actividad fraudulenta.<br><br>\n\n    \n\n      <h3><b>6. Renuncia a la acción colectiva.</b></h3><br><br>\n\n    \n\n    En la medida en que las leyes aplicables lo permitan, tú y C-VIVO acuerdan que cada uno puede presentar reclamos contra la otra parte sólo en nombre propio, y no como actora o parte \n\n    de un grupo en una acción colectiva o representativa. Además, si la ley aplicable lo permite, a menos que tanto tú como C-VIVO acuerden lo contrario, el tribunal no podrá acumular las \n\n    causas de más de una persona con su causa o, de lo contrario, no podrá entender en ninguna acción representativa o colectiva.<br><br>\n\n\n\n    <h3><b>7. Misceláneas</b></h3><br><br>    \n\n      \n\n    <b>7.1.</b> Ley vigente. Estos Términos de uso se regirán e interpretarán de conformidad con las leyes de Colombia.<br><br>\n\n\n\n    <b>7.2.</b> Material no solicitado. En C-Vivo no aceptamos materiales ni ideas no solicitados para nuestro contenido, y no somos responsables por la similitud entre los contenidos o la \n\n    programación de cualquier medio con los materiales o ideas transmitidos a C-VIVO.<br><br>\n\n    \n\n    <b>7.3.</b> Servicio al cliente. Si necesitas obtener más información sobre nuestro servicio y sus funciones, o si necesitas asistencia con tu cuenta, crea un ticket en la sección “Ayuda”\n\n    y nos contactaremos contigo. En el caso en que haya un conflicto entre estos Términos de uso y la información recogida por el Servicio al cliente u otras secciones de nuestro sitio web,\n\n    estos Términos de uso serán los que regirán.<br><br>\n\n    \n\n    <b>7.4.</b> Continuación de vigencia. Si alguna de las disposiciones de estos Términos de uso es declarada nula, ilegal o inaplicable, la validez, legalidad y aplicación de las restantes \n\n    disposiciones continuarán en plena vigencia.<br><br>\n\n    \n\n    <b>7.5.</b> Cambios a los Términos de uso y sesión. C-VIVO puede cambiar estos Términos de uso cuando sea necesario. Podemos ceder o transferir nuestro acuerdo contigo, incluidos nuestros \n\n    derechos asociados y nuestras obligaciones en cualquier momento y tú aceptas cooperar con nosotros en relación con dicha cesión o transferencia. Especificar en qué casos esto puede \n\n    cambiar<br><br>     \n\n\n\n    <b>7.6.</b> Comunicaciones electrónicas. Te enviaremos la información relativa a tu cuenta (por ejemplo, autenticación de correo electrónico, los cambios de contraseña, los mensajes de \n\n    confirmación, los avisos) de manera electrónica únicamente, por ejemplo, mediante emails a la dirección de email que proporcionaste durante el registro. <br><br>\n\n      \n\n\n\n    <h3><b>8. Limitaciones del contenido</b></h3><br><br>\n\n    \n\n      Durante el tiempo que el Contenido esté disponible en el Sitio, tu podrás ver el Contenido tantas veces como lo desees, pero una vez que el contenido ya no esté disponible en el sitio,\n\n      ya no tendrás la capacidad de acceder a dicho contenido. C-VIVO se reserva el derecho, a su entera discreción, de deshabilitar el acceso a cualquier contenido en cualquier momento. <br><br>\n\n    \n\n    <h3><b>9. Fuerza mayor</b></h3><br><br>\n\n\n\n    C-VIVO no tendrá ninguna responsabilidad por cualquier retraso o incumplimiento de cualquier obligación bajo el presente si el retraso o incumplimiento es ocasionado por fuerza mayor,\n\n    el cual deberá tratarse de cualquier acontecimiento de la naturaleza, tormenta, incendio, accidentes, huelga, interrupción de energía, falla de un satélite, conflicto laboral, guerra, \n\n    emergencia nacional, una acción gubernamental, u otra causa fuera de su control.<br><br>\n\n    \n\n    <h3><b>10. Restricciones</b></h3><br><br>\n\n    \n\n    El uso del Servicio, por tu parte, está sujeto a las siguientes restricciones:<br><br>\n\n    \n\n    <b>10.1. Normas y políticas de C-VIVO</b><br><br>\n\n    \n\n    Al utilizar el Servicio, estarás sujeto a cualquier otra directriz o norma aplicable a los servicios y características específicas que se publiquen en forma ocasional \n\n    (las "Directrices"). Todas las Directrices se incorporan mediante referencia a estos Términos de Servicio. Estas Directrices se aplicarán en forma general de manera no \n\n    discriminatoria a todos los usuarios finales del Servicio y podrían incluir, por ejemplo, actualizaciones, modificaciones y reinstalaciones del software requeridas o automáticas, \n\n    y la obtención de parches disponibles para, entre otras razones, abordar cuestiones de seguridad, interoperabilidad y/o funcionamiento. Estas actualizaciones, modificaciones y \n\n    operaciones similares pueden realizarse en forma periódica o cuando sea necesario, sin previo aviso. Además, tú entiendes que determinados aspectos del Servicio son capaces de \n\n    controlarse a sí mismos y pueden crear un sistema especial de identificación con fines relacionados con la seguridad y la detección de manipulaciones indebidas. Tu acceso a \n\n    determinadas aplicaciones está sujeto a restricciones por motivos de seguridad o según las políticas de protección de Contenido de C-VIVO consistentemente aplicadas. Entiendes y\n\n    aceptas que es probable que el Contenido de C-VIVO que anteriormente estaba disponible para tu uso, no se encuentre disponible a partir de ese momento.<br><br>\n\n      \n\n    <b>10.2 Conducta prohibida</b><br><br>\n\n    \n\n    No utilizarás el Servicio para transmitir, mostrar, ejecutar o de algún modo poner a disposición mensajes, contenidos o materiales (i) que sean ilegales, obscenos, amenazantes, \n\n    masivos no solicitados o "spam", difamatorios, invasores de la privacidad, o (ii) que violen o infrinjan derechos de autor, marcas registradas, patentes, secretos comerciales y otros \n\n    derechos de propiedad intelectual, derechos de privacidad o publicidad, reglamentos o estatutos de comunicaciones, o cualesquiera otras leyes, incluyendo, sin limitación, las leyes \n\n    sobre difamación, acoso, obscenidad y pornografía; (iii) que constituyan campañas políticas o solicitudes de venta o marketing o que contengan virus informáticos u otro código de \n\n    computadora destinado a interferir con la funcionalidad de los sistemas de computadoras, o (iv) que de alguna manera perjudiquen a los menores. Convienes en no interrumpir ni intentar \n\n    interrumpir la operación o el Servicio de ninguna manera. Durante los Cursos (y en general en relación con todo el contenido), se espera que los estudiantes se comporten de una manera\n\n    adecuada y respetuosa, teniendo en cuenta un alto estándar de educación y progresión de carrera para con las otras personas. <br><br>\n\n    \n\n    Cualquier violación a lo aquí dispuesto, estará sujeta a la revisión y las acciones pertinentes que C-VIVO decida adoptar, a su sola consideración e inclusive proceder al derecho de \n\n    Terminar el Servicio. Además, no podrás utilizar una dirección de correo electrónico falsa o de algún modo engañar a otros miembros en cuanto a su identidad o al origen de un mensaje \n\n    o contenido.<br><br>\n\n    \n\n    <b>10.3. Restricción sobre el uso relacionado con el Servicio<br><br></b>\n\n    \n\n    El Servicio incluye componentes de seguridad por lo que se aplican normas y políticas especiales. No deberás intentar (ni apoyar los intentos de otros) eludir, aplicar ingeniería inversa,\n\n    descifrar, descompilar, desmontar o de algún modo modificar, alterar o interferir con ningún aspecto del Servicio. No podrás distribuir, intercambiar, modificar, vender o revender, o \n\n    transmitir a cualquier otra persona cualquier parte del Servicio, incluyendo, sin limitación, cualquier texto, imagen o audio, para cualquier propósito empresarial, comercial o público.\n\n    Convienes no copiar, vender, distribuir o de algún modo transferir Contenido de C-VIVO, salvo del modo expresamente permitido en el presente.<br><br>\n\n    \n\n    <b>10.4. Restricción sobre el uso relacionado con la Cuenta de C-VIVO</b><br><br>\n\n   \n\n    Sólo puedes abrir una cuenta de C-VIVO para ti mismo, y no para ninguna otra persona, con sujeción a las disposiciones de la sección relacionada con los requisitos de edad. Tu aceptas \n\n    que no permitirás que otras personas utilicen la Información de Registro y/o la Cuenta de C-VIVO y aceptas que tú eres el único responsable de mantener la confidencialidad y seguridad \n\n    de los mismos. Convienes notificar inmediatamente a C-VIVO cualquier uso no autorizado de tu contraseña y/o Cuenta de C-VIVO.<br><br>\n\n   \n\n    <b>10.5. Restricción sobre el uso relacionado con el Contenido de C-VIVO</b><br><br>\n\n    \n\n    Salvo del modo expresamente aquí permitido, los derechos que se te conceden en virtud del presente no se te confieren ninguno de los siguientes: (a) derechos de reproducción o uso \n\n    promocional en el Contenido de C-VIVO, (b) derechos de celebrar acuerdos con cualquier sistema de difusión que genere ingresos (terrestre, satelital, cable y/u otros canales de \n\n    distribución), (c) derechos de distribuir o redistribuir el Contenido de C-VIVO en aplicaciones de streaming (vía Internet, intranets y/u otras redes), (d) derechos de distribuir a \n\n    otras personas el Contenido de C-VIVO en otros sistemas de distribución de contenido (aplicaciones de audio de pago o audio bajo demanda, etc.) o en medios físicos (discos compactos,\n\n    discos digitales versátiles, chips semiconductores, discos duros, tarjetas de memoria y similares), o (e) derechos de uso comercial, venta, reventa, reproducción, distribución o \n\n    promocional para el Contenido de C-VIVO. Cualquier solución de gestión de derechos digitales que se proporciona con el Contenido de C-VIVO es una parte inseparable del mismo, y no \n\n    podrá eludirse, salvo en la medida permitida por la ley aplicable. Si tú estás en posesión o control de Contenido de C-VIVO, es tu responsabilidad no perder, destruir ni dañar dicho \n\n    contenido.<br><br>\n\n    \n\n    <h3><b>11. Notificaciones especiales</b></h3><br><br>\n\n    \n\n    Como usuario del Servicio, ten en cuenta lo siguiente:<br><br>\n\n    \n\n    <b>11.1. Privacidad.</b><br><br>\n\n    \n\n    Al registrarte en el Servicio, otorgas tu consentimiento para la recopilación y procesamiento de toda la información relacionada con el uso que haces del Servicio, incluyendo la \n\n    Información de Registro. C-VIVO recopila y maneja esta información de conformidad con los términos de la Política de Privacidad, que queda expresamente incorporada en estos Términos \n\n    de Servicio mediante referencia. Al aceptar estos Términos de Servicio, también aceptas la Política de Privacidad la cual está disponible en la pestaña “Perfil” de la App C-VIVO<br><br>\n\n   \n\n    <b>11.2. Exactitud de la información.</b><br><br>\n\n    \n\n    Declaras y garantizas que toda la información que proporcionas a C-VIVO es correcta, completa y vigente, y te comprometes a actualizar dicha información cuando sea necesario. \n\n    También admites que cualquier información que proporciones a C-VIVO no violará ninguna ley o reglamento, ni infringirá los derechos de terceros.<br><br>\n\n    \n\n    <b>11.3 Certificación de residencia y capacidad para celebrar contratos.</b><br><br>\n\n    \n\n    Al abrir una Cuenta en el servicio de C-VIVO, declaras y garantizas a C-VIVO que resides en el territorio que has indicado en tu perfil y que tienes capacidad para celebrar contratos \n\n    de conformidad con las leyes de tu jurisdicción.<br><br>\n\n    Tú eres responsable de cumplir con las leyes locales, siempre y cuando las leyes locales sean aplicables. Aceptas específicamente cumplir con todas las leyes aplicables \n\n    concernientes a la transmisión de datos técnicos en Colombia. <br> <br>\n\n    \n\n    <b>11.4 Naturaleza del Contenido.</b><br><br>\n\n    \n\n    Tu entiendes que al utilizar el Servicio y tener acceso al Contenido de C-VIVO, podrás encontrar materiales que puedes llegar a considerar explícitos, ofensivos o de alguna manera \n\n    objetables. C-VIVO podrá incluir, si se encontrara disponible, información relacionada con calificaciones, tipo de contenido y descripciones, si los propietarios correspondientes del \n\n    Contenido de C-VIVO proporcionaran dicha información. Sin embargo, C-VIVO no es responsable de la exactitud de ese tipo de información. Tú convienes lo siguiente, sin importar si el \n\n    Servicio incluye o no incluye las funciones de control por parte de los padres y sin importar las veces que utiliza dichas funciones: (a) es tu responsabilidad determinar qué Contenido\n\n    de C-VIVO o qué materiales que integran el Servicio cumplen con sus estándares, y (b) bajo ninguna circunstancia, C-VIVO o sus Afiliadas o proveedores de contenido serán de ninguna \n\n    forma responsables de ningún Contenido de C-VIVO o materiales a los que tú tengas acceso. Tú aceptas usar el Servicio a tu propio riesgo y que C-VIVO y sus Afiliadas no tendrán \n\n    responsabilidad alguna frente a ti respecto a cualquier contenido o materiales que incluya el Servicio.<br><br>\n\n    \n\n    <b>11.5. Riesgo de uso.</b><br><br>\n\n    \n\n    Ni C-VIVO ni sus Afiliadas asumirán responsabilidad alguna y no serán responsables por ningún daño o virus que provoque algún daño a tu computadora u otra propiedad como consecuencia \n\n    del acceso, uso, descarga o navegación por el Servicio.<br><br>\n\n    \n\n    <b>11.6 El derecho de C-VIVO a cambiar estos Términos de Servicio.</b><br><br>\n\n    \n\n    C-VIVO se reserva el derecho, a su discreción, de cambiar, modificar, añadir o eliminar partes de estos Términos de Servicio en cualquier momento, Sin darte previo aviso. Todos los \n\n    cambios entrarán en vigor de inmediato. En caso de algún cambio sustancial, haremos todos los esfuerzos comercialmente razonables para notificártelo y obtener tu consentimiento antes \n\n    de implementar dichos cambios. Te recomendamos que consultes estos Términos de Servicio en forma periódica para ver si se han registrado cambios. El uso continuado del Servicio por \n\n    tu parte después de la publicación de dichos cambios implica la aceptación de los mismos.<br><br>\n\n    \n\n    <b>11.7 El derecho de C-VIVO a efectuar cambios al Servicio</b><br><br>\n\n    \n\n  \n\n    C-VIVO puede agregar, cambiar, terminar, remover o suspender cualquier material incorporado al Servicio. Además, C-VIVO y/o los propietarios del Contenido de C-VIVO pueden, en forma \n\n    ocasional, sacar el Contenido de C-VIVO del Servicio sin previo aviso, y C-VIVO podrá en cualquier momento perder el derecho a poner a disposición determinado Contenido de C-VIVO. \n\n    En tal caso, tú ya no podrás obtener ni ver determinado contenido.<br><br>\n\n\n\n    Cada vez que tú accedes al uso de los servicios de C-VIVO, estableces u nuevo acuerdo sobre los términos correspondientes al momento. Podemos modificar estos términos sobre en \n\n    cualquier momento, a nuestra sola discreción, y publicar los cambios, los cuales serán efectivos a partir de los cinco (5) días de notificarlo nosotros a usted o de publicar los\n\n    cambios en los Servicios de la CUN. Su acceso o uso continuado de los Servicios de la CUN luego de publicar nuestros cambios a estos Términos será considerado una aceptación \n\n    irrevocable de estos Términos y sus modificaciones. Usted acepta ser notificado acerca de los cambios a estos Términos mediante publicaciones de actualizaciones en los Servicios de la\n\n    CUN (o en cualquier otra forma de aviso razonable que elijamos).<br><br>\n\n    \n\n    <h3><b>12. Propiedad intelectual</b></h3><br><br>\n\n    \n\n    Secretos comerciales y materiales de propiedad exclusiva: el Servicio contiene y/o incorpora secretos comerciales, inventos patentados (y/o con patente pendiente) y / u otros materiales\n\n    de propiedad exclusiva y propiedad intelectual de C-VIVO y/o sus licenciadores. Todos los derechos de título y propiedad en el Servicio, incluyendo sin que signifique limitación alguna \n\n    el contenido C-VIVO y cualquier copia relacionada con el Servicio y el contenido de C-VIVO, permanecen bajo la propiedad de C-VIVO y sus licenciadores, según corresponda. Tú convienes \n\n    en mantener en forma confidencial aquella información contenida en el Servicio que no sea de dominio público, y no revelar dicha información a terceros sin la aprobación previa por \n\n    escrito de C-VIVO.<br><br>\n\n    \n\n    Los estudiantes no están autorizados para tratar de reconfigurar, descomponer o utilizar ingeniería inversa sobre la página web de C-VIVO, el Servicio y/o el Contenido de C-VIVO.<br><br>\n\n    \n\n    <h3><b>13. Derechos de autor</b></h3><br><br>\n\n    \n\n    El Contenido de C-VIVO y otras obras de autoría que se encuentran en el Servicio, o forman parte del mismo (colectivamente, el "Contenido"), están protegidos por las leyes aplicables de\n\n    derechos de autor y los tratados internacionales de derechos de autor, así como por otras leyes y tratados de propiedad intelectual. El Contenido se licencia, no se vende. Tú no puedes \n\n    realizar copias no autorizadas o utilizar ninguna parte del Contenido, salvo como se especifica en este documento y de conformidad con la legislación aplicable. <br>\n\n    Todos los títulos y derechos de autor del Contenido y del Servicio (incluyendo, entre otros, imágenes, fotografías, animaciones, vídeo, audio, código, artículos, \n\n    texto y "applets", incorporados al Servicio), son propiedad de C-VIVO o sus licenciadores. Tú aceptas cumplir con todas las leyes aplicables sobre protección de \n\n    derechos de autor en relación con el uso del Servicio y del Contenido por tu parte. Además de lo estipulado en estos Términos de Servicio, C-VIVO podrá adoptar \n\n    medidas adecuadas para proteger los derechos de autor en el Contenido.<br><br>\n\n   \n\n\n\n    <h3><b>14. Marcas comerciales</b></h3><br><br>\n\n    \n\n    No puedes utilizar ninguna de las marcas comerciales que se encuentran dentro del Servicio, salvo lo especificado en el presente y de conformidad con la legislación aplicable. No puedes \n\n    copiar, exhibir o utilizar ninguna de las marcas comerciales sin el permiso previo por escrito del propietario. Cualquier uso no autorizado podría violar las leyes de marcas comerciales,\n\n    las leyes de privacidad y publicidad, así como las leyes civiles o penales. <br><br>\n\n   \n\n    <h3><b>15. Derechos de C-VIVO respecto a los materiales que usted publica</b></h3><br><br>\n\n    \n\n    Al enviar mensajes, opiniones, ingresar datos o participar en cualquier otra forma de comunicación a través del Servicio (si así lo permite la C-VIVO), tú declaras que tienes todos los \n\n    derechos para publicar dichos materiales, que estos no violan los derechos de terceros, y que aceptas que C-VIVO puede copiar, sub-licenciar, adaptar, transmitir, ejecutar públicamente \n\n    o exhibir cualquiera de tales contenidos para proporcionar y/o promover el Servicio y/o responder a cualquier requisito legal, demanda o amenaza. Si el uso de tales contenidos por parte\n\n    de C-VIVO explota cualquier derecho de propiedad que tú puedas tener sobre dicho material, tú aceptas que C-VIVO tiene un derecho irrestricto, libre de regalías, no exclusivo y perpetuo\n\n    de hacerlo en todo el mundo. Aceptas que toda pérdida o daño de cualquier tipo que se produzca como consecuencia de la utilización de cualquier mensaje, contenido o material que tú \n\n    cargues, publiques, transmites, exhibas o pongas de algún modo a disposición a través del uso que tú haga del Servicio, es exclusivamente responsabilidad tuya.<br><br>\n\n    \n\n    <h3><b>16. Acción por infracción de los derechos de propiedad intelectual</b></h3><br><br>\n\n    \n\n    Si C-VIVO recibe una notificación alegando que tú estás involucrado en una conducta que viola cualquiera de los derechos de propiedad intelectual de C-VIVO o de tus Afiliadas, o de un\n\n    tercero, o razonablemente sospecha esto, C-VIVO podrá suspender o dar por terminado tu acceso al Servicio, sin previo aviso. Si C-VIVO actúa conforme a esta Sección, la misma no \n\n    tendrá responsabilidad alguna frente a ti, incluso por cualquier cantidad que hayas pagado previamente o cualquier crédito que tengas en el Servicio.<br><br>\n\n    \n\n    <h3><b>17. Términos estándar</b></h3><br><br>\n\n    \n\n    <b>17.1. Recursos</b><br><br>\n\n    \n\n    Tú acuerdas que cualquier uso no autorizado del Servicio y de cualquier tecnología contenida en el mismo podría ocasionar un perjuicio irreparable a C-VIVO para quien una compensación \n\n    por daños y perjuicios monetarios no sería insuficiente. Por lo tanto, en tal caso, C-VIVO tendrá derecho, además de otros recursos disponibles de acuerdo al derecho y en equidad, \n\n    a un desagravio por mandato judicial inmediato en contra tuya y para evitar cualquier uso no autorizado. Nada de lo contenido en esta Sección o en otra parte de estos Términos de \n\n    Servicio se interpretará como que limita los recursos disponibles de conformidad con las reclamaciones legales o de otro tipo que C-VIVO pueda tener bajo una autoridad jurídica\n\n    independiente. Entiendes y convienes en que la cancelación de tu cuenta de C-VIVO es tu único derecho y recurso con respecto a cualquier controversia con C-VIVO.<br><br>\n\n    \n\n     <b>17.2. Indemnización</b><br><br>\n\n    \n\n    Tú convienes defender, indemnizar y eximir de toda responsabilidad a C-VIVO respecto a todas y cualesquiera reclamaciones, pérdidas, daños y perjuicios, responsabilidades, \n\n    deficiencias, sentencias, gravámenes, multas, costas y otros gastos (incluidos los honorarios razonables de abogados) que surjan de, o en relación con, el uso que tú haces del \n\n    Servicio, o cualquier incumplimiento por tu parte de estos Términos de Servicio, y convienes en rembolsar a la C-VIVO, a solicitud, cualquier pérdida, costo o gasto en los que \n\n    incurran a causa de ello.<br><br>\n\n   \n\n    <b>17.3. Plazo; terminación</b><br><br>\n\n   \n\n    El plazo de estos Términos de Servicio se mantendrá en efecto hasta que se dé por terminado, según se describe en el presente. Estos Términos de Servicio y los derechos que tienes a \n\n    acceder, descargar y utilizar el Servicio están sujetos a la terminación inmediata, sin previo aviso, (a) si tú incumples (o C-VIVO sospecha razonablemente que tú has incumplido) \n\n    cualquier disposición de estos Términos de Servicio, o (b) tras la interrupción por parte de la C-VIVO de la difusión o apoyo del Servicio. Si dicha terminación sin previo aviso está \n\n    expresamente prohibida por la legislación aplicable, entonces dicha terminación se producirá tras la notificación de cualquiera de dichos incumplimientos. Tras la terminación, debes \n\n    dejar de utilizar el Servicio, por completo. Si C-VIVO da por terminados estos Términos de Servicio, o suspende tu Cuenta de C-VIVO por cualquiera de las razones expuestas en estos \n\n    Términos de Servicio, C-VIVO no tendrá ninguna obligación ni responsabilidad hacia ti y no te devolverá ningún importe que hayas pagado con anterioridad.<br><br>\n\n    \n\n    <h3><b>18. Notas legales; limitación de responsabilidad</b></h3><br><br>\n\n    \n\n    Entiendes y convienes que el uso del servicio es a tu exclusivo riesgo. Salvo lo expresamente establecido en el presente, el servicio se proporciona "en el estado en que se encuentra" \n\n    y sin garantía de ningún tipo por parte de C-VIVO ni de sus afiliadas, según corresponda, y en la máxima medida permitida por la ley aplicable, C-VIVO expresamente renuncia a todas las \n\n    garantías, ya sea expresas o implícitas, incluidas, entre otras, las garantías implícitas de comercialización, idoneidad para un fin determinado, no infracción y título. Salvo lo \n\n    expresamente establecido en el presente, C-VIVO no garantiza ni hace ninguna declaración sobre el uso o los resultados del uso del servicio con respecto al rendimiento, precisión, \n\n    fiabilidad, seguridad, capacidad, actualidad u otros aspectos. Tú no responsabilizarás a C-VIVO ni a sus afiliadas de ningún daño derivado de su acceso (incluyendo cualquier software o \n\n    sistemas que utilice para acceder) al servicio, incluyendo, sin limitación, daños a cualquier computadora, software o sistemas, o dispositivos portátiles registrados que tú utilices \n\n    para acceder al mismo. No te garantizamos que el funcionamiento del servicio sea ininterrumpido ni que esté exento de errores. Ninguna información o asesoramiento oral o escrito\n\n    proporcionado por cualquier persona, constituirá ningún tipo de garantía en relación con C-VIVO o sus Afiliadas.<br><br>\n\n    \n\n    C-VIVO no garantiza que el servicio sea compatible con cualquier computadora personal, reproductor de cd o dvd, grabador de cd o dvd, o dispositivos portátiles registrados. \n\n    Tú eres el único responsable de asegurarte de que tus sistemas funcionen correctamente con el servicio.<br><br>\n\n    \n\n    El servicio puede contener puntos de vista, consejos, declaraciones y opiniones, que representan las opiniones, consejos, opiniones y declaraciones de los autores individuales y no\n\n    necesariamente los de cualquier compañía afiliada. C-VIVO no declara ni avala la exactitud o la confiabilidad de cualquier punto de vista, consejo, opinión, declaración u otra \n\n    información proporcionada por dichos autores. Dichos puntos de vista, opiniones, consejos, declaraciones u otra información son únicamente los de los autores y no pueden ser \n\n    atribuidos a C-VIVO o sus Afiliadas. La confianza que deposites en tales puntos de vista, opiniones, consejos, declaraciones u otra información queda también bajo su propio riesgo.\n\n    C-VIVO no será responsable ante nadie de ninguna inexactitud, error, omisión, interrupción, oportunidad, infracción de cualquier derecho de propiedad intelectual, integridad, \n\n    eliminación, defecto, falla de funcionamiento, falla en las líneas de comunicación, alteración o uso de las obras del autor, independientemente de la causa, o por cualquier daño \n\n    que de allí resulte. C-VIVO no asume responsabilidad alguna, y no será responsable de ningún daño o virus que dañe tu computadora u otra propiedad, debido al acceso por parte tuya \n\n    o al uso de los materiales del autor.<br><br>\n\n    \n\n    En ningún caso, C-VIVO será responsable por daños y perjuicios directos, emergentes, ejemplares, cuantificables, indirectos, accesorios o punitivos, lucro cesante, sin importar su causa,\n\n    que surjan de o en relación con el servicio, estos términos de servicio o el objeto de cualquiera de lo que antecede, bajo ninguna teoría de responsabilidad, incluyendo, entre otros:\n\n    (1) daños y perjuicios derivados de la pérdida de datos, lucro cesante, pérdida del uso del servicio y cualquier descarga o cualquier equipo relacionado, tiempo de inactividad y \n\n    tiempo del usuario, aunque C-VIVO y sus afiliadas hayan sido notificadas sobre la posibilidad de tales daños y perjuicios (2) daños y perjuicios derivados del uso que tu hagas del\n\n    servicio y que infrinjas estos términos de servicio, en particular las limitaciones con respecto al uso. Bajo ninguna circunstancia C-VIVO o sus afiliadas serán responsables por \n\n    el uso no autorizado de cualquier contenido o cualquier uso del servicio para desarrollar, distribuir o utilizar cualquier material que sea difamatorio, calumnioso, injurioso u \n\n    obsceno, que dé una falsa impresión de cualquier persona, que constituya una invasión de cualquier derecho a la privacidad o una infracción de cualquier derecho a la publicidad, \n\n    que viole o infrinja los derechos de cualquier tercero o que infrinja cualquier ley o regulación extranjera, estatal o local.<br><br>\n\n    \n\n    Algunas jurisdicciones no permiten la exclusión o limitación de garantías implícitas o de responsabilidad por daños y perjuicios accesorios o emergentes, de modo que es posible que \n\n    dichas exclusiones o limitaciones no sean aplicables a tu caso. En la medida en que, en una circunstancia determinada, cualquier nota legal o limitación sobre daños y perjuicios o \n\n    responsabilidad aquí establecida esté prohibida por la ley aplicable, entonces, en lugar de las disposiciones del presente en dicha circunstancia determinada, C-VIVO tendrá derecho \n\n    a las máximas renuncias y/o limitaciones sobre daños y perjuicios y las responsabilidades disponibles en derecho y en equidad por dicha ley aplicable en tal circunstancia en particular.\n\n    <br><br>\n\n  \n\n    <h3><b>19. Convenio total y divisibilidad</b></h3><br><br>\n\n    \n\n    Estos Términos de Servicio, la Política de Privacidad, (incluyendo cualquier modificación o revisión realizada por la C-VIVO a cualquiera de estos documentos) constituyen juntos el \n\n    acuerdo total entre tú y C-VIVO, con respecto a su objeto, y remplaza a todos los convenios y entendimientos previos y/o contemporáneos, ya sea escritos u orales, entre tú y C-VIVO\n\n    con respecto al objeto del presente documento. Salvo lo expresamente establecido en el presente, estos Términos de Servicio no podrán de ninguna manera ser enmendados, modificados o \n\n    complementados por las partes, excepto mediante instrumento por escrito firmado por un directivo autorizado de C-VIVO. Si un tribunal de jurisdicción competente determinara que una \n\n    parte de estos Términos de Servicio es inválida o inexigible, el resto de estos Términos de Servicio se interpretará de modo que refleje razonablemente la intención de las partes. \n\n    Los encabezamientos son únicamente a fines de referencia y de ningún modo definen, limitan, interpretan o describen el alcance o el contenido de dicha sección. Ninguna disposición\n\n    del presente se considerará renunciada (por cualquier acto u omisión) a menos que tal renuncia se realice por escrito y esté firmada por un directivo autorizado de C-VIVO. Estos\n\n    Términos de Servicio serán vinculantes y redundarán en beneficio de los sucesores y cesionarios de cada parte, a condición de que usted no pueda ceder o transferir estos Términos \n\n    de Servicio, en su totalidad o en parte, sin el consentimiento previo por escrito de un directivo autorizado de C-VIVO.<br><br>\n\n     \n\n    <h3><b>20. Aceptación de Términos de uso</b></h3><br><br>\n\n    \n\n    Antes de utilizar el Sitio, lee cuidadosamente estos Términos de Uso y nuestro Aviso de Privacidad. Al utilizar, visitar o navegar por el Sitio, tú expresamente aceptas y estás de \n\n    acuerdo con estos Términos de Uso y con nuestro Aviso de Privacidad. Si tú no estás de acuerdo con estos Términos de Uso o con nuestro Aviso de Privacidad, no utilices el Sitio.<br><br>\n\n    \n\n    Para ser considerado como un usuario del Sitio es necesario que crees una cuenta (“Cuenta Registrada”). La creación de una Cuenta Registrada requiere que tú: cumplas con todos los requisitos técnicos y legales exigidos por C-VIVO.<br><br>\n\n    \n\n    <h1>Declaración de privacidad</h1><br><br>\n\n    \n\n    Esta Declaración de privacidad explica nuestras prácticas, incluidas tus preferencias y opciones, en relación con la recogida, utilización y comunicación de determinada información,\n\n    incluida tu información personal, por parte de C-VIVO.<br><br>\n\n    \n\n    Es importante para nosotros resguardar y proteger tu información, así como tu privacidad. Este aviso de privacidad (“Aviso de Privacidad”) ha sido establecido con el fin de explicarte \n\n    nuestras prácticas de información en línea y las opciones que tú tienes sobre la manera en que tu información se recopila y se utiliza en relación con el servicio C-VIVO (el "Sitio").\n\n    Este Aviso de Privacidad también aplica a todos los otros sitios Internet o aplicaciones que compartan un enlace a este Aviso de Privacidad (individual y colectivamente el “Sitio”). \n\n    El Sitio es proporcionado por C-VIVO, Referencia a “tú” en este Aviso de Privacidad también incluye a cualquier usuario del Sitio.<br><br>\n\n    \n\n    Debes revisar los Términos de Uso del Sitio en conjunto con este Aviso de Privacidad.<br><br>\n\n    \n\n    Tu uso del Sitio y tu confirmación indicando que tú has leído y aceptado este Aviso de Privacidad como parte del proceso de registro indicará tu aceptación de este Aviso de Privacidad, \n\n    así como tu consentimiento para la recopilación, almacenamiento, uso, administración, supresión, transferencia, procesamiento y transmisión (en conjunto, el “Tratamiento”) de tu \n\n    información. Por lo tanto, no utilices el Sitio si no estás de acuerdo con el Tratamiento de su información. <br><br>\n\n    \n\n    En C-VIVO nos reservamos el derecho, a entera discreción, de ocasionalmente modificar o actualizar este Aviso de Privacidad. Tu uso continuado del Sitio después de que C-VIVO haya \n\n    modificado o actualizado este Aviso de Privacidad, significará que tú has aceptado el mismo sin ningún tipo de reservas.<br>\n\n    En caso de que haya un cambio material en el Tratamiento de su información personal que aumente nuestro derecho a utilizar Datos Personales (definidos más adelante) que hayamos \n\n    recolectado previamente sobre ti, C-VIVO te notificara ya sea por medio de un correo electrónico dirigido a tu correo electrónico registrado o mediante una publicación destacada en \n\n    el Sitio de conformidad con las leyes aplicables.<br><br>\n\n    \n\n    C-VIVO podrá dar Tratamiento a tu información (incluyendo tus Datos Personales) como se describe más adelante.<br><br>\n\n    \n\n    <h3><b>1. Aspectos claves de la política de privacidad de C-VIVO</b></h3><br><br>\n\n    \n\n    La participación en los cursos de C-VIVO contiene información transparente para el usuario, disponible desde el perfil del usuario, incluyendo: Cursos aprobados y aportes creados \n\n    (discusiones, comentarios). Podrás modificar tu perfil en cualquier momento para ocultar parte de esta información.<br><br>\n\n    \n\n    Al iniciar sesión en C-VIVO nosotros recolectamos información como la dirección IP del dispositivo y el navegador utilizado para acceder a C-VIVO. Utilizamos esta información para \n\n    actualizar el perfil con el país correcto, ofrecer información relevante para tu región o dispositivo.<br><br>\n\n    \n\n    <b>1.1	Contacto</b><br><br>\n\n   \n\n    Si tienes preguntas no dudes en generar un ticket en la sección “Ayuda”, estaremos pendientes de ti. Si tienes dudas concretas acerca de esta Declaración de privacidad, o sobre la \n\n    utilización de tu información personal, cookies o tecnologías similares, puedes contactar a nuestro delegado de Protección de Datos creando un ticket. <br><br>\n\n    \n\n    C-VIVO es el responsable del tratamiento de tu información personal. Ten en cuenta que, si te pones en contacto con nosotros para que te ayudemos, por tu seguridad y por la nuestra, \n\n    puede que tengamos que comprobar tu identidad antes de atender tu solicitud.<br><br>\n\n    \n\n    <h3><b>2. Recogida de información</b></h3><br><br>\n\n    \n\n    Recibimos y almacenamos información relativa a tu persona como, por ejemplo:<br><br>\n\n    \n\n    <b>2.1.	Información que tú nos facilitas:</b><br><br>\n\n    \n\n    Obtenemos la información que tú nos facilitas, incluyendo: tu nombre y dirección de correo electrónico. Obtenemos dicha información de varias maneras, entre ellas cuando la incorporas \n\n    al utilizar nuestro servicio, al contactar con nuestro Servicio de atención al cliente, o al participar en encuestas o promociones de marketing;, la configuración de tu cuenta, o cuando \n\n    nos facilitas información a través de nuestro servicio o de algún otro modo.<br><br>\n\n    \n\n    Podrás proveer información personal a terceros o páginas de marcas afiliadas a través de las cuales proveemos acceso a nuestros servicios ("Redes Afiliadas"). Cuando te registras con \n\n    nosotros, la Red Afiliada de la cual tú ingresaste podría proveernos con tu nombre de usuario y contraseña de dicha Red. Algunas de esas Redes Afiliadas u otras redes podrían compartir \n\n    cualquier otra información que tú compartas, con nosotros. Al usar nuestros servicios, tú estarás de acuerdo en permitirnos a recibir y usar cualquier información, excepto información\n\n    de tarjetas de crédito que tú le proveas a las redes afiliadas, bajo los mismos términos como si nos las hubieras proveído a nosotros directamente. Pase o no que una Red Afiliada \n\n    comparta su información y hasta qué punto la compartan con nosotros dependerá de tu acuerdo con nosotros y tu Política de Privacidad individual o particular.<br><br>\n\n      \n\n    <b> 2.2.	información que obtenemos automáticamente:</b><br><br>\n\n      \n\n    Obtenemos información sobre ti y sobre tu uso de nuestro servicio, de tus interacciones con nosotros y nuestra publicidad, así como información relacionada con tu ordenador u otro \n\n    dispositivo utilizado para acceder a nuestro servicio. Esta información incluye:<br><br>\n\n    \n\n    <ul type="circle">\n\n      <li><P> Tu actividad en el servicio C-VIVO, como selección de títulos, historial de visionados y consultas de búsqueda;</P></li><br>\n\n      <li><P>Detalles relacionados con tus interacciones con el Servicio de atención al cliente, como la fecha, la hora y el motivo de contactar con nosotros, transcripciones de cualquier \n\n      conversación por chat y, si nos llamas, tu número de teléfono y grabaciones de las llamadas;</P></li><br>\n\n      <li><P>ID de dispositivos u otros identificadores inequívocos;</P></li><br>\n\n      <li><P>Identificadores de publicidad, como los de los dispositivos móviles, tabletas y dispositivos de streaming que incluyan dichos identificadores;</P></li><br>\n\n      <li><P>Características de aparatos y programas informáticos (como el tipo y la configuración), información de conexión, estadísticas de vistas de páginas, orígenes de remisiones \n\n      (las URL de referencia, por ejemplo), dirección IP (que puede indicarnos tu ubicación aproximada), navegador e información estándar del registro del servidor web;</P></li><br>\n\n    </ul>  \n\n    <br>\n\n\n\n    <b>2.3	Información proveniente de otras fuentes:</b> <br> <br>\n\n    \n\n    También obtenemos datos a través de otras fuentes. Protegemos esos datos conforme a las prácticas descritas en esta Declaración de privacidad, además de cualquier otra restricción \n\n    impuesta por la fuente de la que proceden los datos. Estas fuentes varían con el transcurso del tiempo, pero podrían incluir las siguientes:<br> <br>\n\n  \n\n    <ul type="circle">  \n\n      <li><P>Proveedores de servicios que nos ayuden a determinar una ubicación basándose en tu dirección IP con el fin de personalizar nuestro servicio y para otros usos conforme a esta \n\n        Declaración de privacidad;</P></li><br>\n\n      <li><P>Socios que permiten que nuestro servicio esté disponible en tu dispositivo o con los que ofrecemos servicios de marca compartida o actividades de marketing conjuntas;</P></li><br>\n\n      <li><P>Proveedores de servicios de pago que nos proporcionen datos sobre la forma de pago basados en su relación contigo;</P></li><br>\n\n      <li><P>Proveedores de servicios por Internet y sin conexión, de los que obtenemos datos demográficos, basados en intereses y relacionados con la publicidad online;</P></li><br>\n\n      <li><P>Fuentes de dominio público tales como las bases de datos gubernamentales.</P></li><br>\n\n    </ul> \n\n    <br>\n\n\n\n    <b>2.4. Utilización de la información</b><br><br>\n\n   \n\n    Utilizamos la información para analizar, administrar, mejorar, personalizar y prestar nuestros servicios y acciones de marketing, entre otros para procesar tu registro, tus pedidos\n\n    y tus pagos, así como para comunicarnos contigo en relación con este y otros temas. Por ejemplo:<br><br>\n\n   \n\n\n\n    <ul type="circle">\n\n      <li><P>Determinar tu ubicación geográfica general, facilitar contenidos localizados, mostrarte recomendaciones personalizadas que creamos que pueden interesarte, determinar tu proveedor de \n\n        servicios de Internet y ayudarnos a responder consultas rápida y eficazmente;</P></li><br><br>\n\n      <li><P>Prevenir, detectar e investigar actividades potencialmente prohibidas o ilegales, incluido el delito de estafa, y hacer cumplir nuestros términos (tales como establecer los\n\n        requisitos para pruebas gratuitas);</P></li><br>\n\n      <li><P>Analizar y entender nuestra audiencia, mejorar nuestro servicio (incluidas nuestras experiencias de interfaces de usuario) y optimizar la selección de contenido, los algoritmos de \n\n        recomendaciones y la entrega de nuestros servicios;</P></li><br>\n\n      <li><P>Comunicarnos contigo acerca de nuestro servicio (por ejemplo, mediante correo electrónico, notificaciones automáticas, SMS y canales de mensajería en línea), para enviarte \n\n        noticias sobre C-VIVO, detalles de nuestras nuevas prestaciones y contenidos disponibles en C-VIVO, anuncios promocionales y encuestas de satisfacción, y para ayudarte en solicitudes\n\n        operacionales tales como peticiones de cambio de contraseña.</P></li> <br>\n\n    </ul>  \n\n    <br>\n\n    <b> 2.4.a. ¿Cómo utilizamos tu información personal?</b><br><br>\n\n    <b>Ofrecer un mejor producto y servicio</b><br><br>\n\n     \n\n    En general, C-VIVO puede usar tu información para proporcionar y mejorar El Servicio. C-VIVO podrá compartir esta información con los proveedores del servicio sobre contenido, \n\n    afiliados y otras entidades de forma no-personal para estudios demográficos e información preferencial para los usuarios del servicio o para otros propósitos. Esta información podrá \n\n    incluir el uso y la data demográfica, pero no incluirá información personal (tal como su dirección de correo electrónico). Si usted provee a C-VIVO con información personal, tomaremos\n\n    razonados y apropiados pasos para proteger esta información. Excepto conforme está descrito en esta Política de Privacidad, C-VIVO no revelará, compartirá, venderá ni rentará \n\n    información personal recolectada en nuestra Website a terceros para su uso promocional sin tu consentimiento a menos que sea para un programa específico al que podrás pedirnos \n\n    no participar. Si tú solicitas recibir información de nuestros estudiantes al seleccionar esta opción en el futuro, podremos compartir tu información de registro e información acerca \n\n    de tus transacciones en nuestro servicio con los estudios y/o nuestros estudiantes. Si tú accedes a nuestros servicios a través de una versión afiliada de nuestra Website que contenga \n\n    un aviso que esa información será compartida con dicho afiliado la cual aparecerá bajo el nombre de la Website afiliada, cualquier información personal o no-personal será compartida \n\n    con dicha Website afiliada. Cualquier uso de esa información de parte de C-VIVO será sujeto a esta Política de Privacidad, y cualquier uso de dicha información por un afiliado estará \n\n    sujeto a esta Política de Privacidad y la Política de Privacidad del afiliado. Nosotros no compartimos la información de tus cuentas de tarjetas de crédito con redes afiliadas ni \n\n    ningún otro tercero, excepto al servicio de procesamiento de tarjetas de crédito descritos abajo.<br><br>\n\n       \n\n    <b>2.5. Acceso a la cuenta y a los perfiles</b><br><br>\n\n  \n\n    Para tu comodidad, puedes acceder rápidamente con la función "Recordarme en este dispositivo" cuando inicies sesión en el sitio web. La tecnología utilizada por esta función nos permite\n\n    ofrecerte acceso directo a la cuenta y ayudarte a administrar el servicio de C-VIVO, pues no tendrás que poner la contraseña ni otros identificadores de usuario cuando tu navegador \n\n    vuelva a visitar el servicio.<br><br>\n\n    \n\n    Si vendes o devuelves un ordenador o un dispositivo compatible con C-VIVO, antes deberás cerrar la sesión y desactivar el dispositivo. Si no mantienes la seguridad de tu contraseña o \n\n    dispositivo, no lo desactivas o no cierras la sesión, los siguientes usuarios podrían acceder a tu cuenta, que incluye tu información personal.<br><br>\n\n   \n\n    <h3><b>3. Opciones</b></h3><br><br>\n\n    \n\n    \n\n    <b>3.a. Notificaciones</b><br><br>\n\n    \n\n    <b>3.1.</b> Puedes optar por recibir notificaciones automáticas de C-VIVO en el móvil. Si luego decides que prefieres no recibir esas notificaciones, desactívalas en los ajustes de tu \n\n    dispositivo móvil.<br><br>\n\n    \n\n    <h3><b>4.	Tu información y tus derechos</b></h3><br><br>\n\n  \n\n    Puedes solicitar acceso a tu información personal, y corregir o actualizar aquellos datos relativos a tu persona que se hayan quedado desactualizados.<br><br>\n\n    \n\n    Para hacerlo, visita el apartado "Perfil" de nuestro sitio web. Desde allí, puedes acceder a información sobre tu cuenta y actualizarla.<br><br>\n\n    \n\n    Si tienes alguna consulta o solicitud acerca de nuestras prácticas de privacidad, crea un ticket en la sección “Ayuda”. Contestamos a todas las solicitudes de individuos que deseen \n\n    ejercer sus derechos de protección de datos según la legislación de protección de datos aplicable. <br><br>\n\n    \n\n    Podemos rechazar peticiones que no sean razonables o que la ley no exija, incluyendo aquellas que resulten extremadamente poco prácticas, requieran un esfuerzo técnico desproporcionado \n\n    o pudieran exponernos a riesgos operativos como fraudes con las pruebas gratuitas. Podemos retener información requerida o permitida por las leyes y normativas vigentes, incluso para \n\n    respetar tus elecciones, para facturación o registros y para cumplir los propósitos descritos en esta Declaración de privacidad. Cuando no sea necesario retener tus datos personales, \n\n    tomaremos las medidas correspondientes para suprimirlos o hacerlos anónimos.<br><br>\n\n   \n\n    <h3><b>5. Publicidad en línea</b></h3><br><br>\n\n    \n\n    Utilizamos servicios de publicidad de terceros, como servicios de publicidad de  Facebook, así como otras redes y servidores de publicidad, para ofrecer publicidad sobre nuestros \n\n    Servicios en otros sitios web y aplicaciones que el usuario utiliza. Los anuncios se pueden basar en nuestros conocimientos sobre el usuario, como sus Datos de uso y sus Datos del\n\n    sistema y en los conocimientos que estos proveedores de servicios de publicidad tienen sobre el usuario según sus datos de seguimiento. Los anuncios se pueden basar en su actividad \n\n    reciente o en la actividad con el paso del tiempo, y en otros sitios y servicios, y se pueden adaptar a sus intereses.<br><br>\n\n    \n\n    En función de los tipos de servicios de publicidad que utilizamos, pueden colocar cookies u otras tecnologías de seguimiento en el equipo, teléfono u otro dispositivo para recopilar \n\n    datos sobre el uso que hace de nuestros Servicios, y pueden acceder a dichas tecnologías de seguimiento para proporcionar estos anuncios personalizados al usuario. Para ayudar a \n\n    ofrecer publicidad personalizada, podemos proporcionar a estos proveedores de servicios una versión oculta y anónima de la dirección de correo electrónico del usuario (en un formato \n\n    ilegible para el ser humano) y del contenido que comparte públicamente en los Servicios.<br><br>\n\n    \n\n    Al utilizar aplicaciones móviles, el usuario también puede recibir anuncios personalizados en las aplicaciones. Android OS y Microsoft Windows proporcionan sus propias instrucciones \n\n    sobre cómo controlar la publicidad personalizada en las aplicaciones. Para otros dispositivos y sistemas operativos, el usuario deberá revisar su configuración de privacidad o ponerse\n\n     en contacto con el operador de la plataforma.<br><br>\n\n    \n\n    <h3><b>6.	Seguridad</b></h3><br><br>\n\n    Empleamos medidas administrativas, lógicas, físicas y de gestión razonables para salvaguardar tu información personal contra pérdidas, sustracción o acceso, utilización o modificación \n\n    no autorizados. Estás medidas están diseñadas para proporcionar el nivel de seguridad adecuado a los riesgos asociados al tratamiento de tus datos personales.<br><br>\n\n    En cualquier momento podemos solicitar una prueba de que estás cumpliendo con las reglas estipuladas. Nos reservamos el derecho a tomar o a abstenernos de tomar, cualquier y todo \n\n    paso disponible en cuanto tomemos conocimiento de cualquier incumplimiento de estas disposiciones. Si tú estás involucrado en cualquier incumplimiento de la seguridad de nuestros \n\n    sistemas, nos reservamos el derecho a divulgar tus detalles a los administradores del sistema en otros sitios, a fines de ayudarles a resolver los incidentes de seguridad.<br><br>\n\n    \n\n    <h3><b>7.	Trabajos realizados por estudiantes</b></h3><br><br>\n\n    Los miembros de C-VIVO que voluntariamente decidan subir contenido a la plataforma, brindan a C-VIVO, la posibilidad de hacer uso de los mismos en términos de reproducción, canales \n\n    de reproducción y contenido. Se trata de los estudiantes que subirán trabajos a la plataforma y que serán libremente compartidos por otros miembros de C-VIVO<br><br>\n\n    \n\n    <h3><b>8. 	Cookies</b></h3><br><br>\n\n    Cuando usted visita nuestra Website o pulsa cualquier hipervínculo que aparece en ella, o usa uno o más de nuestros servicios, podremos usar una tecnología industrial llamada "cookies"\n\n    la cual almacena cierta información en su computadora y que nos permitirá personalizar su experiencia para alinearla con sus intereses y preferencias o simplemente facilitar su acceso \n\n    al usar nuestros servicios. La mayoría de los Navegadores permitirán que usted elimine o bloquee las "cookies" de su computador o su disco duro o alertará las mismas cuando estas se activen. \n\n    Por favor refiérase a las instrucciones de su Navegador para ayuda o para conocer mejor sus funciones. Por favor note, sin embargo, que, si usted bloquea de su Navegador el uso de estas cookies, \n\n    el servicio no podrá ser utilizado o no podrá acceder a nuestra Website o quizás pueda afectar el funcionamiento de la página como tal.\n\n    En este sentido, compartiremos tu información con Google Analytics. De modo que, al aceptar estos términos y condiciones aceptas que conoces y aceptas esta condición. <br><br>\n\n\n\n    \n\n    <h1><b>Poítica de la propiedad intelectual</b></h1><br>\n\n     \n\n    C-VIVO es una plataforma tecnológica que permite a cualquiera crear y compartir cursos educativos en cualquier parte del mundo. Nuestro modelo de tienda virtual supone que no revisamos \n\n    ni editamos los cursos por cuestiones legales ni estamos en posición de determinar la legalidad del contenido de un curso. Sin embargo, para nosotros es importante que los instructores \n\n    que publican cursos en C-VIVO respeten la propiedad intelectual del resto. Cuando los instructores publican cursos en nuestra tienda virtual, dan fe de que poseen la autorización o los \n\n    derechos necesarios para utilizar todo el contenido de sus cursos.<br><br>\n\n\n\n    <b>La actividad infractora no se tolera en nuestra plataforma o a través de ella.</b><br><br>\n\n    Esta política aborda lo que hacemos en el caso de infracciones de derecho de autor de parte de los propietarios de contenido y en el caso de reclamos por infracción de marca de parte \n\n    de los propietarios de marcas con respecto a los cursos que se ofrecen en la plataforma C-VIVO. La política también aborda lo que hacemos cuando los cursos de los instructores de C-VIVO\n\n    y son copiados en plataformas de terceros sin su consentimiento.<br><br>\n\n\n\n    <h3><b>1. Denuncia de infracciones de copyright de terceros</b></h3><br><br>\n\n    La política de C-VIVO es eliminar los cursos de nuestro servicio cuando se denuncia que estos están en infracción en una notificación de violación de derecho de autor recibida del\n\n    propietario del contenido original. También es nuestra política eliminar todos los cursos de cualquier instructor que se determine que es un infractor reincidente \n\n    (para el que C-VIVO ha recibido más de dos avisos de violación de derecho de autor válidos). Nos reservamos el derecho de rescindir la cuenta de un instructor en cualquier momento, \n\n    incluso cuando éste publica contenido que infrinja la propiedad intelectual de terceros.<br><br>\n\n     \n\n    <h3><b>2. Cómo presentar una denuncia</b></h3><br><br>\n\n    \n\n    Si deseas denunciar algún contenido que se encuentra en el mercado de C-VIVO y si eres el propietario, o el agente designado por el titular, de los derechos sobre el contenido que \n\n    consideras que el curso infringe, la forma más eficiente crear un ticket en la sección “Ayuda”<br><br>\n\n   \n\n    Antes de enviar un aviso de infracción de propiedad intelectual, recuerda estos puntos importantes:<br><br>\n\n    \n\n    Tu aviso de violación de derecho de autor tiene que estar suficientemente fundamentada para que podamos abordarla. Esto significa que:<br><br>\n\n\n\n    Debes proporcionarnos información suficiente para que nos podamos comunicar contigo, incluyendo tu nombre legal completo, una dirección de correo electrónico, una dirección física y \n\n    un número de teléfono (opcional).<br><br>\n\n\n\n    Si estás presentando una denuncia en nombre de una organización, debes incluir el nombre de la organización y tu relación con ella.<br><br>\n\n\n\n    Debes identificar con precisión el material original protegido por propiedad intelectual o, si se incluyen múltiples obras protegidas por propiedad intelectual en tu notificación,\n\n    debes proporcionar una lista suficientemente representativa de dicho material original (por ejemplo, una URL donde se encuentra el material);<br><br>\n\n    \n\n    Debes proporcionar información suficiente para que ubiquemos el curso o los cursos presuntamente infractores que se encuentran en el sitio web de C-VIVO (la URL en nuestro sitio web \n\n    y el nombre exacto del curso y del instructor);<br><br>\n\n\n\n    Debes agregar una declaración que diga: "Declaro, bajo pena de perjurio, que la información contenida en esta reclamación es precisa y que soy el propietario de la\n\n    propiedad intelectual o estoy autorizado/a a actuar en nombre del propietario/a de la propiedad intelectual y creo de buena fe que el uso del material de la manera en la que se \n\n    denunció no está autorizado por el propietario/a de la propiedad intelectual, su agente o la ley".<br><br>   \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\terms\terms.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* App */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"],
-            __WEBPACK_IMPORTED_MODULE_5__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_7__ionic_native_streaming_media__["a" /* StreamingMedia */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_8__ionic_native_native_storage__["a" /* NativeStorage */],
-            __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__["AngularFirestore"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_base64__["a" /* Base64 */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["DomSanitizer"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* Events */]])
-    ], ProfilePage);
-    return ProfilePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], TermsPage);
+    return TermsPage;
 }());
 
-//# sourceMappingURL=profile.js.map
+//# sourceMappingURL=terms.js.map
 
 /***/ })
 

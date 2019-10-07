@@ -68,6 +68,8 @@ $searchbar-ios-input-text-color: map_get($colors, netflixWhite);
 $searchbar-ios-input-clear-icon-color: map_get($colors, netflixRed);
 $searchbar-ios-input-search-icon-color: map_get($colors, netflixRed);
 
+$searchbar-md-input-background-color:map_get($colors, netflixLightGrey);
+
 $loading-ios-background: transparent;
 $loading-ios-spinner-color: map_get($colors, netflixRed);
 $loading-ios-box-shadow: 0px;

@@ -1,3 +1,5 @@
+import { EmbedVideo } from 'ngx-embed-video';
+
 import { ChatPageModule } from './../chat/chat.module';
 import { HomePage } from './home';
 import { NgModule } from '@angular/core';
@@ -14,7 +16,7 @@ import { ComponentsModule } from '../../components/components.module';
     IonicImageLoader,
     ChatPageModule,
     ComponentsModule,
-    
+    EmbedVideo
   ],
   exports:[
     HomePage

@@ -28,15 +28,24 @@
     <ion-col col-25></ion-col>
   </ion-row>
   <p class="more-like-this-title">Mas como este</p>
-  <ion-row *ngIf="!loaded">
+  <!-- <ion-row *ngIf="!loaded">
     <ion-col text-center>
       <br>
       <ion-spinner color="netflixRed"></ion-spinner>
     </ion-col>
-  </ion-row>
-  <ion-row *ngIf="loaded" class="movieLg"> 
+  </ion-row> -->
+  <ion-row [hidden]="!loaded" class="movieLg"> 
     <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">       
-        <img  (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%">
+        <img  class="imgCara" (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%">
     </ion-col>    
   </ion-row>
+
+  <ion-grid *ngIf="!loaded">    
+      <ion-row>
+        <ion-col col-4 col-lg-2 *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
+            <skeleton-item  *ngIf="!menu"  height="295px" style="border-radius: 00px"></skeleton-item>
+            <skeleton-item  *ngIf="menu"  height="120px" ></skeleton-item>
+        </ion-col>     
+      </ion-row>  
+    </ion-grid>      
 </ion-content>

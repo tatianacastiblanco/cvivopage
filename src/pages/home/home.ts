@@ -1,13 +1,10 @@
 
-
-import { AuthService } from './../../services/AuthService';
 import { VimeoService } from './../../services/VimeoService';
 import { ChatService } from './../../services/ChatService';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { Component, NgZone,  ElementRef,ViewChildren, QueryList } from '@angular/core';
+import { Component,ViewChildren, QueryList } from '@angular/core';
 import {
           NavController,
-          LoadingController,
           Platform,
           AlertController,
           ToastController,
@@ -22,9 +19,6 @@ import { Helper } from "../../data/Helper";
 import { HomeScreenGroupItem } from "../../data/HomeScreenGroupItem";
 import { HomeScreenGroup } from "../../data/HomeScreenGroup";
 import {  EmbedVideoService } from 'ngx-embed-video';
-import { NativeStorage } from '@ionic-native/native-storage';
-import {DomSanitizer} from '@angular/platform-browser';
-import firebase from "firebase";
 @IonicPage()
 
 @Component({
@@ -41,7 +35,7 @@ export class HomePage {
   homeScreenGroups: HomeScreenGroup[] = [];
   iframe_html: any;
   segementHome = 'list';
-  chatEnable:any;
+  chatEnable:boolean = false;
   booleanchatEnable:boolean = false;
   messages = [];
   nickname = '';
@@ -61,12 +55,13 @@ export class HomePage {
  menuhead = 'home';
  cur_segment: any
  isModalOpen:boolean = false;
- badge:any;
+ badge:any = 0;
+ hideBadge = true;
+ currentPageVar = 'home';
   //slides: any;
 
   constructor(
     private navCtrl: NavController,
-    private loadingCtrl: LoadingController,
     private platform: Platform,
     private alertCtrl: AlertController,
     private db:AngularFirestore,
@@ -96,7 +91,18 @@ export class HomePage {
       }
       
     });
-  
+
+    this.db.collection('Config').valueChanges().subscribe(res=> {      
+      
+      this.event = res[0]['chatEvent'];
+      this.chatEnable = res[0]['Vivo'];
+      this.hideBadge = !this.chatEnable;
+      console.log(res[0]['Vivo'])
+      localStorage.setItem('chatEvent',this.event); 
+
+      
+})
+
   };
   //Fin cosntructor
 
@@ -114,7 +120,18 @@ export class HomePage {
       this.iframe_html = '';
     };
 
-    ionViewWillEnter(){
+    ionViewWillEnter(){    
+      this.event = localStorage.getItem('chatEvent');
+      var docref = this.db.collection('chats').doc(this.event).collection('chatLog',ref => ref.orderBy('created')); 
+      docref.valueChanges().subscribe(res=>{  
+        
+        if(!this.isModalOpen && res.length > 0 && this.chatEnable){
+          this.badge += 1;
+          this.hideBadge = false;
+
+        }     
+        
+      })    
       this.gethomeVideo().then(()=> {})
     }
 
@@ -124,24 +141,20 @@ export class HomePage {
      * @memberof HomePage
      */
     ionViewDidLoad() {  
-      var loading = this.loadingCtrl.create({
-        spinner: "bubbles",
-        content: "Cargando..."
-      });
-      loading.present();
+
+
+      
+      
       this.gethomeVideo().then(()=> {
                 
         this.getHomeGroups().then(()=>{
           setTimeout(() => {
-            loading.dismiss();
             this.loaded = true;
-          }, 3000);          
+          }, 2000);          
         }).catch(err=>{
-          loading.dismiss();
           this.showAlert(err,'Error de conexion')
         });
       },err=> {
-        loading.dismiss();
         this.showAlert(err,'Error de conexion')
       });
       
@@ -198,7 +211,7 @@ export class HomePage {
            video.name = item.name;
            video.picture = item.files[2].link;
            video.description = item.description;
-           video.detailsPicture = item.pictures.sizes[10].link;
+           video.detailsPicture = item.pictures.sizes[6].link;
            video.movieId = item.uri.split('/')[2];
            element.groupItems.push(video)
            element = Helper.shuffle(element)
@@ -219,24 +232,25 @@ export class HomePage {
  */
 presentChatModal() {
 
-    let CcssClass = this.menu == true ?'custom-modal':'';
+    let CcssClass = this.menu == true ?'':'custom-modal';
 
       let options:ModalOptions={
         showBackdrop:false,
         enableBackdropDismiss:true,
-        cssClass: ''
+        cssClass: CcssClass
       }      
       
       let chatModal = this.modalCtrl.create('ChatPage',{},options);
-      chatModal.present().then(() =>{
-          this.badge = 0;
-      },res=>{
-        console.log("close")
-      });
-
-      chatModal.onWillDismiss(res=>{
-        console.log(res)
+      chatModal.onWillDismiss(()=>{
+        this.isModalOpen = false;
       })
+      chatModal.present().then(()=>{
+        this.isModalOpen = true;
+        this.badge = 0;
+        this.hideBadge = true;
+      })
+
+      
     };
     //Fin presentChatModal()
   
@@ -294,6 +308,7 @@ doRefresh(refresher) {
       refresher.complete()
     }, 3000);   
   };
+
    
     
 

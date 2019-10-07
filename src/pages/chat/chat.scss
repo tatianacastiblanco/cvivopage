@@ -1,4 +1,9 @@
 page-chat {
+
+    .skeletonChat{
+       width: 80%;
+       left:15%;
+    }
     .test {
         height: 160px !important;
         scroll-snap-points-y: 100%;
@@ -113,5 +118,27 @@ page-chat {
         left:45%;
     }
 
+    .right-bubble-skeleton {
+        
+        position: relative;
+        border-top-left-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 18%;
+      width: 80%; 
+     }
+
+     .left-bubble-skeleton {
+        
+        position: relative;
+      border-top-right-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 5%;
+      width: 80%; 
+     }
+    
     
 }

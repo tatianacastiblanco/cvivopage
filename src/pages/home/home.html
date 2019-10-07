@@ -1,13 +1,14 @@
 <ion-header no-border>
-  <menu  [hidden]="menu"></menu> 
+  <menu  [hidden]="menu" [currentPage]="currentPageVar"></menu> 
 </ion-header>
 
 <ion-content class="list-avatar-page"  padding #pageContent >  
-
+    
     <ion-fab bottom right >
-        <ion-badge color="netflixBlue">{{badge}}</ion-badge>   
-        <button ion-fab [disabled]="false" (click)="presentChatModal()"><ion-icon name="ios-chatbubbles"></ion-icon>        
+        <ion-badge color="netflixBlue" [hidden]="hideBadge">{{badge}}</ion-badge>   
+        <button ion-fab [disabled]="!chatEnable" (click)="presentChatModal()" *ngIf="loaded"><ion-icon name="ios-chatbubbles"></ion-icon>        
         </button>         
+        <skeleton-item height="50px" width="50px" rounded  *ngIf="!loaded" ></skeleton-item>
     </ion-fab>
 
   <!-- Refresher para actualizar el video en vivo -->
@@ -24,75 +25,147 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 col-lg-6>
-          <div [innerHtml]="iframe_html" class="iframe"></div>
+        <div  *ngIf="!loaded">
+            <skeleton-item  *ngIf="!menu" height="400px" style="margin: 20px"></skeleton-item>
+            <skeleton-item  *ngIf="menu" height="200px"></skeleton-item>
+        </div>
+        
+          <div [innerHtml]="iframe_html" [ngClass]="{'iframe': !menu}"  [hidden]="!loaded"></div>
       </ion-col>
-      <ion-col col-12 col-lg-6>        
+      <ion-col col-12 col-lg-6>
+          <br>  
+          <skeleton-item  height="56px" *ngIf="!loaded"></skeleton-item>      
         <ion-toolbar color="primary"  *ngIf="segementHome == 'list' && loaded">
             <ion-title color="light">Categorias</ion-title>
           </ion-toolbar>
           <br>
 
-          <div  *ngIf="segementHome == 'list' && loaded" >
+          
+          <ion-grid *ngIf="!loaded" >
+            <ion-row>
+                <div class="item-title" > 
+                  <skeleton-item  *ngIf="!menu"  height="22px" width="170px"></skeleton-item>
+                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>
+                </div> 
+            </ion-row>
+            <ion-row>
+              <ion-col >
+                  <skeleton-item  *ngIf="!menu"  height="366px" style="border-radius: 00px"></skeleton-item>
+                  <skeleton-item  *ngIf="menu"  height="180px" ></skeleton-item>
+              </ion-col>
+              <ion-col >
+                  <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>
+                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+              </ion-col>
+              <ion-col >
+                  <skeleton-item   *ngIf="!menu"  height="366px"></skeleton-item>
+                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <div class="item-title"> 
+                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> 
+                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>
+                 </div> 
+            </ion-row>
+            <ion-row>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <div class="item-title"> 
+                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> 
+                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>
+                 </div> 
+            </ion-row>
+            <ion-row>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+                <ion-col >
+                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>
+                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>
+                </ion-col>
+              </ion-row>
+          </ion-grid>                   
+          
+
+          <div   >             
+            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar >   
+            <div >
               
-            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>   
-            <div *ngIf="homeScreenGroups[6]">
               <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      
-              <ion-slides *ngIf="homeScreenGroups[0].groupItems && homeScreenGroups[0].groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             
-                <ion-slide *ngFor="let groupItem of homeScreenGroups[0].groupItems" >
+              <ion-slides *ngIf="homeScreenGroups[0]?.groupItems && homeScreenGroups[0]?.groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             
+                <ion-slide *ngFor="let groupItem of homeScreenGroups[0]?.groupItems" >
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides>
               <button *ngIf="!menu" (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
               <button  *ngIf="!menu" (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
-              <div class="item-title">{{homeScreenGroups[1].name}} </div>   
+              <div class="item-title">{{homeScreenGroups[1]?.name}} </div>   
               <ion-slides slidesPerView="3" spaceBetween=12     >                                             
-                <ion-slide *ngFor="let groupItem of homeScreenGroups[1].groupItems" >
+                <ion-slide *ngFor="let groupItem of homeScreenGroups[1]?.groupItems" >
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
               <button *ngIf="!menu" (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
               <button *ngIf="!menu" (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>
             <hr>
-            <div class="item-title">{{homeScreenGroups[2].name}} </div>   
+            <div class="item-title">{{homeScreenGroups[2]?.name}} </div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
-              <ion-slide *ngFor="let groupItem of homeScreenGroups[2].groupItems" >
+              <ion-slide *ngFor="let groupItem of homeScreenGroups[2]?.groupItems" >
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
               <button *ngIf="!menu" (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
               <button  *ngIf="!menu" (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
-              <div class="item-title">{{homeScreenGroups[3].name}} </div> 
+              <div class="item-title">{{homeScreenGroups[3]?.name}} </div> 
               <ion-slides slidesPerView="3" spaceBetween=15   >                                             
-                <ion-slide *ngFor="let groupItem of homeScreenGroups[3].groupItems" >
+                <ion-slide *ngFor="let groupItem of homeScreenGroups[3]?.groupItems" >
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
               <button *ngIf="!menu" (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
               <button *ngIf="!menu" (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
-              <div class="item-title">{{homeScreenGroups[4].name}} </div>   
+              <div class="item-title">{{homeScreenGroups[4]?.name}} </div>   
               <ion-slides slidesPerView="3" spaceBetween=12   >                                             
-                <ion-slide *ngFor="let groupItem of homeScreenGroups[4].groupItems" >
+                <ion-slide *ngFor="let groupItem of homeScreenGroups[4]?.groupItems" >
                   <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
                 </ion-slide>
               </ion-slides> 
               <button *ngIf="!menu" (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
               <button *ngIf="!menu" (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
               <hr>
-            <div class="item-title">{{homeScreenGroups[5].name}}</div>   
+            <div class="item-title">{{homeScreenGroups[5]?.name}}</div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
-              <ion-slide *ngFor="let groupItem of homeScreenGroups[5].groupItems" >
+              <ion-slide *ngFor="let groupItem of homeScreenGroups[5]?.groupItems" >
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
               </ion-slide>
             </ion-slides> 
             <button *ngIf="!menu" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
             <button  *ngIf="!menu" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
             <hr>
-            <div class="item-title">{{homeScreenGroups[6].name}} </div>   
+            <div class="item-title">{{homeScreenGroups[6]?.name}} </div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
-              <ion-slide *ngFor="let groupItem of homeScreenGroups[6].groupItems" >
+              <ion-slide *ngFor="let groupItem of homeScreenGroups[6]?.groupItems" >
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
               </ion-slide>
             </ion-slides>

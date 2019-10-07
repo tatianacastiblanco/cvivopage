@@ -1,9 +1,6 @@
 import { Component, NgZone } from "@angular/core";
 import { IonicPage, LoadingController, ModalController,AlertController, Platform, App, NavController } from "ionic-angular";
 import * as moment from 'moment';
-import { HomePage } from '../home/home';
-import { SearchPage } from '../search/search';
-import { ProfilePage } from '../profile/profile';
 import firebase from "firebase";
 import { SignInPage } from '../sign-in/sign-in';
 
@@ -76,8 +73,6 @@ export class ComingSoonPage {
     Platform.ready().then(() => {
       this.width = Platform.width();
       this.heigth = Platform.height();
-      console.log(this.width);
-      console.log(this.heigth +'height');
       
       if(this.width <= 992){
         this.menu = true       
@@ -88,7 +83,6 @@ export class ComingSoonPage {
   }
 
   ionViewDidLoad() {    
-    console.log("ionViewDidLoad ComingSoonPage");
     this.getComingSoon();
   }
 
@@ -141,7 +135,6 @@ showAlert(message,title){
         role: 'cancel',
         cssClass:'btnalert-cancel',
         handler: data => {
-          console.log('Cancel clicked');
         }
       },
       {
@@ -181,23 +174,22 @@ events(index,arrayclasesDia){
         d.setDate(d.getDate() + 7);
     }
 
-    console.log('test')
   }
 
   
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
   
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.setRoot('ComingSoonPage')
   }
   
   buscar() {
-    this.navCtrl.push(SearchPage)
+    this.navCtrl.setRoot('SearchPage')
   }
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.setRoot('ProfilePage')
   }
   
   signOut() {

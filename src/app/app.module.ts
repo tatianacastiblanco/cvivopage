@@ -1,24 +1,14 @@
-import { AboutUsPage } from './../pages/about-us/about-us';
+
+
 import { VimeoService } from './../services/VimeoService';
 import { ForgotPasswordPageModule } from './../pages/forgot-password/forgot-password.module';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import { TabsPage } from '../pages/tabs/tabs';
-import { HomePage } from '../pages/home/home';
-import { SearchPage } from '../pages/search/search';
-import { ComingSoonPage } from '../pages/coming-soon/coming-soon';
-import { DownloadsPage } from '../pages/downloads/downloads';
-import { ProfilePage } from '../pages/profile/profile';
-import { SignUpPage } from '../pages/sign-up/sign-up';
-import { SignInPage } from '../pages/sign-in/sign-in';
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
-
 import { SignInPageModule } from '../pages/sign-in/sign-in.module';
 import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StreamingMedia } from '@ionic-native/streaming-media';
@@ -28,12 +18,10 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from "@ionic-native/file";
 import { IonicStorageModule } from '@ionic/storage';
-
 import firebase from "firebase";
 import { AngularFireModule } from "angularfire2";
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
-
 import { AuthService } from '../services/AuthService';
 import { ComingSoonService } from '../services/ComingSoonService';
 import { HomeScreenService } from '../services/HomeScreenService';
@@ -42,7 +30,6 @@ import { TvShowsService } from '../services/TvShowsService';
 import { CategoriesService } from '../services/CategoriesService';
 import { UserService } from '../services/UserService';
 import { DownloadService } from '../services/DownloadService';
-import { EmbedVideo } from 'ngx-embed-video';
 import { HttpClientModule } from '@angular/common/http';
 import { SQLite } from '@ionic-native/sqlite';
 import { SocketIoModule,SocketIoConfig} from 'ng-socket-io';
@@ -57,12 +44,11 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import { Base64 } from '@ionic-native/base64';
 import { IonicImageLoader } from 'ionic-image-loader';
-registerLocaleData(localeEs);
-import { from } from 'rxjs';
+
 import { HelpDeskProvider } from '../providers/help-desk/help-desk';
-import { TermsPage } from '../pages/terms/terms';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AnalyticsProvider } from '../providers/analytics/analytics';
+registerLocaleData(localeEs);
 // Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyA16S38r7aWz0FJBlZf5c3RVyyPYOkaXY0",
@@ -76,17 +62,17 @@ const firebaseConfig = {
 const config: SocketIoConfig = {url:'https://chatcvivotest.herokuapp.com/',options:{}};
 
 firebase.initializeApp(firebaseConfig);
-
+// EmbedVideo.forRoot()
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,SearchPage
+    TabsPage
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    EmbedVideo.forRoot(),
+
     IonicImageLoader.forRoot(),
     SocketIoModule.forRoot(config),
     IonicModule.forRoot(MyApp, {
@@ -94,8 +80,8 @@ firebase.initializeApp(firebaseConfig);
     }),
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
-    AngularFirestoreModule,
     SignInPageModule,
     SignUpPageModule,
     ForgotPasswordPageModule,
@@ -104,8 +90,7 @@ firebase.initializeApp(firebaseConfig);
   bootstrap: [IonicApp],
   entryComponents: [ 
     MyApp,
-    TabsPage,
-    SearchPage
+    TabsPage
   ],
   providers: [
     StatusBar,
@@ -134,8 +119,7 @@ firebase.initializeApp(firebaseConfig);
     Camera,Base64,
     EmailComposer,
     HelpDeskProvider,
-    AnalyticsProvider
-    
+    AnalyticsProvider   
 
   ]
 })

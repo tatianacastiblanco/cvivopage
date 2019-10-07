@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MovieDetailsPage } from './movie-details';
-import { IonicImageLoader } from 'ionic-image-loader';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import { IonicImageLoader } from 'ionic-image-loader';
   ],
   imports: [
     IonicPageModule.forChild(MovieDetailsPage),
-    IonicImageLoader
+    ComponentsModule
     
   ],
 })

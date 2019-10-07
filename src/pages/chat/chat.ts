@@ -1,20 +1,16 @@
-import { LoadingController } from 'ionic-angular';
+
 import { AlertController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ChatService } from './../../services/ChatService';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { ViewController } from 'ionic-angular';
-
 import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
-import * as firebase from 'Firebase';
 import { UserInfo } from 'src/data/UserInfo';
-/**
- * Generated class for the ChatPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import 'rxjs/add/operator/map'
+import { Observable } from 'rxjs';
+
+export interface Config { Idvivo: string; Vivo: boolean; chatEvent:string }
 
 @IonicPage()
 @Component({
@@ -23,232 +19,219 @@ import { UserInfo } from 'src/data/UserInfo';
 })
 export class ChatPage {
   @ViewChild(Content) content: Content;
+  private ConfigCollection: AngularFirestoreCollection < Config > ;
+  configItems: Observable < Config[] > ;
   messages = [];
-nickname:string = '';
-emailUserChat:string = ''
-offStatus:boolean = false;
-private event;
-photosArray = new Array;
-message = '';
-isLoading:boolean = true;
+  nickname: string;
+  emailUserChat: string;
+  offStatus: boolean = false;
+  private event;
+  photosArray = new Array;
+  message = '';
+  isLoading: boolean = true;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    private viewCtrl:ViewController,
-    private db:AngularFirestore,
-    private chatService : ChatService,
+    private viewCtrl: ViewController,
+    private db: AngularFirestore,
+    private chatService: ChatService,
     private _DomSanitizationService: DomSanitizer,
-    private alertCtrl: AlertController,
-    private loadingCtrl: LoadingController) {
+    private alertCtrl: AlertController) {
 
-  
-    this.nickname = "";
-         
-      this.photosArray = [];
-      this.messages = [];   
-      this.getChatSection();   
 
-    if(this.photosArray.length == 0) {
-      this.db.collection('photos').valueChanges().forEach(elem =>{
-        this.photosArray.push(elem);
-      })
-    };
-    
-    this.chatService.getMessages().subscribe(message => {            
-      let prueba = this.getCurrentUserPhoto(message['from']);     
+    this.photosArray = [];
+    this.messages = [];
+
+
+    this.chatService.getMessages().subscribe(message => {
+      let prueba = this.getCurrentUserPhoto(message['from']);
       message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
       this.messages.push(message);
       setTimeout(() => {
-        if(this.offStatus === false) {
+        if (this.offStatus === false) {
           this.content.scrollToBottom(1000);
         }
       }, 50);
-      let objToSave =
-      {
-        created:message['created'],
-        from:message['from'],
-        text:message['text']
+      let objToSave = {
+        created: message['created'],
+        from: message['from'],
+        text: message['text']
       }
-      this.db.collection('chats').doc(this.event).collection('chatLog').doc('chatLog'+message['created']).set(objToSave)    
+      this.db.collection('chats').doc(this.event).collection('chatLog').doc('chatLog' + message['created']).set(objToSave)
     })
-   
-  };
 
-  loadMessges() {
-    
-    
-    
-    if(this.messages.length === 0 ) {
-     
-        this.event = localStorage.getItem('chatEvent');
-      
-          var docref = this.db.collection('chats').doc(this.event).collection('chatLog',ref => ref.orderBy('created'));         
-          docref.get().subscribe(result => {           
-            result.forEach(res=> {  
-              if (res.data().from !== undefined) {
-                let ObjtResult;
-                // this.photosArray[0].forEach(photo =>{  
-                for (let index = 0; index < this.photosArray[0].length; index++) {
-                  if(this.photosArray[0][index]['name'] === res.data().from) {
-                    ObjtResult = {
-                      created:res.data().created,
-                      from: res.data().from,
-                      text: res.data().text,
-                      picture:this._DomSanitizationService.bypassSecurityTrustResourceUrl(this.photosArray[0][index]['base64'])                     
-                    }                     
-                  break;              
-                  } else {
-                    ObjtResult = {
-                      created:res.data().created,
-                      from: res.data().from,
-                      text: res.data().text,
-                      picture:'assets/imgs/user.png'
-                    }  
-                  }                 
-                }
-                this.messages.push(ObjtResult)  
-              } else {
-                let ObjtResult;
-                ObjtResult = {
-                  created:res.data().created,
-                  from: res.data().from,
-                  text: res.data().text,
-                  picture:'assets/imgs/user.png'
-                };
-                this.messages.push(ObjtResult)   
-              } 
-            })
-            setTimeout(() => {
-              if(this.offStatus === false) {
-                this.content.scrollToBottom(0);
-                this.isLoading = false;
-              }
-            },0);
-          })
-            
-      
+  };
+  //Fin constructor
+
+  ionViewWillEnter() {
+    this.getChatSection()
+    if (this.photosArray.length == 0) {
+      this.db.collection('photos').valueChanges().forEach(elem => {
+        this.photosArray.push(elem);
+      })
     }
   };
 
-  getCurrentUserPhoto(name):string {   
+
+  /**
+   * Observable para desactivar chat o para establecer nickname y evento.
+   */
+  getChatSection() {
+
+    this.ConfigCollection = this.db.collection < Config > ('Config');
+    this.ConfigCollection.valueChanges().subscribe((res) => {
+      if (!res[0]['Vivo']) {
+        this.viewCtrl.dismiss();
+      }
+
+      this.event = res[0]['chatEvent'];
+      localStorage.setItem('chatEvent', this.event);
+      this.chatService.joinChat().then((nickname: UserInfo) => {
+        this.nickname = nickname.name.toString();
+        this.emailUserChat = nickname.email.toString();
+        this.loadMessges();
+      }, err => this.showAlert(err, 'Error FbConfig'))
+    })
+
+  };
+
+/**
+ * Funcion para cargar mensajes y llenar array.
+ */
+  loadMessges() {
+
+    if (this.messages.length === 0) {
+
+      this.event = localStorage.getItem('chatEvent');
+
+      var docref = this.db.collection('chats').doc(this.event).collection('chatLog', ref => ref.orderBy('created'));
+      docref.get().subscribe(result => {
+        result.forEach(res => {
+          if (res.data().from !== undefined) {
+            let ObjtResult;
+            // this.photosArray[0].forEach(photo =>{  
+            for (let index = 0; index < this.photosArray[0].length; index++) {
+              if (this.photosArray[0][index]['name'] === res.data().from) {
+                ObjtResult = {
+                  created: res.data().created,
+                  from: res.data().from,
+                  text: res.data().text,
+                  picture: this._DomSanitizationService.bypassSecurityTrustResourceUrl(this.photosArray[0][index]['base64'])
+                }
+                break;
+              } else {
+                ObjtResult = {
+                  created: res.data().created,
+                  from: res.data().from,
+                  text: res.data().text,
+                  picture: 'assets/imgs/user.png'
+                }
+              }
+            }
+            this.messages.push(ObjtResult)
+          } else {
+            let ObjtResult;
+            ObjtResult = {
+              created: res.data().created,
+              from: res.data().from,
+              text: res.data().text,
+              picture: 'assets/imgs/user.png'
+            };
+            this.messages.push(ObjtResult)
+          }
+        })
+        setTimeout(() => {
+          if (this.offStatus === false) {
+            this.content.scrollToBottom(0);
+            this.isLoading = false;
+
+          }
+        }, 0);
+      })
+
+
+    }
+  };
+
+  /**
+   * Funcion que envia un mensaje por meido de SOCKET.IO
+   */
+  sendMessage() {
+    if (this.message !== '') {
+      this.chatService.sendMessage(this.message);
+      this.message = '';
+    }
+  }
+
+  getCurrentUserPhoto(name): string {
     let photo;
-    let tmp =true;
+    let tmp = true;
     let index = 0;
-    if(name == undefined) {
+    if (name == undefined) {
       photo = 'assets/imgs/user.png'
     } else {
-      do {        
+      do {
         if (this.photosArray[0][index]['name'] === name) {
           photo = (this.photosArray[0][index]['base64']);
           tmp = false;
         } else {
           index += 1;
         };
-        if(index == this.photosArray[0].length) {
+        if (index == this.photosArray[0].length) {
           photo = 'assets/imgs/user.png'
           tmp = false;
         }
-      } while (tmp);  
-    }        
+      } while (tmp);
+    }
     return photo;
   }
 
-  getChatSection() {    
-    this.db.collection('Config').valueChanges().subscribe(res=> {      
-      
-      this.event = res[0]['chatEvent'];
-      localStorage.setItem('chatEvent',this.event);    
-        if(this.nickname === '') {         
-          this.chatService.joinChat().then((nickname: UserInfo) => {                
-            this.nickname = nickname.name.toString(); 
-            this.emailUserChat = nickname.email.toString();    
-            this.loadMessges()    
-        
-    },err => this.showAlert(err,'Error FbConfig'));  
-  };
-})
-  };
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChatPage');
-    setTimeout(() => {
-          if(this.offStatus === false) {
-            this.content.scrollToBottom(1000);
-          }
-        }, 50);
-  };
-
-    /**
+  /**
    * Funcion para mostrar una alerta personalizada
    * @param message mensaje para mostrar en el body de la alerta
    * @param title  titulo para mostrar en el encabezado de la alerta
    */
 
-  showAlert(message,title) {
+  showAlert(message, title) {
     let alert = this.alertCtrl.create({
-      title:title,
-      message:message,
-      buttons :[
-        {
+      title: title,
+      message: message,
+      buttons: [{
           text: 'Cancelar',
           role: 'cancel',
-          cssClass:'btnalert-cancel',
+          cssClass: 'btnalert-cancel',
           handler: data => {
             console.log('Cancel clicked');
           }
         },
         {
-          text: 'Ok',  
+          text: 'Ok',
           cssClass: 'btnalert-ok',
-          handler: data =>{ }
+          handler: data => {}
         }
       ]
     }).present();
   };
 
-    /**
-   * Funcion que envia un mensaje por meido de SOCKET.IO
+
+  /**
+   * Funcion para que el usuario al oprimir ENTER pueda enviar un mensaje
+   * @param key codigo de la tecla presionada
    */
+  keyPress(key) {
+    if (key === 13 && this.message !== '') {
+      this.sendMessage()
+    }
+  };
 
-  sendMessage() { 
-    if(this.message !== '') {
-      this.chatService.sendMessage(this.message); 
-      this.message = '';
-    }  
-  }
-
-   /**
-  * Funcion para que el usuario al oprimir ENTER pueda enviar un mensaje
-  * @param key codigo de la tecla presionada
-  */
-
- keyPress(key) {
-  if( key === 13 &&  this.message !== '') {
-    this.sendMessage()
-  }
-};
-
-
-  close(){
+  close() {
     this.viewCtrl.dismiss();
     this.chatService.disconnect();
     this.nickname = '';
     this.messages = [];
+
   }
 
-};
-
-
-
-export const snapshotToArray = snapshot => {
-  let returnArr = [];
-
-  snapshot.forEach(childSnapshot => {
-      let item = childSnapshot.val();
-      item.key = childSnapshot.key;
-      returnArr.push(item);
-  });
-
-  return returnArr;
 };

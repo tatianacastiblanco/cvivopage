@@ -11,7 +11,15 @@
     </ion-navbar>
   </ion-header>
 <ion-content >
-  <div *ngFor="let message of messages">
+  <div *ngIf="isLoading">
+      <div *ngFor="let i of [1,2,3,4]">
+          <skeleton-item  height="100px"  class="right-bubble-skeleton " ></skeleton-item>
+          <skeleton-item  height="100px"  class="left-bubble-skeleton "> </skeleton-item>
+      </div>
+  </div>  
+    
+  
+  <div *ngFor="let message of messages" >
       <div class="chat-message" text-right  *ngIf="message?.from === nickname" >
           <div class="right-bubble">
             <span class="msg-name">{{message.from}}</span>
@@ -29,8 +37,6 @@
           </div>
       </div>
   </div>
-  <ion-spinner name="bubbles" color="primary" text-center *ngIf="isLoading" ></ion-spinner>
-  
    
    
   </ion-content>

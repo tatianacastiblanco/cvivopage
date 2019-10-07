@@ -1,6 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { EmailComposer } from '@ionic-native/email-composer';
 import { AboutUsPage } from './../about-us/about-us';
 import { Component, NgZone, ViewChild, ElementRef } from "@angular/core";
 import {
@@ -11,7 +10,6 @@ import {
   AlertController,
   Loading
 } from "ionic-angular";
-import { SignInPage } from "../sign-in/sign-in";
 import firebase from "firebase";
 import { AuthService } from "../../services/AuthService";
 import { Camera, CameraOptions } from '@ionic-native/camera';
@@ -20,10 +18,6 @@ import { Platform } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Base64 } from '@ionic-native/base64';
 import { Events } from 'ionic-angular';
-import { HomePage } from '../home/home';
-import { ComingSoonPage } from '../coming-soon/coming-soon';
-import { SearchPage } from '../search/search';
-import { TermsPage } from '../terms/terms';
 
 
 declare global {
@@ -73,6 +67,7 @@ export class ProfilePage {
     private _DomSanitizationService: DomSanitizer,
     public events: Events
   ) { 
+    
 
     Platform.ready().then(() => {
       this.width = Platform.width();
@@ -408,14 +403,14 @@ export class ProfilePage {
   }
   
   parrilla() {
-    this.navCtrl.push('ComingSoonPage')
+    this.navCtrl.setRoot('ComingSoonPage')
   }
   
   buscar() {
-    this.navCtrl.push('SearchPage')
+    this.navCtrl.setRoot('SearchPage')
   }
   perfil() {
-    this.navCtrl.push('ProfilePage')
+    this.navCtrl.setRoot('ProfilePage')
   }
   
 

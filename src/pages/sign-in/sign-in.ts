@@ -30,7 +30,7 @@ export class SignInPage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad SignInPage");
+  
   }
 
 

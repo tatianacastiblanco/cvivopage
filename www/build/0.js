@@ -1,17 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 603:
+/***/ 604:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComingSoonPageModule", function() { return ComingSoonPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coming_soon__ = __webpack_require__(753);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic2_calendar__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_locales_es__ = __webpack_require__(349);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(764);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,34 +18,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-Object(__WEBPACK_IMPORTED_MODULE_4__angular_common__["registerLocaleData"])(__WEBPACK_IMPORTED_MODULE_5__angular_common_locales_es__["a" /* default */]);
-var ComingSoonPageModule = /** @class */ (function () {
-    function ComingSoonPageModule() {
+var HelpPageModule = /** @class */ (function () {
+    function HelpPageModule() {
     }
-    ComingSoonPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
+    HelpPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_1__coming_soon__["a" /* ComingSoonPage */],
+                __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic2_calendar__["a" /* NgCalendarModule */],
-                __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__coming_soon__["a" /* ComingSoonPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
             ],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__coming_soon__["a" /* ComingSoonPage */]],
-            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_3__angular_core__["LOCALE_ID"], useValue: 'es' }]
         })
-    ], ComingSoonPageModule);
-    return ComingSoonPageModule;
+    ], HelpPageModule);
+    return HelpPageModule;
 }());
 
-//# sourceMappingURL=coming-soon.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ }),
 
-/***/ 619:
+/***/ 617:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var require;//! moment.js
@@ -1903,7 +1893,7 @@ var ComingSoonPageModule = /** @class */ (function () {
             try {
                 oldLocale = globalLocale._abbr;
                 var aliasedRequire = require;
-                __webpack_require__(750)("./" + name);
+                __webpack_require__(752)("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {}
         }
@@ -4654,40 +4644,17 @@ var ComingSoonPageModule = /** @class */ (function () {
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(749)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(751)(module)))
 
 /***/ }),
 
-/***/ 620:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Helper; });
-var Helper = /** @class */ (function () {
-    function Helper() {
-    }
-    Helper.shuffle = function (a) {
-        for (var i = a.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            _a = [a[j], a[i]], a[i] = _a[0], a[j] = _a[1];
-        }
-        return a;
-        var _a;
-    };
-    return Helper;
-}());
-
-//# sourceMappingURL=Helper.js.map
-
-/***/ }),
-
-/***/ 621:
+/***/ 622:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -4759,13 +4726,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 622:
+/***/ 623:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -4899,13 +4866,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 623:
+/***/ 624:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -4963,13 +4930,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 624:
+/***/ 625:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5027,13 +4994,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 625:
+/***/ 626:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5154,13 +5121,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 626:
+/***/ 627:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5218,13 +5185,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 627:
+/***/ 628:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5327,13 +5294,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 628:
+/***/ 629:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5391,13 +5358,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 629:
+/***/ 630:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5501,13 +5468,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 630:
+/***/ 631:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5638,13 +5605,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 631:
+/***/ 632:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5733,13 +5700,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 632:
+/***/ 633:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5796,13 +5763,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 633:
+/***/ 634:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -5920,13 +5887,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 634:
+/***/ 635:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6044,13 +6011,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 635:
+/***/ 636:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6157,13 +6124,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 636:
+/***/ 637:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6313,13 +6280,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 637:
+/***/ 638:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6406,13 +6373,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 638:
+/***/ 639:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6583,13 +6550,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 639:
+/***/ 640:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6651,13 +6618,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 640:
+/***/ 641:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6736,13 +6703,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 641:
+/***/ 642:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6801,13 +6768,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 642:
+/***/ 643:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6882,13 +6849,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 643:
+/***/ 644:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -6963,13 +6930,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 644:
+/***/ 645:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7044,13 +7011,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 645:
+/***/ 646:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7148,13 +7115,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 646:
+/***/ 647:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7253,13 +7220,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 647:
+/***/ 648:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7325,13 +7292,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 648:
+/***/ 649:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7397,13 +7364,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 649:
+/***/ 650:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7465,13 +7432,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 650:
+/***/ 651:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7537,13 +7504,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 651:
+/***/ 652:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7609,13 +7576,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 652:
+/***/ 653:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7676,13 +7643,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 653:
+/***/ 654:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7748,13 +7715,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 654:
+/***/ 655:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7824,13 +7791,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 655:
+/***/ 656:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -7921,13 +7888,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 656:
+/***/ 657:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8018,13 +7985,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 657:
+/***/ 658:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8115,13 +8082,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 658:
+/***/ 659:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8200,13 +8167,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 659:
+/***/ 660:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8271,13 +8238,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 660:
+/***/ 661:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8382,13 +8349,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 661:
+/***/ 662:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8496,13 +8463,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 662:
+/***/ 663:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8561,13 +8528,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 663:
+/***/ 664:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8649,13 +8616,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 664:
+/***/ 665:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8728,13 +8695,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 665:
+/***/ 666:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8811,13 +8778,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 666:
+/***/ 667:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8891,13 +8858,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 667:
+/***/ 668:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -8973,13 +8940,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 668:
+/***/ 669:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9054,13 +9021,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 669:
+/***/ 670:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9136,13 +9103,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 670:
+/***/ 671:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9264,13 +9231,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 671:
+/***/ 672:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9393,13 +9360,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 672:
+/***/ 673:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9495,13 +9462,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 673:
+/***/ 674:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9624,13 +9591,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 674:
+/***/ 675:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9783,13 +9750,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 675:
+/***/ 676:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9898,13 +9865,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 676:
+/***/ 677:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -9998,13 +9965,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 677:
+/***/ 678:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10085,13 +10052,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 678:
+/***/ 679:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10222,13 +10189,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 679:
+/***/ 680:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10296,13 +10263,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 680:
+/***/ 681:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10370,13 +10337,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 681:
+/***/ 682:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10467,13 +10434,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 682:
+/***/ 683:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10554,13 +10521,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 683:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10648,13 +10615,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 684:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10740,13 +10707,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 685:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10855,13 +10822,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 686:
+/***/ 687:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -10986,13 +10953,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 687:
+/***/ 688:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11072,13 +11039,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 688:
+/***/ 689:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11196,13 +11163,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 689:
+/***/ 690:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11288,13 +11255,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 690:
+/***/ 691:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11429,13 +11396,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 691:
+/***/ 692:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11504,13 +11471,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 692:
+/***/ 693:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11627,13 +11594,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 693:
+/***/ 694:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11729,13 +11696,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 694:
+/***/ 695:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11846,13 +11813,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 695:
+/***/ 696:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -11915,13 +11882,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 696:
+/***/ 697:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12010,13 +11977,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 697:
+/***/ 698:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12096,13 +12063,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 698:
+/***/ 699:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12205,13 +12172,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 699:
+/***/ 700:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12370,13 +12337,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 700:
+/***/ 701:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12457,13 +12424,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 701:
+/***/ 702:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12544,13 +12511,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 702:
+/***/ 703:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12609,13 +12576,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 703:
+/***/ 704:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12707,13 +12674,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 704:
+/***/ 705:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12774,13 +12741,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 705:
+/***/ 706:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12902,13 +12869,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 706:
+/***/ 707:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -12994,13 +12961,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 707:
+/***/ 708:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13086,13 +13053,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 708:
+/***/ 709:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13151,13 +13118,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 709:
+/***/ 710:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13280,13 +13247,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 710:
+/***/ 711:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13411,13 +13378,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 711:
+/***/ 712:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13481,13 +13448,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 712:
+/***/ 713:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13547,13 +13514,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 713:
+/***/ 714:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13627,13 +13594,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 714:
+/***/ 715:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13814,13 +13781,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 715:
+/***/ 716:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13917,13 +13884,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 716:
+/***/ 717:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -13982,13 +13949,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 717:
+/***/ 718:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14058,13 +14025,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 718:
+/***/ 719:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14219,13 +14186,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 719:
+/***/ 720:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14397,13 +14364,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 720:
+/***/ 721:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14470,13 +14437,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 721:
+/***/ 722:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14586,13 +14553,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 722:
+/***/ 723:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14702,13 +14669,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 723:
+/***/ 724:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14795,13 +14762,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 724:
+/***/ 725:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14869,13 +14836,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 725:
+/***/ 726:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -14933,13 +14900,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 726:
+/***/ 727:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15067,13 +15034,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 727:
+/***/ 728:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15161,13 +15128,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 728:
+/***/ 729:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15233,13 +15200,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 729:
+/***/ 730:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15354,13 +15321,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 730:
+/***/ 731:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15426,13 +15393,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 731:
+/***/ 732:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15493,13 +15460,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 732:
+/***/ 733:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15620,12 +15587,12 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 733:
+/***/ 734:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15719,13 +15686,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 734:
+/***/ 735:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15815,13 +15782,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 735:
+/***/ 736:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15878,13 +15845,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 736:
+/***/ 737:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -15941,13 +15908,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 737:
+/***/ 738:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js language configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16065,13 +16032,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 738:
+/***/ 739:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16224,13 +16191,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 739:
+/***/ 740:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16327,13 +16294,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 740:
+/***/ 741:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16390,13 +16357,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 741:
+/***/ 742:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16453,13 +16420,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 742:
+/***/ 743:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16537,13 +16504,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 743:
+/***/ 744:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16610,13 +16577,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 744:
+/***/ 745:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16675,13 +16642,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 745:
+/***/ 746:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16790,13 +16757,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 746:
+/***/ 747:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -16898,13 +16865,13 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 747:
+/***/ 748:
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
 
 ;(function (global, factory) {
-    true ? factory(__webpack_require__(619)) :
+    true ? factory(__webpack_require__(617)) :
    typeof define === 'function' && define.amd ? define(['../moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
@@ -17006,7 +16973,7 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 749:
+/***/ 751:
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -17035,264 +17002,264 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 750:
+/***/ 752:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 621,
-	"./af.js": 621,
-	"./ar": 622,
-	"./ar-dz": 623,
-	"./ar-dz.js": 623,
-	"./ar-kw": 624,
-	"./ar-kw.js": 624,
-	"./ar-ly": 625,
-	"./ar-ly.js": 625,
-	"./ar-ma": 626,
-	"./ar-ma.js": 626,
-	"./ar-sa": 627,
-	"./ar-sa.js": 627,
-	"./ar-tn": 628,
-	"./ar-tn.js": 628,
-	"./ar.js": 622,
-	"./az": 629,
-	"./az.js": 629,
-	"./be": 630,
-	"./be.js": 630,
-	"./bg": 631,
-	"./bg.js": 631,
-	"./bm": 632,
-	"./bm.js": 632,
-	"./bn": 633,
-	"./bn.js": 633,
-	"./bo": 634,
-	"./bo.js": 634,
-	"./br": 635,
-	"./br.js": 635,
-	"./bs": 636,
-	"./bs.js": 636,
-	"./ca": 637,
-	"./ca.js": 637,
-	"./cs": 638,
-	"./cs.js": 638,
-	"./cv": 639,
-	"./cv.js": 639,
-	"./cy": 640,
-	"./cy.js": 640,
-	"./da": 641,
-	"./da.js": 641,
-	"./de": 642,
-	"./de-at": 643,
-	"./de-at.js": 643,
-	"./de-ch": 644,
-	"./de-ch.js": 644,
-	"./de.js": 642,
-	"./dv": 645,
-	"./dv.js": 645,
-	"./el": 646,
-	"./el.js": 646,
-	"./en-SG": 647,
-	"./en-SG.js": 647,
-	"./en-au": 648,
-	"./en-au.js": 648,
-	"./en-ca": 649,
-	"./en-ca.js": 649,
-	"./en-gb": 650,
-	"./en-gb.js": 650,
-	"./en-ie": 651,
-	"./en-ie.js": 651,
-	"./en-il": 652,
-	"./en-il.js": 652,
-	"./en-nz": 653,
-	"./en-nz.js": 653,
-	"./eo": 654,
-	"./eo.js": 654,
-	"./es": 655,
-	"./es-do": 656,
-	"./es-do.js": 656,
-	"./es-us": 657,
-	"./es-us.js": 657,
-	"./es.js": 655,
-	"./et": 658,
-	"./et.js": 658,
-	"./eu": 659,
-	"./eu.js": 659,
-	"./fa": 660,
-	"./fa.js": 660,
-	"./fi": 661,
-	"./fi.js": 661,
-	"./fo": 662,
-	"./fo.js": 662,
-	"./fr": 663,
-	"./fr-ca": 664,
-	"./fr-ca.js": 664,
-	"./fr-ch": 665,
-	"./fr-ch.js": 665,
-	"./fr.js": 663,
-	"./fy": 666,
-	"./fy.js": 666,
-	"./ga": 667,
-	"./ga.js": 667,
-	"./gd": 668,
-	"./gd.js": 668,
-	"./gl": 669,
-	"./gl.js": 669,
-	"./gom-latn": 670,
-	"./gom-latn.js": 670,
-	"./gu": 671,
-	"./gu.js": 671,
-	"./he": 672,
-	"./he.js": 672,
-	"./hi": 673,
-	"./hi.js": 673,
-	"./hr": 674,
-	"./hr.js": 674,
-	"./hu": 675,
-	"./hu.js": 675,
-	"./hy-am": 676,
-	"./hy-am.js": 676,
-	"./id": 677,
-	"./id.js": 677,
-	"./is": 678,
-	"./is.js": 678,
-	"./it": 679,
-	"./it-ch": 680,
-	"./it-ch.js": 680,
-	"./it.js": 679,
-	"./ja": 681,
-	"./ja.js": 681,
-	"./jv": 682,
-	"./jv.js": 682,
-	"./ka": 683,
-	"./ka.js": 683,
-	"./kk": 684,
-	"./kk.js": 684,
-	"./km": 685,
-	"./km.js": 685,
-	"./kn": 686,
-	"./kn.js": 686,
-	"./ko": 687,
-	"./ko.js": 687,
-	"./ku": 688,
-	"./ku.js": 688,
-	"./ky": 689,
-	"./ky.js": 689,
-	"./lb": 690,
-	"./lb.js": 690,
-	"./lo": 691,
-	"./lo.js": 691,
-	"./lt": 692,
-	"./lt.js": 692,
-	"./lv": 693,
-	"./lv.js": 693,
-	"./me": 694,
-	"./me.js": 694,
-	"./mi": 695,
-	"./mi.js": 695,
-	"./mk": 696,
-	"./mk.js": 696,
-	"./ml": 697,
-	"./ml.js": 697,
-	"./mn": 698,
-	"./mn.js": 698,
-	"./mr": 699,
-	"./mr.js": 699,
-	"./ms": 700,
-	"./ms-my": 701,
-	"./ms-my.js": 701,
-	"./ms.js": 700,
-	"./mt": 702,
-	"./mt.js": 702,
-	"./my": 703,
-	"./my.js": 703,
-	"./nb": 704,
-	"./nb.js": 704,
-	"./ne": 705,
-	"./ne.js": 705,
-	"./nl": 706,
-	"./nl-be": 707,
-	"./nl-be.js": 707,
-	"./nl.js": 706,
-	"./nn": 708,
-	"./nn.js": 708,
-	"./pa-in": 709,
-	"./pa-in.js": 709,
-	"./pl": 710,
-	"./pl.js": 710,
-	"./pt": 711,
-	"./pt-br": 712,
-	"./pt-br.js": 712,
-	"./pt.js": 711,
-	"./ro": 713,
-	"./ro.js": 713,
-	"./ru": 714,
-	"./ru.js": 714,
-	"./sd": 715,
-	"./sd.js": 715,
-	"./se": 716,
-	"./se.js": 716,
-	"./si": 717,
-	"./si.js": 717,
-	"./sk": 718,
-	"./sk.js": 718,
-	"./sl": 719,
-	"./sl.js": 719,
-	"./sq": 720,
-	"./sq.js": 720,
-	"./sr": 721,
-	"./sr-cyrl": 722,
-	"./sr-cyrl.js": 722,
-	"./sr.js": 721,
-	"./ss": 723,
-	"./ss.js": 723,
-	"./sv": 724,
-	"./sv.js": 724,
-	"./sw": 725,
-	"./sw.js": 725,
-	"./ta": 726,
-	"./ta.js": 726,
-	"./te": 727,
-	"./te.js": 727,
-	"./tet": 728,
-	"./tet.js": 728,
-	"./tg": 729,
-	"./tg.js": 729,
-	"./th": 730,
-	"./th.js": 730,
-	"./tl-ph": 731,
-	"./tl-ph.js": 731,
-	"./tlh": 732,
-	"./tlh.js": 732,
-	"./tr": 733,
-	"./tr.js": 733,
-	"./tzl": 734,
-	"./tzl.js": 734,
-	"./tzm": 735,
-	"./tzm-latn": 736,
-	"./tzm-latn.js": 736,
-	"./tzm.js": 735,
-	"./ug-cn": 737,
-	"./ug-cn.js": 737,
-	"./uk": 738,
-	"./uk.js": 738,
-	"./ur": 739,
-	"./ur.js": 739,
-	"./uz": 740,
-	"./uz-latn": 741,
-	"./uz-latn.js": 741,
-	"./uz.js": 740,
-	"./vi": 742,
-	"./vi.js": 742,
-	"./x-pseudo": 743,
-	"./x-pseudo.js": 743,
-	"./yo": 744,
-	"./yo.js": 744,
-	"./zh-cn": 745,
-	"./zh-cn.js": 745,
-	"./zh-hk": 746,
-	"./zh-hk.js": 746,
-	"./zh-tw": 747,
-	"./zh-tw.js": 747
+	"./af": 622,
+	"./af.js": 622,
+	"./ar": 623,
+	"./ar-dz": 624,
+	"./ar-dz.js": 624,
+	"./ar-kw": 625,
+	"./ar-kw.js": 625,
+	"./ar-ly": 626,
+	"./ar-ly.js": 626,
+	"./ar-ma": 627,
+	"./ar-ma.js": 627,
+	"./ar-sa": 628,
+	"./ar-sa.js": 628,
+	"./ar-tn": 629,
+	"./ar-tn.js": 629,
+	"./ar.js": 623,
+	"./az": 630,
+	"./az.js": 630,
+	"./be": 631,
+	"./be.js": 631,
+	"./bg": 632,
+	"./bg.js": 632,
+	"./bm": 633,
+	"./bm.js": 633,
+	"./bn": 634,
+	"./bn.js": 634,
+	"./bo": 635,
+	"./bo.js": 635,
+	"./br": 636,
+	"./br.js": 636,
+	"./bs": 637,
+	"./bs.js": 637,
+	"./ca": 638,
+	"./ca.js": 638,
+	"./cs": 639,
+	"./cs.js": 639,
+	"./cv": 640,
+	"./cv.js": 640,
+	"./cy": 641,
+	"./cy.js": 641,
+	"./da": 642,
+	"./da.js": 642,
+	"./de": 643,
+	"./de-at": 644,
+	"./de-at.js": 644,
+	"./de-ch": 645,
+	"./de-ch.js": 645,
+	"./de.js": 643,
+	"./dv": 646,
+	"./dv.js": 646,
+	"./el": 647,
+	"./el.js": 647,
+	"./en-SG": 648,
+	"./en-SG.js": 648,
+	"./en-au": 649,
+	"./en-au.js": 649,
+	"./en-ca": 650,
+	"./en-ca.js": 650,
+	"./en-gb": 651,
+	"./en-gb.js": 651,
+	"./en-ie": 652,
+	"./en-ie.js": 652,
+	"./en-il": 653,
+	"./en-il.js": 653,
+	"./en-nz": 654,
+	"./en-nz.js": 654,
+	"./eo": 655,
+	"./eo.js": 655,
+	"./es": 656,
+	"./es-do": 657,
+	"./es-do.js": 657,
+	"./es-us": 658,
+	"./es-us.js": 658,
+	"./es.js": 656,
+	"./et": 659,
+	"./et.js": 659,
+	"./eu": 660,
+	"./eu.js": 660,
+	"./fa": 661,
+	"./fa.js": 661,
+	"./fi": 662,
+	"./fi.js": 662,
+	"./fo": 663,
+	"./fo.js": 663,
+	"./fr": 664,
+	"./fr-ca": 665,
+	"./fr-ca.js": 665,
+	"./fr-ch": 666,
+	"./fr-ch.js": 666,
+	"./fr.js": 664,
+	"./fy": 667,
+	"./fy.js": 667,
+	"./ga": 668,
+	"./ga.js": 668,
+	"./gd": 669,
+	"./gd.js": 669,
+	"./gl": 670,
+	"./gl.js": 670,
+	"./gom-latn": 671,
+	"./gom-latn.js": 671,
+	"./gu": 672,
+	"./gu.js": 672,
+	"./he": 673,
+	"./he.js": 673,
+	"./hi": 674,
+	"./hi.js": 674,
+	"./hr": 675,
+	"./hr.js": 675,
+	"./hu": 676,
+	"./hu.js": 676,
+	"./hy-am": 677,
+	"./hy-am.js": 677,
+	"./id": 678,
+	"./id.js": 678,
+	"./is": 679,
+	"./is.js": 679,
+	"./it": 680,
+	"./it-ch": 681,
+	"./it-ch.js": 681,
+	"./it.js": 680,
+	"./ja": 682,
+	"./ja.js": 682,
+	"./jv": 683,
+	"./jv.js": 683,
+	"./ka": 684,
+	"./ka.js": 684,
+	"./kk": 685,
+	"./kk.js": 685,
+	"./km": 686,
+	"./km.js": 686,
+	"./kn": 687,
+	"./kn.js": 687,
+	"./ko": 688,
+	"./ko.js": 688,
+	"./ku": 689,
+	"./ku.js": 689,
+	"./ky": 690,
+	"./ky.js": 690,
+	"./lb": 691,
+	"./lb.js": 691,
+	"./lo": 692,
+	"./lo.js": 692,
+	"./lt": 693,
+	"./lt.js": 693,
+	"./lv": 694,
+	"./lv.js": 694,
+	"./me": 695,
+	"./me.js": 695,
+	"./mi": 696,
+	"./mi.js": 696,
+	"./mk": 697,
+	"./mk.js": 697,
+	"./ml": 698,
+	"./ml.js": 698,
+	"./mn": 699,
+	"./mn.js": 699,
+	"./mr": 700,
+	"./mr.js": 700,
+	"./ms": 701,
+	"./ms-my": 702,
+	"./ms-my.js": 702,
+	"./ms.js": 701,
+	"./mt": 703,
+	"./mt.js": 703,
+	"./my": 704,
+	"./my.js": 704,
+	"./nb": 705,
+	"./nb.js": 705,
+	"./ne": 706,
+	"./ne.js": 706,
+	"./nl": 707,
+	"./nl-be": 708,
+	"./nl-be.js": 708,
+	"./nl.js": 707,
+	"./nn": 709,
+	"./nn.js": 709,
+	"./pa-in": 710,
+	"./pa-in.js": 710,
+	"./pl": 711,
+	"./pl.js": 711,
+	"./pt": 712,
+	"./pt-br": 713,
+	"./pt-br.js": 713,
+	"./pt.js": 712,
+	"./ro": 714,
+	"./ro.js": 714,
+	"./ru": 715,
+	"./ru.js": 715,
+	"./sd": 716,
+	"./sd.js": 716,
+	"./se": 717,
+	"./se.js": 717,
+	"./si": 718,
+	"./si.js": 718,
+	"./sk": 719,
+	"./sk.js": 719,
+	"./sl": 720,
+	"./sl.js": 720,
+	"./sq": 721,
+	"./sq.js": 721,
+	"./sr": 722,
+	"./sr-cyrl": 723,
+	"./sr-cyrl.js": 723,
+	"./sr.js": 722,
+	"./ss": 724,
+	"./ss.js": 724,
+	"./sv": 725,
+	"./sv.js": 725,
+	"./sw": 726,
+	"./sw.js": 726,
+	"./ta": 727,
+	"./ta.js": 727,
+	"./te": 728,
+	"./te.js": 728,
+	"./tet": 729,
+	"./tet.js": 729,
+	"./tg": 730,
+	"./tg.js": 730,
+	"./th": 731,
+	"./th.js": 731,
+	"./tl-ph": 732,
+	"./tl-ph.js": 732,
+	"./tlh": 733,
+	"./tlh.js": 733,
+	"./tr": 734,
+	"./tr.js": 734,
+	"./tzl": 735,
+	"./tzl.js": 735,
+	"./tzm": 736,
+	"./tzm-latn": 737,
+	"./tzm-latn.js": 737,
+	"./tzm.js": 736,
+	"./ug-cn": 738,
+	"./ug-cn.js": 738,
+	"./uk": 739,
+	"./uk.js": 739,
+	"./ur": 740,
+	"./ur.js": 740,
+	"./uz": 741,
+	"./uz-latn": 742,
+	"./uz-latn.js": 742,
+	"./uz.js": 741,
+	"./vi": 743,
+	"./vi.js": 743,
+	"./x-pseudo": 744,
+	"./x-pseudo.js": 744,
+	"./yo": 745,
+	"./yo.js": 745,
+	"./zh-cn": 746,
+	"./zh-cn.js": 746,
+	"./zh-hk": 747,
+	"./zh-hk.js": 747,
+	"./zh-tw": 748,
+	"./zh-tw.js": 748
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -17308,26 +17275,24 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 750;
+webpackContext.id = 752;
 
 /***/ }),
 
-/***/ 751:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_VimeoService__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ChatService__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__data_Helper__ = __webpack_require__(620);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_HomeScreenGroupItem__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_AuthService__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_help_desk_help_desk__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_email_composer__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(617);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17346,543 +17311,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var HomePage = /** @class */ (function () {
-    //slides: any;
-    function HomePage(navCtrl, loadingCtrl, platform, alertCtrl, db, embedService, chatService, toastCtrl, VimeoService, events, modalCtrl) {
+var HelpPage = /** @class */ (function () {
+    function HelpPage(navCtrl, navParams, emailComposer, ticketService, nativeStorage, formBuilder, alertCtrl, authService, loadingCtrl, platform) {
         var _this = this;
         this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.emailComposer = emailComposer;
+        this.ticketService = ticketService;
+        this.nativeStorage = nativeStorage;
+        this.formBuilder = formBuilder;
+        this.alertCtrl = alertCtrl;
+        this.authService = authService;
         this.loadingCtrl = loadingCtrl;
         this.platform = platform;
-        this.alertCtrl = alertCtrl;
-        this.db = db;
-        this.embedService = embedService;
-        this.chatService = chatService;
-        this.toastCtrl = toastCtrl;
-        this.VimeoService = VimeoService;
-        this.events = events;
-        this.modalCtrl = modalCtrl;
-        this.homeScreenGroups = [];
-        this.segementHome = 'list';
-        this.booleanchatEnable = false;
-        this.messages = [];
-        this.nickname = '';
-        this.emailUserChat = '';
-        this.message = '';
-        this.photosArray = new Array;
-        this.loaded = false;
-        this.out = true;
-        this.menu = true;
-        this.refrescarpag = false;
-        this.menuhead = 'home';
-        this.isModalOpen = false;
-        platform.ready().then(function () {
-            _this.width = platform.width();
-            _this.heigth = platform.height();
-            if (_this.width <= 992) {
-                _this.menu = true;
-                _this.refrescarpag = false;
-                _this.widthFrame = "100%";
-                _this.heightFrame = 200;
-            }
-            else {
-                _this.menu = false;
-                _this.refrescarpag = true;
-                _this.widthFrame = "92%";
-                _this.heightFrame = 500;
-            }
-        });
-    }
-    ;
-    //Fin cosntructor
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||------------------------||||||||||||||||||||||||||||||||||||||||||                 
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||    Inicio funciones    ||||||||||||||||||||||||||||||||||||||||||
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||------------------------||||||||||||||||||||||||||||||||||||||||||
-    // Funicone de ciclo de vida (lifecycle)
-    HomePage.prototype.ionViewWillLeave = function () {
-        this.iframe_html = '';
-    };
-    ;
-    HomePage.prototype.ionViewDidLeave = function () {
-        this.iframe_html = '';
-    };
-    ;
-    HomePage.prototype.ionViewWillEnter = function () {
-        this.gethomeVideo().then(function () { });
-    };
-    /**
-     *Funcion de ciclo de vida que se ejecuta cuando la vista ha cargado,
-     * ejecuta la funcion gethomeVideo() y posteriormente getHomeGroups()
-     * @memberof HomePage
-     */
-    HomePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cargando..."
-        });
-        loading.present();
-        this.gethomeVideo().then(function () {
-            _this.getHomeGroups().then(function () {
-                setTimeout(function () {
-                    loading.dismiss();
-                    _this.loaded = true;
-                }, 3000);
-            }).catch(function (err) {
-                loading.dismiss();
-                _this.showAlert(err, 'Error de conexion');
-            });
-        }, function (err) {
-            loading.dismiss();
-            _this.showAlert(err, 'Error de conexion');
-        });
-    };
-    ;
-    // Fin funciones ciclo de vida
-    /**
-     * Funcion que realiza consulta a BD para obtener ID del evento, para luego obtener el IFRAME
-     * seguro para efectuar el INNERHTML en el DOM.
-     * @returns
-     * @memberof HomePage
-     */
-    HomePage.prototype.gethomeVideo = function () {
-        var _this = this;
-        var promise = new Promise(function (resolve, reject) {
-            _this.db.collection('Config').valueChanges().subscribe(function (res) {
-                _this.iframe_html = _this.embedService.embed_vimeo(res[0]['Idvivo'], {
-                    query: { autoplay: 1, loop: 1, color: 'ffff', portrait: 0 },
-                    attr: { width: _this.widthFrame, height: _this.heightFrame, }
-                });
-                resolve({ videoConfig: res });
-            }, function (err) { reject(err); });
-        });
-        return promise;
-    };
-    ;
-    //Fin gethomeVideo()
-    /**
-     *funcion que utiliza la api de vimeo para traer las categorias de Vimeo
-     *
-     * @returns
-     * @memberof HomePage
-     */
-    HomePage.prototype.getHomeGroups = function () {
-        var _this = this;
-        var promise = new Promise(function (resolve, reject) {
-            _this.VimeoService.getHomeScreenGroups().subscribe(function (res) {
-                _this.homeScreenGroups = [];
-                var collection = res;
-                collection.forEach(function (element) {
-                    var homeGropuModel = new __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__["a" /* HomeScreenGroup */]();
-                    homeGropuModel.name = element.name;
-                    homeGropuModel.groupId = element.metadata.connections.videos.uri;
-                    homeGropuModel.groupItems = [];
-                    _this.homeScreenGroups.push(homeGropuModel);
-                    _this.homeScreenGroups = __WEBPACK_IMPORTED_MODULE_5__data_Helper__["a" /* Helper */].shuffle(_this.homeScreenGroups);
-                });
-                _this.homeScreenGroups.forEach(function (element) {
-                    /************************** En  esta seccion se recorre cada categoria y se obtiene los videos de la misma por meido de la api de vimeo *******************************************/
-                    _this.VimeoService.getHomeScreenGroupsVideos(element).subscribe(function (result) {
-                        var videos = result;
-                        videos.data.forEach(function (item) {
-                            var video = new __WEBPACK_IMPORTED_MODULE_6__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
-                            video.name = item.name;
-                            video.picture = item.files[2].link;
-                            video.description = item.description;
-                            video.detailsPicture = item.pictures.sizes[10].link;
-                            video.movieId = item.uri.split('/')[2];
-                            element.groupItems.push(video);
-                            element = __WEBPACK_IMPORTED_MODULE_5__data_Helper__["a" /* Helper */].shuffle(element);
-                        });
-                    }, function (err) { return reject(err); });
-                });
-                resolve();
-            }, function (err) { return reject(err); }); //Fin subscripcion getHomeScreenGroups()
-        }); //Fin promesa
-        return promise;
-    };
-    ;
-    // Fin getHomeGroups()
-    /**
-     * FUncion que abre la modal de chatPage
-     *
-     * @memberof HomePage
-     */
-    HomePage.prototype.presentChatModal = function () {
-        var _this = this;
-        var CcssClass = this.menu == true ? 'custom-modal' : '';
-        var options = {
-            showBackdrop: false,
-            enableBackdropDismiss: true,
-            cssClass: ''
-        };
-        var chatModal = this.modalCtrl.create('ChatPage', {}, options);
-        chatModal.present().then(function () {
-            _this.badge = 0;
-        }, function (res) {
-            console.log("close");
-        });
-        chatModal.onWillDismiss(function (res) {
-            console.log(res);
-        });
-    };
-    ;
-    //Fin presentChatModal()
-    /**
-     *
-     *Funcion para abrir la pagina de detalles del video
-     * @param {HomeScreenGroupItem} groupItem objeto con la informacion del video
-     * @memberof HomePage
-     */
-    HomePage.prototype.goToGroupItemDetails = function (groupItem) {
-        this.navCtrl.push("MovieDetailsPage", { movieId: groupItem });
-    };
-    ;
-    /**
-     * Funcion para mover un slide hacia la derecha
-     * @param {number} index
-     * @memberof HomePage
-     */
-    HomePage.prototype.moveNext = function (index) {
-        this.slides.toArray()[index].slideNext();
-    };
-    ;
-    //Fin moveNext()
-    /**
-     * Funcion para mover un slide hacia la izquierda
-     * @param {number} index
-     * @memberof HomePage
-     */
-    HomePage.prototype.movePrev = function (index) {
-        this.slides.toArray()[index].slidePrev();
-    };
-    ;
-    //Fin movePrev()
-    /**
-     * Funcion que se ejecuta al hacer swipe down en la pantalla
-     * para recargar el video
-     * @param {*} refresher
-     * @memberof HomePage
-     */
-    HomePage.prototype.doRefresh = function (refresher) {
-        var _this = this;
-        this.loaded = false;
-        this.gethomeVideo().then(function (res) {
-            _this.getHomeGroups().then(function () {
-                refresher.complete();
-                _this.loaded = true;
-            });
-        }, function (err) {
-            _this.showAlert(err, 'Error al cargar');
-            refresher.complete();
-        }).catch(function () { return refresher.complete(); });
-        setTimeout(function () {
-            refresher.complete();
-        }, 3000);
-    };
-    ;
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||------------------------||||||||||||||||||||||||||||||||||||||||||                 
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||        Helpers         ||||||||||||||||||||||||||||||||||||||||||
-    // ||||||||||||||||||||||||||||||||||||||||||||||||||||------------------------||||||||||||||||||||||||||||||||||||||||||
-    /**
-     * Funcion para mostrar un toaster con cualuiqer funcion/metodo
-     *
-     * @param {*} msg cadena de texto para mostrar
-     * @memberof HomePage
-     */
-    HomePage.prototype.showToast = function (msg) {
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 2000
-        });
-        toast.present();
-    };
-    ;
-    /**
-     * Funcion para mostrar una alerta personalizada
-     * @param message mensaje para mostrar en el body de la alerta
-     * @param title  titulo para mostrar en el encabezado de la alerta
-     * @memberof HomePage
-     */
-    HomePage.prototype.showAlert = function (message, title) {
-        var alert = this.alertCtrl.create({
-            title: title,
-            message: message,
-            buttons: [
-                {
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    cssClass: 'btnalert-cancel',
-                    handler: function (data) {
-                        console.log('Cancel clicked');
-                    }
-                },
-                {
-                    text: 'Ok',
-                    cssClass: 'btnalert-ok',
-                    handler: function (data) { }
-                }
-            ]
-        }).present();
-    };
-    ;
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChildren"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["q" /* Slides */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_core__["QueryList"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_core__["QueryList"]) === "function" && _a || Object)
-    ], HomePage.prototype, "slides", void 0);
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: "page-home",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\home\home.html"*/'<ion-header no-border>\n\n  <menu  [hidden]="menu"></menu> \n\n</ion-header>\n\n\n\n<ion-content class="list-avatar-page"  padding #pageContent >  \n\n\n\n    <ion-fab bottom right >\n\n        <ion-badge color="netflixBlue">{{badge}}</ion-badge>   \n\n        <button ion-fab [disabled]="false" (click)="presentChatModal()"><ion-icon name="ios-chatbubbles"></ion-icon>        \n\n        </button>         \n\n    </ion-fab>\n\n\n\n  <!-- Refresher para actualizar el video en vivo -->\n\n  <ion-grid>\n\n    <ion-row pull-lg-9>\n\n      <ion-col col-12 >\n\n        <ion-refresher (ionRefresh)="doRefresh($event)" pullMin=200>\n\n          <ion-refresher-content \n\n            pullingIcon="refresh-circle"\n\n            refreshingSpinner="bubbles">\n\n          </ion-refresher-content>\n\n        </ion-refresher>\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col col-12 col-lg-6>\n\n          <div [innerHtml]="iframe_html" class="iframe"></div>\n\n      </ion-col>\n\n      <ion-col col-12 col-lg-6>        \n\n        <ion-toolbar color="primary"  *ngIf="segementHome == \'list\' && loaded">\n\n            <ion-title color="light">Categorias</ion-title>\n\n          </ion-toolbar>\n\n          <br>\n\n\n\n          <div  *ngIf="segementHome == \'list\' && loaded" >\n\n              \n\n            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar>   \n\n            <div *ngIf="homeScreenGroups[6]">\n\n              <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      \n\n              <ion-slides *ngIf="homeScreenGroups[0].groupItems && homeScreenGroups[0].groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[0].groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides>\n\n              <button *ngIf="!menu" (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu" (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[1].name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12     >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[1].groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>\n\n            <hr>\n\n            <div class="item-title">{{homeScreenGroups[2].name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[2].groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu" (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[3].name}} </div> \n\n              <ion-slides slidesPerView="3" spaceBetween=15   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[3].groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[4].name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[4].groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n            <div class="item-title">{{homeScreenGroups[5].name}}</div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[5].groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides> \n\n            <button *ngIf="!menu" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n            <hr>\n\n            <div class="item-title">{{homeScreenGroups[6].name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[6].groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides>\n\n            <button  *ngIf="!menu"(click)="movePrev(6)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu"(click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n          </div>  \n\n          </ion-scroll> \n\n        </div>      \n\n      </ion-col>\n\n    </ion-row>\n\n   </ion-grid>  \n\n  </ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\home\home.html"*/
-        }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["l" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["n" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["n" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["AngularFirestore"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["AngularFirestore"]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__["EmbedVideoService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__["EmbedVideoService"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1__services_ChatService__["a" /* ChatService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_ChatService__["a" /* ChatService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["r" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["r" /* ToastController */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_0__services_VimeoService__["a" /* VimeoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__services_VimeoService__["a" /* VimeoService */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* Events */]) === "function" && _l || Object, typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* ModalController */]) === "function" && _m || Object])
-    ], HomePage);
-    return HomePage;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
-}()); // Fin homePage
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 752:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_AuthService__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_streaming_media__ = __webpack_require__(338);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_native_storage__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_base64__ = __webpack_require__(346);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-
-
-
-
-
-
-
-var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, app, loadingCtrl, zone, authService, camera, streamingMedia, Platform, nativeStorage, db, alertCtrl, base64, _DomSanitizationService, events) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.app = app;
-        this.loadingCtrl = loadingCtrl;
-        this.zone = zone;
-        this.authService = authService;
-        this.camera = camera;
-        this.streamingMedia = streamingMedia;
-        this.Platform = Platform;
-        this.nativeStorage = nativeStorage;
-        this.db = db;
-        this.alertCtrl = alertCtrl;
-        this.base64 = base64;
-        this._DomSanitizationService = _DomSanitizationService;
-        this.events = events;
-        this.userName = "";
-        this.userPicture = "";
-        this.uid = '';
-        this.colectionName = '';
-        this.isCordova = false;
-        this.isCordovaWithoutCamera = false;
-        this.isCordovaWithCamera = false;
-        this.menu = true;
-        this.menuhead = 'perfil';
-        Platform.ready().then(function () {
-            _this.width = Platform.width();
-            _this.heigth = Platform.height();
-            console.log(_this.width);
-            console.log(_this.heigth + 'height');
-            if (_this.width <= 992) {
-                _this.menu = true;
-            }
-            else {
-                _this.menu = false;
-            }
-        });
-        this.constraints = window.constraints = {
-            audio: false,
-            video: true
-        };
+        this.segementTickets = 'create';
+        this.myTickets = [];
         this.authService.afAuth.user.subscribe(function (user) {
-            _this.userName = user.email;
-            _this.uid = user.uid;
-            _this.db.collection('photos').doc(_this.uid).valueChanges().subscribe(function (photo) {
-                _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(photo['base64']);
-            });
+            if (user == null) {
+                _this.hideSegment = true;
+            }
+            _this.userEmail = user.email;
         });
-    }
-    ;
-    ProfilePage.prototype.profilePhotobtn = function (e) {
-        return __awaiter(this, void 0, void 0, function () {
-            var stream, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!!this.Platform.is('cordova')) return [3 /*break*/, 5];
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, navigator.mediaDevices.getUserMedia(this.constraints)];
-                    case 2:
-                        stream = _a.sent();
-                        this.handleSuccess(stream);
-                        e.target.disabled = true;
-                        return [3 /*break*/, 4];
-                    case 3:
-                        e_1 = _a.sent();
-                        if (e_1.name === 'NotFoundError') {
-                            this.isCordovaWithCamera = false;
-                            this.isCordovaWithoutCamera = true;
-                        }
-                        else {
-                            this.handleError(e_1);
-                        }
-                        return [3 /*break*/, 4];
-                    case 4: return [3 /*break*/, 6];
-                    case 5:
-                        this.openCamera();
-                        _a.label = 6;
-                    case 6: return [2 /*return*/];
-                }
-            });
+        this.ticketFormGroup = this.formBuilder.group({
+            email: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
+            phone: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
+            subject: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
+            description: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
+            type: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
+            status: [''],
+            priority: ['']
         });
-    };
-    /**
-     * if web rtc video media is succes
-     * @param stream
-     */
-    ProfilePage.prototype.handleSuccess = function (stream) {
-        this.isCordova = false;
-        this.canvasref = this.canvast.nativeElement;
-        this.canvasref.width = 480;
-        this.canvasref.height = 360;
-        this.isCordovaWithoutCamera = false;
-        this.isCordovaWithCamera = true;
-        var video = document.querySelector('video');
-        var videoTracks = stream.getVideoTracks();
-        console.log('Got stream with constraints:', this.constraints);
-        console.log("Using video device: " + videoTracks[0].label);
-        window.stream = stream; // make variable available to browser console
-        video.srcObject = stream;
-    };
-    ;
-    /**
-     * take photo button
-     */
-    ProfilePage.prototype.snapshotButton = function () {
-        var _this = this;
-        this.canvasref.getContext('2d').drawImage(this.video, 0, 0, 480, 360);
-        var photoBase64 = this.canvasref.toDataURL();
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cargando..."
-        });
-        loading.present();
-        // Obtener el UID del usuario desde firebase para posteriromente guardar foto en base de datos con el nombre
-        this.db.collection('users').doc(this.uid).get().subscribe(function (doc) {
-            // Guardar en BD la foto {name:'',base64:''} 
-            _this.db.collection('photos').doc(_this.uid).set({ name: doc.data().name, base64: photoBase64 })
-                .then(function (res) {
-                _this.isCordovaWithCamera = false;
-                loading.dismiss();
-                _this.showAlert('Tu foto se ha guardado', 'Bien');
-                _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(photoBase64);
-                _this.events.publish('user:photoChanged', photoBase64);
-            });
-        });
-    };
-    /**
-     *
-     * @param error if web rtc video fail
-     */
-    ProfilePage.prototype.handleError = function (error) {
-        if (error.name === 'ConstraintNotSatisfiedError') {
-            var v = this.constraints.video;
-            this.errorMsg("The resolution " + v.width.exact + "x" + v.height.exact + " px is not supported by your device.", v);
-        }
-        else if (error.name === 'PermissionDeniedError') {
-            this.errorMsg('Permissions have not been granted to use your camera and ' +
-                'microphone, you need to allow the page access to your devices in ' +
-                'order for the demo to work.', error.name);
-        }
-        this.errorMsg("getUserMedia error: " + error.name, error);
-    };
-    /**
-     * function to control de error of web rtc
-     * @param msg
-     * @param error
-     */
-    ProfilePage.prototype.errorMsg = function (msg, error) {
-        var errorElement = document.querySelector('#errorMsg');
-        errorElement.innerHTML += "<p>" + msg + "</p>";
-        if (typeof error !== 'undefined') {
-            console.error(error);
-        }
-    };
-    ;
-    ProfilePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.video = window.video = document.querySelector('video');
-        if (this.Platform.is('cordova')) {
+        if (this.platform.is('cordova')) {
             this.nativeStorage.getItem('imgSource').then(function (res) {
                 if (res) {
-                    _this.myPhoto;
+                    _this.myPhoto = res;
                 }
                 else {
                     _this.myPhoto = 'assets/imgs/photo-camera.png';
@@ -17890,353 +17352,88 @@ var ProfilePage = /** @class */ (function () {
             }, function (err) { return _this.myPhoto = 'assets/imgs/photo-camera.png'; });
         }
         else {
-            this.isCordova = true;
             this.myPhoto = 'assets/imgs/user.png';
         }
-    };
-    ProfilePage.prototype.goToUsers = function () {
-        this.navCtrl.push("UsersPage");
-    };
-    ProfilePage.prototype.goToHelp = function () {
-        this.navCtrl.push("HelpPage");
-    };
-    ProfilePage.prototype.goToNotifications = function () {
-        this.navCtrl.push("NotificationsPage");
-    };
-    ProfilePage.prototype.goToMyList = function () {
-        this.navCtrl.push("MylistPage");
-    };
-    ProfilePage.prototype.goToSettings = function () {
-        this.navCtrl.push("SettingsPage");
-    };
-    ProfilePage.prototype.goToAboutUs = function () {
-        if (this.Platform.is('cordova')) {
-            var options = {
-                successCallback: function () {
-                    console.log("Video played");
-                },
-                errorCallback: function (e) {
-                    console.log("Error streaming");
-                },
-                orientation: "landscape",
-                shouldAutoClose: true,
-                controls: true
-            };
-            this.streamingMedia.playVideo("https://firebasestorage.googleapis.com/v0/b/cvivo-84315.appspot.com/o/C-VIVO%20introducci%C3%B3n%20v2.mp4?alt=media&token=c3610c01-6b2c-4c47-b009-396c513b4899", options);
-        }
-        else {
-            this.navCtrl.push('AboutUsPage');
-        }
-    };
-    ;
-    ProfilePage.prototype.openCamera = function () {
-        var _this = this;
-        if (this.Platform.is('cordova')) {
-            var loading = this.loadingCtrl.create({
-                spinner: "bubbles",
-                content: "Cargando..."
-            });
-            var options = {
-                quality: 100,
-                destinationType: this.camera.DestinationType.FILE_URI,
-                mediaType: this.camera.MediaType.PICTURE,
-                correctOrientation: true,
-                allowEdit: true,
-                targetWidth: 100,
-                targetHeight: 100
-            };
-            // Abrir camara para tomar foto
-            this.camera.getPicture(options).then(function (imageData) {
-                // Codificar a base64 la foto tomada
-                _this.base64.encodeFile(imageData).then(function (res) {
-                    loading.present();
-                    var imageBase64 = res;
-                    // Obtener el UID del usuario desde firebase para posteriromente guardar foto en base de datos con el nombre
-                    _this.db.collection('users').doc(_this.uid).get().subscribe(function (doc) {
-                        // Guardar en BD la foto {name:'',base64:''} 
-                        _this.db.collection('photos').doc(_this.uid).set({ name: doc.data().name, base64: res })
-                            .then(function (res) {
-                            loading.dismiss();
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.myPhoto = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(imageBase64);
-                            _this.events.publish('user:photoChanged', imageBase64);
-                        })
-                            .catch(function (err) { return _this.showAlert(err, 'Error'); });
-                    }, function (err) { _this.showAlert(err, 'Error users'); loading.dismiss(); });
-                });
-                _this.nativeStorage.setItem('imgSource', imageData);
-            }, function (err) { _this.showAlert('err', 'Error de camara'); loading.dismiss(); });
-        }
-    };
-    ;
-    /**
-     * Funcion  que se ejecuta cuando se selecciona una imagen desde web en el input file
-     * @param $event recibe el target para obtener el "file"
-     */
-    ProfilePage.prototype.changeListener = function ($event) {
-        this.readThis($event.target);
-    };
-    /**
-     * Funcion que sirve para leer el la foto seleccionada y convertirla en base 64 para poder almacenalra en BD
-     * @param inputValue
-     */
-    ProfilePage.prototype.readThis = function (inputValue) {
-        var _this = this;
-        var file = inputValue.files[0];
-        var myReader = new FileReader();
-        myReader.onloadend = function (e) {
-            _this.image = myReader.result;
-            _this.db.collection('users').doc(_this.uid).get().subscribe(function (doc) {
-                _this.colectionName = doc.data().name;
-                _this.db.collection('photos', function (ref) { return ref.where('name', '==', _this.colectionName); }).stateChanges().subscribe(function (res0) {
-                    if (res0.length > 0) {
-                        _this.db.collection('photos').doc(res0[0].payload.doc.id).set({ base64: _this.image, name: _this.colectionName }).then(function () {
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.events.publish('user:photoChanged', _this.image);
-                            _this.myPhoto = _this.image;
-                            return;
-                        }, function (err) { return _this.showAlert('Tu foto no se guardó ', 'Error'); });
-                    }
-                    else {
-                        _this.db.collection('photos').add({ base64: _this.image, name: _this.colectionName }).then(function () {
-                            _this.showAlert('Tu foto se ha guardado', 'Bien');
-                            _this.events.publish('user:photoChanged', _this.image);
-                            _this.myPhoto = _this.image;
-                            return;
-                        }, function (err) { return _this.showAlert('Tu foto no se guardó ', 'Error'); });
-                    }
-                }, function (err) {
-                    console.log(err);
-                });
-            });
-        };
-        myReader.readAsDataURL(file);
-    };
-    ;
-    /**
-     * Alerta personalizada
-     * @param message
-     * @param title
-     */
-    ProfilePage.prototype.showAlert = function (message, title) {
-        var alert = this.alertCtrl.create({
-            title: title,
-            message: message,
-            buttons: [
-                {
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    cssClass: 'btnalert-cancel',
-                    handler: function (data) {
-                        console.log('Cancel clicked');
-                    }
-                },
-                {
-                    text: 'Ok',
-                    cssClass: 'btnalert-ok',
-                    handler: function (data) {
-                    }
-                }
-            ]
-        }).present();
-    };
-    ;
-    /**
-     * Slair de sesion en firebase
-     */
-    ProfilePage.prototype.home = function () {
-        this.navCtrl.setRoot('HomePage');
-    };
-    ProfilePage.prototype.parrilla = function () {
-        this.navCtrl.push('ComingSoonPage');
-    };
-    ProfilePage.prototype.buscar = function () {
-        this.navCtrl.push('SearchPage');
-    };
-    ProfilePage.prototype.perfil = function () {
-        this.navCtrl.push('ProfilePage');
-    };
-    ProfilePage.prototype.signOut = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cerrando sesión..."
-        });
-        loading.present();
-        setTimeout(function () {
-            loading.dismiss();
-            __WEBPACK_IMPORTED_MODULE_4_firebase___default.a
-                .auth()
-                .signOut()
-                .then(function () {
-                _this.zone.run(function () {
-                    _this.app.getRootNav().setRoot('SignInPage');
-                });
-            });
-        }, 500);
-    };
-    ;
-    ProfilePage.prototype.terminos = function () {
-        this.navCtrl.push('TermsPage');
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["ViewChild"])('snapShotCanvas'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_core__["ElementRef"])
-    ], ProfilePage.prototype, "canvast", void 0);
-    ProfilePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: "page-profile",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\profile\profile.html"*/'<ion-header no-border>\n\n    <ion-grid>\n\n      <ion-row class="padTitle">\n\n        <ion-col col-12 col-lg-4>\n\n                <ion-navbar>  \n\n                  <ion-item  no-lines>\n\n                      <ion-avatar item-start>               \n\n                        <img [src]="myPhoto">\n\n                      </ion-avatar>\n\n                      <h2>{{userName}}</h2>       \n\n                    </ion-item>\n\n                </ion-navbar>   \n\n            \n\n        </ion-col>\n\n        <ion-col col-lg-8 [hidden]="menu">\n\n          <div >\n\n            <ion-segment [(ngModel)]="menuhead">\n\n              <ion-segment-button value="home"   class="segmenthead"  (click)="home()"> <ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n              <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n              <ion-segment-button value="parrilla" class="segmenthead"(click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n              <ion-segment-button value="perfil"   class="segmenthead" > <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n              <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n            </ion-segment>\n\n          </div>         \n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>    \n\n  </ion-header>\n\n<ion-content padding >\n\n<!-- <ion-header>   \n\n        <ion-navbar>  \n\n          <ion-item  no-lines>\n\n             <ion-avatar item-start>               \n\n               <img [src]="myPhoto">\n\n             </ion-avatar>\n\n             <h2>{{userName}}</h2>       \n\n           </ion-item>\n\n       </ion-navbar>   \n\n</ion-header> -->\n\n\n\n<ion-content padding>\n\n  <ion-list class="top-menu-list">\n\n    <!-- <ion-item (click)="goToNotifications()">\n\n      <ion-icon name="md-notifications" item-start></ion-icon>\n\n      <p>Notifications</p>\n\n    </ion-item> -->\n\n\n\n    <ion-item (click)="goToMyList()">\n\n      <ion-icon name="list-box" item-start></ion-icon>\n\n      <p>Mi lista</p>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-list no-lines class="user-menu-list">\n\n\n\n    <!-- Seccion foto de perfil -->\n\n    <ion-item  (click)="profilePhotobtn(handleError)">\n\n        <ion-icon name="camera" item-start color="netflixWhite"  ></ion-icon>\n\n        <p> Foto de perfil</p>\n\n    </ion-item>\n\n    \n\n    <ion-item  [hidden]="!isCordovaWithoutCamera"  >\n\n        <ion-label>Seleccionar foto de perfil</ion-label>\n\n        <br>\n\n        <ion-input type="file" accept="image/*" (change)="changeListener($event)" ></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item text-center [hidden]="!isCordovaWithCamera">       \n\n            <video id="gum-local" autoplay playsinline width="200px" height="200px" ></video>  \n\n            <button ion-button block round (click)="snapshotButton()"><ion-icon name="camera" ></ion-icon></button>       \n\n      </ion-item>\n\n\n\n      <!-- fin seccion foto de perfil -->\n\n   \n\n\n\n    <ion-item (click)="goToAboutUs()">\n\n        <ion-icon name="body" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Acerca de nosotros</p>\n\n    </ion-item>\n\n\n\n    <ion-item (click)="terminos()">\n\n        <ion-icon name="clipboard" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Términos y condiciones de uso</p>\n\n    </ion-item>\n\n\n\n    <ion-item (click)="goToHelp()">\n\n        <ion-icon name="help-buoy" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Ayuda</p>\n\n    </ion-item>\n\n    <!-- <ion-item>\n\n      <p>Términos y condiciones</p>\n\n    </ion-item> -->\n\n\n\n    <ion-item (click)="signOut()">\n\n        <ion-icon name="log-out" item-start color="netflixWhite" ></ion-icon>\n\n      <p>Cerrar sesión</p>\n\n    </ion-item>\n\n\n\n  </ion-list>  \n\n  \n\n  <canvas #snapShotCanvas [hidden]="true"></canvas>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\profile\profile.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* App */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_core__["NgZone"],
-            __WEBPACK_IMPORTED_MODULE_5__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_7__ionic_native_streaming_media__["a" /* StreamingMedia */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_8__ionic_native_native_storage__["a" /* NativeStorage */],
-            __WEBPACK_IMPORTED_MODULE_1_angularfire2_firestore__["AngularFirestore"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_base64__["a" /* Base64 */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["DomSanitizer"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* Events */]])
-    ], ProfilePage);
-    return ProfilePage;
-}());
-
-//# sourceMappingURL=profile.js.map
-
-/***/ }),
-
-/***/ 753:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComingSoonPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(619);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(751);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__search_search__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(752);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sign_in_sign_in__ = __webpack_require__(347);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var ComingSoonPage = /** @class */ (function () {
-    function ComingSoonPage(loadingCtrl, navCtrl, modalCtrl, alertCtrl, Platform, app, zone) {
-        var _this = this;
-        this.loadingCtrl = loadingCtrl;
-        this.navCtrl = navCtrl;
-        this.modalCtrl = modalCtrl;
-        this.alertCtrl = alertCtrl;
-        this.Platform = Platform;
-        this.app = app;
-        this.zone = zone;
-        this.loaded = false;
-        this.eventSource = [];
-        this.HorarioLunes = [
-            { inicio: 8, final: 9, materia: '' }, { inicio: 10, final: 11, materia: '' }, { inicio: 12, final: 13, materia: 'Opción de grado III' },
-            { inicio: 14, final: 15, materia: 'Proyecto de vida' }, { inicio: 16, final: 17, materia: '' },
-        ];
-        this.HorarioMartes = [
-            { inicio: 8, final: 9, materia: '' }, { inicio: 10, final: 11, materia: '' }, { inicio: 12, final: 13, materia: 'Opción de grado II' },
-            { inicio: 14, final: 15, materia: '' }, { inicio: 16, final: 17, materia: 'Opción de grado I' },
-        ];
-        this.HorarioMiercoles = [
-            { inicio: 8, final: 9, materia: '' }, { inicio: 10, final: 11, materia: '' }, { inicio: 12, final: 13, materia: 'Espiritu Emprendedor' },
-            { inicio: 14, final: 15, materia: 'Proyecto de vida' }, { inicio: 16, final: 17, materia: '' },
-        ];
-        this.HorarioJueves = [
-            { inicio: 8, inicio1: 0, final: 8, final1: 15, materia: 'TIPS propuesta de valor por Diego Casas' }, { inicio: 8, inicio1: 20, final: 8, final1: 35, materia: 'TIPS redes sociales para emprendedores por Jhon Gonzalez' }, { inicio: 8, inicio1: 40, final: 8, final1: 55, materia: 'TIPS finanzas personales para emprendedores por Miguel Gutierrez' },
-            { inicio: 9, inicio1: 0, final: 9, final1: 15, materia: 'TIPS objetivos de desarrollo sotenible para emprendedores por German Sarmiento' }
-        ];
-        this.HorarioViernes = [
-            { inicio: 8, final: 9, materia: '' }, { inicio: 10, final: 11, materia: '' }, { inicio: 12, final: 13, materia: 'Proyecto de vida' },
-            { inicio: 14, final: 15, materia: 'Opción de grado II' }, { inicio: 16, final: 17, materia: ' Opción de grado III' },
-        ];
-        this.selectedDay = new Date();
-        this.calendar = {
-            mode: 'day',
-            currentDate: this.selectedDay,
-            labelAllDay: 'Eventos',
-            lockSwipes: false
-        };
-        this.menu = true;
-        this.menuhead = 'parrilla';
-        this.events(1, this.HorarioLunes);
-        this.events(2, this.HorarioMartes);
-        this.events(3, this.HorarioMiercoles);
-        this.events(4, this.HorarioJueves);
-        this.events(5, this.HorarioViernes);
-        Platform.ready().then(function () {
-            _this.width = Platform.width();
-            _this.heigth = Platform.height();
-            console.log(_this.width);
-            console.log(_this.heigth + 'height');
-            if (_this.width <= 992) {
-                _this.menu = true;
-            }
-            else {
-                _this.menu = false;
-            }
-        });
     }
-    ComingSoonPage_1 = ComingSoonPage;
-    ComingSoonPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad ComingSoonPage");
-        this.getComingSoon();
+    HelpPage.prototype.getTickets = function () {
+        var _this = this;
+        this.myTickets = [];
+        var loading = this.loadingCtrl.create({
+            spinner: "bubbles",
+            content: "Cargando tickets..."
+        });
+        loading.present();
+        this.ticketService.getMyTickets().subscribe(function (res) {
+            if (res.length == 0) {
+                _this.showAlert('No tienes tickets', 'Tickets');
+                _this.segementTickets = 'create';
+                loading.dismiss();
+            }
+            var temp = res;
+            temp.forEach(function (element) {
+                var objTemp = { id: 0, subject: '', created_at: '', status: 0, statusColor: '' };
+                switch (element.status) {
+                    case 2:
+                        objTemp.statusText = 'Abierto';
+                        objTemp.statusColor = 'Abierto';
+                        break;
+                    case 3:
+                        objTemp.statusText = 'En progreso';
+                        objTemp.statusColor = 'Pendiente';
+                        break;
+                    case 4:
+                        objTemp.statusText = 'Resuelto';
+                        objTemp.statusColor = 'Cerrado';
+                        break;
+                    default:
+                        break;
+                }
+                objTemp.created_at = __WEBPACK_IMPORTED_MODULE_7_moment__(element.created_at).startOf('day').fromNow();
+                objTemp.subject = element.subject;
+                objTemp.id = element.id;
+                _this.myTickets.push(objTemp);
+                loading.dismiss();
+            });
+        }, function (err) {
+            console.log(err);
+            loading.dismiss();
+            _this.showAlert(err, 'Error al cargar tickets');
+        });
     };
-    ComingSoonPage.prototype.getComingSoon = function () {
+    ;
+    /**
+   * Funcion que se ejecuta al hacer swipe down en la pantalla
+   * para recargar el video
+   * @param refresher
+   */
+    HelpPage.prototype.doRefresh = function (refresher) {
+        this.getTickets();
+        refresher.complete();
+        setTimeout(function () {
+            refresher.complete();
+        }, 3000);
+    };
+    ;
+    HelpPage.prototype.createTicket = function () {
         var _this = this;
         var loading = this.loadingCtrl.create({
             spinner: "bubbles",
-            content: "Cargando parrilla..."
+            content: "Creando ticket..."
         });
         loading.present();
-        setTimeout(function () {
-            _this.loaded = true;
+        this.ticketFormGroup.controls.status.setValue(2);
+        this.ticketFormGroup.controls.priority.setValue(1);
+        this.ticketFormGroup.controls.email.setValue(this.userEmail);
+        this.ticketService.createTicket(this.ticketFormGroup.value).subscribe(function (result) {
+            _this.ticketFormGroup.reset();
             loading.dismiss();
-        }, 2000);
-        // this.comingSoonService.getComingSoon().then((result: any) => {
-        //   this.comingSoonList = result.comingSoonList;
-        //   this.loaded = true;
-        //   loading.dismiss();
-        // });
+            _this.showAlert('Tu ticket fue creado con el ID: ' + result['id'], 'Ticket Creado');
+        }, function (err) {
+            loading.dismiss();
+            _this.showAlert(err, 'Error al crear ticket');
+        });
     };
-    ComingSoonPage.prototype.onCurrentDateChanged = function ($event) {
-    };
-    ComingSoonPage.prototype.reloadSource = function (startTime, endTime) { };
-    ComingSoonPage.prototype.onEventSelected = function (event) {
-        var start = __WEBPACK_IMPORTED_MODULE_2_moment__(event.startTime).calendar();
-        var end = __WEBPACK_IMPORTED_MODULE_2_moment__(event.endTime).calendar();
-        this.showAlert('<b>Desde:</b> ' + start + '<br><b>Hasta:</b> ' + end, '' + event.title);
-    };
-    ComingSoonPage.prototype.onViewTitleChanged = function (title) {
-        this.title = title;
-    };
-    ComingSoonPage.prototype.onTimeSelected = function (ev) {
-        // this.selectedDay = ev.selectedTime;
-    };
-    ComingSoonPage.prototype.showAlert = function (message, title) {
+    HelpPage.prototype.showAlert = function (message, title) {
         var alert = this.alertCtrl.create({
             title: title,
             message: message,
@@ -18259,85 +17456,25 @@ var ComingSoonPage = /** @class */ (function () {
         }).present();
     };
     ;
-    ComingSoonPage.prototype.events = function (index, arrayclasesDia) {
-        var _this = this;
-        var d = new Date(), year = d.getFullYear();
-        d.setDate(index);
-        // Get the first Monday in the month
-        while (d.getDay() !== index) {
-            d.setDate(d.getDate() + 1);
-        }
-        // Get all the other Mondays in the month
-        while (d.getFullYear() === year) {
-            var pushDate = new Date(d.getTime());
-            arrayclasesDia.forEach(function (clase) {
-                var obj = {
-                    title: clase.materia,
-                    startTime: new Date(pushDate.getFullYear(), pushDate.getMonth(), pushDate.getDate(), clase.inicio, clase.inicio1),
-                    endTime: new Date(pushDate.getFullYear(), pushDate.getMonth(), pushDate.getDate(), clase.final, clase.final1)
-                };
-                _this.eventSource.push(obj);
-            });
-            d.setDate(d.getDate() + 7);
-        }
-        console.log('test');
-    };
-    ComingSoonPage.prototype.home = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
-    };
-    ComingSoonPage.prototype.parrilla = function () {
-        this.navCtrl.push(ComingSoonPage_1);
-    };
-    ComingSoonPage.prototype.buscar = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__search_search__["a" /* SearchPage */]);
-    };
-    ComingSoonPage.prototype.perfil = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__profile_profile__["a" /* ProfilePage */]);
-    };
-    ComingSoonPage.prototype.signOut = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cerrando sesión..."
-        });
-        loading.present();
-        setTimeout(function () {
-            loading.dismiss();
-            __WEBPACK_IMPORTED_MODULE_6_firebase___default.a
-                .auth()
-                .signOut()
-                .then(function () {
-                _this.zone.run(function () {
-                    _this.app.getRootNav().setRoot(__WEBPACK_IMPORTED_MODULE_7__sign_in_sign_in__["a" /* SignInPage */]);
-                });
-            });
-        }, 500);
-    };
-    ;
-    ComingSoonPage = ComingSoonPage_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-coming-soon",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\coming-soon\coming-soon.html"*/'<ion-header no-border>\n\n    <ion-grid>\n\n      <ion-row class="padTitle">\n\n        <ion-col col-12 col-lg-2 [hidden]="menu" >\n\n          <ion-navbar align-title="center" transparent >\n\n            <ion-title>\n\n              <img src="assets/imgs/netflix-logo.png">\n\n            </ion-title>   \n\n          </ion-navbar>\n\n        </ion-col>\n\n        <ion-col col-lg-10 [hidden]="menu">\n\n          <div >\n\n            <ion-segment [(ngModel)]="menuhead">\n\n              <ion-segment-button value="home"   class="segmenthead"  (click)="home()"> <ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n              <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n              <ion-segment-button value="parrilla" class="segmenthead"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n              <ion-segment-button value="perfil"   class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n              <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n            </ion-segment>\n\n          </div>\n\n        </ion-col>\n\n        <ion-col col-12 col-lg-12 class="padTitle"> \n\n          <ion-navbar color="netflixRed" >\n\n            <ion-title>{{title}}</ion-title>\n\n          </ion-navbar>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>    \n\n  </ion-header>\n\n<ion-content padding >\n\n\n\n<calendar \n\n[eventSource]="eventSource"\n\nstyle="color:#b3b3b3;"\n\n[allDayLabel]=\'calendar.labelAllDay\'\n\nformatWeekTitle=\'MMMM yyyy \'\n\nformatWeekViewDayHeader=\'EEE\'\n\nstartingDayWeek = \'1\'\n\nscrollToHour = \'8\'\n\nlocale = \'es-Es\'\n\n[lockSwipes] = \'calendar.lockSwipes\'\n\nstartHour = "8"\n\nendHour = "19"\n\n[calendarMode]="calendar.mode"\n\n[currentDate]="calendar.currentDate"\n\n(onCurrentDateChanged)="onCurrentDateChanged($event)"\n\n(onEventSelected)="onEventSelected($event)"\n\n(onTitleChanged)="onViewTitleChanged($event)"\n\n(onTimeSelected)="onTimeSelected($event)"\n\n>\n\n</calendar>\n\n<!-- \n\n  <ion-list no-lines *ngIf="comingSoonList.length > 0">\n\n    <ion-item *ngFor="let comingSoon of comingSoonList">\n\n      <img src="{{ comingSoon.picture }}">\n\n\n\n      <ion-row>\n\n        <ion-col col-8>\n\n          <p class="item-title">{{ comingSoon.name }}</p>\n\n        </ion-col>\n\n\n\n        <ion-col col-4>\n\n          <button ion-button clear color="netflixWhite">\n\n            <ion-icon name=\'md-add\'></ion-icon>\n\n            <p>My List</p>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <p class="item-summary line-break">{{ comingSoon.description }}</p>\n\n      </ion-row>\n\n\n\n      <ion-row>\n\n        <p class="coming-date">{{ comingSoon.releaseDate }}</p>\n\n      </ion-row>\n\n\n\n      <br>\n\n    </ion-item>\n\n  </ion-list> -->\n\n<!-- \n\n  <ion-row style="margin-top: 50%;" *ngIf="loaded && comingSoonList.length <= 0">\n\n    <ion-col text-center>\n\n      <img class="demo-image" src="assets/netflix-icon.png">\n\n      <p class="demo-message">There are no items yet.</p>\n\n      <p class="demo-sub-message">Use the Admin Ion Netflix to add your own coming soon items here!</p>\n\n    </ion-col>\n\n  </ion-row> -->\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\coming-soon\coming-soon.html"*/
-        })
-        //
-        // Planes de negocio 1 2 3  :Planea tu negocio
-        // Espíritu y proyecto :Proyectarse para emprender
-        // Opciones de grado: Ideas en acción
-        // Pensamiento cunista :Transformando con tus ideas
-        // //
-        ,
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]])
-    ], ComingSoonPage);
-    return ComingSoonPage;
-    var ComingSoonPage_1;
+    HelpPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
+            selector: 'page-help',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\help\help.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Ayuda</ion-title>  \n\n  </ion-navbar>\n\n  <ion-segment [(ngModel)]="segementTickets"   color="netflixRed">\n\n    <ion-segment-button value="create" >Crear ticket\n\n    </ion-segment-button>\n\n    <ion-segment-button value="myTickets" (click)="getTickets()" [disabled]="hideSegment">Mis tickets\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</ion-header>\n\n<ion-content padding>\n\n <ion-grid>\n\n   <ion-row>\n\n     <ion-col >\n\n      <!-- Segmento de creacion de ticket  -->\n\n      <div class="contentLg" *ngIf="segementTickets === \'create\'" >\n\n        <form [formGroup]="ticketFormGroup" (ngSubmit)="createTicket()" class="segmentCreateTicket">\n\n          <ion-item>\n\n            <ion-label>Correo</ion-label>\n\n            <ion-input formControlName="email" type="email" ></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-label>Número Celular</ion-label>\n\n            <ion-input formControlName="phone" type="number" ></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-label>Asunto</ion-label>\n\n            <ion-input formControlName="subject"></ion-input>\n\n          </ion-item>  \n\n          <ion-item >\n\n            <ion-select formControlName="type" placeholder="Selecciona una..." style="color:white">\n\n              <ion-option value="question">Pregunta</ion-option>\n\n              <ion-option value="problem">Problema</ion-option>\n\n              <ion-option value="suggest">Sugerencia</ion-option>\n\n            </ion-select>\n\n          </ion-item>                \n\n          <ion-item>\n\n            <ion-label>Descripción</ion-label>\n\n            <ion-textarea formControlName="description" style="color:white"></ion-textarea >\n\n          </ion-item>                      \n\n          <button ion-button type="submit" [disabled]="!ticketFormGroup.valid" full round>Crear</button>\n\n        </form>\n\n      </div> \n\n     </ion-col>\n\n   </ion-row>\n\n   <ion-row>  <!-- //////////////////////////////////////////// Segmento de mis tickets ////////////////////////////////////////////// -->   \n\n    <ion-col col-12 col-lg-12 >\n\n        <div *ngIf="segementTickets === \'myTickets\'"  >\n\n            <ion-refresher \n\n                (ionRefresh)="doRefresh($event)"\n\n                pullMin=200>\n\n              <ion-refresher-content \n\n                pullingIcon="refresh-circle"\n\n                refreshingSpinner="bubbles">\n\n              </ion-refresher-content>\n\n            </ion-refresher>      \n\n            <ion-card class="cardLg" *ngFor="let ticket of myTickets;let i = index" [ngClass]="(( i % 2) == 0)?\'cardRed\':\'cardWhite\'">\n\n              <ion-item > \n\n                <h2><b>{{ticket.subject}}</b></h2>\n\n                <p>ID:{{ticket.id}}</p>\n\n              </ion-item>\n\n                <ion-row>\n\n                <ion-col>\n\n                  <button ion-button icon-start clear small color="{{ticket.statusColor}}">\n\n                    <ion-icon name="disc"></ion-icon>\n\n                    <div  >{{ticket.statusText}}</div>\n\n                  </button>\n\n                </ion-col >\n\n                <ion-col align-self-center text-center>\n\n                  <ion-note>\n\n                    {{ticket.created_at}}\n\n                  </ion-note>\n\n                </ion-col>\n\n              </ion-row>      \n\n            </ion-card>\n\n          </div>\n\n    </ion-col> \n\n\n\n   </ion-row>\n\n </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\help\help.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_email_composer__["a" /* EmailComposer */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_help_desk_help_desk__["a" /* HelpDeskProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_0__services_AuthService__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["n" /* Platform */]])
+    ], HelpPage);
+    return HelpPage;
 }());
 
-//# sourceMappingURL=coming-soon.js.map
+//# sourceMappingURL=help.js.map
 
 /***/ })
 

@@ -1,10 +1,4 @@
 import { Component } from '@angular/core';
-
-import { HomePage } from '../home/home';
-import { SearchPage } from '../search/search';
-import { ComingSoonPage } from '../coming-soon/coming-soon';
-import { DownloadsPage } from '../downloads/downloads';
-import { ProfilePage } from '../profile/profile';
 import { NavController, Platform } from 'ionic-angular';
 
 
@@ -15,7 +9,7 @@ import { NavController, Platform } from 'ionic-angular';
 export class TabsPage {
 
   tab1Root = 'HomePage';
-  tab2Root = SearchPage;
+  tab2Root = 'SearchPage';
   tab3Root = 'ComingSoonPage';
   tab4Root = 'ProfilePage';
 

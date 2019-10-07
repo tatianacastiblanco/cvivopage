@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 612:
+/***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersPageModule", function() { return UsersPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(764);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users__ = __webpack_require__(779);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingsPageModule = /** @class */ (function () {
-    function SettingsPageModule() {
+var UsersPageModule = /** @class */ (function () {
+    function UsersPageModule() {
     }
-    SettingsPageModule = __decorate([
+    UsersPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__users__["a" /* UsersPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__users__["a" /* UsersPage */]),
             ],
         })
-    ], SettingsPageModule);
-    return SettingsPageModule;
+    ], UsersPageModule);
+    return UsersPageModule;
 }());
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=users.module.js.map
 
 /***/ }),
 
-/***/ 764:
+/***/ 779:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -54,22 +54,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SettingsPage = /** @class */ (function () {
-    function SettingsPage() {
+var UsersPage = /** @class */ (function () {
+    function UsersPage() {
+        this.showEditIcon = false;
     }
-    SettingsPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad SettingsPage");
+    UsersPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad UsersPage");
     };
-    SettingsPage = __decorate([
+    UsersPage.prototype.editProfiles = function () {
+        this.showEditIcon = true;
+    };
+    UsersPage.prototype.cancelEdit = function () {
+        this.showEditIcon = false;
+    };
+    UsersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-settings",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\settings\settings.html"*/'<ion-header no-border>\n\n  <ion-navbar align-title="center">\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Video playback</ion-list-header>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Cellular Data Usage</p>\n\n      <p class="item-subtitle">Automatic (Default data & quality setting)</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Notifications</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Accept push notifications</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Notifications may include newly-</p>\n\n      <p class="item-subtitle">added movies, TV shows, personalised</p>\n\n      <p class="item-subtitle">suggestions or other notices</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Downloads</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Smart Downloads</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="false" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Completely episodes will be deleted and</p>\n\n      <p class="item-subtitle">replaced with the next episodes, only</p>\n\n      <p class="item-subtitle">on Wi-Fi</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Wi-Fi only</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Video Quality</p>\n\n      <p class="item-subtitle">Standard</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Location</p>\n\n      <p class="item-subtitle">Internal Storage</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Internal Storage</p>\n\n      <p class="item-title" item-end>Default</p>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <div class="light-grey-rectangle"></div>\n\n      <div class="red-rectangle"></div>\n\n      <div class="white-rectangle"></div>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -20px;">\n\n      <ion-row>\n\n        <div class="light-grey-square"></div>\n\n        <p class="used-storage">Used - 10 GB</p>\n\n        <div class="red-square"></div>\n\n        <p class="used-storage">Netflix - 5 GB</p>\n\n        <div class="white-square"></div>\n\n        <p class="used-storage">Free - 15 GB</p>\n\n      </ion-row>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\settings\settings.html"*/
+            selector: "page-users",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\users\users.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n\n\n    <ion-buttons right>\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="!showEditIcon" (click)="editProfiles()">\n\n        <ion-icon name="md-create" item-end></ion-icon>\n\n      </button>\n\n\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="showEditIcon" (click)="cancelEdit()">\n\n        <ion-icon name="md-close-circle" item-end></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" text-center padding>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <p class="who-watching">Who\'s watching?</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/orange-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Mr John Doe</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/blue-user.jpg" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 1</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/yellow-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 2</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/kids-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Kids</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6>\n\n        <ion-icon class="add-profile" name="md-add-circle" color="netflixWhite"></ion-icon>\n\n        <p>Add Profile</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\users\users.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SettingsPage);
-    return SettingsPage;
+    ], UsersPage);
+    return UsersPage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=users.js.map
 
 /***/ })
 

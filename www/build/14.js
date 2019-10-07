@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 607:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HorizontalListPageModule", function() { return HorizontalListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__horizontal_list__ = __webpack_require__(759);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(775);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HorizontalListPageModule = /** @class */ (function () {
-    function HorizontalListPageModule() {
+var SettingsPageModule = /** @class */ (function () {
+    function SettingsPageModule() {
     }
-    HorizontalListPageModule = __decorate([
+    SettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__horizontal_list__["a" /* HorizontalListPage */],
+                __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__horizontal_list__["a" /* HorizontalListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */]),
             ],
         })
-    ], HorizontalListPageModule);
-    return HorizontalListPageModule;
+    ], SettingsPageModule);
+    return SettingsPageModule;
 }());
 
-//# sourceMappingURL=horizontal-list.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 759:
+/***/ 775:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HorizontalListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,27 +54,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var HorizontalListPage = /** @class */ (function () {
-    function HorizontalListPage(navParams) {
-        this.navParams = navParams;
-        this.popularMovies = [];
-        this.trendingMovies = [];
-        this.myMovies = [];
-        this.title = this.navParams.get("title");
+var SettingsPage = /** @class */ (function () {
+    function SettingsPage() {
     }
-    HorizontalListPage.prototype.ionViewDidLoad = function () {
+    SettingsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad SettingsPage");
     };
-    HorizontalListPage = __decorate([
+    SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-horizontal-list",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\horizontal-list\horizontal-list.html"*/'<ion-header no-border>\n\n  <ion-navbar align-title="center">\n\n    <ion-title>{{ title }}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="item-title">Popular on Netflix</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of popularMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n\n\n  <div class="item-title">Trending Now</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of trendingMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n\n\n  <div class="item-title">Continue watching for Mr John Doe</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of myMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n\n\n  <div class="item-title">Popular on Netflix</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of popularMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n\n\n  <div class="item-title">Trending Now</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of trendingMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n\n\n  <div class="item-title">Continue watching for Mr John Doe</div>\n\n\n\n  <ion-scroll scrollX="true" scroll-avatar>\n\n    <ion-list>\n\n      <ion-col *ngFor="let movie of myMovies" class="scroll-item">\n\n        <img src="{{ movie }}" />\n\n      </ion-col>\n\n    </ion-list>\n\n  </ion-scroll>\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\horizontal-list\horizontal-list.html"*/
+            selector: "page-settings",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\settings\settings.html"*/'<ion-header no-border>\n\n  <ion-navbar align-title="center">\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Video playback</ion-list-header>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Cellular Data Usage</p>\n\n      <p class="item-subtitle">Automatic (Default data & quality setting)</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Notifications</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Accept push notifications</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Notifications may include newly-</p>\n\n      <p class="item-subtitle">added movies, TV shows, personalised</p>\n\n      <p class="item-subtitle">suggestions or other notices</p>\n\n    </ion-item>\n\n\n\n    <ion-list-header>Downloads</ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Smart Downloads</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="false" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <p class="item-subtitle">Completely episodes will be deleted and</p>\n\n      <p class="item-subtitle">replaced with the next episodes, only</p>\n\n      <p class="item-subtitle">on Wi-Fi</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label class="item-title">Wi-Fi only</ion-label>\n\n      <ion-checkbox color="netflixRed" checked="true" item-end></ion-checkbox>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Video Quality</p>\n\n      <p class="item-subtitle">Standard</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Download Location</p>\n\n      <p class="item-subtitle">Internal Storage</p>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <p class="item-title">Internal Storage</p>\n\n      <p class="item-title" item-end>Default</p>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -10px;">\n\n      <div class="light-grey-rectangle"></div>\n\n      <div class="red-rectangle"></div>\n\n      <div class="white-rectangle"></div>\n\n    </ion-item>\n\n\n\n    <ion-item style="margin-top: -20px;">\n\n      <ion-row>\n\n        <div class="light-grey-square"></div>\n\n        <p class="used-storage">Used - 10 GB</p>\n\n        <div class="red-square"></div>\n\n        <p class="used-storage">Netflix - 5 GB</p>\n\n        <div class="white-square"></div>\n\n        <p class="used-storage">Free - 15 GB</p>\n\n      </ion-row>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\settings\settings.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], HorizontalListPage);
-    return HorizontalListPage;
+        __metadata("design:paramtypes", [])
+    ], SettingsPage);
+    return SettingsPage;
 }());
 
-//# sourceMappingURL=horizontal-list.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

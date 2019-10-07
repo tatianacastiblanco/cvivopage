@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 615:
+/***/ 606:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersPageModule", function() { return UsersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MylistPageModule", function() { return MylistPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__users__ = __webpack_require__(767);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mylist__ = __webpack_require__(766);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,32 +18,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var UsersPageModule = /** @class */ (function () {
-    function UsersPageModule() {
+var MylistPageModule = /** @class */ (function () {
+    function MylistPageModule() {
     }
-    UsersPageModule = __decorate([
+    MylistPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__users__["a" /* UsersPage */],
+                __WEBPACK_IMPORTED_MODULE_2__mylist__["a" /* MylistPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__users__["a" /* UsersPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mylist__["a" /* MylistPage */]),
             ],
         })
-    ], UsersPageModule);
-    return UsersPageModule;
+    ], MylistPageModule);
+    return MylistPageModule;
 }());
 
-//# sourceMappingURL=users.module.js.map
+//# sourceMappingURL=mylist.module.js.map
 
 /***/ }),
 
-/***/ 767:
+/***/ 621:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeScreenGroupItem; });
+var HomeScreenGroupItem = /** @class */ (function () {
+    function HomeScreenGroupItem() {
+    }
+    return HomeScreenGroupItem;
+}());
+
+//# sourceMappingURL=HomeScreenGroupItem.js.map
+
+/***/ }),
+
+/***/ 766:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MylistPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_UserService__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_AuthService__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,29 +73,74 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var UsersPage = /** @class */ (function () {
-    function UsersPage() {
-        this.showEditIcon = false;
+
+
+
+
+var MylistPage = /** @class */ (function () {
+    function MylistPage(navCtrl, userService, authService) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.userService = userService;
+        this.authService = authService;
+        this.userId = "";
+        this.myListItems = [];
+        this.loaded = false;
+        this.authService.afAuth.user.subscribe(function (user) {
+            _this.userId = user.uid;
+        });
     }
-    UsersPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad UsersPage");
+    MylistPage.prototype.ionViewDidEnter = function () {
+        console.log("ionViewDidEnter MylistPage");
+        this.getMoviesAndShowsFromMyList();
     };
-    UsersPage.prototype.editProfiles = function () {
-        this.showEditIcon = true;
+    MylistPage.prototype.goHome = function () {
+        this.navCtrl.setRoot('TabsPage');
     };
-    UsersPage.prototype.cancelEdit = function () {
-        this.showEditIcon = false;
+    MylistPage.prototype.getMoviesAndShowsFromMyList = function () {
+        var _this = this;
+        this.myListItems = [];
+        this.loaded = false;
+        // Get movies from my list first
+        this.userService.getFavoriteMovies(this.userId).then(function (result) {
+            result.favoriteMovies.forEach(function (movie) {
+                var myListItem = new __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
+                myListItem.movieId = movie.movieId;
+                myListItem.detailsPicture = movie.detailsPicture;
+                myListItem.description = movie.description;
+                myListItem.name = movie.name;
+                myListItem.picture = movie.picture;
+                _this.myListItems.push(myListItem);
+            });
+            _this.loaded = true;
+            // Then get tv shows from my list
+            // this.userService.getFavoriteTvShows(this.userId).then((result: any) => {
+            //   result.favoriteTvShows.forEach((tvShow: TvShow) => {
+            //     var myListItem = new MyListItem();
+            //     myListItem.itemId = tvShow.tvShowId;
+            //     myListItem.picture = tvShow.picture;
+            //     myListItem.isMovie = false;
+            //     this.myListItems.push(myListItem);
+            //   });
+            //   this.loaded = true;
+            // });
+        });
     };
-    UsersPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-users",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\users\users.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      <img src="assets/imgs/netflix-logo.png">\n\n    </ion-title>\n\n\n\n    <ion-buttons right>\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="!showEditIcon" (click)="editProfiles()">\n\n        <ion-icon name="md-create" item-end></ion-icon>\n\n      </button>\n\n\n\n      <button ion-button icon-only color="netflixWhite" *ngIf="showEditIcon" (click)="cancelEdit()">\n\n        <ion-icon name="md-close-circle" item-end></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="no-scroll" text-center padding>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <p class="who-watching">Who\'s watching?</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/orange-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Mr John Doe</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/blue-user.jpg" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 1</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/yellow-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Parasite 2</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n\n\n      <ion-col col-6>\n\n        <div class="user-thumbnail">\n\n          <img src="assets/imgs/kids-user.png" [class.low-opacity]="showEditIcon">\n\n          <p>Kids</p>\n\n          <ion-icon *ngIf="showEditIcon" name="md-create"></ion-icon>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row>\n\n      <ion-col col-6>\n\n        <ion-icon class="add-profile" name="md-add-circle" color="netflixWhite"></ion-icon>\n\n        <p>Add Profile</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\users\users.html"*/
+    MylistPage.prototype.goToMyListItem = function (myListItem) {
+        this.navCtrl.push("MovieDetailsPage", { movieId: myListItem });
+    };
+    MylistPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: "page-mylist",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\mylist\mylist.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Mi lista</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-content padding>\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n      <ion-col text-center>\n\n        <button ion-button clear color="netflixWhite">\n\n          <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n        </button>\n\n\n\n        <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">\n\n      <ion-col text-center>\n\n        <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n          ENCUENTRA ALGO QUE VER\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="!loaded">\n\n      <ion-col text-center>\n\n        <br>\n\n        <ion-spinner color="netflixRed"></ion-spinner>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n      <ion-col col-4 col-lg-1 *ngFor="let myListItem of myListItems">\n\n        <img class="imgCara" src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n        <p text-wrap style="color:#f5f5f1">{{myListItem.name}}</p>  \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-content>\n\n</ion-content>\n\n\n\n  <!-- <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n          <button ion-button clear color="netflixWhite">\n\n            <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n          </button>\n\n          <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n        </div>\n\n\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">      \n\n          <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n            ENCUENTRA ALGO QUE VER\n\n          </button>      \n\n        </div>\n\n    \n\n        <div *ngIf="!loaded">      \n\n            <br>\n\n            <ion-spinner color="netflixRed"></ion-spinner>     \n\n        </div>\n\n    \n\n        <div *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n          <div *ngFor="let myListItem of myListItems">\n\n            <img src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n          </div>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid> -->'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\mylist\mylist.html"*/
         }),
-        __metadata("design:paramtypes", [])
-    ], UsersPage);
-    return UsersPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_3__services_UserService__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_4__services_AuthService__["a" /* AuthService */]])
+    ], MylistPage);
+    return MylistPage;
 }());
 
-//# sourceMappingURL=users.js.map
+//# sourceMappingURL=mylist.js.map
 
 /***/ })
 

@@ -47,7 +47,9 @@ export class MovieDetailsPage {
 
   isDownloading = false;
   isDownloaded = false;
-
+  menu:boolean;
+  private width:number;
+ private heigth:number;
   constructor(
     private navCtrl: NavController,
     private navParams: NavParams,
@@ -63,6 +65,18 @@ export class MovieDetailsPage {
     private imageLoaderConfig: ImageLoaderConfig
   ) {
 
+    platform.ready().then(() => {
+      this.width = platform.width();
+      this.heigth = platform.height();
+      
+      if(this.width <= 992){
+        this.menu = true
+      
+      } else{
+        this.menu = false
+      }
+      
+    });
     this.imageLoaderConfig.enableDebugMode();
     this.imageLoaderConfig.setCacheDirectoryName('my-custom-cache-directory-name');
 
@@ -71,20 +85,10 @@ export class MovieDetailsPage {
     });
 
     this.movie = this.navParams.get("movieId");
-
-    // if (this.movieId == undefined) {
-    //   this.movieId = "";
-    // } else {
-    //   this.downloadService
-    //     .isMovieDownloaded(this.movieId)
-    //     .then((result: any) => {
-    //       this.isDownloaded = result.isDownloaded;
-    //     });
-    // }
+   
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad MovieDetailsPage");
 
     this.getMovie();
      this.getRecentlyAddedMovies();
@@ -105,10 +109,7 @@ export class MovieDetailsPage {
   getCategoryMovies(){
     this.vimeoService.getHomeScreenGroups().subscribe(result => {
       this.homeScreenGroups = []
-      let category:any = result;
-
-      console.log(category);
-      
+      let category:any = result;      
     })
   }
   getRecentlyAddedMovies() {
@@ -131,18 +132,11 @@ export class MovieDetailsPage {
        
       });
       this.loaded = true;
-    },err => console.log(err))
-    // this.moviesService.getRecentlyAddedMovies().then((result: any) => {
-    //   this.recentlyAddedMovies = Helper.shuffle(result.movies);
-    // 
-    // });
+    },err => console.log(err));
    
   }
 
-  getIsPartOfMyList() {
-
-
-    console.log('test')
+  getIsPartOfMyList() {  
     
     this.userService
       .getIsMoviePartOfMyList(this.userId, this.movieId)
