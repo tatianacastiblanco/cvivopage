@@ -1,36 +1,24 @@
 
 
 <ion-content padding>
-    <ion-slides 
-    >
-        <ion-slide>
-          <img src="assets/channels/1.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/2.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/3.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/4.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/2.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/3.jpg" alt="">
-        </ion-slide>
-        <ion-slide>
-            <img src="assets/channels/4.jpg" alt="">
-        </ion-slide>
-      </ion-slides>
-</ion-content>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+          <img src="assets/netflix-icon.png" alt="" width="100px">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+          <ion-card *ngFor="let item of images" >
+              <img src="assets/channels/{{item}}"/>
+              <div class="card-title">Madison</div>
+              <div class="card-subtitle">28 Listings</div>
+            </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <!-- <ion-content>
-    <ion-slides >
-      <ion-slide *ngFor="let slide of slidePages" [style.background-color]="slide.color">
-        {{slide.text}}
-      </ion-slide>
-    </ion-slides>
-  </ion-content> -->
+  </ion-grid>
+ 
+        
+</ion-content>

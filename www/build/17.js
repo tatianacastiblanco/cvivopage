@@ -76,37 +76,38 @@ var ChannelsPage = /** @class */ (function () {
             { text: 'Slide 4', color: 'orange' },
             { text: 'Slide 5', color: 'magenta' },
         ];
+        this.images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
     }
     ChannelsPage.prototype.ionViewDidLoad = function () {
-        this.slides.effect = 'coverflow';
-        this.slides.centeredSlides = true;
-        this.slides.slidesPerView = 1.5;
-        this.slides.slidesOffsetBefore = 10;
-        this.slides.slidesOffsetAfter = 45;
-        this.slides.spaceBetween = 25;
-        this.slides.initialSlide = 1;
-        this.slides.coverflow = {
-            rotate: 20,
-            stretch: 50,
-            depth: 10,
-            modifier: 1,
-            slideShadows: true,
-        };
+        // this.slides.effect = 'coverflow';
+        // this.slides.centeredSlides = true; 
+        // this.slides.slidesPerView = 1.5;
+        // this.slides.slidesOffsetBefore = 20;
+        // this.slides.slidesOffsetAfter = 25;
+        // this.slides.spaceBetween = 30;
+        // this.slides.initialSlide = 1;
+        // this.slides.loop = true;
+        // this.slides.coverflow = {
+        //   rotate: 50,
+        //   stretch: 0,
+        //   depth: 100,
+        //   modifier: 1,
+        //   slideShadows: false,
+        // }
     };
     ChannelsPage.prototype.ngOnInit = function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Slides */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Slides */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Slides */])
     ], ChannelsPage.prototype, "slides", void 0);
     ChannelsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-channels',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\channels\channels.html"*/'\n\n\n\n<ion-content padding>\n\n    <ion-slides \n\n    >\n\n        <ion-slide>\n\n          <img src="assets/channels/1.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/2.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/3.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/4.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/2.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/3.jpg" alt="">\n\n        </ion-slide>\n\n        <ion-slide>\n\n            <img src="assets/channels/4.jpg" alt="">\n\n        </ion-slide>\n\n      </ion-slides>\n\n</ion-content>\n\n\n\n  <!-- <ion-content>\n\n    <ion-slides >\n\n      <ion-slide *ngFor="let slide of slidePages" [style.background-color]="slide.color">\n\n        {{slide.text}}\n\n      </ion-slide>\n\n    </ion-slides>\n\n  </ion-content> -->\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\channels\channels.html"*/,
+            selector: 'page-channels',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\channels\channels.html"*/'\n\n\n\n<ion-content padding>\n\n  \n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col text-center>\n\n          <img src="assets/netflix-icon.png" alt="" width="100px">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col >\n\n          <ion-card *ngFor="let item of images" >\n\n              <img src="assets/channels/{{item}}"/>\n\n              <div class="card-title">Madison</div>\n\n              <div class="card-subtitle">28 Listings</div>\n\n            </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n  </ion-grid>\n\n \n\n        \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\channels\channels.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
     ], ChannelsPage);
     return ChannelsPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=channels.js.map

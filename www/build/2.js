@@ -42,7 +42,7 @@ var ChatPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 615:
+/***/ 613:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51,7 +51,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ngx_embed_video__ = __webpack_require__(755);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ngx_embed_video__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__chat_chat_module__ = __webpack_require__(598);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(778);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_image_loader__ = __webpack_require__(339);
@@ -894,7 +894,7 @@ exports.EmbedVideoService = EmbedVideoService;
 
 /***/ }),
 
-/***/ 780:
+/***/ 778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -907,7 +907,7 @@ exports.EmbedVideoService = EmbedVideoService;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__data_Helper__ = __webpack_require__(749);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_HomeScreenGroupItem__ = __webpack_require__(621);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__ = __webpack_require__(755);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

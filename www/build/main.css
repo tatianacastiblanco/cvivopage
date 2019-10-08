@@ -70840,6 +70840,28 @@ page-about-us h2 {
   color: #CA5F45;
 }
 
+page-channels ion-card {
+  position: relative;
+  text-align: center;
+}
+
+page-channels .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+}
+
+page-channels .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+}
+
 page-chat .skeletonChat {
   width: 80%;
   left: 15%;

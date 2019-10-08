@@ -20,28 +20,19 @@ export class ChannelsPage {
     { text: 'Slide 3', color: 'green' },
     { text: 'Slide 4', color: 'orange' },
     { text: 'Slide 5', color: 'magenta' },
+    { text: 'Slide 6', color: 'brown' },
+    { text: 'Slide 7', color: 'gray' },
+    { text: 'Slide 8', color: 'yellow' },
+    { text: 'Slide 9', color: 'orange' },
+    { text: 'Slide 10', color: 'magenta' },
   ]
+  images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
   @ViewChild(Slides) private slides: Slides;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    this.slides.effect = 'coverflow';
-    this.slides.centeredSlides = true; 
-    this.slides.slidesPerView = 1.5;
-    this.slides.slidesOffsetBefore = 10;
-    this.slides.slidesOffsetAfter = 45;
-    this.slides.spaceBetween = 25;
-    this.slides.initialSlide = 1
-
-    
-    this.slides.coverflow = {
-      rotate: 20,
-      stretch: 50,
-      depth: 10,
-      modifier: 1,
-      slideShadows: true,
-    }
+   
   }
   public ngOnInit() {
    

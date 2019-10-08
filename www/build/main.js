@@ -5,12 +5,12 @@ webpackJsonp([19],{
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_UserInfo__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_UserInfo__ = __webpack_require__(539);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Movie__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_TvShow__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_TvShow__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -543,34 +543,34 @@ var map = {
 		1
 	],
 	"../pages/downloads/downloads.module": [
-		602,
+		606,
 		9
 	],
 	"../pages/forgot-password/forgot-password.module": [
 		214
 	],
 	"../pages/grid-list/grid-list.module": [
-		603,
+		602,
 		6
 	],
 	"../pages/help/help.module": [
-		604,
+		603,
 		0
 	],
 	"../pages/home/home.module": [
-		615,
+		613,
 		2
 	],
 	"../pages/horizontal-list/horizontal-list.module": [
-		605,
+		604,
 		16
 	],
 	"../pages/movie-details/movie-details.module": [
-		608,
+		614,
 		5
 	],
 	"../pages/mylist/mylist.module": [
-		606,
+		605,
 		8
 	],
 	"../pages/notifications/notifications.module": [
@@ -578,7 +578,7 @@ var map = {
 		7
 	],
 	"../pages/profile/profile.module": [
-		616,
+		615,
 		15
 	],
 	"../pages/search/search.module": [
@@ -586,29 +586,29 @@ var map = {
 		3
 	],
 	"../pages/settings/settings.module": [
-		610,
+		608,
 		14
 	],
 	"../pages/show-details/show-details.module": [
-		611,
+		610,
 		13
 	],
 	"../pages/sign-in/sign-in.module": [
-		284
+		283
 	],
 	"../pages/sign-up/sign-up.module": [
-		285
+		284
 	],
 	"../pages/terms/terms.module": [
-		612,
+		611,
 		12
 	],
 	"../pages/users/users.module": [
-		614,
+		616,
 		11
 	],
 	"../pages/video-playback/video-playback.module": [
-		613,
+		612,
 		10
 	]
 };
@@ -676,7 +676,7 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 284:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -714,7 +714,7 @@ var SignInPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -722,7 +722,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpPageModule", function() { return SignUpPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(572);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_up__ = __webpack_require__(569);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1247,9 +1247,9 @@ var SignInPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoriesService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_TvShow__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_TvShow__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_Movie__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Category__ = __webpack_require__(566);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Category__ = __webpack_require__(534);
 
 
 
@@ -1393,114 +1393,7 @@ var HelpDeskProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 343:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MoviesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_Movie__ = __webpack_require__(94);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var MoviesService = /** @class */ (function () {
-    function MoviesService() {
-    }
-    MoviesService.prototype.getMovie = function (movieId) {
-        var promise = new Promise(function (resolve, reject) {
-            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
-            db.collection("movies")
-                .doc(movieId)
-                .get()
-                .then(function (doc) {
-                var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
-                // movie.movieId = doc.id;
-                // movie.name = doc.data().name;
-                // movie.picture = doc.data().picture;
-                // movie.detailsPicture = doc.data().detailsPicture;
-                // movie.releaseYear = doc.data().releaseYear;
-                // movie.rating = doc.data().rating;
-                // movie.description = doc.data().description;
-                // movie.videoUrl = doc.data().videoUrl;
-                resolve({ movie: movie });
-            });
-        });
-        return promise;
-    };
-    MoviesService.prototype.getAllMovies = function () {
-        var promise = new Promise(function (resolve, reject) {
-            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
-            db.collection("movies")
-                .orderBy("addedAt", "desc")
-                .get()
-                .then(function (moviesSnapshot) {
-                var movies = [];
-                moviesSnapshot.forEach(function (doc) {
-                    var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
-                    // movie.movieId = doc.id;
-                    // movie.name = doc.data().name;
-                    // movie.picture = doc.data().picture;
-                    // movie.detailsPicture = doc.data().detailsPicture;
-                    // movie.releaseYear = doc.data().releaseYear;
-                    // movie.rating = doc.data().rating;
-                    // movie.description = doc.data().description;
-                    // movie.videoUrl = doc.data().videoUrl;
-                    movies.push(movie);
-                });
-                resolve({ movies: movies });
-            });
-        });
-        return promise;
-    };
-    MoviesService.prototype.getRecentlyAddedMovies = function () {
-        var promise = new Promise(function (resolve, reject) {
-            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
-            db.collection("movies")
-                .limit(12)
-                .orderBy("addedAt", "desc")
-                .get()
-                .then(function (moviesSnapshot) {
-                var movies = [];
-                moviesSnapshot.forEach(function (doc) {
-                    var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
-                    // movie.movieId = doc.id;
-                    // movie.name = doc.data().name;
-                    // movie.picture = doc.data().picture;
-                    // movie.detailsPicture = doc.data().detailsPicture;
-                    // movie.releaseYear = doc.data().releaseYear;
-                    // movie.rating = doc.data().rating;
-                    // movie.description = doc.data().description;
-                    // movie.videoUrl = doc.data().videoUrl;
-                    movies.push(movie);
-                });
-                resolve({ movies: movies });
-            });
-        });
-        return promise;
-    };
-    MoviesService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], MoviesService);
-    return MoviesService;
-}());
-
-//# sourceMappingURL=MoviesService.js.map
-
-/***/ }),
-
-/***/ 345:
+/***/ 344:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1508,9 +1401,9 @@ var MoviesService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_TvShow__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Season__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_Episode__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_TvShow__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Season__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_Episode__ = __webpack_require__(568);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1639,7 +1532,7 @@ var TvShowsService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 346:
+/***/ 345:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1652,6 +1545,113 @@ var HomeScreenGroup = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=HomeScreenGroup.js.map
+
+/***/ }),
+
+/***/ 346:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MoviesService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_Movie__ = __webpack_require__(94);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MoviesService = /** @class */ (function () {
+    function MoviesService() {
+    }
+    MoviesService.prototype.getMovie = function (movieId) {
+        var promise = new Promise(function (resolve, reject) {
+            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
+            db.collection("movies")
+                .doc(movieId)
+                .get()
+                .then(function (doc) {
+                var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
+                // movie.movieId = doc.id;
+                // movie.name = doc.data().name;
+                // movie.picture = doc.data().picture;
+                // movie.detailsPicture = doc.data().detailsPicture;
+                // movie.releaseYear = doc.data().releaseYear;
+                // movie.rating = doc.data().rating;
+                // movie.description = doc.data().description;
+                // movie.videoUrl = doc.data().videoUrl;
+                resolve({ movie: movie });
+            });
+        });
+        return promise;
+    };
+    MoviesService.prototype.getAllMovies = function () {
+        var promise = new Promise(function (resolve, reject) {
+            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
+            db.collection("movies")
+                .orderBy("addedAt", "desc")
+                .get()
+                .then(function (moviesSnapshot) {
+                var movies = [];
+                moviesSnapshot.forEach(function (doc) {
+                    var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
+                    // movie.movieId = doc.id;
+                    // movie.name = doc.data().name;
+                    // movie.picture = doc.data().picture;
+                    // movie.detailsPicture = doc.data().detailsPicture;
+                    // movie.releaseYear = doc.data().releaseYear;
+                    // movie.rating = doc.data().rating;
+                    // movie.description = doc.data().description;
+                    // movie.videoUrl = doc.data().videoUrl;
+                    movies.push(movie);
+                });
+                resolve({ movies: movies });
+            });
+        });
+        return promise;
+    };
+    MoviesService.prototype.getRecentlyAddedMovies = function () {
+        var promise = new Promise(function (resolve, reject) {
+            var db = __WEBPACK_IMPORTED_MODULE_1_firebase___default.a.firestore();
+            db.collection("movies")
+                .limit(12)
+                .orderBy("addedAt", "desc")
+                .get()
+                .then(function (moviesSnapshot) {
+                var movies = [];
+                moviesSnapshot.forEach(function (doc) {
+                    var movie = new __WEBPACK_IMPORTED_MODULE_2__data_Movie__["a" /* Movie */]();
+                    // movie.movieId = doc.id;
+                    // movie.name = doc.data().name;
+                    // movie.picture = doc.data().picture;
+                    // movie.detailsPicture = doc.data().detailsPicture;
+                    // movie.releaseYear = doc.data().releaseYear;
+                    // movie.rating = doc.data().rating;
+                    // movie.description = doc.data().description;
+                    // movie.videoUrl = doc.data().videoUrl;
+                    movies.push(movie);
+                });
+                resolve({ movies: movies });
+            });
+        });
+        return promise;
+    };
+    MoviesService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
+    ], MoviesService);
+    return MoviesService;
+}());
+
+//# sourceMappingURL=MoviesService.js.map
 
 /***/ }),
 
@@ -1683,8 +1683,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(591);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tabs_tabs__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_sign_in_sign_in_module__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_sign_up_sign_up_module__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_sign_in_sign_in_module__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_sign_up_sign_up_module__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(326);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(327);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_streaming_media__ = __webpack_require__(331);
@@ -1705,13 +1705,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_AuthService__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_ComingSoonService__ = __webpack_require__(593);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_HomeScreenService__ = __webpack_require__(595);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_MoviesService__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_TvShowsService__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_MoviesService__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_TvShowsService__ = __webpack_require__(344);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_CategoriesService__ = __webpack_require__(340);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_UserService__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_DownloadService__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_common_http__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_sqlite__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_sqlite__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_ng_socket_io__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_ng_socket_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32_ng_socket_io__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__services_ChatService__ = __webpack_require__(333);
@@ -1722,7 +1722,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_camera__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__ionic_native_native_storage__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_email_composer__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_speech_recognition__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_speech_recognition__ = __webpack_require__(343);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_base64__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_ionic_image_loader__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__providers_help_desk_help_desk__ = __webpack_require__(341);
@@ -1817,25 +1817,25 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/about-us/about-us.module#ComingSoonPageModule', name: 'AboutUsPage', segment: 'about-us', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/channels/channels.module#ChannelsPageModule', name: 'ChannelsPage', segment: 'channels', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coming-soon/coming-soon.module#ComingSoonPageModule', name: 'ComingSoonPage', segment: 'coming-soon', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/downloads/downloads.module#DownloadsPageModule', name: 'DownloadsPage', segment: 'downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/grid-list/grid-list.module#GridListPageModule', name: 'GridListPage', segment: 'grid-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/help/help.module#HelpPageModule', name: 'HelpPage', segment: 'help', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/horizontal-list/horizontal-list.module#HorizontalListPageModule', name: 'HorizontalListPage', segment: 'horizontal-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mylist/mylist.module#MylistPageModule', name: 'MylistPage', segment: 'mylist', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/downloads/downloads.module#DownloadsPageModule', name: 'DownloadsPage', segment: 'downloads', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notifications/notifications.module#NotificationsPageModule', name: 'NotificationsPage', segment: 'notifications', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/movie-details/movie-details.module#MovieDetailsPageModule', name: 'MovieDetailsPage', segment: 'movie-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/show-details/show-details.module#ShowDetailsPageModule', name: 'ShowDetailsPage', segment: 'show-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-playback/video-playback.module#VideoPlaybackPageModule', name: 'VideoPlaybackPage', segment: 'video-playback', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#MovieDetailsPageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/movie-details/movie-details.module#MovieDetailsPageModule', name: 'MovieDetailsPage', segment: 'movie-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_17__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -1897,29 +1897,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 538:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserInfo; });
-var UserInfo = /** @class */ (function () {
-    function UserInfo() {
-    }
-    return UserInfo;
-}());
-
-//# sourceMappingURL=UserInfo.js.map
-
-/***/ }),
-
-/***/ 560:
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 566:
+/***/ 534:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1936,7 +1914,29 @@ var Category = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 570:
+/***/ 539:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserInfo; });
+var UserInfo = /** @class */ (function () {
+    function UserInfo() {
+    }
+    return UserInfo;
+}());
+
+//# sourceMappingURL=UserInfo.js.map
+
+/***/ }),
+
+/***/ 561:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 567:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1951,7 +1951,7 @@ var Season = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 571:
+/***/ 568:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1966,7 +1966,7 @@ var Episode = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 572:
+/***/ 569:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1976,7 +1976,7 @@ var Episode = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_sqlite__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_sqlite__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_firestore__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angularfire2_firestore__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2686,9 +2686,9 @@ var ComingSoon = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_HomeScreenGroup__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_HomeScreenGroup__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Movie__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_TvShow__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_TvShow__ = __webpack_require__(93);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2786,6 +2786,21 @@ var HomeScreenService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 93:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TvShow; });
+var TvShow = /** @class */ (function () {
+    function TvShow() {
+    }
+    return TvShow;
+}());
+
+//# sourceMappingURL=TvShow.js.map
+
+/***/ }),
+
 /***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2798,21 +2813,6 @@ var Movie = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=Movie.js.map
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TvShow; });
-var TvShow = /** @class */ (function () {
-    function TvShow() {
-    }
-    return TvShow;
-}());
-
-//# sourceMappingURL=TvShow.js.map
 
 /***/ })
 
