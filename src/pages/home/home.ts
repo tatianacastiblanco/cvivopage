@@ -72,7 +72,7 @@ export class HomePage {
     public events: Events,    
     public modalCtrl: ModalController
   ) { 
-    
+       
     platform.ready().then(() => {
       this.width = platform.width();
       this.heigth = platform.height();

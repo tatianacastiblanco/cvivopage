@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { VimeoService } from './../../services/VimeoService';
+import { map } from 'rxjs-compat/operator/map';
 
 /**
  * Generated class for the ChannelsPage page.
@@ -28,11 +30,18 @@ export class ChannelsPage {
   ]
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
   @ViewChild(Slides) private slides: Slides;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private vimeoService:VimeoService, public navParams: NavParams) {
+  
+  
+    let subs = this.vimeoService.getChannelsFromFB().subscribe(res=>{
+      console.log(res)
+    })
+
   }
 
   ionViewDidLoad() {
    
+ 
   }
   public ngOnInit() {
    

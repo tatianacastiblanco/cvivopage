@@ -1,7 +1,9 @@
+import { AngularFirestore } from 'angularfire2/firestore';
 import { HomeScreenGroup } from './../data/HomeScreenGroup';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import {map, startWith} from "rxjs/operators";
 
 @Injectable()
 export class VimeoService {
@@ -11,11 +13,11 @@ export class VimeoService {
   private vimeoURl:string;
   private apiurl:string;
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private readonly db:AngularFirestore) {
     this.apiurl = 'https://cvivovimeoapi.herokuapp.com';
     this.vimeoURl = "https://api.vimeo.com";
 
-  }
+  };
 
 getHomeScreenGroups() {
 
@@ -53,4 +55,14 @@ getHomeScreenGroups() {
     return  this.http.get(this.vimeoURl + '/me/videos?query='+parameter ,)      
   
      };
+
+  getChannelsFromFB(){
+   
+
+    return  this.db.collection('channels').snapshotChanges();
+     
+  
+   
+    
+  }
 }
