@@ -1,14 +1,11 @@
+import { Channel } from './../../data/Channel';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 import { VimeoService } from './../../services/VimeoService';
 import { map } from 'rxjs-compat/operator/map';
+import { DocumentChangeAction } from 'angularfire2/firestore';
 
-/**
- * Generated class for the ChannelsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -29,20 +26,32 @@ export class ChannelsPage {
     { text: 'Slide 10', color: 'magenta' },
   ]
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+  channels:Channel[] = [];
   @ViewChild(Slides) private slides: Slides;
   constructor(public navCtrl: NavController, private vimeoService:VimeoService, public navParams: NavParams) {
   
   
-    let subs = this.vimeoService.getChannelsFromFB().subscribe(res=>{
-      console.log(res)
-    })
-
   }
 
-  ionViewDidLoad() {
-   
+  ionViewDidLoad() {   
+
+  this.getChannels();
  
+  };
+
+
+  private getChannels(){
+    let subs = this.vimeoService.getChannelsFromFB().subscribe((_channels)=>{
+      _channels.forEach(_channel => {
+        let id = _channel.payload.doc.id;
+        let img = 'assets/channels/2.jpg';
+        let data = _channel.payload.doc.data();
+        this.channels.push({id,img,...data} as Channel);
+        subs.unsubscribe();
+      });
+    })
   }
+
   public ngOnInit() {
    
   }

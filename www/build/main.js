@@ -543,14 +543,14 @@ var map = {
 		1
 	],
 	"../pages/downloads/downloads.module": [
-		603,
+		602,
 		9
 	],
 	"../pages/forgot-password/forgot-password.module": [
 		218
 	],
 	"../pages/grid-list/grid-list.module": [
-		602,
+		603,
 		6
 	],
 	"../pages/help/help.module": [
@@ -570,11 +570,11 @@ var map = {
 		5
 	],
 	"../pages/mylist/mylist.module": [
-		608,
+		607,
 		8
 	],
 	"../pages/notifications/notifications.module": [
-		607,
+		608,
 		7
 	],
 	"../pages/profile/profile.module": [
@@ -582,15 +582,15 @@ var map = {
 		15
 	],
 	"../pages/search/search.module": [
-		611,
+		609,
 		3
 	],
 	"../pages/settings/settings.module": [
-		609,
+		610,
 		14
 	],
 	"../pages/show-details/show-details.module": [
-		610,
+		611,
 		13
 	],
 	"../pages/sign-in/sign-in.module": [
@@ -871,10 +871,9 @@ var VimeoService = /** @class */ (function () {
     };
     VimeoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpClient"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpClient"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_angularfire2_firestore__["AngularFirestore"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_angularfire2_firestore__["AngularFirestore"]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpClient"], __WEBPACK_IMPORTED_MODULE_0_angularfire2_firestore__["AngularFirestore"]])
     ], VimeoService);
     return VimeoService;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=VimeoService.js.map
@@ -1258,7 +1257,7 @@ var SignInPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_TvShow__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_Movie__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Category__ = __webpack_require__(563);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_Category__ = __webpack_require__(566);
 
 
 
@@ -1509,7 +1508,7 @@ var MoviesService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 344:
+/***/ 345:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1715,7 +1714,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_ComingSoonService__ = __webpack_require__(593);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_HomeScreenService__ = __webpack_require__(595);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_MoviesService__ = __webpack_require__(343);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_TvShowsService__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_TvShowsService__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_CategoriesService__ = __webpack_require__(340);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_UserService__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_DownloadService__ = __webpack_require__(176);
@@ -1731,7 +1730,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_camera__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__ionic_native_native_storage__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_email_composer__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_speech_recognition__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_speech_recognition__ = __webpack_require__(344);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_base64__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_ionic_image_loader__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__providers_help_desk_help_desk__ = __webpack_require__(341);
@@ -1827,21 +1826,21 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/channels/channels.module#ChannelsPageModule', name: 'ChannelsPage', segment: 'channels', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coming-soon/coming-soon.module#ComingSoonPageModule', name: 'ComingSoonPage', segment: 'coming-soon', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/grid-list/grid-list.module#GridListPageModule', name: 'GridListPage', segment: 'grid-list', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/downloads/downloads.module#DownloadsPageModule', name: 'DownloadsPage', segment: 'downloads', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/grid-list/grid-list.module#GridListPageModule', name: 'GridListPage', segment: 'grid-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/help/help.module#HelpPageModule', name: 'HelpPage', segment: 'help', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/horizontal-list/horizontal-list.module#HorizontalListPageModule', name: 'HorizontalListPage', segment: 'horizontal-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/movie-details/movie-details.module#MovieDetailsPageModule', name: 'MovieDetailsPage', segment: 'movie-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/notifications/notifications.module#NotificationsPageModule', name: 'NotificationsPage', segment: 'notifications', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mylist/mylist.module#MylistPageModule', name: 'MylistPage', segment: 'mylist', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/notifications/notifications.module#NotificationsPageModule', name: 'NotificationsPage', segment: 'notifications', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/show-details/show-details.module#ShowDetailsPageModule', name: 'ShowDetailsPage', segment: 'show-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/terms/terms.module#TermsPageModule', name: 'TermsPage', segment: 'terms', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/users/users.module#UsersPageModule', name: 'UsersPage', segment: 'users', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-playback/video-playback.module#VideoPlaybackPageModule', name: 'VideoPlaybackPage', segment: 'video-playback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#MovieDetailsPageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
@@ -1928,7 +1927,7 @@ var UserInfo = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 563:
+/***/ 566:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2554,7 +2553,7 @@ var MyApp = /** @class */ (function () {
             if (user.emailVerified === true) {
                 var dataToPost = { email: user.email, timestamp: new Date().toLocaleString() };
                 _this.userService.postLog(dataToPost);
-                _this.rootPage = 'ChannelsPage';
+                _this.rootPage = 'TabsPage';
                 // this.userService.addUser(user);
                 // this.zone.run(() => {
                 //   this.rootPage = TabsPage;
