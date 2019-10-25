@@ -14,11 +14,12 @@ import {
           ModalController,
           ModalOptions
 } from "ionic-angular";
-import { Slides } from 'ionic-angular';
+import { Slides, NavParams } from 'ionic-angular';
 import { Helper } from "../../data/Helper";
 import { HomeScreenGroupItem } from "../../data/HomeScreenGroupItem";
 import { HomeScreenGroup } from "../../data/HomeScreenGroup";
 import {  EmbedVideoService } from 'ngx-embed-video';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @IonicPage()
 
 @Component({
@@ -58,6 +59,8 @@ export class HomePage {
  badge:any = 0;
  hideBadge = true;
  currentPageVar = 'home';
+ segment ="inicio";
+ channelName="";
   //slides: any;
 
   constructor(
@@ -70,7 +73,9 @@ export class HomePage {
     private toastCtrl: ToastController,
     private VimeoService: VimeoService,
     public events: Events,    
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    private navParams: NavParams
+
   ) { 
        
     platform.ready().then(() => {
@@ -92,12 +97,11 @@ export class HomePage {
       
     });
 
-    this.db.collection('Config').valueChanges().subscribe(res=> {      
+    this.db.collection('Config').doc(sessionStorage.getItem('channelName')).valueChanges().subscribe(res=> {      
       
-      this.event = res[0]['chatEvent'];
-      this.chatEnable = res[0]['Vivo'];
+      this.event = res['chatEvent'];
+      this.chatEnable = res['Vivo'];
       this.hideBadge = !this.chatEnable;
-      console.log(res[0]['Vivo'])
       localStorage.setItem('chatEvent',this.event); 
 
       
@@ -120,7 +124,7 @@ export class HomePage {
       this.iframe_html = '';
     };
 
-    ionViewWillEnter(){    
+    ionViewWillEnter(){        
       this.event = localStorage.getItem('chatEvent');
       var docref = this.db.collection('chats').doc(this.event).collection('chatLog',ref => ref.orderBy('created')); 
       docref.valueChanges().subscribe(res=>{  
@@ -141,16 +145,13 @@ export class HomePage {
      * @memberof HomePage
      */
     ionViewDidLoad() {  
-
-
-      
-      
+       
       this.gethomeVideo().then(()=> {
                 
         this.getHomeGroups().then(()=>{
           setTimeout(() => {
             this.loaded = true;
-          }, 2000);          
+          }, 1000);          
         }).catch(err=>{
           this.showAlert(err,'Error de conexion')
         });
@@ -169,9 +170,10 @@ export class HomePage {
      * @memberof HomePage
      */
     gethomeVideo() {
+      this.channelName = sessionStorage.getItem('channelName');
       const promise = new Promise((resolve,reject)=> {
-        this.db.collection('Config').valueChanges().subscribe(res=> {           
-          this.iframe_html = this.embedService.embed_vimeo(res[0]['Idvivo'],{
+        this.db.collection('Config').doc(this.channelName).valueChanges().subscribe(res=> {        
+          this.iframe_html = this.embedService.embed_vimeo(res['Idvivo'],{
             query:{autoplay:1, loop:1, color:'ffff', portrait: 0},                
             attr: { width:this.widthFrame, height: this.heightFrame, }                 
           });
@@ -190,36 +192,34 @@ export class HomePage {
    */
   getHomeGroups() { 
 
-    const promise = new Promise((resolve,reject)=> {
-   this.VimeoService.getHomeScreenGroups().subscribe(res=> {       
-     this.homeScreenGroups = []       
-     let collection:any = res
-     collection.forEach(element => {  
-       let homeGropuModel = new HomeScreenGroup();        
-       homeGropuModel.name = element.name;
-       homeGropuModel.groupId = element.metadata.connections.videos.uri;
-       homeGropuModel.groupItems = [];
-       this.homeScreenGroups.push(homeGropuModel)   
-       this.homeScreenGroups = Helper.shuffle(this.homeScreenGroups)
-     });
-     this.homeScreenGroups.forEach(element => {
-/************************** En  esta seccion se recorre cada categoria y se obtiene los videos de la misma por meido de la api de vimeo *******************************************/
-       this.VimeoService.getHomeScreenGroupsVideos(element).subscribe(result=> {
-         let videos:any = result         
-         videos.data.forEach(item => {
-           let video = new HomeScreenGroupItem();
-           video.name = item.name;
-           video.picture = item.files[2].link;
-           video.description = item.description;
-           video.detailsPicture = item.pictures.sizes[6].link;
-           video.movieId = item.uri.split('/')[2];
-           element.groupItems.push(video)
-           element = Helper.shuffle(element)
-         });
-       },err => reject(err))
-     });
-     resolve();
-   },err => reject(err))//Fin subscripcion getHomeScreenGroups()
+    const promise = new Promise((resolve,reject)=> {      
+    
+    let collection:any = JSON.parse(sessionStorage.getItem('categories'));
+    collection.forEach(element => {  
+      let homeGropuModel = new HomeScreenGroup();         
+      homeGropuModel.name = element.name;
+      homeGropuModel.groupId = element.uri;
+      homeGropuModel.groupItems = [];
+      this.homeScreenGroups.push(homeGropuModel)   
+      this.homeScreenGroups = Helper.shuffle(this.homeScreenGroups)
+    });
+    this.homeScreenGroups.forEach(element => {
+      /************************** En  esta seccion se recorre cada categoria y se obtiene los videos de la misma por meido de la api de vimeo *******************************************/
+             this.VimeoService.getHomeScreenGroupsVideos(element).subscribe(result=> {
+               let videos:any = result         
+               videos.data.forEach(item => {
+                 let video = new HomeScreenGroupItem();
+                 video.name = item.name;
+                 video.picture = item.files[2].link;
+                 video.description = item.description;
+                 video.detailsPicture = item.pictures.sizes[6].link;
+                 video.movieId = item.uri.split('/')[2];
+                 element.groupItems.push(video)
+                 element = Helper.shuffle(element)
+               });
+             },err => reject(err))
+           });
+           resolve();  
  })//Fin promesa
  return promise;
  };
@@ -309,6 +309,10 @@ doRefresh(refresher) {
     }, 3000);   
   };
 
+  goToChannels(){    
+    this.navCtrl.setRoot('ChannelsPage');
+  }
+
    
     
 
@@ -359,5 +363,18 @@ showAlert(message,title) {
       ]
     }).present();
   };  
+  buscar() {
+    this.navCtrl.setRoot('SearchPage')
+  };
+  parrilla() {
+    this.navCtrl.setRoot('ComingSoonPage')
+  };
+  perfil() {
+    this.navCtrl.setRoot('ProfilePage')
+  };
+  canales() {
+    this.navCtrl.setRoot('ChannelsPage')
+  }
+
 
 } // Fin homePage

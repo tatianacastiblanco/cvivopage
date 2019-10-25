@@ -19,7 +19,7 @@ export interface Config { Idvivo: string; Vivo: boolean; chatEvent:string }
 })
 export class ChatPage {
   @ViewChild(Content) content: Content;
-  private ConfigCollection: AngularFirestoreCollection < Config > ;
+  private ConfigCollection: any;
   configItems: Observable < Config[] > ;
   messages = [];
   nickname: string;
@@ -44,7 +44,7 @@ export class ChatPage {
     this.messages = [];
 
 
-    this.chatService.getMessages().subscribe(message => {
+    this.chatService.getMessages(sessionStorage.getItem('channelName').replace(/ /g,'')).subscribe(message => {
       let prueba = this.getCurrentUserPhoto(message['from']);
       message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
       this.messages.push(message);
@@ -79,19 +79,20 @@ export class ChatPage {
    */
   getChatSection() {
 
-    this.ConfigCollection = this.db.collection < Config > ('Config');
+    this.ConfigCollection = this.db.collection < Config > ('Config').doc(sessionStorage.getItem('channelName'));
     this.ConfigCollection.valueChanges().subscribe((res) => {
-      if (!res[0]['Vivo']) {
+      if (!res['Vivo']) {
         this.viewCtrl.dismiss();
       }
 
-      this.event = res[0]['chatEvent'];
+      this.event = res['chatEvent'];
       localStorage.setItem('chatEvent', this.event);
-      this.chatService.joinChat().then((nickname: UserInfo) => {
-        this.nickname = nickname.name.toString();
-        this.emailUserChat = nickname.email.toString();
-        this.loadMessges();
-      }, err => this.showAlert(err, 'Error FbConfig'))
+      this.chatService.joinChat(sessionStorage.getItem('channelName').replace(/ /g,''))
+      // .then((nickname: UserInfo) => {
+      //   this.nickname = nickname.name.toString();
+      //   this.emailUserChat = nickname.email.toString();
+      //   this.loadMessges();
+      // }, err => this.showAlert(err, 'Error FbConfig'))
     })
 
   };
@@ -159,7 +160,7 @@ export class ChatPage {
    */
   sendMessage() {
     if (this.message !== '') {
-      this.chatService.sendMessage(this.message);
+      this.chatService.sendMessage(this.message,sessionStorage.getItem('channelName').replace(/ /g,''));
       this.message = '';
     }
   }

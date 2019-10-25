@@ -1,3 +1,4 @@
+import { Socket } from 'ng-socket-io';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable, observable } from 'rxjs';
 import { AlertController, ToastController } from 'ionic-angular';
@@ -5,15 +6,18 @@ import { UserService } from './UserService';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Socket } from 'ng-socket-io';
 import { UserInfo } from '../data/UserInfo';
+// import * as io from 'socket.io-client/dist/socket.io.js'
+import io from 'socket.io-client';
 
 @Injectable()
 export class ChatService {
    private uid:any;
-  constructor(private socket: Socket,
+
+  constructor(
               private afAuth:AngularFireAuth,
               private db :AngularFirestore,
+              private ng_socket:Socket,
               private UserService:UserService,
               private alertCtrl: AlertController,
               private toastCtrl: ToastController) {
@@ -21,48 +25,78 @@ export class ChatService {
    
   };
 
-   joinChat(){
-    this.socket.connect();
-    const promise = new Promise((resolve,reject)=>{
-
-      this.afAuth.authState.subscribe((user: firebase.User) => {
-        if (user) {    
-          
-          this.uid = user.uid;
-          this.UserService.getUserInfo(this.uid).then((userInfo:UserInfo)=>{
-            
-          this.socket.emit('set-nickname',userInfo.name)
-          resolve({email:userInfo.email, name:userInfo.name})
-           
-          },err =>{
-            reject(err);
-            this.showAlert(err,'Error userInfo');
-          })
-        } else {
-          this.uid = null;
-        } 
+   joinChat(room){
+     
     
-      });
-    })   
-    return promise; 
+    let socket = this.ng_socket.connect();
+      socket.emit('room',room);
+  
+    socket.on('message',(data)=>{
+      console.log(data)
+    })
+
+
+    // var socket = io(`http://localhost:3001/${room}`);
+    // socket.connect();
+    
+     
+    // const promise = new Promise((resolve,reject)=>{
+
+    //   this.afAuth.authState.subscribe((user: firebase.User) => {
+    //     if (user) {    
+          
+    //       this.uid = user.uid;
+    //       this.UserService.getUserInfo(this.uid).then((userInfo:UserInfo)=>{
+            
+    //       socket.emit('set-nickname',userInfo.name)
+    //       socket.on('users-changed',(data)=>{
+    //         console.log(data)
+    //       })
+
+    //       socket.on('message',(data)=>{
+    //         console.log(data)
+    //       })
+    //       sessionStorage.setItem('userInfo',JSON.stringify(userInfo));
+    //       resolve({email:userInfo.email, name:userInfo.name})
+           
+    //       },err =>{
+    //         reject(err);
+    //         this.showAlert(err,'Error userInfo');
+    //       })
+    //     } else {
+    //       this.uid = null;
+    //     } 
+    
+    //   });
+    // })   
+    // return promise; 
    };
-getUsers(){
+// getUsers(){
+//     let observable = new Observable(observer =>{
+//       this.socket.on('users-changed',data =>{
+//         observer.next(data);        
+//       })
+//     })
+//     return observable
+//   };
+
+  sendMessage(message:string,room){
+    var socket = io(`http://localhost:3001/${room}`);
+    socket.connect();
+    socket.emit('add-message',{text:message});
+    // this.message = '';
     let observable = new Observable(observer =>{
-      this.socket.on('users-changed',data =>{
-        observer.next(data);        
+      socket.on('message',data =>{
+        observer.next(data);
       })
     })
     return observable
   };
 
-  sendMessage(message:string){
-    this.socket.emit('add-message',{text:message});
-    // this.message = '';
-  };
-
-  getMessages(){
+  getMessages(room){
+    var socket = io(`http://localhost:3001/${room}`);
     let observable = new Observable(observer =>{
-      this.socket.on('message',data =>{
+      socket.on('message',data =>{
         observer.next(data);
       })
     })
@@ -96,7 +130,9 @@ getUsers(){
   
 
   disconnect(){
-    this.socket.disconnect();
+    // var socket = io(`http://localhost:3001/Emprendimiento`);
+    // this.ng_socket.disconnect();
+    
   }
 
   showToast(msg){

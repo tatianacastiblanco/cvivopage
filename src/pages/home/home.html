@@ -12,7 +12,8 @@
     </ion-fab>
 
   <!-- Refresher para actualizar el video en vivo -->
-  <ion-grid>
+  
+  <ion-grid>     
     <ion-row pull-lg-9>
       <ion-col col-12 >
         <ion-refresher (ionRefresh)="doRefresh($event)" pullMin=200>
@@ -36,7 +37,7 @@
           <br>  
           <skeleton-item  height="56px" *ngIf="!loaded"></skeleton-item>      
         <ion-toolbar color="primary"  *ngIf="segementHome == 'list' && loaded">
-            <ion-title color="light">Categorias</ion-title>
+            <ion-title color="light">Categorias de {{channelName}}</ion-title>
           </ion-toolbar>
           <br>
 
@@ -176,7 +177,28 @@
         </div>      
       </ion-col>
     </ion-row>
-   </ion-grid>  
+   </ion-grid>    
   </ion-content>
+  <ion-footer [hidden]="!menu">
+    <ion-toolbar >
+       <ion-segment [(ngModel)]="segment">
+            <ion-segment-button value="inicio" icon-left>                        
+              <ion-icon name="home"> </ion-icon> 
+             </ion-segment-button>
+            <ion-segment-button value="Buscar" (click)="buscar()">
+                <ion-icon name="search"></ion-icon> 
+               </ion-segment-button>
+              <ion-segment-button value="Parrilla" (click)="parrilla()">
+                  <ion-icon name="laptop"></ion-icon>               
+                </ion-segment-button>
+                <ion-segment-button value="Canales" (click)="canales()">
+                    <ion-icon name="albums"></ion-icon>
+                    </ion-segment-button>
+                <ion-segment-button value="Perfil" (click)="perfil()">
+                    <ion-icon name="person"></ion-icon>
+                   </ion-segment-button>            
+          </ion-segment>
+        </ion-toolbar>
+  </ion-footer>
 
 

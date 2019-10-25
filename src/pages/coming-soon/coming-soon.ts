@@ -19,6 +19,7 @@ import { SignInPage } from '../sign-in/sign-in';
 // //
 export class ComingSoonPage {
   private loaded = false;
+  segment ="Parrilla";
   eventSource = [];
   HorarioLunes = [
     {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:'Opción de grado III'},
@@ -187,6 +188,9 @@ events(index,arrayclasesDia){
   
   buscar() {
     this.navCtrl.setRoot('SearchPage')
+  }
+  canales() {
+    this.navCtrl.setRoot('ChannelsPage')
   }
   perfil() {
     this.navCtrl.setRoot('ProfilePage')

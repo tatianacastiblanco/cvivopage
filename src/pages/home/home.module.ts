@@ -1,3 +1,5 @@
+import { LottieAnimationViewModule } from 'ng-lottie';
+import { SearchPage } from './../search/search';
 import { EmbedVideo } from 'ngx-embed-video';
 
 import { ChatPageModule } from './../chat/chat.module';
@@ -16,7 +18,7 @@ import { ComponentsModule } from '../../components/components.module';
     IonicImageLoader,
     ChatPageModule,
     ComponentsModule,
-    EmbedVideo
+    EmbedVideo,
   ],
   exports:[
     HomePage

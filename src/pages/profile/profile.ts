@@ -50,6 +50,7 @@ export class ProfilePage {
   private heigth:number;
   menu = true;
   menuhead = 'perfil';
+  segment ="Perfil";
  
   constructor(
     private navCtrl: NavController,
@@ -72,8 +73,6 @@ export class ProfilePage {
     Platform.ready().then(() => {
       this.width = Platform.width();
       this.heigth = Platform.height();
-      console.log(this.width);
-      console.log(this.heigth +'height');
       
       if(this.width <= 992){
         this.menu = true
@@ -405,7 +404,9 @@ export class ProfilePage {
   parrilla() {
     this.navCtrl.setRoot('ComingSoonPage')
   }
-  
+  canales() {
+    this.navCtrl.setRoot('ChannelsPage')
+  }
   buscar() {
     this.navCtrl.setRoot('SearchPage')
   }

@@ -19,14 +19,18 @@ export class VimeoService {
 
   };
 
-getHomeScreenGroups() {
+// getHomeScreenGroups() {
 
-  this.options = {
-    headers: this.headersParams
-  }
-  return  this.http.get(this.apiurl + '/albums')      
+//   this.options = {
+//     headers: this.headersParams
+//   }
+//   return  this.http.get(this.apiurl + '/albums')      
 
-   };
+//    };
+
+getCategoriesFromFB(channel){
+ return this.db.collection('channels').doc(channel.id).collection('categories').valueChanges()
+}
 
 
 
@@ -52,17 +56,14 @@ getHomeScreenGroups() {
    };
 
    searchVideo(parameter:string)  {   
-    return  this.http.get(this.vimeoURl + '/me/videos?query='+parameter ,)      
+    return  this.http.get(this.vimeoURl + '/me/videos?query='+parameter ,this.options)      
   
      };
 
-  getChannelsFromFB(){
-   
-
+  getChannelsFromFB(){  
     return  this.db.collection('channels').snapshotChanges();
-     
+   };
   
-   
-    
-  }
+
+
 }

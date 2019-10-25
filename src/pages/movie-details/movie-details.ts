@@ -106,12 +106,12 @@ export class MovieDetailsPage {
      this.getIsPartOfMyList();
   }
 
-  getCategoryMovies(){
-    this.vimeoService.getHomeScreenGroups().subscribe(result => {
-      this.homeScreenGroups = []
-      let category:any = result;      
-    })
-  }
+  // getCategoryMovies(){
+  //   this.vimeoService.getHomeScreenGroups().subscribe(result => {
+  //     this.homeScreenGroups = []
+  //     let category:any = result;      
+  //   })
+  // }
   getRecentlyAddedMovies() {
 
     this.vimeoService.getAllVideos().subscribe(result =>{      

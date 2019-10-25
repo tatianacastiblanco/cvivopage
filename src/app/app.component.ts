@@ -47,7 +47,7 @@ export class MyApp {
         let dataToPost = {email:user.email,timestamp:new Date().toLocaleString()}
         this.userService.postLog(dataToPost) 
 
-         this.rootPage = 'TabsPage';
+         this.rootPage = 'ChannelsPage';
 
         // this.userService.addUser(user);
     

@@ -42,6 +42,9 @@ export class MenuComponent {
     perfil() {
       this.navCtrl.setRoot('ProfilePage')
     };
+    canales() {
+      this.navCtrl.setRoot('ChannelsPage')
+    };
 
     terminos() {
       this.navCtrl.push('TermsPage')

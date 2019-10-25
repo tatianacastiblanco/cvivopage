@@ -230,6 +230,10 @@ var MenuComponent = /** @class */ (function () {
         this.navCtrl.setRoot('ProfilePage');
     };
     ;
+    MenuComponent.prototype.canales = function () {
+        this.navCtrl.setRoot('ChannelsPage');
+    };
+    ;
     MenuComponent.prototype.terminos = function () {
         this.navCtrl.push('TermsPage');
     };
@@ -259,7 +263,7 @@ var MenuComponent = /** @class */ (function () {
     ], MenuComponent.prototype, "currentPage", void 0);
     MenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/
+            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
@@ -280,7 +284,7 @@ var MenuComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
@@ -320,7 +324,7 @@ var ChatPage = /** @class */ (function () {
         this.isLoading = true;
         this.photosArray = [];
         this.messages = [];
-        this.chatService.getMessages().subscribe(function (message) {
+        this.chatService.getMessages(sessionStorage.getItem('channelName').replace(/ /g, '')).subscribe(function (message) {
             var prueba = _this.getCurrentUserPhoto(message['from']);
             message['picture'] = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
             _this.messages.push(message);
@@ -354,18 +358,19 @@ var ChatPage = /** @class */ (function () {
      */
     ChatPage.prototype.getChatSection = function () {
         var _this = this;
-        this.ConfigCollection = this.db.collection('Config');
+        this.ConfigCollection = this.db.collection('Config').doc(sessionStorage.getItem('channelName'));
         this.ConfigCollection.valueChanges().subscribe(function (res) {
-            if (!res[0]['Vivo']) {
+            if (!res['Vivo']) {
                 _this.viewCtrl.dismiss();
             }
-            _this.event = res[0]['chatEvent'];
+            _this.event = res['chatEvent'];
             localStorage.setItem('chatEvent', _this.event);
-            _this.chatService.joinChat().then(function (nickname) {
-                _this.nickname = nickname.name.toString();
-                _this.emailUserChat = nickname.email.toString();
-                _this.loadMessges();
-            }, function (err) { return _this.showAlert(err, 'Error FbConfig'); });
+            _this.chatService.joinChat(sessionStorage.getItem('channelName').replace(/ /g, ''));
+            // .then((nickname: UserInfo) => {
+            //   this.nickname = nickname.name.toString();
+            //   this.emailUserChat = nickname.email.toString();
+            //   this.loadMessges();
+            // }, err => this.showAlert(err, 'Error FbConfig'))
         });
     };
     ;
@@ -429,7 +434,7 @@ var ChatPage = /** @class */ (function () {
      */
     ChatPage.prototype.sendMessage = function () {
         if (this.message !== '') {
-            this.chatService.sendMessage(this.message);
+            this.chatService.sendMessage(this.message, sessionStorage.getItem('channelName').replace(/ /g, ''));
             this.message = '';
         }
     };
@@ -542,7 +547,7 @@ __webpack_require__(752);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var rxjs_1 = __webpack_require__(13);
-var map_1 = __webpack_require__(334);
+var map_1 = __webpack_require__(335);
 rxjs_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 

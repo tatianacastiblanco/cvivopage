@@ -33,6 +33,7 @@ export class SearchPage {
   menuhead = 'buscar';
   public lottieConfig: Object;  
  currentPageVar = 'home';
+ segment="Buscar"
 
 
   constructor(
@@ -199,14 +200,16 @@ home() {
 }
 
 parrilla() {
-  this.navCtrl.push('ComingSoonPage')
+  this.navCtrl.setRoot('ComingSoonPage')
 }
-
+canales() {
+  this.navCtrl.setRoot('ChannelsPage')
+}
 buscar() {
-  this.navCtrl.push('SearchPage')
+  this.navCtrl.setRoot('SearchPage')
 }
 perfil() {
-  this.navCtrl.push('ProfilePage')
+  this.navCtrl.setRoot('ProfilePage')
 }
 
 signOut() {

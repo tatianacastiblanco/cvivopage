@@ -19,6 +19,7 @@
               <ion-segment-button value="buscar" class="segmenthead"  (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>
               <ion-segment-button value="parrilla" class="segmenthead"(click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>
               <ion-segment-button value="perfil"   class="segmenthead" > <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>
+              <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>     
               <ion-segment-button value="salir"    class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>
             </ion-segment>
           </div>         
@@ -101,3 +102,25 @@
   <canvas #snapShotCanvas [hidden]="true"></canvas>
 
 </ion-content>
+
+<ion-footer [hidden]="!menu">
+    <ion-toolbar >
+       <ion-segment [(ngModel)]="segment">
+            <ion-segment-button value="inicio" icon-left (click)="home()">                        
+              <ion-icon name="home"> </ion-icon> 
+             </ion-segment-button>
+            <ion-segment-button value="Buscar" (click)="buscar()">
+                <ion-icon name="search"></ion-icon> 
+               </ion-segment-button>
+              <ion-segment-button value="Parrilla" (click)="parrilla()">
+                  <ion-icon name="laptop"></ion-icon>               
+                </ion-segment-button>
+                <ion-segment-button value="Canales" (click)="canales()">
+                    <ion-icon name="albums"></ion-icon>
+                    </ion-segment-button>
+                <ion-segment-button value="Perfil" >
+                    <ion-icon name="person"></ion-icon>
+                   </ion-segment-button>            
+          </ion-segment>
+        </ion-toolbar>
+  </ion-footer>
