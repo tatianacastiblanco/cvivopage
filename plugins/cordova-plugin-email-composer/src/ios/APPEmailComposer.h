@@ -25,9 +25,7 @@
 
 // Shows the email composer view with pre-filled data
 - (void) open:(CDVInvokedUrlCommand*)command;
-// Checks if an email account is configured
-- (void) account:(CDVInvokedUrlCommand*)command;
-// Checks if the specified email client is installed
-- (void) client:(CDVInvokedUrlCommand*)command;
+// Checks if the mail composer is able to send mails
+- (void) isAvailable:(CDVInvokedUrlCommand*)command;
 
 @end

@@ -163,8 +163,8 @@
             </ion-slides> 
             <button *ngIf="!menu" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   
             <button  *ngIf="!menu" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
-            <hr>
-            <div class="item-title">{{homeScreenGroups[6]?.name}} </div>   
+            <hr *ngIf="true">
+            <div    class="item-title">{{homeScreenGroups[6]?.name}} </div>   
             <ion-slides slidesPerView="3" spaceBetween=12   >                                             
               <ion-slide *ngFor="let groupItem of homeScreenGroups[6]?.groupItems" >
                 <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />
@@ -174,7 +174,8 @@
             <button  *ngIf="!menu"(click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  
           </div>  
           </ion-scroll> 
-        </div>      
+        </div> 
+           
       </ion-col>
     </ion-row>
    </ion-grid>    

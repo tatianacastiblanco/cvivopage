@@ -1,3 +1,4 @@
+
 import { ComponentsModule } from './../../components/components.module';
 
 import { NgModule } from '@angular/core';
@@ -10,7 +11,7 @@ import { ChatPage } from './chat';
   ],
   imports: [
     IonicPageModule.forChild(ChatPage),    
-    ComponentsModule
+    ComponentsModule,
   ],
   exports:[ChatPage]
 })

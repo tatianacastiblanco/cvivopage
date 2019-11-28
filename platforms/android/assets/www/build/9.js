@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 743:
+/***/ 602:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DownloadsPageModule", function() { return DownloadsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(757);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__downloads__ = __webpack_require__(760);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,40 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HelpPageModule = /** @class */ (function () {
-    function HelpPageModule() {
+var DownloadsPageModule = /** @class */ (function () {
+    function DownloadsPageModule() {
     }
-    HelpPageModule = __decorate([
+    DownloadsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
+                __WEBPACK_IMPORTED_MODULE_2__downloads__["a" /* DownloadsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__downloads__["a" /* DownloadsPage */]),
             ],
         })
-    ], HelpPageModule);
-    return HelpPageModule;
+    ], DownloadsPageModule);
+    return DownloadsPageModule;
 }());
 
-//# sourceMappingURL=help.module.js.map
+//# sourceMappingURL=downloads.module.js.map
 
 /***/ }),
 
-/***/ 757:
+/***/ 760:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_AuthService__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_help_desk_help_desk__ = __webpack_require__(487);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_email_composer__ = __webpack_require__(488);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DownloadsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_DownloadService__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__ = __webpack_require__(761);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,174 +62,199 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-var HelpPage = /** @class */ (function () {
-    function HelpPage(navCtrl, navParams, emailComposer, ticketService, nativeStorage, formBuilder, alertCtrl, authService, loadingCtrl, platform) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.emailComposer = emailComposer;
-        this.ticketService = ticketService;
-        this.nativeStorage = nativeStorage;
-        this.formBuilder = formBuilder;
+var DownloadsPage = /** @class */ (function () {
+    function DownloadsPage(downloadService, alertCtrl, streamingMedia) {
+        this.downloadService = downloadService;
         this.alertCtrl = alertCtrl;
-        this.authService = authService;
-        this.loadingCtrl = loadingCtrl;
-        this.platform = platform;
-        this.segementTickets = 'create';
-        this.myTickets = [];
-        this.authService.afAuth.user.subscribe(function (user) {
-            if (user == null) {
-                _this.hideSegment = true;
-            }
-            _this.userEmail = user.email;
-        });
-        this.ticketFormGroup = this.formBuilder.group({
-            email: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
-            phone: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
-            subject: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
-            description: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
-            type: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required],
-            status: [''],
-            priority: ['']
-        });
-        if (this.platform.is('cordova')) {
-            this.nativeStorage.getItem('imgSource').then(function (res) {
-                if (res) {
-                    _this.myPhoto = res;
-                }
-                else {
-                    _this.myPhoto = 'assets/imgs/photo-camera.png';
-                }
-            }, function (err) { return _this.myPhoto = 'assets/imgs/photo-camera.png'; });
-        }
-        else {
-            this.myPhoto = 'assets/imgs/user.png';
-        }
+        this.streamingMedia = streamingMedia;
+        this.downloadType = "movies";
+        this.hasAnyDownloads = false;
+        this.movieDownloadItems = [];
+        this.episodesDownloadItems = [];
     }
-    HelpPage.prototype.getTickets = function () {
+    DownloadsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad DownloadsPage");
+    };
+    DownloadsPage.prototype.ionViewDidEnter = function () {
+        console.log("ionViewDidEnter DownloadsPage");
+        this.loadDownloads();
+    };
+    DownloadsPage.prototype.loadDownloads = function () {
         var _this = this;
-        this.myTickets = [];
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Cargando tickets..."
+        this.movieDownloadItems = [];
+        this.episodesDownloadItems = [];
+        this.hasAnyDownloads =
+            this.downloadService.moviesDownloaded.length > 0 ||
+                this.downloadService.episodesDownloaded.length > 0;
+        this.downloadService.moviesDownloaded.forEach(function (movie) {
+            var downloadItem = new __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__["a" /* DownloadItem */]();
+            downloadItem.itemId = movie.movieId;
+            downloadItem.name = movie.name;
+            downloadItem.picture = movie.picture;
+            downloadItem.isMovie = true;
+            downloadItem.downloadUrl = movie.downloadUrl;
+            _this.movieDownloadItems.push(downloadItem);
         });
-        loading.present();
-        this.ticketService.getMyTickets().subscribe(function (res) {
-            if (res.length == 0) {
-                _this.showAlert('No tienes tickets', 'Tickets');
-                _this.segementTickets = 'create';
-                loading.dismiss();
-            }
-            var temp = res;
-            temp.forEach(function (element) {
-                var objTemp = { id: 0, subject: '', created_at: '', status: 0, statusColor: '' };
-                switch (element.status) {
-                    case 2:
-                        objTemp.statusText = 'Abierto';
-                        objTemp.statusColor = 'Abierto';
-                        break;
-                    case 3:
-                        objTemp.statusText = 'En progreso';
-                        objTemp.statusColor = 'Pendiente';
-                        break;
-                    case 4:
-                        objTemp.statusText = 'Resuelto';
-                        objTemp.statusColor = 'Cerrado';
-                        break;
-                    default:
-                        break;
-                }
-                objTemp.created_at = __WEBPACK_IMPORTED_MODULE_7_moment__(element.created_at).startOf('day').fromNow();
-                objTemp.subject = element.subject;
-                objTemp.id = element.id;
-                _this.myTickets.push(objTemp);
-                loading.dismiss();
+        this.downloadService.episodesDownloaded.forEach(function (episode) {
+            var downloadItem = new __WEBPACK_IMPORTED_MODULE_4__data_DownloadItem__["a" /* DownloadItem */]();
+            downloadItem.itemId = episode.episodeId;
+            downloadItem.name = episode.name;
+            downloadItem.picture = episode.picture;
+            downloadItem.isMovie = false;
+            downloadItem.downloadUrl = episode.downloadUrl;
+            _this.episodesDownloadItems.push(downloadItem);
+        });
+    };
+    DownloadsPage.prototype.goToAvailableDownloads = function () {
+        // this.navCtrl.push("HorizontalListPage", { title: "Available Downloads" });
+    };
+    DownloadsPage.prototype.playMovie = function (movieDownloadItem) {
+        if (movieDownloadItem.downloadUrl === "") {
+            var alert_1 = this.alertCtrl.create({
+                title: "This movie has not yet been uploaded!",
+                subTitle: "Use the Admin Ion Netflix to add the movie and watch it here!",
+                buttons: ["Dismiss"]
             });
-        }, function (err) {
-            console.log(err);
-            loading.dismiss();
-            _this.showAlert(err, 'Error al cargar tickets');
-        });
+            alert_1.present();
+            return;
+        }
+        var options = {
+            successCallback: function () {
+                console.log("Video played");
+            },
+            errorCallback: function (e) {
+                console.log("Error streaming");
+            },
+            orientation: "landscape",
+            shouldAutoClose: true,
+            controls: true
+        };
+        this.streamingMedia.playVideo(movieDownloadItem.downloadUrl, options);
     };
-    ;
-    /**
-   * Funcion que se ejecuta al hacer swipe down en la pantalla
-   * para recargar el video
-   * @param refresher
-   */
-    HelpPage.prototype.doRefresh = function (refresher) {
-        this.getTickets();
-        refresher.complete();
-        setTimeout(function () {
-            refresher.complete();
-        }, 3000);
+    DownloadsPage.prototype.playEpisode = function (episodeDownloadItem) {
+        if (episodeDownloadItem.downloadUrl === "") {
+            var alert_2 = this.alertCtrl.create({
+                title: "This episode has not yet been uploaded!",
+                subTitle: "Use the Admin Ion Netflix to add the episode and watch it here!",
+                buttons: ["Dismiss"]
+            });
+            alert_2.present();
+            return;
+        }
+        var options = {
+            successCallback: function () {
+                console.log("Video played");
+            },
+            errorCallback: function (e) {
+                console.log("Error streaming");
+            },
+            orientation: "landscape",
+            shouldAutoClose: true,
+            controls: true
+        };
+        this.streamingMedia.playVideo(episodeDownloadItem.downloadUrl, options);
     };
-    ;
-    HelpPage.prototype.createTicket = function () {
+    DownloadsPage.prototype.deleteMovie = function (movieDownloadItem) {
+        this.presentMovieDeleteConfirm(movieDownloadItem);
+    };
+    DownloadsPage.prototype.presentMovieDeleteConfirm = function (movieDownloadItem) {
         var _this = this;
-        var loading = this.loadingCtrl.create({
-            spinner: "bubbles",
-            content: "Creando ticket..."
-        });
-        loading.present();
-        this.ticketFormGroup.controls.status.setValue(2);
-        this.ticketFormGroup.controls.priority.setValue(1);
-        this.ticketFormGroup.controls.email.setValue(this.userEmail);
-        this.ticketService.createTicket(this.ticketFormGroup.value).subscribe(function (result) {
-            _this.ticketFormGroup.reset();
-            loading.dismiss();
-            _this.showAlert('Tu ticket fue creado con el ID: ' + result['id'], 'Ticket Creado');
-        }, function (err) {
-            loading.dismiss();
-            _this.showAlert(err, 'Error al crear ticket');
-        });
-    };
-    HelpPage.prototype.showAlert = function (message, title) {
         var alert = this.alertCtrl.create({
-            title: title,
-            message: message,
+            title: "Delete downloaded movie.",
+            message: "Do you want to delete this download?",
             buttons: [
                 {
-                    text: 'Cancelar',
-                    role: 'cancel',
-                    cssClass: 'btnalert-cancel',
-                    handler: function (data) {
-                        console.log('Cancel clicked');
+                    text: "No",
+                    role: "cancel",
+                    handler: function () {
+                        console.log("Cancel clicked");
                     }
                 },
                 {
-                    text: 'Ok',
-                    cssClass: 'btnalert-ok',
-                    handler: function (data) {
+                    text: "Yes",
+                    handler: function () {
+                        console.log("Yes clicked");
+                        _this.downloadService
+                            .deleteMovie(movieDownloadItem.itemId)
+                            .then(function (result) {
+                            var index = _this.movieDownloadItems.indexOf(movieDownloadItem);
+                            if (index > -1) {
+                                _this.movieDownloadItems.splice(index, 1);
+                            }
+                            _this.hasAnyDownloads =
+                                _this.downloadService.moviesDownloaded.length > 0 ||
+                                    _this.downloadService.episodesDownloaded.length > 0;
+                        });
                     }
                 }
             ]
-        }).present();
+        });
+        alert.present();
     };
-    ;
-    HelpPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["Component"])({
-            selector: 'page-help',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\help\help.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Ayuda</ion-title>  \n\n  </ion-navbar>\n\n  <ion-segment [(ngModel)]="segementTickets"   color="netflixRed">\n\n    <ion-segment-button value="create" >Crear ticket\n\n    </ion-segment-button>\n\n    <ion-segment-button value="myTickets" (click)="getTickets()" [disabled]="hideSegment">Mis tickets\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</ion-header>\n\n<ion-content padding>\n\n <ion-grid>\n\n   <ion-row>\n\n     <ion-col >\n\n      <!-- Segmento de creacion de ticket  -->\n\n      <div class="contentLg" *ngIf="segementTickets === \'create\'" >\n\n        <form [formGroup]="ticketFormGroup" (ngSubmit)="createTicket()" class="segmentCreateTicket">\n\n          <ion-item>\n\n            <ion-label>Correo</ion-label>\n\n            <ion-input formControlName="email" type="email" ></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-label>Número Celular</ion-label>\n\n            <ion-input formControlName="phone" type="number" ></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-label>Asunto</ion-label>\n\n            <ion-input formControlName="subject"></ion-input>\n\n          </ion-item>  \n\n          <ion-item >\n\n            <ion-select formControlName="type" placeholder="Selecciona una..." style="color:white">\n\n              <ion-option value="question">Pregunta</ion-option>\n\n              <ion-option value="problem">Problema</ion-option>\n\n              <ion-option value="suggest">Sugerencia</ion-option>\n\n            </ion-select>\n\n          </ion-item>                \n\n          <ion-item>\n\n            <ion-label>Descripción</ion-label>\n\n            <ion-textarea formControlName="description" style="color:white"></ion-textarea >\n\n          </ion-item>                      \n\n          <button ion-button type="submit" [disabled]="!ticketFormGroup.valid" full round>Crear</button>\n\n        </form>\n\n      </div> \n\n     </ion-col>\n\n   </ion-row>\n\n   <ion-row>  <!-- //////////////////////////////////////////// Segmento de mis tickets ////////////////////////////////////////////// -->   \n\n    <ion-col col-12 col-lg-12 >\n\n        <div *ngIf="segementTickets === \'myTickets\'"  >\n\n            <ion-refresher \n\n                (ionRefresh)="doRefresh($event)"\n\n                pullMin=200>\n\n              <ion-refresher-content \n\n                pullingIcon="refresh-circle"\n\n                refreshingSpinner="bubbles">\n\n              </ion-refresher-content>\n\n            </ion-refresher>      \n\n            <ion-card class="cardLg" *ngFor="let ticket of myTickets;let i = index" [ngClass]="(( i % 2) == 0)?\'cardRed\':\'cardWhite\'">\n\n              <ion-item > \n\n                <h2><b>{{ticket.subject}}</b></h2>\n\n                <p>ID:{{ticket.id}}</p>\n\n              </ion-item>\n\n                <ion-row>\n\n                <ion-col>\n\n                  <button ion-button icon-start clear small color="{{ticket.statusColor}}">\n\n                    <ion-icon name="disc"></ion-icon>\n\n                    <div  >{{ticket.statusText}}</div>\n\n                  </button>\n\n                </ion-col >\n\n                <ion-col align-self-center text-center>\n\n                  <ion-note>\n\n                    {{ticket.created_at}}\n\n                  </ion-note>\n\n                </ion-col>\n\n              </ion-row>      \n\n            </ion-card>\n\n          </div>\n\n    </ion-col> \n\n\n\n   </ion-row>\n\n </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\help\help.html"*/,
+    DownloadsPage.prototype.deleteEpisode = function (episodesDownloadItems) {
+        this.presentEpisodeDeleteConfirm(episodesDownloadItems);
+    };
+    DownloadsPage.prototype.presentEpisodeDeleteConfirm = function (episodeDownloadItem) {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: "Delete downloaded episode.",
+            message: "Do you want to delete this download?",
+            buttons: [
+                {
+                    text: "No",
+                    role: "cancel",
+                    handler: function () {
+                        console.log("Cancel clicked");
+                    }
+                },
+                {
+                    text: "Yes",
+                    handler: function () {
+                        console.log("Yes clicked");
+                        _this.downloadService
+                            .deleteEpisode(episodeDownloadItem.itemId)
+                            .then(function (result) {
+                            var index = _this.episodesDownloadItems.indexOf(episodeDownloadItem);
+                            if (index > -1) {
+                                _this.episodesDownloadItems.splice(index, 1);
+                            }
+                            _this.hasAnyDownloads =
+                                _this.downloadService.moviesDownloaded.length > 0 ||
+                                    _this.downloadService.episodesDownloaded.length > 0;
+                        });
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DownloadsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "page-downloads",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\downloads\downloads.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>My Downloads</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-row class="smart-downloads-row">\n\n    <ion-col col-10>\n\n      <ion-row>\n\n        <p class="item-title">Smart Downloads</p>\n\n      </ion-row>\n\n      <ion-row>\n\n        <p class="item-sub-title">Completed episodes will be deleted and replaced with the next episodes, only on Wi-Fi.</p>\n\n      </ion-row>\n\n    </ion-col>\n\n\n\n    <ion-col col-2>\n\n      <ion-toggle checked="false" color="netflixRed"></ion-toggle>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!hasAnyDownloads" class="movies-shows-row">\n\n    <ion-col text-center>\n\n      <button ion-button clear color="netflixWhite">\n\n        <ion-icon name=\'md-download\'></ion-icon>\n\n      </button>\n\n\n\n      <p>Movies and TV show that you download appear here.</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!hasAnyDownloads" class="find-downloads-row">\n\n    <ion-col text-center>\n\n      <button ion-button icon-start color="netflixWhite" (click)="goToAvailableDownloads()">\n\n        FIND SOMETHING TO DOWNLOAD\n\n      </button>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <div *ngIf="hasAnyDownloads">\n\n    <div padding>\n\n      <ion-segment color="netflixRed" [(ngModel)]="downloadType">\n\n        <ion-segment-button value="movies">\n\n          Movies\n\n        </ion-segment-button>\n\n\n\n        <ion-segment-button value="tvShows">\n\n          Tv Shows\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </div>\n\n\n\n    <div [ngSwitch]="downloadType">\n\n      <div *ngSwitchCase="\'movies\'">\n\n        <ion-list>\n\n          <ion-item *ngFor="let movieDownloadItem of movieDownloadItems">\n\n            <img item-start src="{{movieDownloadItem.picture}}">\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <p class="ellipsis">{{movieDownloadItem.name}}</p>\n\n              </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <button (click)="playMovie(movieDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-play"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n\n\n              <ion-col text-center>\n\n                <button (click)="deleteMovie(movieDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-trash"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-item>\n\n        </ion-list>\n\n      </div>\n\n\n\n      <div *ngSwitchCase="\'tvShows\'">\n\n        <ion-list>\n\n          <ion-item *ngFor="let episodesDownloadItem of episodesDownloadItems">\n\n            <img item-start src="{{episodesDownloadItem.picture}}">\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <p class="ellipsis">{{episodesDownloadItem.name}}</p>\n\n              </ion-col>\n\n            </ion-row>\n\n\n\n            <ion-row>\n\n              <ion-col text-center>\n\n                <button (click)="playEpisode(episodesDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-play"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n\n\n              <ion-col text-center>\n\n                <button (click)="deleteEpisode(episodesDownloadItem)" ion-button icon-only clear>\n\n                  <ion-icon name="md-trash"></ion-icon>\n\n                </button>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-item>\n\n        </ion-list>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\downloads\downloads.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6_ionic_angular__["k" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["l" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_email_composer__["a" /* EmailComposer */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_help_desk_help_desk__["a" /* HelpDeskProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_0__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["h" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["m" /* Platform */]])
-    ], HelpPage);
-    return HelpPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_DownloadService__["a" /* DownloadService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__["a" /* StreamingMedia */]])
+    ], DownloadsPage);
+    return DownloadsPage;
 }());
 
-//# sourceMappingURL=help.js.map
+//# sourceMappingURL=downloads.js.map
+
+/***/ }),
+
+/***/ 761:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DownloadItem; });
+var DownloadItem = /** @class */ (function () {
+    function DownloadItem() {
+    }
+    return DownloadItem;
+}());
+
+//# sourceMappingURL=DownloadItem.js.map
 
 /***/ })
 

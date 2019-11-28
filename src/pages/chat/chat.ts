@@ -29,7 +29,7 @@ export class ChatPage {
   photosArray = new Array;
   message = '';
   isLoading: boolean = true;
-
+  isTyping = '';
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -39,6 +39,8 @@ export class ChatPage {
     private _DomSanitizationService: DomSanitizer,
     private alertCtrl: AlertController) {
 
+      
+
 
     this.photosArray = [];
     this.messages = [];
@@ -46,6 +48,7 @@ export class ChatPage {
 
     this.chatService.getMessages(sessionStorage.getItem('channelName').replace(/ /g,'')).subscribe(message => {
       let prueba = this.getCurrentUserPhoto(message['from']);
+      
       message['picture'] = this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
       this.messages.push(message);
       setTimeout(() => {
@@ -86,13 +89,13 @@ export class ChatPage {
       }
 
       this.event = res['chatEvent'];
-      localStorage.setItem('chatEvent', this.event);
       this.chatService.joinChat(sessionStorage.getItem('channelName').replace(/ /g,''))
-      // .then((nickname: UserInfo) => {
-      //   this.nickname = nickname.name.toString();
-      //   this.emailUserChat = nickname.email.toString();
-      //   this.loadMessges();
-      // }, err => this.showAlert(err, 'Error FbConfig'))
+      .then((nickname: UserInfo) => {
+        
+        this.nickname = nickname.name.toString();
+        this.emailUserChat = nickname.email.toString();
+        this.loadMessges();
+      }, err => this.showAlert(err, 'Error FbConfig'))
     })
 
   };
@@ -160,8 +163,11 @@ export class ChatPage {
    */
   sendMessage() {
     if (this.message !== '') {
-      this.chatService.sendMessage(this.message,sessionStorage.getItem('channelName').replace(/ /g,''));
-      this.message = '';
+      this.chatService.sendMessage(this.message,sessionStorage.getItem('channelName').replace(/ /g,''))
+      .subscribe(()=>{
+        this.message = '';
+      })
+   
     }
   }
 
@@ -222,10 +228,26 @@ export class ChatPage {
    * @param key codigo de la tecla presionada
    */
   keyPress(key) {
+    this.isTyping = '';
     if (key === 13 && this.message !== '') {
       this.sendMessage()
+      this.isTyping = ''
+    }else{
+      this.chatService.isTyping(this.nickname,sessionStorage.getItem('channelName').replace(/ /g,'')).subscribe(WhoTyping=>{
+        this.isTyping =  WhoTyping['nickname']
+        
+      })
     }
   };
+  isEmpty(ev){
+    if(ev.data == null){
+      this.isTyping = '';
+      this.chatService.isTyping('',sessionStorage.getItem('channelName').replace(/ /g,''))
+      .subscribe(()=>{
+
+      })
+    }
+  }
 
   close() {
     this.viewCtrl.dismiss();

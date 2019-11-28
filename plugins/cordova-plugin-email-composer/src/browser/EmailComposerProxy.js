@@ -18,7 +18,7 @@
  */
 
 /**
- * Tries to find out if the device has an configured email account.
+ * Verifies if sending emails is supported on the device.
  *
  * @param [ Function ] success Success callback
  * @param [ Function ] error   Error callback
@@ -26,21 +26,8 @@
  *
  * @return [ Void ]
  */
-exports.account = function (success, error, args) {
-    success(null);
-};
-
-/**
- * Tries to find out if the device has an installed email client.
- *
- * @param [ Function ] success Success callback
- * @param [ Function ] error   Error callback
- * @param [ Array ]    args    Interface arguments
- *
- * @return [ Void ]
- */
-exports.client = function (success, error, args) {
-    success(null);
+exports.isAvailable = function (success, error, args) {
+    success(true, false);
 };
 
 /**

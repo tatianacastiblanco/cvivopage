@@ -17,9 +17,9 @@
     <ion-row style="padding:0 10%;">
       <ion-col col-6 col-md-2 *ngFor="let channel of channels">
           <ion-card   (click)="goToChannel(channel)" (mouseover)="playVideo(channel)" (mouseout)="showVideo=false">
-              <img  src="assets/imgs/blue-user.jpg"/>            
+              <img  [src]="channel.img"/>            
             </ion-card>
-            <div class="card-title" >{{channel.name}}</div>
+            <!-- <div class="card-title" >{{channel.name}}</div> -->
             <!-- <div class="card-subtitle">{{channel.description}}</div> -->
       </ion-col>   
     </ion-row>

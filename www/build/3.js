@@ -1,16 +1,16 @@
 webpackJsonp([3],{
 
-/***/ 609:
+/***/ 736:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(744);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(770);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_lottie__ = __webpack_require__(771);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(897);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_lottie__ = __webpack_require__(898);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,15 +44,15 @@ var SearchPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 618:
+/***/ 744:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__ = __webpack_require__(619);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__ = __webpack_require__(745);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(620);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -80,7 +80,7 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 619:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -176,7 +176,7 @@ var SkeletonItemComponent = /** @class */ (function () {
     ], SkeletonItemComponent.prototype, "radius", void 0);
     SkeletonItemComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'skeleton-item',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\skeleton-item\skeleton-item.html"*/'<div [ngStyle]="styles"></div>\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\skeleton-item\skeleton-item.html"*/
+            selector: 'skeleton-item',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/'<div [ngStyle]="styles"></div>\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/
         })
     ], SkeletonItemComponent);
     return SkeletonItemComponent;
@@ -186,14 +186,14 @@ var SkeletonItemComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 620:
+/***/ 746:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -265,7 +265,7 @@ var MenuComponent = /** @class */ (function () {
     ], MenuComponent.prototype, "currentPage", void 0);
     MenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\components\menu\menu.html"*/
+            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
@@ -279,7 +279,7 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 621:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -294,19 +294,19 @@ var HomeScreenGroupItem = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 770:
+/***/ 897:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(621);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__ = __webpack_require__(390);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sign_in_sign_in__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sign_in_sign_in__ = __webpack_require__(396);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -507,7 +507,7 @@ var SearchPage = /** @class */ (function () {
     ], SearchPage.prototype, "searchbar", void 0);
     SearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: "page-search",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\search\search.html"*/'\n\n<ion-header no-border>\n\n    <ion-grid>\n\n        <ion-row>\n\n          <ion-col col-12 col-lg-2  >\n\n            <ion-navbar align-title="center" transparent >\n\n              <ion-title>\n\n                <img src="assets/imgs/netflix-logo.png">\n\n              </ion-title>   \n\n            </ion-navbar>\n\n          </ion-col>\n\n          <ion-col col-lg-10 [hidden]="menu">\n\n            <div >\n\n              <ion-segment [(ngModel)]="menuhead">\n\n                <ion-segment-button value="home" class="segmenthead" (click)="home()"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n                <ion-segment-button class="segmenthead" value="buscar" > <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n                <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n                <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>                \n\n                <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>     \n\n                <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n              </ion-segment>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid> \n\n\n\n  <ion-grid>\n\n      <ion-row>\n\n  \n\n        <ion-col col-12 col-lg-12>\n\n          <ion-navbar>\n\n              <ion-row>\n\n                <ion-col col-10>\n\n                    <ion-searchbar  \n\n                    id="searchInput"\n\n                    #searchbar [(ngModel)]="searchValue"\n\n                    autocorrect ="on"\n\n                    placeholder="Buscar"\n\n                    (ngModelChange)="search($event)"\n\n                    (ionClear)="onClear($event)"\n\n                    animated=true>\n\n                  </ion-searchbar>                  \n\n                </ion-col>          \n\n                <ion-col col-2 text-center>\n\n                  <button ion-button clear item-end (click)="startListening()">\n\n                    <ion-icon name={{icon}}></ion-icon>\n\n                  </button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-navbar>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>    \n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n    <lottie-animation-view\n\n                    [options]="lottieConfig"\n\n                    [width]="300"\n\n                    [height]="400"\n\n                    *ngIf="isSearching" >\n\n              </lottie-animation-view>\n\n\n\n \n\n\n\n  <ion-row *ngIf=" searchItems.length > 0" style="padding-left: 0px;" >\n\n    <ion-col col-6 col-lg-1 *ngFor="let searchItem of searchItems">\n\n        \n\n      <img src="{{searchItem.detailsPicture}}" (click)="goToSearchItem(searchItem)" style="width:100%" class="imgs">   \n\n      <p text-wrap style="color:#f5f5f1">{{searchItem.name}}</p>  \n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf=" !isSearching&& searchItems.length === 0">\n\n    <ion-col text-center>\n\n      <img class="demo-image" src="assets/netflix-icon.png">\n\n      <p class="demo-message">Sin resultados.</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n<ion-footer [hidden]="!menu">\n\n    <ion-toolbar >\n\n       <ion-segment [(ngModel)]="segment">\n\n            <ion-segment-button value="inicio" icon-left (click)="home()">                        \n\n              <ion-icon name="home"> </ion-icon> \n\n             </ion-segment-button>\n\n            <ion-segment-button value="Buscar" >\n\n                <ion-icon name="search"></ion-icon> \n\n               </ion-segment-button>\n\n              <ion-segment-button value="Parrilla" (click)="parrilla()">\n\n                  <ion-icon name="laptop"></ion-icon>               \n\n                </ion-segment-button>\n\n                <ion-segment-button value="Canales" (click)="canales()">\n\n                    <ion-icon name="albums"></ion-icon>\n\n                    </ion-segment-button>\n\n                <ion-segment-button value="Perfil" (click)="perfil()">\n\n                    <ion-icon name="person"></ion-icon>\n\n                   </ion-segment-button>            \n\n          </ion-segment>\n\n        </ion-toolbar>\n\n  </ion-footer>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\search\search.html"*/
+            selector: "page-search",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\search\search.html"*/'\n\n<ion-header no-border>\n\n    <ion-grid>\n\n        <ion-row>\n\n          <ion-col col-12 col-lg-2  >\n\n            <ion-navbar align-title="center" transparent >\n\n              <ion-title>\n\n                <img src="assets/imgs/netflix-logo.png">\n\n              </ion-title>   \n\n            </ion-navbar>\n\n          </ion-col>\n\n          <ion-col col-lg-10 [hidden]="menu">\n\n            <div >\n\n              <ion-segment [(ngModel)]="menuhead">\n\n                <ion-segment-button value="home" class="segmenthead" (click)="home()"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n                <ion-segment-button class="segmenthead" value="buscar" > <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n                <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n                <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>                \n\n                <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>     \n\n                <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n              </ion-segment>\n\n            </div>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid> \n\n\n\n  <ion-grid>\n\n      <ion-row>\n\n  \n\n        <ion-col col-12 col-lg-12>\n\n          <ion-navbar>\n\n              <ion-row>\n\n                <ion-col col-10>\n\n                    <ion-searchbar  \n\n                    id="searchInput"\n\n                    #searchbar [(ngModel)]="searchValue"\n\n                    autocorrect ="on"\n\n                    placeholder="Buscar"\n\n                    (ngModelChange)="search($event)"\n\n                    (ionClear)="onClear($event)"\n\n                    animated=true>\n\n                  </ion-searchbar>                  \n\n                </ion-col>          \n\n                <ion-col col-2 text-center>\n\n                  <button ion-button clear item-end (click)="startListening()">\n\n                    <ion-icon name={{icon}}></ion-icon>\n\n                  </button>\n\n                </ion-col>\n\n              </ion-row>\n\n            </ion-navbar>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>    \n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n    <lottie-animation-view\n\n                    [options]="lottieConfig"\n\n                    [width]="300"\n\n                    [height]="400"\n\n                    *ngIf="isSearching" >\n\n              </lottie-animation-view>\n\n\n\n \n\n\n\n  <ion-row *ngIf=" searchItems.length > 0" style="padding-left: 0px;" >\n\n    <ion-col col-6 col-lg-1 *ngFor="let searchItem of searchItems">\n\n        \n\n      <img src="{{searchItem.detailsPicture}}" (click)="goToSearchItem(searchItem)" style="width:100%" class="imgs">   \n\n      <p text-wrap style="color:#f5f5f1">{{searchItem.name}}</p>  \n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf=" !isSearching&& searchItems.length === 0">\n\n    <ion-col text-center>\n\n      <img class="demo-image" src="assets/netflix-icon.png">\n\n      <p class="demo-message">Sin resultados.</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n</ion-content>\n\n<ion-footer [hidden]="!menu">\n\n    <ion-toolbar >\n\n       <ion-segment [(ngModel)]="segment">\n\n            <ion-segment-button value="inicio" icon-left (click)="home()">                        \n\n              <ion-icon name="home"> </ion-icon> \n\n             </ion-segment-button>\n\n            <ion-segment-button value="Buscar" >\n\n                <ion-icon name="search"></ion-icon> \n\n               </ion-segment-button>\n\n              <ion-segment-button value="Parrilla" (click)="parrilla()">\n\n                  <ion-icon name="laptop"></ion-icon>               \n\n                </ion-segment-button>\n\n                <ion-segment-button value="Canales" (click)="canales()">\n\n                    <ion-icon name="albums"></ion-icon>\n\n                    </ion-segment-button>\n\n                <ion-segment-button value="Perfil" (click)="perfil()">\n\n                    <ion-icon name="person"></ion-icon>\n\n                   </ion-segment-button>            \n\n          </ion-segment>\n\n        </ion-toolbar>\n\n  </ion-footer>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\search\search.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_speech_recognition__["a" /* SpeechRecognition */],
@@ -525,25 +525,25 @@ var SearchPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 771:
+/***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lottieAnimationView_module__ = __webpack_require__(772);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lottieAnimationView_module__ = __webpack_require__(899);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__lottieAnimationView_module__["a"]; });
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 772:
+/***/ 899:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LottieAnimationViewModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lottieAnimationView_component__ = __webpack_require__(773);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lottieAnimationView_component__ = __webpack_require__(900);
 
 
 
@@ -573,16 +573,16 @@ LottieAnimationViewModule.ctorParameters = function () { return []; };
 
 /***/ }),
 
-/***/ 773:
+/***/ 900:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LottieAnimationViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(32);
 
 
-var lottie = __webpack_require__(774);
+var lottie = __webpack_require__(901);
 var LottieAnimationViewComponent = (function () {
     function LottieAnimationViewComponent(platformId) {
         this.platformId = platformId;
@@ -631,7 +631,7 @@ LottieAnimationViewComponent.propDecorators = {
 
 /***/ }),
 
-/***/ 774:
+/***/ 901:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;(typeof navigator !== "undefined") && (function(root, factory) {
@@ -1269,7 +1269,7 @@ var Matrix = (function(){
         return x * this.props[2] + y * this.props[6] + z * this.props[10] + this.props[14];
     }
 
-    function inversePoint(pt) {
+    function getInverseMatrix() {
         var determinant = this.props[0] * this.props[5] - this.props[1] * this.props[4];
         var a = this.props[5]/determinant;
         var b = - this.props[1]/determinant;
@@ -1277,7 +1277,19 @@ var Matrix = (function(){
         var d = this.props[0]/determinant;
         var e = (this.props[4] * this.props[13] - this.props[5] * this.props[12])/determinant;
         var f = - (this.props[0] * this.props[13] - this.props[1] * this.props[12])/determinant;
-        return [pt[0] * a + pt[1] * c + e, pt[0] * b + pt[1] * d + f, 0];
+        var inverseMatrix = new Matrix();
+        inverseMatrix.props[0] = a;
+        inverseMatrix.props[1] = b;
+        inverseMatrix.props[4] = c;
+        inverseMatrix.props[5] = d;
+        inverseMatrix.props[12] = e;
+        inverseMatrix.props[13] = f;
+        return inverseMatrix;
+    }
+
+    function inversePoint(pt) {
+        var inverseMatrix = this.getInverseMatrix();
+        return inverseMatrix.applyToPointArray(pt[0], pt[1], pt[2] || 0)
     }
 
     function inversePoints(pts){
@@ -1394,6 +1406,7 @@ var Matrix = (function(){
         this.equals = equals;
         this.inversePoints = inversePoints;
         this.inversePoint = inversePoint;
+        this.getInverseMatrix = getInverseMatrix;
         this._t = this.transform;
         this.isIdentity = isIdentity;
         this._identity = true;
@@ -2423,11 +2436,16 @@ function dataFunctionManager(){
 
     var moduleOb = {};
     moduleOb.completeData = completeData;
+    moduleOb.checkColors = checkColors;
+    moduleOb.checkChars = checkChars;
+    moduleOb.checkShapes = checkShapes;
+    moduleOb.completeLayers = completeLayers;
 
     return moduleOb;
 }
 
 var dataManager = dataFunctionManager();
+
 var FontManager = (function(){
 
     var maxWaitingTime = 5000;
@@ -3096,9 +3114,9 @@ var PropertyFactory = (function(){
         var i, len = data.k.length;
         var s, e,to,ti;
         for (i = 0; i < len - 1; i += 1) {
-            if (data.k[i].to && data.k[i].s && data.k[i].e) {
+            if (data.k[i].to && data.k[i].s && data.k[i + 1] && data.k[i + 1].s) {
                 s = data.k[i].s;
-                e = data.k[i].e;
+                e = data.k[i + 1].s;
                 to = data.k[i].to;
                 ti = data.k[i].ti;
                 if((s.length === 2 && !(s[0] === e[0] && s[1] === e[1]) && bez.pointOnLine2D(s[0],s[1],e[0],e[1],s[0] + to[0],s[1] + to[1]) && bez.pointOnLine2D(s[0],s[1],e[0],e[1],e[0] + ti[0],e[1] + ti[1])) || (s.length === 3 && !(s[0] === e[0] && s[1] === e[1] && s[2] === e[2]) && bez.pointOnLine3D(s[0],s[1],s[2],e[0],e[1],e[2],s[0] + to[0],s[1] + to[1],s[2] + to[2]) && bez.pointOnLine3D(s[0],s[1],s[2],e[0],e[1],e[2],e[0] + ti[0],e[1] + ti[1],e[2] + ti[2]))){
@@ -3166,6 +3184,8 @@ var PropertyFactory = (function(){
     return ob;
 }());
 var TransformPropertyFactory = (function() {
+
+    var defaultVector = [0,0]
 
     function applyToMatrix(mat) {
         var _mdf = this._mdf;
@@ -3254,6 +3274,8 @@ var TransformPropertyFactory = (function() {
                         v2[0] = px.getValueAtTime((px._caching.lastFrame+px.offsetTime - 0.01) / frameRate,px.offsetTime);
                         v2[1] = py.getValueAtTime((py._caching.lastFrame+py.offsetTime - 0.01) / frameRate,py.offsetTime);
                     }
+                } else {
+                    v1 = v2 = defaultVector
                 }
                 this.v.rotate(-Math.atan2(v1[1] - v2[1], v1[0] - v2[0]));
             }
@@ -6126,7 +6148,24 @@ var TextSelectorProp = (function(){
                 this.getValue();
             }
             //var easer = bez.getEasingCurve(this.ne.v/100,0,1-this.xe.v/100,1);
-            var easer = BezierFactory.getBezierEasing(this.ne.v/100,0,1-this.xe.v/100,1).get;
+            var x1 = 0;
+            var y1 = 0;
+            var x2 = 1;
+            var y2 = 1;
+            if(this.ne.v > 0) {
+                x1 = this.ne.v / 100.0;
+            }
+            else {
+                y1 = -this.ne.v / 100.0;
+            }
+            if(this.xe.v > 0) {
+                x2 = 1.0 - this.xe.v / 100.0;
+            }
+            else {
+                y2 = 1.0 + this.xe.v / 100.0;
+            }
+            var easer = BezierFactory.getBezierEasing(x1, y1, x2, y2).get;
+
             var mult = 0;
             var s = this.finalS;
             var e = this.finalE;
@@ -7550,8 +7589,7 @@ MaskElement.prototype.renderFrame = function (isFirstFrame) {
         }
         if(this.masksProperties[i].mode !== 'n'){
             if(this.viewData[i].invRect && (this.element.finalTransform.mProp._mdf || isFirstFrame)){
-                this.viewData[i].invRect.setAttribute('x', -finalMat.props[12]);
-                this.viewData[i].invRect.setAttribute('y', -finalMat.props[13]);
+                this.viewData[i].invRect.setAttribute('transform', finalMat.getInverseMatrix().to2dCSS())
             }
             if(this.storedData[i].x && (this.storedData[i].x._mdf || isFirstFrame)){
                 var feMorph = this.storedData[i].expan;
@@ -13158,6 +13196,11 @@ var ExpressionManager = (function(){
             return '';
         }
 
+        function posterizeTime(framesPerSecond) {
+            time = framesPerSecond === 0 ? 0 : Math.floor(time * framesPerSecond) / framesPerSecond
+            value = valueAtTime(time)
+        }
+
         var time, velocity, value, text, textIndex, textTotal, selectorValue;
         var index = elem.data.ind;
         var hasParent = !!(elem.hierarchy && elem.hierarchy.length);
@@ -15091,7 +15134,7 @@ GroupEffect.prototype.init = function(data,element){
     lottiejs.unfreeze = animationManager.unfreeze;
     lottiejs.getRegisteredAnimations = animationManager.getRegisteredAnimations;
     lottiejs.__getFactory = getFactory;
-    lottiejs.version = '5.5.9';
+    lottiejs.version = '5.5.10';
 
     function checkReady() {
         if (document.readyState === "complete") {

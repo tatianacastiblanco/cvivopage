@@ -13,6 +13,8 @@ import io from 'socket.io-client';
 @Injectable()
 export class ChatService {
    private uid:any;
+private emprende:any;
+
 
   constructor(
               private afAuth:AngularFireAuth,
@@ -26,51 +28,49 @@ export class ChatService {
   };
 
    joinChat(room){
-     
-    
-    let socket = this.ng_socket.connect();
-      socket.emit('room',room);
-  
-    socket.on('message',(data)=>{
-      console.log(data)
-    })
 
+      this.emprende = io.connect(`https://chatcvivotest.herokuapp.com/${room}`);
 
-    // var socket = io(`http://localhost:3001/${room}`);
-    // socket.connect();
+ 
+
     
      
-    // const promise = new Promise((resolve,reject)=>{
+    
+    // this.ng_socket.connect();
+    
+    // this.ng_socket.emit('room',room)    
 
-    //   this.afAuth.authState.subscribe((user: firebase.User) => {
-    //     if (user) {    
+    const promise = new Promise((resolve,reject)=>{
+
+      this.afAuth.authState.subscribe((user: firebase.User) => {
+        if (user) {    
           
-    //       this.uid = user.uid;
-    //       this.UserService.getUserInfo(this.uid).then((userInfo:UserInfo)=>{
+          this.uid = user.uid;
+          this.UserService.getUserInfo(this.uid).then((userInfo:UserInfo)=>{
             
-    //       socket.emit('set-nickname',userInfo.name)
-    //       socket.on('users-changed',(data)=>{
-    //         console.log(data)
-    //       })
-
-    //       socket.on('message',(data)=>{
-    //         console.log(data)
-    //       })
-    //       sessionStorage.setItem('userInfo',JSON.stringify(userInfo));
-    //       resolve({email:userInfo.email, name:userInfo.name})
+          this.emprende.emit('set-nickname',userInfo.name)
+          this.emprende.on('users-changed',(data)=>{            
+             
+          })
+         
+          sessionStorage.setItem('userInfo',JSON.stringify(userInfo));
+          resolve({email:userInfo.email, name:userInfo.name})
            
-    //       },err =>{
-    //         reject(err);
-    //         this.showAlert(err,'Error userInfo');
-    //       })
-    //     } else {
-    //       this.uid = null;
-    //     } 
+          },err =>{
+            reject(err);
+            this.showAlert(err,'Error userInfo');
+          })
+        } else {
+          this.uid = null;
+        } 
     
-    //   });
-    // })   
-    // return promise; 
+      });
+    })   
+    return promise; 
    };
+
+
+
 // getUsers(){
 //     let observable = new Observable(observer =>{
 //       this.socket.on('users-changed',data =>{
@@ -81,12 +81,13 @@ export class ChatService {
 //   };
 
   sendMessage(message:string,room){
-    var socket = io(`http://localhost:3001/${room}`);
-    socket.connect();
-    socket.emit('add-message',{text:message});
+    
+  
+    this.emprende.emit('add-message',{text:message,room:room})
+
     // this.message = '';
     let observable = new Observable(observer =>{
-      socket.on('message',data =>{
+      this.emprende.on('message',(data) =>{  
         observer.next(data);
       })
     })
@@ -94,9 +95,10 @@ export class ChatService {
   };
 
   getMessages(room){
-    var socket = io(`http://localhost:3001/${room}`);
+   
+this.emprende = io.connect(`https://chatcvivotest.herokuapp.com/${room}`);
     let observable = new Observable(observer =>{
-      socket.on('message',data =>{
+      this.emprende.on('message',data =>{
         observer.next(data);
       })
     })
@@ -127,11 +129,26 @@ export class ChatService {
     //   }    
     // })
     // return photo
+
+    isTyping(nickname,room){
+  
+        this.emprende.emit('typing',{nickname:nickname,room:room})
+    
+        let observable = new Observable(observer =>{
+          this.emprende.on('isTyping',(info)=>{
+              observer.next(info)
+          })
+        })
+      
+      
+      return observable
+    }
   
 
   disconnect(){
+    
     // var socket = io(`http://localhost:3001/Emprendimiento`);
-    // this.ng_socket.disconnect();
+     
     
   }
 

@@ -59,7 +59,7 @@ const firebaseConfig = {
   messagingSenderId: "818528881307",
   timestampsInSnapshots: true
 };
-const config: SocketIoConfig = {url:'http://localhost:3001',options:{}};
+const config: SocketIoConfig = {url:'https://chatcvivotest.herokuapp.com/',options:{}};
 
 firebase.initializeApp(firebaseConfig);
 // EmbedVideo.forRoot()

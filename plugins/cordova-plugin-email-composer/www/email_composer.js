@@ -27,16 +27,7 @@ var exec      = require('cordova/exec'),
  */
 exports.aliases = {
     gmail:   isAndroid ? 'com.google.android.gm' : 'googlegmail://co',
-    outlook: isAndroid ? 'com.microsoft.office.outlook' : 'ms-outlook://compose',
-    hub:     isAndroid ? 'com.blackberry.hub' : undefined
-};
-
-/**
- * List of possible permissions to request.
- */
-exports.permission = {
-    READ_EXTERNAL_STORAGE: 1,
-    READ_ACCOUNTS: 2
+    outlook: isAndroid ? 'com.microsoft.office.outlook' : 'ms-outlook://compose'
 };
 
 /**
@@ -47,14 +38,13 @@ exports.permission = {
 exports.getDefaults = function () {
     return {
         app:           mailto,
-        from:          '',
         subject:       '',
         body:          '',
         to:            [],
         cc:            [],
         bcc:           [],
         attachments:   [],
-        isHtml:        false,
+        isHtml:        true,
         chooserHeader: 'Open with'
     };
 };
@@ -62,13 +52,12 @@ exports.getDefaults = function () {
 /**
  * Informs if the app has the needed permission.
  *
- * @param [ Number ]   permission The permission to check.
- * @param [ Function ] callback   The callback function.
- * @param [ Object ]   scope      The scope of the callback.
+ * @param [ Function ] callback The callback function.
+ * @param [ Object ]   scope    The scope of the callback.
  *
  * @return [ Void ]
  */
-exports.hasPermission = function(permission, callback, scope) {
+exports.hasPermission = function(callback, scope) {
     var fn = this.createCallbackFn(callback, scope);
 
     if (!isAndroid) {
@@ -76,19 +65,18 @@ exports.hasPermission = function(permission, callback, scope) {
         return;
     }
 
-    exec(fn, null, 'EmailComposer', 'check', [permission]);
+    exec(fn, null, 'EmailComposer','hasPermission', []);
  };
 
 /**
  * Request permission if not already granted.
  *
- * @param [ Number ]   permission The permission to request.
  * @param [ Function ] callback The callback function.
  * @param [ Object ]   scope    The scope of the callback.
  *
  * @return [ Void ]
  */
-exports.requestPermission = function(permission, callback, scope) {
+exports.requestPermission = function(callback, scope) {
     var fn = this.createCallbackFn(callback, scope);
 
     if (!isAndroid) {
@@ -96,25 +84,11 @@ exports.requestPermission = function(permission, callback, scope) {
         return;
     }
 
-    exec(fn, null, 'EmailComposer', 'request', [permission]);
+    exec(fn, null, 'EmailComposer','requestPermission', []);
 };
 
 /**
- * Tries to find out if the device has an configured email account.
- *
- * @param [ Function ] callback The callback function.
- * @param [ Object ]   scope    The scope of the callback.
- *
- * @return [ Void ]
- */
-exports.hasAccount = function (callback, scope) {
-    var fn  = this.createCallbackFn(callback, scope);
-
-    exec(fn, null, 'EmailComposer', 'account', []);
-};
-
-/**
- * Tries to find out if the device has an installed email client.
+ * Verifies if sending emails is supported on the device.
  *
  * @param [ String ]   app      An optional app id or uri scheme.
  *                              Defaults to mailto.
@@ -123,7 +97,7 @@ exports.hasAccount = function (callback, scope) {
  *
  * @return [ Void ]
  */
-exports.hasClient = function (app, callback, scope) {
+exports.isAvailable = function (app, callback, scope) {
 
     if (typeof callback != 'function') {
         scope    = null;
@@ -131,33 +105,46 @@ exports.hasClient = function (app, callback, scope) {
         app      = mailto;
     }
 
-    var fn  = this.createCallbackFn(callback, scope),
+    var fn  = this.createCallbackFn(callback, scope);
         app = app || mailto;
 
     if (this.aliases.hasOwnProperty(app)) {
         app = this.aliases[app];
     }
 
-    exec(fn, null, 'EmailComposer', 'client', [app]);
+    exec(fn, null, 'EmailComposer', 'isAvailable', [app]);
 };
 
 /**
- * List of package IDs for all available email clients (Android only).
+ * Verifies if sending emails is supported on the device.
  *
+ * @param [ String ]   app      An optional app id or uri scheme.
+ *                              Defaults to mailto.
  * @param [ Function ] callback The callback function.
  * @param [ Object ]   scope    The scope of the callback.
  *
  * @return [ Void ]
  */
-exports.getClients = function (callback, scope) {
-    var fn = this.createCallbackFn(callback, scope);
+exports.isAvailable2 = function (app, callback, scope) {
 
-    if (!isAndroid) {
-        if (fn) fn(null);
-        return;
+    if (typeof callback != 'function') {
+        scope    = null;
+        callback = app;
+        app      = mailto;
     }
 
-    exec(fn, null, 'EmailComposer', 'clients', []);
+    var fn  = this.createCallbackFn(callback, scope), fn2;
+        app = app || mailto;
+
+    if (this.aliases.hasOwnProperty(app)) {
+        app = this.aliases[app];
+    }
+
+    if (fn) {
+        fn2 = function (a, b) { fn(b, a); };
+    }
+
+    exec(fn2, null, 'EmailComposer', 'isAvailable', [app]);
 };
 
 /**
@@ -177,7 +164,7 @@ exports.open = function (options, callback, scope) {
         options  = {};
     }
 
-    var fn      = this.createCallbackFn(callback, scope),
+    var fn      = this.createCallbackFn(callback, scope);
         options = this.mergeWithDefaults(options || {});
 
     if (!isAndroid && options.app != mailto && fn) {
@@ -218,6 +205,10 @@ exports.openDraft = function () {
 exports.mergeWithDefaults = function (options) {
     var defaults = this.getDefaults();
 
+    if (options.hasOwnProperty('isHTML')) {
+        options.isHtml = options.isHTML;
+    }
+
     if (!options.hasOwnProperty('isHtml')) {
         options.isHtml = defaults.isHtml;
     }
@@ -226,12 +217,7 @@ exports.mergeWithDefaults = function (options) {
         options.app = this.aliases[options.app];
     }
 
-    if (Array.isArray(options.body)) {
-        options.body = options.body.join("\n");
-    }
-
     options.app           = String(options.app || defaults.app);
-    options.from          = String(options.from || defaults.from);
     options.subject       = String(options.subject || defaults.subject);
     options.body          = String(options.body || defaults.body);
     options.chooserHeader = String(options.chooserHeader || defaults.chooserHeader);

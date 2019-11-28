@@ -1,15 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 747:
+/***/ 608:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieDetailsPageModule", function() { return MovieDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationsPageModule", function() { return NotificationsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movie_details__ = __webpack_require__(762);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_image_loader__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notifications__ = __webpack_require__(768);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,44 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var MovieDetailsPageModule = /** @class */ (function () {
-    function MovieDetailsPageModule() {
+var NotificationsPageModule = /** @class */ (function () {
+    function NotificationsPageModule() {
     }
-    MovieDetailsPageModule = __decorate([
+    NotificationsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__movie_details__["a" /* MovieDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__notifications__["a" /* NotificationsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__movie_details__["a" /* MovieDetailsPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic_image_loader__["b" /* IonicImageLoader */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__notifications__["a" /* NotificationsPage */]),
             ],
         })
-    ], MovieDetailsPageModule);
-    return MovieDetailsPageModule;
+    ], NotificationsPageModule);
+    return NotificationsPageModule;
 }());
 
-//# sourceMappingURL=movie-details.module.js.map
+//# sourceMappingURL=notifications.module.js.map
 
 /***/ }),
 
-/***/ 762:
+/***/ 768:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MovieDetailsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_streaming_media__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_MoviesService__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_UserService__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_AuthService__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__data_Helper__ = __webpack_require__(483);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_DownloadService__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_image_loader__ = __webpack_require__(189);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__ = __webpack_require__(769);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,181 +56,60 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
-
-
-
-
-
-var MovieDetailsPage = /** @class */ (function () {
-    function MovieDetailsPage(navCtrl, navParams, streamingMedia, moviesService, userService, downloadService, toastController, alertController, platform, vimeoService, authService, imageLoaderConfig) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.streamingMedia = streamingMedia;
-        this.moviesService = moviesService;
-        this.userService = userService;
-        this.downloadService = downloadService;
-        this.toastController = toastController;
-        this.alertController = alertController;
-        this.platform = platform;
-        this.vimeoService = vimeoService;
-        this.authService = authService;
-        this.imageLoaderConfig = imageLoaderConfig;
-        this.userId = "";
-        this.movieId = "";
-        this.urlPathVideo = "";
-        this.homeScreenGroups = [];
-        this.recentlyAddedMovies = [];
-        this.loaded = false;
-        this.isPartOfMyList = false;
-        this.isDownloading = false;
-        this.isDownloaded = false;
-        this.imageLoaderConfig.enableDebugMode();
-        this.imageLoaderConfig.setCacheDirectoryName('my-custom-cache-directory-name');
-        this.authService.afAuth.user.subscribe(function (user) {
-            _this.userId = user.uid;
-        });
-        this.movie = this.navParams.get("movieId");
-        // if (this.movieId == undefined) {
-        //   this.movieId = "";
-        // } else {
-        //   this.downloadService
-        //     .isMovieDownloaded(this.movieId)
-        //     .then((result: any) => {
-        //       this.isDownloaded = result.isDownloaded;
-        //     });
-        // }
+var NotificationsPage = /** @class */ (function () {
+    function NotificationsPage() {
+        this.notifications = [];
+        this.initialiseNotifications();
     }
-    MovieDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad MovieDetailsPage");
-        this.getMovie();
-        this.getRecentlyAddedMovies();
+    NotificationsPage.prototype.initialiseNotifications = function () {
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Play the trailer", "Coming March 5", "assets/imgs/american dream.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("The Hurt Locker", "Now on Netflix for you", "assets/imgs/hurt-locker.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("John Wick: Chapter 2", "New arrival", "assets/imgs/notifications-image1.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Left Behind", "New arrival", "assets/imgs/left-behind.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Vampire Academy", "New arrival", "assets/imgs/vampire-academy.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Standup for Dummies", "New arrival", "assets/imgs/standup-for-dummies.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Damnation", "New arrival", "assets/imgs/damnation-notification.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Almost Banned", "New arrival", "assets/imgs/almost-banned.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Hay gente asi", "New arrival", "assets/imgs/hay-dente-asi.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Riase el Show", "New arrival", "assets/imgs/riase-el-show.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Great America", "New arrival", "assets/imgs/great-america.png", true));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Especial de Standup", "New arrival", "assets/imgs/especial-de-standup.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Weeds", "New arrival", "assets/imgs/weeds.png", false));
+        this.notifications.push(new __WEBPACK_IMPORTED_MODULE_1__data_NotificationItem__["a" /* NotificationItem */]("Equanimity", "New arrival", "assets/imgs/equanimity.png", true));
     };
-    MovieDetailsPage.prototype.getMovie = function () {
-        this.title = this.movie.name;
-        this.detailsPicture = this.movie.detailsPicture;
-        this.description = this.movie.description;
-        this.urlPathVideo = this.movie.picture;
-        this.movieId = this.movie.movieId;
-        this.getIsPartOfMyList();
+    NotificationsPage.prototype.ionViewDidLoad = function () {
+        console.log("ionViewDidLoad NotificationsPage");
     };
-    MovieDetailsPage.prototype.getCategoryMovies = function () {
-        var _this = this;
-        this.vimeoService.getHomeScreenGroups().subscribe(function (result) {
-            _this.homeScreenGroups = [];
-            var category = result;
-            console.log(category);
-        });
-    };
-    MovieDetailsPage.prototype.getRecentlyAddedMovies = function () {
-        var _this = this;
-        this.vimeoService.getAllVideos().subscribe(function (result) {
-            var videos = result;
-            videos.forEach(function (item) {
-                if (item.files[2] && item.pictures.sizes[3]) {
-                    var video = new __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
-                    video.name = item.name;
-                    video.picture = item.files[2].link;
-                    video.description = item.description;
-                    video.detailsPicture = item.pictures.sizes[6].link;
-                    video.movieId = item.uri.split('/')[2];
-                    _this.recentlyAddedMovies.push(video);
-                    _this.recentlyAddedMovies = __WEBPACK_IMPORTED_MODULE_8__data_Helper__["a" /* Helper */].shuffle(_this.recentlyAddedMovies);
-                }
-            });
-            _this.loaded = true;
-        }, function (err) { return console.log(err); });
-        // this.moviesService.getRecentlyAddedMovies().then((result: any) => {
-        //   this.recentlyAddedMovies = Helper.shuffle(result.movies);
-        // 
-        // });
-    };
-    MovieDetailsPage.prototype.getIsPartOfMyList = function () {
-        var _this = this;
-        console.log('test');
-        this.userService
-            .getIsMoviePartOfMyList(this.userId, this.movieId)
-            .then(function (result) {
-            _this.isPartOfMyList = result.isPartOfMyList;
-        });
-    };
-    MovieDetailsPage.prototype.addToMyList = function () {
-        var _this = this;
-        this.userService
-            .addMovieToMyList(this.userId, this.movie)
-            .then(function (result) {
-            _this.isPartOfMyList = true;
-            _this.showPartOfMyListToast(true);
-        });
-    };
-    MovieDetailsPage.prototype.removeFromMyList = function () {
-        var _this = this;
-        this.userService
-            .removeMovieFromMyList(this.userId, this.movieId)
-            .then(function (result) {
-            _this.isPartOfMyList = false;
-            _this.showPartOfMyListToast(false);
-        });
-    };
-    MovieDetailsPage.prototype.showPartOfMyListToast = function (added) {
-        var toast = this.toastController.create({
-            message: added ? "Agregado a mi lista" : "Removido de mi lista",
-            duration: 2000,
-            position: "bottom"
-        });
-        toast.present();
-    };
-    MovieDetailsPage.prototype.goToMovie = function (movie) {
-        var _this = this;
-        //this.navCtrl.push("MovieDetailsPage", { movieId: movie });
-        this.navCtrl.pop().then(function () {
-            _this.navCtrl.push("MovieDetailsPage", { movieId: movie });
-        });
-    };
-    MovieDetailsPage.prototype.newMethod = function () {
-        return "MovieDetailsPage";
-    };
-    MovieDetailsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: "page-movie-details",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\movie-details\movie-details.html"*/'<ion-header no-border>\n\n  <ion-navbar transparent>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content fullscreen padding>\n\n  <video [src]=urlPathVideo [autoplay]=false class="video" controls controlsList="nodownload" poster="https://i.vimeocdn.com/portrait/30313759_300x300"></video> \n\n  <p class="title">{{title}}</p>\n\n  <ion-row class="movie-details-row">\n\n    <!-- <p class="match-percentage">99% Match</p> -->\n\n    <p style="color: #00aced">2019</p>\n\n    <!-- <p>25</p> -->\n\n    <!-- <p>2h 2m</p> -->\n\n  </ion-row>\n\n  <ion-row class="movie-summary-row">\n\n    <p>{{description}}</p>\n\n  </ion-row>\n\n  <ion-row class="list-like-download-row">\n\n    <ion-col text-center col-3>\n\n      <button *ngIf="!isPartOfMyList" (click)="addToMyList()" ion-button icon-only clear color="netflixBlue">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </button>\n\n      <button class="isPartOfMyList" *ngIf="isPartOfMyList" (click)="removeFromMyList()" ion-button icon-only clear color="netflixWhite">\n\n        <ion-icon name="md-checkmark"></ion-icon>\n\n      </button>\n\n      <p>Mi lista</p>\n\n    </ion-col>\n\n    <ion-col col-25></ion-col>\n\n  </ion-row>\n\n  <p class="more-like-this-title">Mas como este</p>\n\n  <ion-row *ngIf="!loaded">\n\n    <ion-col text-center>\n\n      <br>\n\n      <ion-spinner color="netflixRed"></ion-spinner>\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row *ngIf="loaded" class="movieLg"> \n\n    <ion-col col-4 col-lg-2 *ngFor="let movie of recentlyAddedMovies">\n\n        <img-loader (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%" useImg [spinner]="true"></img-loader>\n\n        <!-- <img  (click)="goToMovie(movie)" src="{{movie.detailsPicture}}" style="width:100%"> -->\n\n    </ion-col>    \n\n  </ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\movie-details\movie-details.html"*/
+    NotificationsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "page-notifications",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\notifications\notifications.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Notifications</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-item *ngFor="let notification of notifications">\n\n      <span [class.hidden]="!notification.isNew" class="dot" item-start></span>\n\n\n\n      <img src="{{ notification.picture }}">\n\n\n\n      <div item-end>\n\n        <p class="new-arrival">{{ notification.description }}</p>\n\n        <p class="title">{{ notification.title }}</p>\n\n        <p class="date">{{ notification.dateTime }}</p>\n\n      </div>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\notifications\notifications.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_streaming_media__["a" /* StreamingMedia */],
-            __WEBPACK_IMPORTED_MODULE_5__services_MoviesService__["a" /* MoviesService */],
-            __WEBPACK_IMPORTED_MODULE_6__services_UserService__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_9__services_DownloadService__["a" /* DownloadService */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["q" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["m" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__["a" /* VimeoService */],
-            __WEBPACK_IMPORTED_MODULE_7__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_10_ionic_image_loader__["a" /* ImageLoaderConfig */]])
-    ], MovieDetailsPage);
-    return MovieDetailsPage;
+        __metadata("design:paramtypes", [])
+    ], NotificationsPage);
+    return NotificationsPage;
 }());
 
-// showDownloadOnDeviceOnlyToast() {
-//   let toast = this.toastController.create({
-//     message: 'You can only download on a device!',
-//     duration: 2000,
-//     position: "bottom"
-//   });
-//   toast.present();
-// }
-// showDownloadToast(movieName: string) {
-//   let toast = this.toastController.create({
-//     message: 'Movie "' + movieName + '" successfully downloaded!',
-//     duration: 2000,
-//     position: "bottom"
-//   });
-//   toast.present();
-// }
-//# sourceMappingURL=movie-details.js.map
+//# sourceMappingURL=notifications.js.map
+
+/***/ }),
+
+/***/ 769:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationItem; });
+var NotificationItem = /** @class */ (function () {
+    function NotificationItem(title, description, picture, isNew) {
+        this.title = title;
+        this.description = description;
+        this.dateTime = "15 Feb.";
+        this.picture = picture;
+        this.isNew = isNew;
+    }
+    return NotificationItem;
+}());
+
+//# sourceMappingURL=NotificationItem.js.map
 
 /***/ })
 

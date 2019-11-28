@@ -4,10 +4,9 @@
       <ion-buttons start>
         <button ion-button icon-only (click)="close()" >
           <ion-icon name="close"></ion-icon>
-        </button>
-      </ion-buttons>  
-      <ion-title>Chat</ion-title>
-      
+        </button>        
+      </ion-buttons>     
+      <ion-title>Chat</ion-title>  
     </ion-navbar>
   </ion-header>
 <ion-content >
@@ -40,10 +39,13 @@
    
    
   </ion-content>
-  <ion-footer>
+  <ion-footer>   
+   
     <ion-toolbar>
+        <ion-note> <span *ngIf="isTyping !== ''" > <i> {{isTyping}} esta escribiendo </i>
+        </span>  </ion-note>  
       <ion-item class="chat-item">    
-        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)"></ion-input>
+        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)" (input)="isEmpty($event)"></ion-input>
       </ion-item>
       <ion-buttons end>
         <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">

@@ -1,14 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 749:
+/***/ 598:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowDetailsPageModule", function() { return ShowDetailsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_details__ = __webpack_require__(763);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(618);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat__ = __webpack_require__(750);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,38 +19,277 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ShowDetailsPageModule = /** @class */ (function () {
-    function ShowDetailsPageModule() {
+
+var ChatPageModule = /** @class */ (function () {
+    function ChatPageModule() {
     }
-    ShowDetailsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    ChatPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__show_details__["a" /* ShowDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__chat__["a" /* ChatPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__show_details__["a" /* ShowDetailsPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__chat__["a" /* ChatPage */]),
+                __WEBPACK_IMPORTED_MODULE_0__components_components_module__["a" /* ComponentsModule */],
             ],
+            exports: [__WEBPACK_IMPORTED_MODULE_3__chat__["a" /* ChatPage */]]
         })
-    ], ShowDetailsPageModule);
-    return ShowDetailsPageModule;
+    ], ChatPageModule);
+    return ChatPageModule;
 }());
 
-//# sourceMappingURL=show-details.module.js.map
+//# sourceMappingURL=chat.module.js.map
 
 /***/ }),
 
-/***/ 763:
+/***/ 618:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__ = __webpack_require__(620);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(621);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ComponentsModule = /** @class */ (function () {
+    function ComponentsModule() {
+    }
+    ComponentsModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuComponent */], __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__["a" /* SkeletonItemComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* IonicModule */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuComponent */], __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__["a" /* SkeletonItemComponent */]]
+        })
+    ], ComponentsModule);
+    return ComponentsModule;
+}());
+
+//# sourceMappingURL=components.module.js.map
+
+/***/ }),
+
+/***/ 620:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SkeletonItemComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_TvShowsService__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_AuthService__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_UserService__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_DownloadService__ = __webpack_require__(115);
+/**
+
+  # Ionic 3 Skeleton Loader component
+
+  ## Setup
+
+  After clone or download this project.
+
+  Install Ionic CLI
+
+  ```
+  $ npm install -g ionic
+  ```
+
+  Install dependencies
+
+  ```
+  $ cd <project>
+  $ npm install
+  ```
+
+  Run the app on Localhost
+
+  ```
+  $ ionic serve
+  ```
+
+  See more at [Get started with Ionic](https://ionicframework.com/getting-started/)
+
+  ## skeleton-item
+  `<skeleton-item>` is the main block to build more complex skeleton-style loading screen
+
+  ### Usage
+
+  ```
+  <skeleton-item height="50px" width="50px" rounded></skeleton-item>
+  ```
+
+  You can add CSS classes or inline CSS as normal HTML element
+
+  ```
+  <skeleton-item class="pin-image" height="50px" width="50px" rounded style="margin-bottom: 16px"></skeleton-item>
+  ```
+
+  ### Available attributes
+
+  - {height: string} can be px or %, default value is '16px'
+  - {width: string} can be px or %, default value is '100%'
+  - {radius: string} set border-radius, default value is '4px'
+  - {rounded} set border-radius to 999em to make rounded block when the height and width have the same value
+  - {no-animated} disable animation effect
+
+ */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SkeletonItemComponent = /** @class */ (function () {
+    function SkeletonItemComponent() {
+        this.styles = {};
+    }
+    SkeletonItemComponent.prototype.ngOnInit = function () {
+        this.styles = {
+            width: this.width ? this.width : '100%',
+            height: this.height ? this.height : '16px'
+        };
+        if (typeof this.radius !== 'undefined' && this.radius !== '') {
+            this.styles.borderRadius = this.radius;
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SkeletonItemComponent.prototype, "width", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SkeletonItemComponent.prototype, "height", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SkeletonItemComponent.prototype, "radius", void 0);
+    SkeletonItemComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'skeleton-item',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/'<div [ngStyle]="styles"></div>\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/
+        })
+    ], SkeletonItemComponent);
+    return SkeletonItemComponent;
+}());
+
+//# sourceMappingURL=skeleton-item.js.map
+
+/***/ }),
+
+/***/ 621:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MenuComponent = /** @class */ (function () {
+    function MenuComponent(navCtrl, loadingCtrl, app, zone) {
+        this.navCtrl = navCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.app = app;
+        this.zone = zone;
+        this.menuhead = 'home';
+    }
+    ;
+    // ||||||||||||||||||||||||||||||||||||||||||||||||||||----------------------------------------||||||||||||||||||||||||||||||||||||||||||                 
+    // ||||||||||||||||||||||||||||||||||||||||||||||||||||        Funciones Nav bar DESKTOP       ||||||||||||||||||||||||||||||||||||||||||
+    // ||||||||||||||||||||||||||||||||||||||||||||||||||||----------------------------------------||||||||||||||||||||||||||||||||||||||||||
+    MenuComponent.prototype.home = function () {
+        this.navCtrl.setRoot('HomePage');
+    };
+    MenuComponent.prototype.parrilla = function () {
+        this.navCtrl.setRoot('ComingSoonPage');
+    };
+    MenuComponent.prototype.buscar = function () {
+        this.navCtrl.setRoot('SearchPage');
+    };
+    MenuComponent.prototype.perfil = function () {
+        this.navCtrl.setRoot('ProfilePage');
+    };
+    ;
+    MenuComponent.prototype.canales = function () {
+        this.navCtrl.setRoot('ChannelsPage');
+    };
+    ;
+    MenuComponent.prototype.terminos = function () {
+        this.navCtrl.push('TermsPage');
+    };
+    MenuComponent.prototype.signOut = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            spinner: "bubbles",
+            content: "Cerrando sesión..."
+        });
+        loading.present();
+        setTimeout(function () {
+            loading.dismiss();
+            __WEBPACK_IMPORTED_MODULE_2_firebase___default.a
+                .auth()
+                .signOut()
+                .then(function () {
+                _this.zone.run(function () {
+                    _this.app.getRootNav().setRoot('SignInPage');
+                });
+            });
+        }, 500);
+    };
+    ;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], MenuComponent.prototype, "currentPage", void 0);
+    MenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]])
+    ], MenuComponent);
+    return MenuComponent;
+}());
+
+//# sourceMappingURL=menu.js.map
+
+/***/ }),
+
+/***/ 750:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,210 +306,269 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ShowDetailsPage = /** @class */ (function () {
-    function ShowDetailsPage(navParams, streamingMedia, tvShowsService, userService, authService, toastController, alertController, downloadService, platform) {
+
+var ChatPage = /** @class */ (function () {
+    function ChatPage(navCtrl, navParams, viewCtrl, db, chatService, _DomSanitizationService, alertCtrl) {
         var _this = this;
+        this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.streamingMedia = streamingMedia;
-        this.tvShowsService = tvShowsService;
-        this.userService = userService;
-        this.authService = authService;
-        this.toastController = toastController;
-        this.alertController = alertController;
-        this.downloadService = downloadService;
-        this.platform = platform;
-        this.userId = "";
-        this.tvShowId = "";
-        this.tvShowSeasons = [];
-        this.seasonEpisodes = [];
-        this.seasonsLoaded = false;
-        this.episodesLoaded = false;
-        this.isPartOfMyList = false;
-        this.authService.afAuth.user.subscribe(function (user) {
-            _this.userId = user.uid;
+        this.viewCtrl = viewCtrl;
+        this.db = db;
+        this.chatService = chatService;
+        this._DomSanitizationService = _DomSanitizationService;
+        this.alertCtrl = alertCtrl;
+        this.messages = [];
+        this.offStatus = false;
+        this.photosArray = new Array;
+        this.message = '';
+        this.isLoading = true;
+        this.isTyping = '';
+        this.photosArray = [];
+        this.messages = [];
+        this.chatService.getMessages(sessionStorage.getItem('channelName').replace(/ /g, '')).subscribe(function (message) {
+            var prueba = _this.getCurrentUserPhoto(message['from']);
+            message['picture'] = _this._DomSanitizationService.bypassSecurityTrustResourceUrl(prueba);
+            _this.messages.push(message);
+            setTimeout(function () {
+                if (_this.offStatus === false) {
+                    _this.content.scrollToBottom(1000);
+                }
+            }, 50);
+            var objToSave = {
+                created: message['created'],
+                from: message['from'],
+                text: message['text']
+            };
+            _this.db.collection('chats').doc(_this.event).collection('chatLog').doc('chatLog' + message['created']).set(objToSave);
         });
-        this.tvShowId = this.navParams.get("tvShowId");
-        if (this.tvShowId == undefined) {
-            this.tvShowId = "";
-        }
     }
-    ShowDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad ShowDetailsPage");
-        this.getTvShow();
-        this.getIsPartOfMyList();
-    };
-    ShowDetailsPage.prototype.getTvShow = function () {
+    ;
+    //Fin constructor
+    ChatPage.prototype.ionViewWillEnter = function () {
         var _this = this;
-        this.tvShowsService.getTvShow(this.tvShowId).then(function (result) {
-            _this.tvShow = result.tvShow;
-            _this.title = _this.tvShow.name;
-            _this.detailsPicture = _this.tvShow.detailsPicture;
-            _this.releaseYear = _this.tvShow.releaseYear.toString();
-            _this.rating = _this.tvShow.rating;
-            _this.description = _this.tvShow.description;
-            _this.tvShowsService.getSeasons(_this.tvShow).then(function (result) {
-                _this.tvShowSeasons = result.tvShowSeasons;
-                _this.seasonsLoaded = true;
-                if (_this.tvShowSeasons.length > 0) {
-                    _this.selectedSeason = _this.tvShowSeasons[0].name;
-                    _this.tvShowsService
-                        .getEpisodes(_this.tvShow, _this.tvShowSeasons[0])
-                        .then(function (result) {
-                        _this.seasonEpisodes = result.seasonEpisodes;
-                        _this.seasonEpisodes.forEach(function (episode) {
-                            _this.downloadService
-                                .isEpisodeDownloaded(episode.episodeId)
-                                .then(function (result) {
-                                episode.isDownloaded = result.isDownloaded;
-                            });
-                        });
-                        _this.episodesLoaded = true;
-                    });
+        this.getChatSection();
+        if (this.photosArray.length == 0) {
+            this.db.collection('photos').valueChanges().forEach(function (elem) {
+                _this.photosArray.push(elem);
+            });
+        }
+    };
+    ;
+    /**
+     * Observable para desactivar chat o para establecer nickname y evento.
+     */
+    ChatPage.prototype.getChatSection = function () {
+        var _this = this;
+        this.ConfigCollection = this.db.collection('Config').doc(sessionStorage.getItem('channelName'));
+        this.ConfigCollection.valueChanges().subscribe(function (res) {
+            if (!res['Vivo']) {
+                _this.viewCtrl.dismiss();
+            }
+            _this.event = res['chatEvent'];
+            _this.chatService.joinChat(sessionStorage.getItem('channelName').replace(/ /g, ''))
+                .then(function (nickname) {
+                _this.nickname = nickname.name.toString();
+                _this.emailUserChat = nickname.email.toString();
+                _this.loadMessges();
+            }, function (err) { return _this.showAlert(err, 'Error FbConfig'); });
+        });
+    };
+    ;
+    /**
+     * Funcion para cargar mensajes y llenar array.
+     */
+    ChatPage.prototype.loadMessges = function () {
+        var _this = this;
+        if (this.messages.length === 0) {
+            this.event = localStorage.getItem('chatEvent');
+            var docref = this.db.collection('chats').doc(this.event).collection('chatLog', function (ref) { return ref.orderBy('created'); });
+            docref.get().subscribe(function (result) {
+                result.forEach(function (res) {
+                    if (res.data().from !== undefined) {
+                        var ObjtResult = void 0;
+                        // this.photosArray[0].forEach(photo =>{  
+                        for (var index = 0; index < _this.photosArray[0].length; index++) {
+                            if (_this.photosArray[0][index]['name'] === res.data().from) {
+                                ObjtResult = {
+                                    created: res.data().created,
+                                    from: res.data().from,
+                                    text: res.data().text,
+                                    picture: _this._DomSanitizationService.bypassSecurityTrustResourceUrl(_this.photosArray[0][index]['base64'])
+                                };
+                                break;
+                            }
+                            else {
+                                ObjtResult = {
+                                    created: res.data().created,
+                                    from: res.data().from,
+                                    text: res.data().text,
+                                    picture: 'assets/imgs/user.png'
+                                };
+                            }
+                        }
+                        _this.messages.push(ObjtResult);
+                    }
+                    else {
+                        var ObjtResult = void 0;
+                        ObjtResult = {
+                            created: res.data().created,
+                            from: res.data().from,
+                            text: res.data().text,
+                            picture: 'assets/imgs/user.png'
+                        };
+                        _this.messages.push(ObjtResult);
+                    }
+                });
+                setTimeout(function () {
+                    if (_this.offStatus === false) {
+                        _this.content.scrollToBottom(0);
+                        _this.isLoading = false;
+                    }
+                }, 0);
+            });
+        }
+    };
+    ;
+    /**
+     * Funcion que envia un mensaje por meido de SOCKET.IO
+     */
+    ChatPage.prototype.sendMessage = function () {
+        var _this = this;
+        if (this.message !== '') {
+            this.chatService.sendMessage(this.message, sessionStorage.getItem('channelName').replace(/ /g, ''))
+                .subscribe(function () {
+                _this.message = '';
+            });
+        }
+    };
+    ChatPage.prototype.getCurrentUserPhoto = function (name) {
+        var photo;
+        var tmp = true;
+        var index = 0;
+        if (name == undefined) {
+            photo = 'assets/imgs/user.png';
+        }
+        else {
+            do {
+                if (this.photosArray[0][index]['name'] === name) {
+                    photo = (this.photosArray[0][index]['base64']);
+                    tmp = false;
                 }
                 else {
-                    _this.episodesLoaded = true;
+                    index += 1;
                 }
-            });
-        });
-    };
-    ShowDetailsPage.prototype.getIsPartOfMyList = function () {
-        var _this = this;
-        this.userService
-            .getIsTvShowPartOfMyList(this.userId, this.tvShowId)
-            .then(function (result) {
-            _this.isPartOfMyList = result.isPartOfMyList;
-        });
-    };
-    ShowDetailsPage.prototype.addToMyList = function () {
-        var _this = this;
-        this.userService
-            .addTvShowToMyList(this.userId, this.tvShow)
-            .then(function (result) {
-            _this.isPartOfMyList = true;
-            _this.showPartOfMyListToast(true);
-        });
-    };
-    ShowDetailsPage.prototype.removeFromMyList = function () {
-        var _this = this;
-        this.userService
-            .removeTvShowFromMyList(this.userId, this.tvShowId)
-            .then(function (result) {
-            _this.isPartOfMyList = false;
-            _this.showPartOfMyListToast(false);
-        });
-    };
-    ShowDetailsPage.prototype.showPartOfMyListToast = function (added) {
-        var toast = this.toastController.create({
-            message: added ? "Added to My List" : "Removed from My List",
-            duration: 2000,
-            position: "bottom"
-        });
-        toast.present();
-    };
-    ShowDetailsPage.prototype.playEpisode = function (episode) {
-        if (!this.platform.is("cordova")) {
-            var alert_1 = this.alertController.create({
-                title: "Run on device",
-                subTitle: "This feature is only available on a device!",
-                buttons: ["Dismiss"]
-            });
-            alert_1.present();
-            return;
+                ;
+                if (index == this.photosArray[0].length) {
+                    photo = 'assets/imgs/user.png';
+                    tmp = false;
+                }
+            } while (tmp);
         }
-        if (episode.videoUrl === "") {
-            var alert_2 = this.alertController.create({
-                title: "This episode has not yet been uploaded!",
-                subTitle: "Use the Admin Ion Netflix to add your own episode and watch it here!",
-                buttons: ["Dismiss"]
-            });
-            alert_2.present();
-            return;
-        }
-        var options = {
-            successCallback: function () {
-                console.log("Video played");
-            },
-            errorCallback: function (e) {
-                console.log("Error streaming");
-            },
-            orientation: "landscape",
-            shouldAutoClose: true,
-            controls: true
-        };
-        this.streamingMedia.playVideo(episode.videoUrl, options);
+        return photo;
     };
-    ShowDetailsPage.prototype.seasonChanged = function (event) {
+    /**
+     * Funcion para mostrar una alerta personalizada
+     * @param message mensaje para mostrar en el body de la alerta
+     * @param title  titulo para mostrar en el encabezado de la alerta
+     */
+    ChatPage.prototype.showAlert = function (message, title) {
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: message,
+            buttons: [{
+                    text: 'Cancelar',
+                    role: 'cancel',
+                    cssClass: 'btnalert-cancel',
+                    handler: function (data) {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Ok',
+                    cssClass: 'btnalert-ok',
+                    handler: function (data) { }
+                }
+            ]
+        }).present();
+    };
+    ;
+    /**
+     * Funcion para que el usuario al oprimir ENTER pueda enviar un mensaje
+     * @param key codigo de la tecla presionada
+     */
+    ChatPage.prototype.keyPress = function (key) {
         var _this = this;
-        this.episodesLoaded = false;
-        var season = this.tvShowSeasons.find(function (x) { return x.name === event; });
-        if (season) {
-            this.tvShowsService
-                .getEpisodes(this.tvShow, season)
-                .then(function (result) {
-                _this.seasonEpisodes = result.seasonEpisodes;
-                _this.episodesLoaded = true;
+        this.isTyping = '';
+        if (key === 13 && this.message !== '') {
+            this.sendMessage();
+            this.isTyping = '';
+        }
+        else {
+            this.chatService.isTyping(this.nickname, sessionStorage.getItem('channelName').replace(/ /g, '')).subscribe(function (WhoTyping) {
+                _this.isTyping = WhoTyping['nickname'];
             });
         }
     };
-    ShowDetailsPage.prototype.downloadEpisode = function (episode) {
-        var _this = this;
-        if (!this.platform.is("cordova")) {
-            var alert_3 = this.alertController.create({
-                title: "Run on device",
-                subTitle: "This feature is only available on a device!",
-                buttons: ["Dismiss"]
+    ;
+    ChatPage.prototype.isEmpty = function (ev) {
+        if (ev.data == null) {
+            this.isTyping = '';
+            this.chatService.isTyping('', sessionStorage.getItem('channelName').replace(/ /g, ''))
+                .subscribe(function () {
             });
-            alert_3.present();
-            return;
         }
-        if (episode.videoUrl === "") {
-            var alert_4 = this.alertController.create({
-                title: "This episode has not yet been uploaded!",
-                subTitle: "Use the Admin Ion Netflix to add your own episode and watch it here!",
-                buttons: ["Dismiss"]
-            });
-            alert_4.present();
-            return;
-        }
-        episode.isDownloading = true;
-        this.downloadService.episodeFileTransfer.onProgress(function (event) {
-            var progress = Math.round((event.loaded / event.total) * 100);
-            episode.downloadProgress = progress;
-        });
-        this.downloadService.downloadEpisode(episode).then(function (result) {
-            _this.showDownloadToast(episode.name);
-            episode.isDownloading = false;
-            episode.isDownloaded = true;
-        }, function (error) {
-            episode.isDownloading = false;
-        });
     };
-    ShowDetailsPage.prototype.showDownloadToast = function (episodeName) {
-        var toast = this.toastController.create({
-            message: 'Episode "' + episodeName + '" successfully downloaded!',
-            duration: 2000,
-            position: "bottom"
-        });
-        toast.present();
+    ChatPage.prototype.close = function () {
+        this.viewCtrl.dismiss();
+        this.chatService.disconnect();
+        this.nickname = '';
+        this.messages = [];
     };
-    ShowDetailsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: "page-show-details",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\show-details\show-details.html"*/'<ion-header no-border>\n\n  <ion-navbar transparent>\n\n    <ion-buttons right>\n\n      <button ion-button icon-only color="netflixWhite">\n\n        <ion-icon name="logo-rss" item-end></ion-icon>\n\n      </button>\n\n\n\n      <button ion-button icon-only color="netflixWhite">\n\n        <ion-icon name="md-share" item-end></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content fullscreen padding>\n\n  <img class="details-picture" src="{{detailsPicture}}">\n\n\n\n  <p class="title">{{title}}</p>\n\n\n\n  <ion-row class="movie-details-row">\n\n    <p>{{releaseYear}}</p>\n\n    <p>{{rating}}</p>\n\n    <p>{{tvShowSeasons.length}} seasons</p>\n\n  </ion-row>\n\n\n\n  <ion-row class="movie-summary-row">\n\n    <p>{{description}}</p>\n\n  </ion-row>\n\n\n\n  <ion-row class="list-like-download-row">\n\n    <ion-col text-center col-3>\n\n      <button *ngIf="!isPartOfMyList" (click)="addToMyList()" ion-button icon-only clear color="netflixWhite">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </button>\n\n\n\n      <button class="isPartOfMyList" *ngIf="isPartOfMyList" (click)="removeFromMyList()" ion-button icon-only clear color="netflixWhite">\n\n        <ion-icon name="md-checkmark"></ion-icon>\n\n      </button>\n\n\n\n      <p>My List</p>\n\n    </ion-col>\n\n\n\n    <ion-col text-center col-3>\n\n      <button ion-button icon-only clear color="netflixWhite">\n\n        <ion-icon name="md-thumbs-up"></ion-icon>\n\n      </button>\n\n\n\n      <p>Rate</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!seasonsLoaded">\n\n    <ion-col text-center>\n\n      <br>\n\n      <ion-spinner color="netflixRed"></ion-spinner>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="!episodesLoaded">\n\n    <ion-col text-center>\n\n      <br>\n\n      <ion-spinner color="netflixRed"></ion-spinner>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="tvShowSeasons.length > 0">\n\n    <ion-select title="Pick a season" [(ngModel)]="selectedSeason" (ngModelChange)="seasonChanged($event)">\n\n      <ion-option *ngFor="let season of tvShowSeasons">{{season.name}}</ion-option>\n\n    </ion-select>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="seasonsLoaded && tvShowSeasons.length <= 0">\n\n    <ion-col text-center>\n\n      <img class="demo-image" src="assets/netflix-icon.png">\n\n      <p class="demo-message">There are no seasons yet.</p>\n\n      <p class="demo-sub-message">Use the Admin Ion Netflix to add your own seasons here!</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row *ngIf="episodesLoaded && seasonEpisodes.length <= 0">\n\n    <ion-col text-center>\n\n      <img class="demo-image" src="assets/netflix-icon.png">\n\n      <p class="demo-message">There are no episodes yet.</p>\n\n      <p class="demo-sub-message">Use the Admin Ion Netflix to add your own episodes here!</p>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-list no-lines *ngIf="episodesLoaded">\n\n    <div *ngFor="let episode of seasonEpisodes">\n\n      <ion-item>\n\n        <img (click)="playEpisode(episode)" item-start src="{{episode.picture}}">\n\n\n\n        <ion-col>\n\n          <p class="episode-title">{{episode.name}}</p>\n\n          <p class="episode-duration">1h 21m</p>\n\n        </ion-col>\n\n\n\n        <button item-end *ngIf="!episode.isDownloading && !episode.isDownloaded" (click)="downloadEpisode(episode)" ion-button icon-only clear\n\n          color="netflixWhite">\n\n          <ion-icon name="md-download"></ion-icon>\n\n        </button>\n\n\n\n        <div item-end *ngIf="episode.isDownloading && !episode.isDownloaded">\n\n          <ion-spinner style="width: 35px; height: 35px;" color="netflixRed"></ion-spinner>\n\n          <p>{{episode.downloadProgress}}</p>\n\n        </div>\n\n\n\n        <button item-end class="downloaded" *ngIf="episode.isDownloaded" ion-button icon-only clear color="netflixWhite">\n\n          <ion-icon name="md-checkmark"></ion-icon>\n\n        </button>\n\n      </ion-item>\n\n\n\n      <ion-item style="margin-top: -20px;">\n\n        <ion-row>\n\n          <p class="line-break">{{episode.description}}</p>\n\n        </ion-row>\n\n      </ion-item>\n\n    </div>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage\src\pages\show-details\show-details.html"*/
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["c" /* Content */])
+    ], ChatPage.prototype, "content", void 0);
+    ChatPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\chat\chat.html"*/'\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-buttons start>\n\n        <button ion-button icon-only (click)="close()" >\n\n          <ion-icon name="close"></ion-icon>\n\n        </button>        \n\n      </ion-buttons>     \n\n      <ion-title>Chat</ion-title>  \n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content >\n\n  <div *ngIf="isLoading">\n\n      <div *ngFor="let i of [1,2,3,4]">\n\n          <skeleton-item  height="100px"  class="right-bubble-skeleton " ></skeleton-item>\n\n          <skeleton-item  height="100px"  class="left-bubble-skeleton "> </skeleton-item>\n\n      </div>\n\n  </div>  \n\n    \n\n  \n\n  <div *ngFor="let message of messages" >\n\n      <div class="chat-message" text-right  *ngIf="message?.from === nickname" >\n\n          <div class="right-bubble">\n\n            <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n        </div>\n\n        <div class="chat-message" text-left  *ngIf="message?.from !== nickname" >\n\n          <div class="left-bubble">\n\n              <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n      </div>\n\n  </div>\n\n   \n\n   \n\n  </ion-content>\n\n  <ion-footer>   \n\n   \n\n    <ion-toolbar>\n\n        <ion-note> <span *ngIf="isTyping !== \'\'" > <i> {{isTyping}} esta escribiendo </i>\n\n        </span>  </ion-note>  \n\n      <ion-item class="chat-item">    \n\n        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)" (input)="isEmpty($event)"></ion-input>\n\n      </ion-item>\n\n      <ion-buttons end>\n\n        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">\n\n          <ion-icon name="send"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n  </ion-footer>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\chat\chat.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_streaming_media__["a" /* StreamingMedia */],
-            __WEBPACK_IMPORTED_MODULE_3__services_TvShowsService__["a" /* TvShowsService */],
-            __WEBPACK_IMPORTED_MODULE_5__services_UserService__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_6__services_DownloadService__["a" /* DownloadService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Platform */]])
-    ], ShowDetailsPage);
-    return ShowDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["s" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["AngularFirestore"],
+            __WEBPACK_IMPORTED_MODULE_2__services_ChatService__["a" /* ChatService */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["DomSanitizer"],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]])
+    ], ChatPage);
+    return ChatPage;
 }());
 
-//# sourceMappingURL=show-details.js.map
+;
+//# sourceMappingURL=chat.js.map
+
+/***/ }),
+
+/***/ 753:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(754);
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+
+/***/ 754:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var rxjs_1 = __webpack_require__(13);
+var map_1 = __webpack_require__(335);
+rxjs_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
 
 /***/ })
 
