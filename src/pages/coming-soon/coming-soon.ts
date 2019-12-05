@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/AuthService';
 import { Component, NgZone } from "@angular/core";
 import { IonicPage, LoadingController, ModalController,AlertController, Platform, App, NavController } from "ionic-angular";
 import * as moment from 'moment';
@@ -63,7 +64,21 @@ export class ComingSoonPage {
                 private Platform: Platform,
                 private app: App,
                 private zone: NgZone,
+                private authService: AuthService
   ) {
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+
+
+
       
     this.events(1,this.HorarioLunes)
     this.events(2,this.HorarioMartes)

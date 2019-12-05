@@ -17,16 +17,18 @@
       "../node_modules/@types"
     ],
     "paths": {
-      "ngx-embed-video":["../node_modules/ngx-embed-video"]
+      "ngx-embed-video":["node_modules/ngx-embed-video"]
     }
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "../node_modules/ngx-embed-video/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
+    "src/**/__tests__/*.ts",
+    "./node_modules/ngx-embed-video/tests/embed-video-service.spec.ts"
   ],
   "compileOnSave": false,
   "atom": {

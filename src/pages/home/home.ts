@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/AuthService';
 
 import { VimeoService } from './../../services/VimeoService';
 import { ChatService } from './../../services/ChatService';
@@ -74,9 +75,20 @@ export class HomePage {
     private VimeoService: VimeoService,
     public events: Events,    
     public modalCtrl: ModalController,
-    private navParams: NavParams
+    private navParams: NavParams,    
+    private authService: AuthService
 
   ) { 
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
        
     platform.ready().then(() => {
       this.width = platform.width();

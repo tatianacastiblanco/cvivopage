@@ -70852,6 +70852,10 @@ page-channels {
   overflow: hidden !important;
 }
 
+page-channels .card-md {
+  background-color: black !important;
+}
+
 page-channels ion-card {
   position: relative;
   text-align: center;
@@ -70871,25 +70875,11 @@ page-channels ion-card:hover {
   transform: scale(1);
 }
 
-page-channels .card-title {
-  position: relative;
-  left: 10%;
-  font-size: 1.1em;
-  width: 80%;
-  font-weight: normal;
-  color: #fff;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  text-shadow: -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-page-channels .card-subtitle {
-  font-size: 1.0em;
+page-channels #infoIcon {
   position: absolute;
-  top: 52%;
-  width: 100%;
-  color: #fff;
+  top: 12%;
+  right: 0%;
+  background-color: transparent !important;
 }
 
 page-channels h1 {

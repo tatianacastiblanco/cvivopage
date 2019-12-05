@@ -1,3 +1,4 @@
+import { TooltipsModule } from 'ionic-tooltips';
 
 
 import { VimeoService } from './../services/VimeoService';
@@ -36,7 +37,7 @@ import { SocketIoModule,SocketIoConfig} from 'ng-socket-io';
 import { ChatService} from '../services/ChatService';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgCalendarModule  } from 'ionic2-calendar';
-import { registerLocaleData } from '@angular/common';
+import { registerLocaleData, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { Camera } from '@ionic-native/camera';
 import { NativeStorage } from '@ionic-native/native-storage';
@@ -72,7 +73,7 @@ firebase.initializeApp(firebaseConfig);
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-
+    TooltipsModule,
     IonicImageLoader.forRoot(),
     SocketIoModule.forRoot(config),
     IonicModule.forRoot(MyApp, {
@@ -119,7 +120,7 @@ firebase.initializeApp(firebaseConfig);
     Camera,Base64,
     EmailComposer,
     HelpDeskProvider,
-    AnalyticsProvider   
+    AnalyticsProvider,
 
   ]
 })

@@ -1,12 +1,16 @@
+import { AuthService } from './../../services/AuthService';
+import { App } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 
 import { Channel } from './../../data/Channel';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { VimeoService } from './../../services/VimeoService';
 import { map } from 'rxjs-compat/operator/map';
 import { DocumentChangeAction } from 'angularfire2/firestore';
 import { TabsPage } from '../tabs/tabs';
+import firebase from "firebase";
 
 
 
@@ -33,9 +37,22 @@ export class ChannelsPage {
   showVideo:boolean= false;
   urlVideo:string;
   menu:any;
+  private zone: NgZone;
+  private app: App
   @ViewChild(Slides) private slides: Slides;
-  constructor(public navCtrl: NavController,private Platform: Platform, private vimeoService:VimeoService, public navParams: NavParams) {
+  constructor(private authService: AuthService,public navCtrl: NavController,private loadingCtrl: LoadingController,private Platform: Platform, private vimeoService:VimeoService, public navParams: NavParams) {
 
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+    
+    
     Platform.ready().then(() => {
       let width = Platform.width();
       
@@ -87,6 +104,30 @@ export class ChannelsPage {
 
   public ngOnInit() {
    
-  }
+  };
+
+  signOut() {
+    var loading = this.loadingCtrl.create({
+      spinner: "bubbles",
+      content: "Cerrando sesión..."
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {      
+        
+            this.navCtrl.setRoot('SignInPage');
+            this.navCtrl.popAll();
+            this.navCtrl.popToRoot();   
+           
+        });
+    }, 500);
+  };
 
 }

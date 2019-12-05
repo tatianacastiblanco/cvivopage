@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/AuthService';
 
 import { HomeScreenGroupItem } from './../../data/HomeScreenGroupItem';
 import { VimeoService } from './../../services/VimeoService';
@@ -43,8 +44,20 @@ export class SearchPage {
     private vimeoService: VimeoService,
     private loadingCtrl: LoadingController,
     private app: App,
-    private zone: NgZone,
+    private zone: NgZone,    
+    private authService: AuthService
   ) {
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+
 
     this.lottieConfig = {
       path: 'assets/search3.json',

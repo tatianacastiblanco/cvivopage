@@ -69,7 +69,7 @@ export class SignInPage {
       .then(x => {  
           if(x.user.emailVerified === true){
             loading.dismiss();
-            this.navCtrl.setRoot(TabsPage);
+            this.navCtrl.setRoot('ChannelsPage');
           } else{
             loading.dismiss();
             this.showAlert('Nos has verificado tu cuenta','Error de verificación ');

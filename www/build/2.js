@@ -1,15 +1,15 @@
 webpackJsonp([2,4],{
 
-/***/ 724:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(744);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_components_module__ = __webpack_require__(749);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat__ = __webpack_require__(876);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat__ = __webpack_require__(881);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,21 +42,21 @@ var ChatPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 731:
+/***/ 746:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieDetailsPageModule", function() { return MovieDetailsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ngx_embed_video__ = __webpack_require__(881);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ngx_embed_video__ = __webpack_require__(886);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ngx_embed_video__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__chat_chat_module__ = __webpack_require__(724);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(891);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__chat_chat_module__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(911);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_image_loader__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat_chat__ = __webpack_require__(876);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(744);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_image_loader__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat_chat__ = __webpack_require__(881);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(749);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -101,15 +101,15 @@ var MovieDetailsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 744:
+/***/ 749:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__ = __webpack_require__(745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skeleton_item_skeleton_item__ = __webpack_require__(750);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(746);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(751);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -137,7 +137,7 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 745:
+/***/ 750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,7 +233,7 @@ var SkeletonItemComponent = /** @class */ (function () {
     ], SkeletonItemComponent.prototype, "radius", void 0);
     SkeletonItemComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'skeleton-item',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/'<div [ngStyle]="styles"></div>\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\skeleton-item\skeleton-item.html"*/
+            selector: 'skeleton-item',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\components\skeleton-item\skeleton-item.html"*/'<div [ngStyle]="styles"></div>\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\components\skeleton-item\skeleton-item.html"*/
         })
     ], SkeletonItemComponent);
     return SkeletonItemComponent;
@@ -243,13 +243,13 @@ var SkeletonItemComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 746:
+/***/ 751:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -322,7 +322,7 @@ var MenuComponent = /** @class */ (function () {
     ], MenuComponent.prototype, "currentPage", void 0);
     MenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\components\menu\menu.html"*/
+            selector: 'menu',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\components\menu\menu.html"*/'<ion-grid>\n\n  <ion-row>\n\n    <ion-col col-12 col-lg-2 >\n\n      <ion-navbar align-title="center" transparent >\n\n        <ion-title>\n\n          <img src="assets/imgs/netflix-logo.png">\n\n        </ion-title>   \n\n      </ion-navbar>\n\n    </ion-col>\n\n    <ion-col col-lg-10 >\n\n      <div >\n\n        <ion-segment [(ngModel)]="menuhead">\n\n          <ion-segment-button value="home" class="segmenthead"><ion-icon class="iconhead" name="home"></ion-icon>   Inicio</ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="buscar" (click)="buscar()"> <ion-icon class="iconhead" name="search" ></ion-icon>   Buscar  </ion-segment-button>\n\n          <ion-segment-button class="segmenthead" value="parrilla" (click)="parrilla()"> <ion-icon class="iconhead" name="md-laptop"></ion-icon>   Parrilla  </ion-segment-button>\n\n          <ion-segment-button value="perfil" class="segmenthead" (click)="perfil()"> <ion-icon class="iconhead" name="md-person"></ion-icon>   Perfil  </ion-segment-button>\n\n          <ion-segment-button value="canales" class="segmenthead" (click)="canales()"> <ion-icon class="iconhead" name="albums"></ion-icon>   Canales  </ion-segment-button>         \n\n          <ion-segment-button value="salir" class="segmenthead" (click)="signOut()"> <ion-icon class="iconhead" name="log-out"></ion-icon>   Salir  </ion-segment-button>\n\n        </ion-segment>\n\n      </div>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid> \n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\components\menu\menu.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */],
@@ -336,7 +336,7 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 747:
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -351,7 +351,7 @@ var HomeScreenGroupItem = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 875:
+/***/ 880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -374,18 +374,18 @@ var Helper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 876:
+/***/ 881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(877);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(882);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -627,7 +627,7 @@ var ChatPage = /** @class */ (function () {
     ], ChatPage.prototype, "content", void 0);
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\chat\chat.html"*/'\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-buttons start>\n\n        <button ion-button icon-only (click)="close()" >\n\n          <ion-icon name="close"></ion-icon>\n\n        </button>        \n\n      </ion-buttons>     \n\n      <ion-title>Chat</ion-title>  \n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content >\n\n  <div *ngIf="isLoading">\n\n      <div *ngFor="let i of [1,2,3,4]">\n\n          <skeleton-item  height="100px"  class="right-bubble-skeleton " ></skeleton-item>\n\n          <skeleton-item  height="100px"  class="left-bubble-skeleton "> </skeleton-item>\n\n      </div>\n\n  </div>  \n\n    \n\n  \n\n  <div *ngFor="let message of messages" >\n\n      <div class="chat-message" text-right  *ngIf="message?.from === nickname" >\n\n          <div class="right-bubble">\n\n            <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n        </div>\n\n        <div class="chat-message" text-left  *ngIf="message?.from !== nickname" >\n\n          <div class="left-bubble">\n\n              <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n      </div>\n\n  </div>\n\n   \n\n   \n\n  </ion-content>\n\n  <ion-footer>   \n\n   \n\n    <ion-toolbar>\n\n        <ion-note> <span *ngIf="isTyping !== \'\'" > <i> {{isTyping}} esta escribiendo </i>\n\n        </span>  </ion-note>  \n\n      <ion-item class="chat-item">    \n\n        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)" (input)="isEmpty($event)"></ion-input>\n\n      </ion-item>\n\n      <ion-buttons end>\n\n        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">\n\n          <ion-icon name="send"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n  </ion-footer>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\chat\chat.html"*/,
+            selector: 'page-chat',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\chat\chat.html"*/'\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-buttons start>\n\n        <button ion-button icon-only (click)="close()" >\n\n          <ion-icon name="close"></ion-icon>\n\n        </button>        \n\n      </ion-buttons>     \n\n      <ion-title>Chat</ion-title>  \n\n    </ion-navbar>\n\n  </ion-header>\n\n<ion-content >\n\n  <div *ngIf="isLoading">\n\n      <div *ngFor="let i of [1,2,3,4]">\n\n          <skeleton-item  height="100px"  class="right-bubble-skeleton " ></skeleton-item>\n\n          <skeleton-item  height="100px"  class="left-bubble-skeleton "> </skeleton-item>\n\n      </div>\n\n  </div>  \n\n    \n\n  \n\n  <div *ngFor="let message of messages" >\n\n      <div class="chat-message" text-right  *ngIf="message?.from === nickname" >\n\n          <div class="right-bubble">\n\n            <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n        </div>\n\n        <div class="chat-message" text-left  *ngIf="message?.from !== nickname" >\n\n          <div class="left-bubble">\n\n              <span class="msg-name">{{message.from}}</span>\n\n            <span class="msg-date">{{message.created | date:\' h:mm\' }}</span>\n\n            <span><img [src]="message.picture" class="msg-img"></span>\n\n            <p text-wrap><a >  {{message.text}} </a></p>\n\n          </div>\n\n      </div>\n\n  </div>\n\n   \n\n   \n\n  </ion-content>\n\n  <ion-footer>   \n\n   \n\n    <ion-toolbar>\n\n        <ion-note> <span *ngIf="isTyping !== \'\'" > <i> {{isTyping}} esta escribiendo </i>\n\n        </span>  </ion-note>  \n\n      <ion-item class="chat-item">    \n\n        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)" (input)="isEmpty($event)"></ion-input>\n\n      </ion-item>\n\n      <ion-buttons end>\n\n        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">\n\n          <ion-icon name="send"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n  </ion-footer>'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\chat\chat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* NavParams */],
@@ -645,31 +645,31 @@ var ChatPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 877:
+/***/ 882:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(878);
+__webpack_require__(883);
 //# sourceMappingURL=map.js.map
 
 /***/ }),
 
-/***/ 878:
+/***/ 883:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var rxjs_1 = __webpack_require__(12);
-var map_1 = __webpack_require__(393);
+var rxjs_1 = __webpack_require__(13);
+var map_1 = __webpack_require__(395);
 rxjs_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
 
-/***/ 881:
+/***/ 886:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -686,8 +686,8 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(32);
-var embed_video_service_1 = __webpack_require__(882);
-__export(__webpack_require__(882));
+var embed_video_service_1 = __webpack_require__(887);
+__export(__webpack_require__(887));
 var EmbedVideo = /** @class */ (function () {
     function EmbedVideo() {
     }
@@ -714,7 +714,7 @@ exports.EmbedVideo = EmbedVideo;
 
 /***/ }),
 
-/***/ 882:
+/***/ 887:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -731,7 +731,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var http_1 = __webpack_require__(61);
-var platform_browser_1 = __webpack_require__(56);
+var platform_browser_1 = __webpack_require__(51);
 var operators_1 = __webpack_require__(26);
 var EmbedVideoService = /** @class */ (function () {
     function EmbedVideoService(http, sanitizer) {
@@ -918,22 +918,23 @@ exports.EmbedVideoService = EmbedVideoService;
 
 /***/ }),
 
-/***/ 891:
+/***/ 911:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_VimeoService__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ChatService__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__data_Helper__ = __webpack_require__(875);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_HomeScreenGroupItem__ = __webpack_require__(747);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__ = __webpack_require__(881);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_AuthService__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_ChatService__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_Helper__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroupItem__ = __webpack_require__(752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__data_HomeScreenGroup__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_embed_video__ = __webpack_require__(886);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_embed_video___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ngx_embed_video__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -953,9 +954,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = /** @class */ (function () {
     //slides: any;
-    function HomePage(navCtrl, platform, alertCtrl, db, embedService, chatService, toastCtrl, VimeoService, events, modalCtrl, navParams) {
+    function HomePage(navCtrl, platform, alertCtrl, db, embedService, chatService, toastCtrl, VimeoService, events, modalCtrl, navParams, authService) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.platform = platform;
@@ -968,6 +970,7 @@ var HomePage = /** @class */ (function () {
         this.events = events;
         this.modalCtrl = modalCtrl;
         this.navParams = navParams;
+        this.authService = authService;
         this.homeScreenGroups = [];
         this.segementHome = 'list';
         this.chatEnable = false;
@@ -988,6 +991,13 @@ var HomePage = /** @class */ (function () {
         this.currentPageVar = 'home';
         this.segment = "inicio";
         this.channelName = "";
+        this.authService.afAuth.authState.subscribe(function (user) {
+            if (user === null) {
+                _this.navCtrl.setRoot('SignInPage');
+            }
+        }, function (error) {
+            console.error(JSON.stringify(error));
+        });
         platform.ready().then(function () {
             _this.width = platform.width();
             _this.heigth = platform.height();
@@ -1091,26 +1101,26 @@ var HomePage = /** @class */ (function () {
         var promise = new Promise(function (resolve, reject) {
             var collection = JSON.parse(sessionStorage.getItem('categories'));
             collection.forEach(function (element) {
-                var homeGropuModel = new __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroup__["a" /* HomeScreenGroup */]();
+                var homeGropuModel = new __WEBPACK_IMPORTED_MODULE_8__data_HomeScreenGroup__["a" /* HomeScreenGroup */]();
                 homeGropuModel.name = element.name;
                 homeGropuModel.groupId = element.uri;
                 homeGropuModel.groupItems = [];
                 _this.homeScreenGroups.push(homeGropuModel);
-                _this.homeScreenGroups = __WEBPACK_IMPORTED_MODULE_5__data_Helper__["a" /* Helper */].shuffle(_this.homeScreenGroups);
+                _this.homeScreenGroups = __WEBPACK_IMPORTED_MODULE_6__data_Helper__["a" /* Helper */].shuffle(_this.homeScreenGroups);
             });
             _this.homeScreenGroups.forEach(function (element) {
                 /************************** En  esta seccion se recorre cada categoria y se obtiene los videos de la misma por meido de la api de vimeo *******************************************/
                 _this.VimeoService.getHomeScreenGroupsVideos(element).subscribe(function (result) {
                     var videos = result;
                     videos.data.forEach(function (item) {
-                        var video = new __WEBPACK_IMPORTED_MODULE_6__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
+                        var video = new __WEBPACK_IMPORTED_MODULE_7__data_HomeScreenGroupItem__["a" /* HomeScreenGroupItem */]();
                         video.name = item.name;
                         video.picture = item.files[2].link;
                         video.description = item.description;
                         video.detailsPicture = item.pictures.sizes[6].link;
                         video.movieId = item.uri.split('/')[2];
                         element.groupItems.push(video);
-                        element = __WEBPACK_IMPORTED_MODULE_5__data_Helper__["a" /* Helper */].shuffle(element);
+                        element = __WEBPACK_IMPORTED_MODULE_6__data_Helper__["a" /* Helper */].shuffle(element);
                     });
                 }, function (err) { return reject(err); });
             });
@@ -1262,25 +1272,27 @@ var HomePage = /** @class */ (function () {
         this.navCtrl.setRoot('ChannelsPage');
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["ViewChildren"])(__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["q" /* Slides */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__angular_core__["QueryList"])
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["ViewChildren"])(__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["q" /* Slides */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__angular_core__["QueryList"])
     ], HomePage.prototype, "slides", void 0);
     HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: "page-home",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\home\home.html"*/'<ion-header no-border>\n\n  <menu  [hidden]="menu" [currentPage]="currentPageVar"></menu> \n\n</ion-header>\n\n\n\n<ion-content class="list-avatar-page"  padding #pageContent >  \n\n    \n\n    <ion-fab bottom right >\n\n        <ion-badge color="netflixBlue" [hidden]="hideBadge">{{badge}}</ion-badge>   \n\n        <button ion-fab [disabled]="!chatEnable" (click)="presentChatModal()" *ngIf="loaded"><ion-icon name="ios-chatbubbles"></ion-icon>        \n\n        </button>         \n\n        <skeleton-item height="50px" width="50px" rounded  *ngIf="!loaded" ></skeleton-item>\n\n    </ion-fab>\n\n\n\n  <!-- Refresher para actualizar el video en vivo -->\n\n  \n\n  <ion-grid>     \n\n    <ion-row pull-lg-9>\n\n      <ion-col col-12 >\n\n        <ion-refresher (ionRefresh)="doRefresh($event)" pullMin=200>\n\n          <ion-refresher-content \n\n            pullingIcon="refresh-circle"\n\n            refreshingSpinner="bubbles">\n\n          </ion-refresher-content>\n\n        </ion-refresher>\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col col-12 col-lg-6>\n\n        <div  *ngIf="!loaded">\n\n            <skeleton-item  *ngIf="!menu" height="400px" style="margin: 20px"></skeleton-item>\n\n            <skeleton-item  *ngIf="menu" height="200px"></skeleton-item>\n\n        </div>\n\n        \n\n          <div [innerHtml]="iframe_html" [ngClass]="{\'iframe\': !menu}"  [hidden]="!loaded"></div>\n\n      </ion-col>\n\n      <ion-col col-12 col-lg-6>\n\n          <br>  \n\n          <skeleton-item  height="56px" *ngIf="!loaded"></skeleton-item>      \n\n        <ion-toolbar color="primary"  *ngIf="segementHome == \'list\' && loaded">\n\n            <ion-title color="light">Categorias de {{channelName}}</ion-title>\n\n          </ion-toolbar>\n\n          <br>\n\n\n\n          \n\n          <ion-grid *ngIf="!loaded" >\n\n            <ion-row>\n\n                <div class="item-title" > \n\n                  <skeleton-item  *ngIf="!menu"  height="22px" width="170px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                </div> \n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col >\n\n                  <skeleton-item  *ngIf="!menu"  height="366px" style="border-radius: 00px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"  height="180px" ></skeleton-item>\n\n              </ion-col>\n\n              <ion-col >\n\n                  <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n              </ion-col>\n\n              <ion-col >\n\n                  <skeleton-item   *ngIf="!menu"  height="366px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <div class="item-title"> \n\n                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> \n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                 </div> \n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                <div class="item-title"> \n\n                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> \n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                 </div> \n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n              </ion-row>\n\n          </ion-grid>                   \n\n          \n\n\n\n          <div   >             \n\n            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar >   \n\n            <div >\n\n              \n\n              <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      \n\n              <ion-slides *ngIf="homeScreenGroups[0]?.groupItems && homeScreenGroups[0]?.groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[0]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides>\n\n              <button *ngIf="!menu" (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu" (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[1]?.name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12     >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[1]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>\n\n            <hr>\n\n            <div class="item-title">{{homeScreenGroups[2]?.name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[2]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu" (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[3]?.name}} </div> \n\n              <ion-slides slidesPerView="3" spaceBetween=15   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[3]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n              <div class="item-title">{{homeScreenGroups[4]?.name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[4]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu" (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu" (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr>\n\n            <div class="item-title">{{homeScreenGroups[5]?.name}}</div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[5]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides> \n\n            <button *ngIf="!menu" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n            <hr *ngIf="true">\n\n            <div    class="item-title">{{homeScreenGroups[6]?.name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[6]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides>\n\n            <button  *ngIf="!menu"(click)="movePrev(6)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu"(click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n          </div>  \n\n          </ion-scroll> \n\n        </div> \n\n           \n\n      </ion-col>\n\n    </ion-row>\n\n   </ion-grid>    \n\n  </ion-content>\n\n  <ion-footer [hidden]="!menu">\n\n    <ion-toolbar >\n\n       <ion-segment [(ngModel)]="segment">\n\n            <ion-segment-button value="inicio" icon-left>                        \n\n              <ion-icon name="home"> </ion-icon> \n\n             </ion-segment-button>\n\n            <ion-segment-button value="Buscar" (click)="buscar()">\n\n                <ion-icon name="search"></ion-icon> \n\n               </ion-segment-button>\n\n              <ion-segment-button value="Parrilla" (click)="parrilla()">\n\n                  <ion-icon name="laptop"></ion-icon>               \n\n                </ion-segment-button>\n\n                <ion-segment-button value="Canales" (click)="canales()">\n\n                    <ion-icon name="albums"></ion-icon>\n\n                    </ion-segment-button>\n\n                <ion-segment-button value="Perfil" (click)="perfil()">\n\n                    <ion-icon name="person"></ion-icon>\n\n                   </ion-segment-button>            \n\n          </ion-segment>\n\n        </ion-toolbar>\n\n  </ion-footer>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\home\home.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: "page-home",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\home\home.html"*/'<ion-header no-border>\n\n  <menu  [hidden]="menu" [currentPage]="currentPageVar"></menu> \n\n</ion-header>\n\n\n\n<ion-content class="list-avatar-page"  padding #pageContent >  \n\n    \n\n    <ion-fab bottom right >\n\n        <ion-badge color="netflixBlue" [hidden]="hideBadge">{{badge}}</ion-badge>   \n\n        <button ion-fab [disabled]="!chatEnable" (click)="presentChatModal()" *ngIf="loaded"><ion-icon name="ios-chatbubbles"></ion-icon>        \n\n        </button>         \n\n        <skeleton-item height="50px" width="50px" rounded  *ngIf="!loaded" ></skeleton-item>\n\n    </ion-fab>\n\n\n\n  <!-- Refresher para actualizar el video en vivo -->\n\n  \n\n  <ion-grid>     \n\n    <ion-row pull-lg-9>\n\n      <ion-col col-12 >\n\n        <ion-refresher (ionRefresh)="doRefresh($event)" pullMin=200>\n\n          <ion-refresher-content \n\n            pullingIcon="refresh-circle"\n\n            refreshingSpinner="bubbles">\n\n          </ion-refresher-content>\n\n        </ion-refresher>\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n      <ion-col col-12 col-lg-6>\n\n        <div  *ngIf="!loaded">\n\n            <skeleton-item  *ngIf="!menu" height="400px" style="margin: 20px"></skeleton-item>\n\n            <skeleton-item  *ngIf="menu" height="200px"></skeleton-item>\n\n        </div>\n\n        \n\n          <div [innerHtml]="iframe_html" [ngClass]="{\'iframe\': !menu}"  [hidden]="!loaded"></div>\n\n      </ion-col>\n\n      <ion-col col-12 col-lg-6>\n\n          <br>  \n\n          <skeleton-item  height="56px" *ngIf="!loaded"></skeleton-item>      \n\n        <ion-toolbar color="primary"  *ngIf="segementHome == \'list\' && loaded">\n\n            <ion-title color="light">Categorias de {{channelName}}</ion-title>\n\n          </ion-toolbar>\n\n          <br>\n\n\n\n          \n\n          <ion-grid *ngIf="!loaded" >\n\n            <ion-row>\n\n                <div class="item-title" > \n\n                  <skeleton-item  *ngIf="!menu"  height="22px" width="170px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                </div> \n\n            </ion-row>\n\n            <ion-row>\n\n              <ion-col >\n\n                  <skeleton-item  *ngIf="!menu"  height="366px" style="border-radius: 00px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"  height="180px" ></skeleton-item>\n\n              </ion-col>\n\n              <ion-col >\n\n                  <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n              </ion-col>\n\n              <ion-col >\n\n                  <skeleton-item   *ngIf="!menu"  height="366px"></skeleton-item>\n\n                  <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <div class="item-title"> \n\n                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> \n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                 </div> \n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                <div class="item-title"> \n\n                  <skeleton-item   *ngIf="!menu" height="22px" width="170px"></skeleton-item> \n\n                  <skeleton-item  *ngIf="menu"    width="120px"></skeleton-item>\n\n                 </div> \n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"  height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n                <ion-col >\n\n                    <skeleton-item  *ngIf="!menu"   height="366px"></skeleton-item>\n\n                    <skeleton-item  *ngIf="menu"   height="180px" ></skeleton-item>\n\n                </ion-col>\n\n              </ion-row>\n\n          </ion-grid>                   \n\n          \n\n\n\n          <div   >             \n\n            <ion-scroll scrollY="true"  class="scrollY" scroll-avatar >   \n\n            <div >\n\n              \n\n              <div class="item-title">{{homeScreenGroups[0]?.name}} </div>                      \n\n              <ion-slides *ngIf="homeScreenGroups[0]?.groupItems && homeScreenGroups[0]?.groupItems.length" autoplay="3000" slidesPerView="3" spaceBetween=12 zoom=true loop=true paginationType="fraction">                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[0]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides>\n\n              <button *ngIf="!menu && homeScreenGroups[0]?.groupItems" (click)="movePrev(0)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu && homeScreenGroups[0]?.groupItems" (click)="moveNext(0)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr *ngIf="homeScreenGroups[1]?.groupItems">\n\n              <div *ngIf="homeScreenGroups[1]?.groupItems" class="item-title">{{homeScreenGroups[1]?.name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12     >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[1]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu && homeScreenGroups[1]?.groupItems" (click)="movePrev(1)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu && homeScreenGroups[1]?.groupItems" (click)="moveNext(1)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>\n\n            <hr *ngIf="homeScreenGroups[2]?.groupItems">\n\n            <div *ngIf="homeScreenGroups[2]?.groupItems" class="item-title">{{homeScreenGroups[2]?.name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[2]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu && homeScreenGroups[2]?.groupItems" (click)="movePrev(2)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button  *ngIf="!menu && homeScreenGroups[2]?.groupItems" (click)="moveNext(2)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr *ngIf="homeScreenGroups[3]?.groupItems">\n\n              <div  *ngIf="homeScreenGroups[3]?.groupItems" class="item-title">{{homeScreenGroups[3]?.name}} </div> \n\n              <ion-slides slidesPerView="3" spaceBetween=15   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[3]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu && homeScreenGroups[3]?.groupItems" (click)="movePrev(3)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu && homeScreenGroups[3]?.groupItems" (click)="moveNext(3)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr *ngIf="homeScreenGroups[4]?.groupItems">\n\n              <div *ngIf="homeScreenGroups[4]?.groupItems" class="item-title">{{homeScreenGroups[4]?.name}} </div>   \n\n              <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n                <ion-slide *ngFor="let groupItem of homeScreenGroups[4]?.groupItems" >\n\n                  <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n                </ion-slide>\n\n              </ion-slides> \n\n              <button *ngIf="!menu && homeScreenGroups[4]?.groupItems" (click)="movePrev(4)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n              <button *ngIf="!menu && homeScreenGroups[4]?.groupItems" (click)="moveNext(4)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n              <hr *ngIf="homeScreenGroups[5]?.groupItems">\n\n            <div *ngIf="homeScreenGroups[5]?.groupItems"  class="item-title">{{homeScreenGroups[5]?.name}}</div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[5]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides> \n\n            <button *ngIf="!menu && homeScreenGroups[5]?.groupItems" (click)="movePrev(5)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu && homeScreenGroups[5]?.groupItems" (click)="moveNext(5)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n            <hr *ngIf="homeScreenGroups[6]?.groupItems">\n\n            <div  *ngIf="homeScreenGroups[6]?.groupItems"  class="item-title">{{homeScreenGroups[6]?.name}} </div>   \n\n            <ion-slides slidesPerView="3" spaceBetween=12   >                                             \n\n              <ion-slide *ngFor="let groupItem of homeScreenGroups[6]?.groupItems" >\n\n                <img class="imgCara"src="{{groupItem.detailsPicture}}" (click)="goToGroupItemDetails(groupItem)" />\n\n              </ion-slide>\n\n            </ion-slides>\n\n            <button  *ngIf="!menu && homeScreenGroups[6]?.groupItems"(click)="movePrev(6)" float-left  ion-button class="buttonSlide" ><ion-icon name="arrow-dropleft"></ion-icon></button>   \n\n            <button  *ngIf="!menu && homeScreenGroups[6]?.groupItems"(click)="moveNext(6)" float-right ion-button class="buttonSlide"><ion-icon name="arrow-dropright"></ion-icon></button>  \n\n          </div>  \n\n          </ion-scroll> \n\n        </div> \n\n           \n\n      </ion-col>\n\n    </ion-row>\n\n   </ion-grid>    \n\n  </ion-content>\n\n  <ion-footer [hidden]="!menu">\n\n    <ion-toolbar >\n\n       <ion-segment [(ngModel)]="segment">\n\n            <ion-segment-button value="inicio" icon-left>                        \n\n              <ion-icon name="home"> </ion-icon> \n\n             </ion-segment-button>\n\n            <ion-segment-button value="Buscar" (click)="buscar()">\n\n                <ion-icon name="search"></ion-icon> \n\n               </ion-segment-button>\n\n              <ion-segment-button value="Parrilla" (click)="parrilla()">\n\n                  <ion-icon name="laptop"></ion-icon>               \n\n                </ion-segment-button>\n\n                <ion-segment-button value="Canales" (click)="canales()">\n\n                    <ion-icon name="albums"></ion-icon>\n\n                    </ion-segment-button>\n\n                <ion-segment-button value="Perfil" (click)="perfil()">\n\n                    <ion-icon name="person"></ion-icon>\n\n                   </ion-segment-button>            \n\n          </ion-segment>\n\n        </ion-toolbar>\n\n  </ion-footer>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["AngularFirestore"], typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__["EmbedVideoService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8_ngx_embed_video__["EmbedVideoService"]) === "function" && _a || Object, __WEBPACK_IMPORTED_MODULE_1__services_ChatService__["a" /* ChatService */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["r" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_0__services_VimeoService__["a" /* VimeoService */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["j" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["m" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["n" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire2_firestore__["AngularFirestore"],
+            __WEBPACK_IMPORTED_MODULE_9_ngx_embed_video__["EmbedVideoService"],
+            __WEBPACK_IMPORTED_MODULE_2__services_ChatService__["a" /* ChatService */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["r" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1__services_VimeoService__["a" /* VimeoService */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["d" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["j" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0__services_AuthService__["a" /* AuthService */]])
     ], HomePage);
     return HomePage;
-    var _a;
 }()); // Fin homePage
 
 //# sourceMappingURL=home.js.map

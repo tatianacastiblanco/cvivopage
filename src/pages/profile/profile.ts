@@ -66,8 +66,19 @@ export class ProfilePage {
     private alertCtrl: AlertController,
     private base64: Base64,
     private _DomSanitizationService: DomSanitizer,
-    public events: Events
+    public events: Events,
   ) { 
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+
     
 
     Platform.ready().then(() => {

@@ -28,7 +28,7 @@ export class MyApp {
     private zone: NgZone,
     private alertCtrl:AlertController,
     private ga: GoogleAnalytics,
-    public analyticsProvider:AnalyticsProvider,
+    public analyticsProvider:AnalyticsProvider
   ) {
     
     //this.initializeApp();

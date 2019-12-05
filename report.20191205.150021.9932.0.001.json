@@ -1,0 +1,506 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20191205.150021.9932.0.001.json",
+    "dumpEventTime": "2019-12-05T15:00:21Z",
+    "dumpEventTimeStamp": "1575576021725",
+    "processId": 9932,
+    "cwd": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage",
+    "commandLine": [
+      "node",
+      "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\.bin\\\\..\\@ionic\\app-scripts\\bin\\ionic-app-scripts.js",
+      "build",
+      "--prod"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.16299",
+    "osVersion": "Windows 10 Pro N",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 464843,
+        "nice": 0,
+        "sys": 361640,
+        "idle": 5730875,
+        "irq": 25203
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 458453,
+        "nice": 0,
+        "sys": 301265,
+        "idle": 5797500,
+        "irq": 13890
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 498718,
+        "nice": 0,
+        "sys": 349281,
+        "idle": 5709218,
+        "irq": 2140
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 491359,
+        "nice": 0,
+        "sys": 293046,
+        "idle": 5772812,
+        "irq": 1062
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "b0:6e:bf:d2:69:3f",
+        "address": "fe80::e940:c667:8b8c:5c6c",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "b0:6e:bf:d2:69:3f",
+        "address": "172.17.44.105",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:0b",
+        "address": "fe80::b422:3830:ec08:f334",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:0b",
+        "address": "192.168.56.1",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Teredo Tunneling Pseudo-Interface",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "2001:0:34f1:8072:8fd:11ed:53ee:d396",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Teredo Tunneling Pseudo-Interface",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::8fd:11ed:53ee:d396",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 13
+      }
+    ],
+    "host": "ADMBOGSDCCEBI16"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff760ef1729",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff760ef5b4c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff760ef4b08",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff760fe369b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff7617e82de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7617d0321",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff76169dbec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff7616a8f90",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff7616a5ac4",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff76169b353",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff761699b24",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff7616badf5",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff761426e19",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff761c1404d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x00000075a700e32f",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151755776,
+    "totalCommittedMemory": 2151755776,
+    "usedMemory": 2132898416,
+    "availableMemory": 52524432,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047488,
+        "used": 224536,
+        "available": 822952
+      },
+      "old_space": {
+        "memorySize": 2099884032,
+        "committedMemory": 2099884032,
+        "capacity": 2096259232,
+        "used": 2091894336,
+        "available": 4364896
+      },
+      "code_space": {
+        "memorySize": 3047424,
+        "committedMemory": 3047424,
+        "capacity": 2581696,
+        "used": 2581696,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 10227712,
+        "committedMemory": 10227712,
+        "capacity": 2113360,
+        "used": 2113360,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 35614720,
+        "committedMemory": 35614720,
+        "capacity": 35501792,
+        "used": 35501792,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550400,
+        "used": 550400,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 128.968,
+    "kernelCpuSeconds": 4.578,
+    "cpuConsumptionPercent": 202.342,
+    "maxRss": 2253082624,
+    "pageFaults": {
+      "IORequired": 1064652,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 4824,
+      "writes": 174
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage",
+    "allusersprofile": "C:\\ProgramData",
+    "appdata": "C:\\Users\\CUN\\AppData\\Roaming",
+    "colorterm": "truecolor",
+    "commonprogramfiles": "C:\\Program Files\\Common Files",
+    "commonprogramfiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "commonprogramw6432": "C:\\Program Files\\Common Files",
+    "computername": "ADMBOGSDCCEBI16",
+    "comspec": "C:\\Windows\\system32\\cmd.exe",
+    "ethereum_socket": "\\\\.\\pipe\\geth.ipc",
+    "force_color": "1",
+    "fsharpinstalldir": "C:\\Program Files (x86)\\Microsoft SDKs\\F#\\10.1\\Framework\\v4.0\\",
+    "gopath": "C:\\Users\\CUN\\go",
+    "goroot": "C:\\Go\\",
+    "homedrive": "C:",
+    "homepath": "\\Users\\CUN",
+    "IONIC_ACTION_SHEET_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\action-sheet\\action-sheet-component.ngfactory.js",
+    "IONIC_ACTION_SHEET_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\action-sheet\\action-sheet-component.js",
+    "IONIC_ACTION_SHEET_CONTROLLER_CLASSNAME": "ActionSheetController",
+    "IONIC_ACTION_SHEET_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\action-sheet\\action-sheet-controller.js",
+    "IONIC_ACTION_SHEET_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\action-sheet\\action-sheet.js",
+    "IONIC_ALERT_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\alert\\alert-component.ngfactory.js",
+    "IONIC_ALERT_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\alert\\alert-component.js",
+    "IONIC_ALERT_CONTROLLER_CLASSNAME": "AlertController",
+    "IONIC_ALERT_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\alert\\alert-controller.js",
+    "IONIC_ALERT_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\alert\\alert.js",
+    "IONIC_ANGULAR_CORE_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@angular\\core",
+    "IONIC_ANGULAR_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular",
+    "IONIC_ANGULAR_ENTRY_POINT": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\index.js",
+    "IONIC_ANGULAR_TEMPLATE_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\templates",
+    "IONIC_AOT": "true",
+    "IONIC_APP_ENTRY_POINT": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\app\\main.ts",
+    "IONIC_APP_NG_MODULE_CLASS": "AppModule",
+    "IONIC_APP_NG_MODULE_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\app\\app.module.ts",
+    "IONIC_APP_ROOT_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\app\\app-root.js",
+    "IONIC_APP_SCRIPTS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@ionic\\app-scripts",
+    "IONIC_BUILD_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\www\\build",
+    "IONIC_CACHE_LOADER": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@ionic\\app-scripts\\dist\\webpack\\cache-loader.js",
+    "ionic_cli_bin": "C:\\Users\\CUN\\AppData\\Roaming\\npm\\node_modules\\ionic\\bin\\ionic",
+    "ionic_cli_lib": "C:\\Users\\CUN\\AppData\\Roaming\\npm\\node_modules\\ionic",
+    "ionic_cli_local_error": "LOCAL_CLI_NOT_FOUND",
+    "IONIC_COMPONENTS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\components",
+    "IONIC_COMPONENTS_NG_MODULE_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\components\\components.module.ts",
+    "IONIC_CORE_COMPILER_FILE_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\compiler",
+    "IONIC_CORE_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular",
+    "IONIC_DEEPLINKS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src",
+    "IONIC_DIRECTIVES_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\directives",
+    "IONIC_DIRECTIVES_NG_MODULE_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\directives\\directives.module.ts",
+    "IONIC_ENABLE_LINT": "true",
+    "IONIC_ENV": "prod",
+    "IONIC_FONTS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\www\\assets\\fonts",
+    "IONIC_GLOB_UTIL": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@ionic\\app-scripts\\dist\\util\\glob-util.js",
+    "IONIC_HTML_TO_SERVE": "index.html",
+    "IONIC_LOADING_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\loading\\loading-component.ngfactory.js",
+    "IONIC_LOADING_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\loading\\loading-component.js",
+    "IONIC_LOADING_CONTROLLER_CLASSNAME": "LoadingController",
+    "IONIC_LOADING_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\loading\\loading-controller.js",
+    "IONIC_LOADING_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\loading\\loading.js",
+    "IONIC_MINIFY_CSS": "true",
+    "IONIC_MINIFY_JS": "true",
+    "IONIC_MODAL_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\modal\\modal-component.ngfactory.js",
+    "IONIC_MODAL_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\modal\\modal-component.js",
+    "IONIC_MODAL_CONTROLLER_CLASSNAME": "ModalController",
+    "IONIC_MODAL_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\modal\\modal-controller.js",
+    "IONIC_MODAL_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\modal\\modal.js",
+    "IONIC_MOVE_SOURCE_MAPS": "true",
+    "IONIC_NG_MODULE_FILENAME_SUFFIX": ".module.ts",
+    "IONIC_NODE_MODULES_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules",
+    "IONIC_OPTIMIZE_JS": "true",
+    "IONIC_OUTPUT_CSS_FILE_NAME": "main.css",
+    "IONIC_OUTPUT_JS_FILE_NAME": "main.js",
+    "IONIC_PAGES_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\pages",
+    "IONIC_PARSE_DEEPLINKS": "true",
+    "IONIC_PICKER_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\picker\\picker-component.ngfactory.js",
+    "IONIC_PICKER_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\picker\\picker-component.js",
+    "IONIC_PICKER_CONTROLLER_CLASSNAME": "PickerController",
+    "IONIC_PICKER_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\picker\\picker-controller.js",
+    "IONIC_PICKER_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\picker\\picker.js",
+    "IONIC_PIPES_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\pipes",
+    "IONIC_PIPES_NG_MODULE_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\pipes\\pipes.module.ts",
+    "IONIC_POLYFILL_FILE_NAME": "polyfills.js",
+    "IONIC_POPOVER_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\popover\\popover-component.ngfactory.js",
+    "IONIC_POPOVER_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\popover\\popover-component.js",
+    "IONIC_POPOVER_CONTROLLER_CLASSNAME": "PopoverController",
+    "IONIC_POPOVER_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\popover\\popover-controller.js",
+    "IONIC_POPOVER_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\popover\\popover.js",
+    "IONIC_PROVIDERS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src\\providers",
+    "IONIC_PURGE_UNUSED_FONTS": "true",
+    "IONIC_READ_CONFIG_JSON": "true",
+    "IONIC_ROOT_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage",
+    "IONIC_RXJS_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\rxjs",
+    "IONIC_SELECT_POPOVER_CLASSNAME": "SelectPopover",
+    "IONIC_SELECT_POPOVER_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\select\\select-popover-component.ngfactory.js",
+    "IONIC_SELECT_POPOVER_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\select\\select-popover-component.js",
+    "IONIC_SKIP_IONIC_ANGULAR_VERSION": "false",
+    "IONIC_SOURCEMAP_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\.sourcemaps",
+    "IONIC_SOURCE_MAP_TYPE": "source-map",
+    "IONIC_SRC_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\src",
+    "IONIC_START_WATCH_TIMEOUT": "3000",
+    "IONIC_TMP_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\.tmp",
+    "IONIC_TOAST_COMPONENT_FACTORY_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\toast\\toast-component.ngfactory.js",
+    "IONIC_TOAST_COMPONENT_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\toast\\toast-component.js",
+    "IONIC_TOAST_CONTROLLER_CLASSNAME": "ToastController",
+    "IONIC_TOAST_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\toast\\toast-controller.js",
+    "IONIC_TOAST_VIEW_CONTROLLER_PATH": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\ionic-angular\\components\\toast\\toast.js",
+    "IONIC_TS_CONFIG": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\tsconfig.json",
+    "IONIC_TYPESCRIPT_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\typescript",
+    "IONIC_WEBPACK_FACTORY": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@ionic\\app-scripts\\dist\\webpack\\ionic-webpack-factory.js",
+    "IONIC_WEBPACK_LOADER": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\@ionic\\app-scripts\\dist\\webpack\\loader.js",
+    "IONIC_WWW_DIR": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\www",
+    "lang": "es_419.UTF-8",
+    "localappdata": "C:\\Users\\CUN\\AppData\\Local",
+    "logonserver": "\\\\ADMBOGSDCCEBI16",
+    "memu_path": "C:\\Program Files (x86)\\Microvirt",
+    "ndi_runtime_dir_v2": "C:\\Program Files\\NewTek\\NewTek NDI 3.8 Runtime\\v3",
+    "ndi_runtime_dir_v3": "C:\\Program Files\\NewTek\\NewTek NDI 3.8 Runtime\\v3",
+    "number_of_processors": "4",
+    "onedrive": "C:\\Users\\Administrador\\OneDrive",
+    "os": "Windows_NT",
+    "path": "C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\.bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Geth;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\ManagementStudio\\;C:\\Go\\bin;C:\\Users\\sergio_velandia\\AppData\\Local\\Programs\\Git\\cmd;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files (x86)\\nodejs\\;C:\\Users\\CUN\\.windows-build-tools\\python27\\;C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\npm-lifecycle\\node-gyp-bin;C:\\Users\\CUN\\AppData\\Roaming\\npm\\node_modules\\windows-build-tools\\node_modules\\.bin;C:\\Users\\CUN\\AppData\\Roaming\\npm\\node_modules\\.bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Geth;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\ManagementStudio\\;C:\\Go\\bin;C:\\Users\\sergio_velandia\\AppData\\Local\\Programs\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Users\\CUN\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\;C:\\Users\\CUN\\AppData\\Local\\Programs\\Python\\Python37-32\\;C:\\Users\\CUN\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_171;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Users\\CUN\\AppData\\Local\\Android\\Sdk\\build-tools\\28.0.3;C:\\Users\\CUN\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Users\\CUN\\AppData\\Local\\Android\\Sdk\\tools;C:\\Program Files\\heroku\\bin;C:\\Program Files\\PostgreSQL\\11\\bin;C:\\Program Files\\Java\\jre1.8.0_171\\bin;C:\\Users\\CUN\\AppData\\Roaming\\npm",
+    "pathext": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "processor_architecture": "AMD64",
+    "processor_identifier": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "processor_level": "6",
+    "processor_revision": "9e09",
+    "programdata": "C:\\ProgramData",
+    "programfiles": "C:\\Program Files",
+    "programfiles(x86)": "C:\\Program Files (x86)",
+    "programw6432": "C:\\Program Files",
+    "prompt": "$P$G",
+    "psmodulepath": "C:\\Users\\CUN\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "pt7home": "C:\\Program Files\\Cisco Packet Tracer 7.1.1",
+    "public": "C:\\Users\\Public",
+    "qt_device_pixel_ratio": "auto",
+    "sessionname": "Console",
+    "systemdrive": "C:",
+    "systemroot": "C:\\Windows",
+    "temp": "C:\\Users\\CUN\\AppData\\Local\\Temp",
+    "term_program": "vscode",
+    "term_program_version": "1.40.2",
+    "tmp": "C:\\Users\\CUN\\AppData\\Local\\Temp",
+    "userdomain": "ADMBOGSDCCEBI16",
+    "userdomain_roamingprofile": "ADMBOGSDCCEBI16",
+    "username": "soporte",
+    "userprofile": "C:\\Users\\CUN",
+    "vbox_msi_install_path": "C:\\Program Files\\Oracle\\VirtualBox\\",
+    "windir": "C:\\Windows"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\SYSTEM32\\apphelp.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "\\\\?\\C:\\Users\\CUN\\Desktop\\PROYECTOSCEBIAC\\CVIVO\\cvivo2019\\cvivopage2\\cvivopage\\node_modules\\node-sass\\vendor\\win32-x64-72\\binding.",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll"
+  ]
+}

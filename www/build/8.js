@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 734:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MylistPageModule", function() { return MylistPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mylist__ = __webpack_require__(894);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mylist__ = __webpack_require__(898);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MylistPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 747:
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,14 +53,14 @@ var HomeScreenGroupItem = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 894:
+/***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MylistPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_HomeScreenGroupItem__ = __webpack_require__(752);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_UserService__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_AuthService__ = __webpack_require__(73);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -131,7 +131,7 @@ var MylistPage = /** @class */ (function () {
     };
     MylistPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: "page-mylist",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\mylist\mylist.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Mi lista</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-content padding>\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n      <ion-col text-center>\n\n        <button ion-button clear color="netflixWhite">\n\n          <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n        </button>\n\n\n\n        <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">\n\n      <ion-col text-center>\n\n        <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n          ENCUENTRA ALGO QUE VER\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="!loaded">\n\n      <ion-col text-center>\n\n        <br>\n\n        <ion-spinner color="netflixRed"></ion-spinner>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n      <ion-col col-4 col-lg-1 *ngFor="let myListItem of myListItems">\n\n        <img class="imgCara" src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n        <p text-wrap style="color:#f5f5f1">{{myListItem.name}}</p>  \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-content>\n\n</ion-content>\n\n\n\n  <!-- <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n          <button ion-button clear color="netflixWhite">\n\n            <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n          </button>\n\n          <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n        </div>\n\n\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">      \n\n          <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n            ENCUENTRA ALGO QUE VER\n\n          </button>      \n\n        </div>\n\n    \n\n        <div *ngIf="!loaded">      \n\n            <br>\n\n            <ion-spinner color="netflixRed"></ion-spinner>     \n\n        </div>\n\n    \n\n        <div *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n          <div *ngFor="let myListItem of myListItems">\n\n            <img src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n          </div>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid> -->'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage(IONIC)\src\pages\mylist\mylist.html"*/
+            selector: "page-mylist",template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\mylist\mylist.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Mi lista</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-content padding>\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n      <ion-col text-center>\n\n        <button ion-button clear color="netflixWhite">\n\n          <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n        </button>\n\n\n\n        <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">\n\n      <ion-col text-center>\n\n        <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n          ENCUENTRA ALGO QUE VER\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="!loaded">\n\n      <ion-col text-center>\n\n        <br>\n\n        <ion-spinner color="netflixRed"></ion-spinner>\n\n      </ion-col>\n\n    </ion-row>\n\n\n\n    <ion-row *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n      <ion-col col-4 col-lg-1 *ngFor="let myListItem of myListItems">\n\n        <img class="imgCara" src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n        <p text-wrap style="color:#f5f5f1">{{myListItem.name}}</p>  \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-content>\n\n</ion-content>\n\n\n\n  <!-- <ion-grid>\n\n    <ion-row>\n\n      <ion-col>\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="movies-shows-row">\n\n          <button ion-button clear color="netflixWhite">\n\n            <ion-icon name=\'ios-checkmark-circle\'></ion-icon>\n\n          </button>\n\n          <p>Videos que agruegues a tu lista aparecerán aquí.</p>\n\n        </div>\n\n\n\n        <div *ngIf="loaded && myListItems.length <= 0" class="find-downloads-row">      \n\n          <button ion-button icon-start color="netflixWhite" (click)=goHome()>\n\n            ENCUENTRA ALGO QUE VER\n\n          </button>      \n\n        </div>\n\n    \n\n        <div *ngIf="!loaded">      \n\n            <br>\n\n            <ion-spinner color="netflixRed"></ion-spinner>     \n\n        </div>\n\n    \n\n        <div *ngIf="loaded && myListItems.length > 0" style="padding-left: 0px;">\n\n          <div *ngFor="let myListItem of myListItems">\n\n            <img src="{{myListItem.detailsPicture}}" (click)="goToMyListItem(myListItem)" style="width:100%">\n\n          </div>\n\n        </div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid> -->'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\mylist\mylist.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__services_UserService__["a" /* UserService */],

@@ -16,15 +16,36 @@
     </ion-row>
     <ion-row style="padding:0 10%;">
       <ion-col col-6 col-md-2 *ngFor="let channel of channels">
-          <ion-card   (click)="goToChannel(channel)" (mouseover)="playVideo(channel)" (mouseout)="showVideo=false">
-              <img  [src]="channel.img"/>            
+          <ion-card  (click)="channel.isDisabled ? $event.stopPropagation() : goToChannel(channel)"  (mouseover)="playVideo(channel)" (mouseout)="showVideo=false">
+              <img  [src]="channel.img"/> 
+                   
             </ion-card>
+            <button ion-button icon-only clear id="infoIcon" 
+            tooltip="{{channel.description}}" 
+            positionV="bottom" 
+            desktopEvent="hover"
+            mobileEvent="click"
+            duration=1500
+            arrow> 
+              <ion-icon name="information-circle"  ></ion-icon>
+            </button>
+            
+           <!-- (click)="goToChannel(channel)" -->
             <!-- <div class="card-title" >{{channel.name}}</div> -->
             <!-- <div class="card-subtitle">{{channel.description}}</div> -->
       </ion-col>   
     </ion-row>
 
   </ion-grid>
- 
+  <ion-fab center bottom  
+  tooltip="Salir"
+  positionH="right" 
+  arrow desktopEvent="hover"
+  mobileEvent="press"
+  duration=1500 
+  (click)="signOut()">
+      <button  ion-fab color="netflixRed" mini><ion-icon name="log-out"  ></ion-icon></button>
+    
+    </ion-fab>
         
 </ion-content>
