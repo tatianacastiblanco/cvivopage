@@ -19,7 +19,7 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from "@ionic-native/file";
 import { IonicStorageModule } from '@ionic/storage';
-import firebase from "firebase";
+import {initializeApp} from "firebase/app";
 import { AngularFireModule } from "angularfire2";
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
@@ -62,7 +62,7 @@ const firebaseConfig = {
 };
 const config: SocketIoConfig = {url:'https://chatcvivotest.herokuapp.com/',options:{}};
 
-firebase.initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 // EmbedVideo.forRoot()
 @NgModule({
   declarations: [

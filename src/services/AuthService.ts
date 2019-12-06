@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from "angularfire2/auth";
-import * as firebase from "firebase";
+
+import firebase from 'firebase/app';
 import "rxjs/add/operator/filter";
 import "rxjs/add/operator/first";
 import { Facebook } from "@ionic-native/facebook";
 import { Platform, AlertController } from "ionic-angular";
 import { GooglePlus } from "@ionic-native/google-plus";
 import { TwitterConnect } from "@ionic-native/twitter-connect";
-
+// import * as firebase from "firebase";
 
 @Injectable()
 export class AuthService {
