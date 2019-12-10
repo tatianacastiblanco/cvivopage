@@ -1,11 +1,12 @@
 import { TabsPage } from './../tabs/tabs';
-import { Component, SimpleChanges, Input} from "@angular/core";
+import { Component, SimpleChanges, Input, ɵConsole} from "@angular/core";
 import {
   IonicPage,
   NavController,
   AlertController,
   LoadingController,
-  ViewController
+  ViewController,
+  NavParams
 } from "ionic-angular";
 import { AuthService } from "../../services/AuthService";
 import { AngularFireAuth } from "angularfire2/auth";
@@ -13,6 +14,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { SQLite, SQLiteObject  } from "@ionic-native/sqlite";
 import { AngularFirestore } from 'angularfire2/firestore';
 import { TermsPage } from '../terms/terms';
+import undefined from 'firebase/empty-import';
 
 
 
@@ -34,6 +36,7 @@ export class SignUpPage   {
   passwordIcon: string = 'eye-off';
   public signUpForm : FormGroup;
   errors = {correo:false,confirmPass:false,minLength:false}
+  emailPattern: string;
  
   constructor(
     private navCtrl: NavController,
@@ -44,14 +47,29 @@ export class SignUpPage   {
     private viewCtrl: ViewController,
     private loadingCtrl: LoadingController,
     private formBuilder: FormBuilder,
+    private navParams: NavParams
     
   ) {
+
+    let navparam = this.navParams.get('coupon');
+
+    if(navparam){
+      this.emailPattern = "";
+      console.log(navparam + ' ' + this.emailPattern)
+    }else{
+      this.emailPattern = "^[a-zA-Z0-9._%+-]+@cun.edu.co";
+      console.log(this.emailPattern)
+    }
    
-    let emailPattern = "^[a-zA-Z0-9._%+-]+@cun.edu.co";
+    
+
+   
+   
+   
 
     this.signUpForm = this.formBuilder.group({
       name:['',Validators.required],
-      email:["",[Validators.required, Validators.pattern(emailPattern)]],
+      email:["",[Validators.required, Validators.pattern(this.emailPattern)]],
       password: ['', Validators.required],
       password2: ['', Validators.required],
       checked:[ false, Validators.requiredTrue]
@@ -59,9 +77,7 @@ export class SignUpPage   {
    
   }
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad SignUpPage");
-  }
+ 
 
   goToHelp(){  
       this.navCtrl.push("HelpPage");
@@ -106,7 +122,10 @@ export class SignUpPage   {
   }
 
   signIn() {
-    this.navCtrl.push("SignInPage");
+    this.navCtrl.pop().then(()=>{
+      this.navCtrl.setRoot("SignInPage");
+    });
+  
   }
  
 /**

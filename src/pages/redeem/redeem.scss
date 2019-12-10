@@ -1,0 +1,43 @@
+page-redeem {
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height:-1%;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        filter: brightness(0.4) opacity(50%) saturate(120%);
+     
+    }
+       
+    ion-title {
+     
+        img {
+          max-height: 46px;
+          text-align: center;
+          margin-right: 16px;
+        }
+      }
+
+    .principalText{
+        color: color($colors, netflixWhite);
+    }  
+    .content{
+      ion-item {
+        background-color: transparent;
+  
+        ion-label {
+          color: map_get($colors, netflixWhite);
+        }
+  
+        ion-input {
+          color: map_get($colors, netflixWhite);
+        }
+      }  
+    }
+    
+}

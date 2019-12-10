@@ -1,3 +1,5 @@
+import { Coupon } from './../data/Coupon';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from "angularfire2/auth";
 
@@ -8,6 +10,7 @@ import { Facebook } from "@ionic-native/facebook";
 import { Platform, AlertController } from "ionic-angular";
 import { GooglePlus } from "@ionic-native/google-plus";
 import { TwitterConnect } from "@ionic-native/twitter-connect";
+import { Observable } from 'rxjs';
 // import * as firebase from "firebase";
 
 @Injectable()
@@ -21,7 +24,8 @@ export class AuthService {
     private platform: Platform,
     private fb: Facebook,
     private googlePlus: GooglePlus,
-    private twitter: TwitterConnect
+    private twitter: TwitterConnect,
+    private db: AngularFirestore
   ) {
     
     this.afAuth.authState.subscribe((user: firebase.User) => {
@@ -225,5 +229,10 @@ export class AuthService {
         alert.present();
         throw error;
       });
+  };
+
+  checkCoupon(coupon){
+    return this.db.collection('coupons', ref => ref.where('cupon',"==",coupon)).valueChanges()
   }
+
 }
