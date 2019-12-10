@@ -1,9 +1,7 @@
+import { AuthService } from './../../services/AuthService';
 import { Component, NgZone } from "@angular/core";
 import { IonicPage, LoadingController, ModalController,AlertController, Platform, App, NavController } from "ionic-angular";
 import * as moment from 'moment';
-import { HomePage } from '../home/home';
-import { SearchPage } from '../search/search';
-import { ProfilePage } from '../profile/profile';
 import firebase from "firebase";
 import { SignInPage } from '../sign-in/sign-in';
 
@@ -22,6 +20,7 @@ import { SignInPage } from '../sign-in/sign-in';
 // //
 export class ComingSoonPage {
   private loaded = false;
+  segment ="Parrilla";
   eventSource = [];
   HorarioLunes = [
     {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:'Opción de grado III'},
@@ -36,8 +35,8 @@ export class ComingSoonPage {
     {inicio:14,final:15,materia:'Proyecto de vida'},{inicio:16,final:17,materia:''},
   ]
   HorarioJueves = [
-    {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:''},
-    {inicio:14,final:15,materia:'Opción de grado III'},{inicio:16,final:17,materia:'Opción de grado I'},
+    {inicio:8,inicio1:0,final:8,final1:15, materia:'TIPS propuesta de valor por Diego Casas'}, {inicio:8,inicio1:20,final:8,final1:35,materia:'TIPS redes sociales para emprendedores por Jhon Gonzalez'}, {inicio:8,inicio1:40,final:8,final1:55, materia:'TIPS finanzas personales para emprendedores por Miguel Gutierrez'},
+    {inicio:9,inicio1:0, final:9,final1:15, materia:'TIPS objetivos de desarrollo sotenible para emprendedores por German Sarmiento'}
   ]
   HorarioViernes = [
     {inicio:8,final:9,materia:''}, {inicio:10,final:11,materia:''}, {inicio:12,final:13,materia:'Proyecto de vida'},
@@ -47,9 +46,9 @@ export class ComingSoonPage {
   title:string;
 
   calendar={
-    mode:'week',
+    mode:'day',
     currentDate:this.selectedDay,
-    labelAllDay:'',
+    labelAllDay:'Eventos',
     lockSwipes:false
   }
 
@@ -65,7 +64,21 @@ export class ComingSoonPage {
                 private Platform: Platform,
                 private app: App,
                 private zone: NgZone,
+                private authService: AuthService
   ) {
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+
+
+
       
     this.events(1,this.HorarioLunes)
     this.events(2,this.HorarioMartes)
@@ -76,8 +89,6 @@ export class ComingSoonPage {
     Platform.ready().then(() => {
       this.width = Platform.width();
       this.heigth = Platform.height();
-      console.log(this.width);
-      console.log(this.heigth +'height');
       
       if(this.width <= 992){
         this.menu = true       
@@ -88,7 +99,6 @@ export class ComingSoonPage {
   }
 
   ionViewDidLoad() {    
-    console.log("ionViewDidLoad ComingSoonPage");
     this.getComingSoon();
   }
 
@@ -141,7 +151,6 @@ showAlert(message,title){
         role: 'cancel',
         cssClass:'btnalert-cancel',
         handler: data => {
-          console.log('Cancel clicked');
         }
       },
       {
@@ -172,8 +181,8 @@ events(index,arrayclasesDia){
         arrayclasesDia.forEach(clase => {
           let obj = {
             title: clase.materia,
-            startTime: new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.inicio,0),
-            endTime : new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.final,0)
+            startTime: new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.inicio,clase.inicio1),
+            endTime : new Date(pushDate.getFullYear(),pushDate.getMonth(),pushDate.getDate(),clase.final,clase.final1)
           }
           this.eventSource.push(obj);
         });    
@@ -181,23 +190,25 @@ events(index,arrayclasesDia){
         d.setDate(d.getDate() + 7);
     }
 
-    console.log('test')
   }
 
   
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
   
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.setRoot('ComingSoonPage')
   }
   
   buscar() {
-    this.navCtrl.push(SearchPage)
+    this.navCtrl.setRoot('SearchPage')
+  }
+  canales() {
+    this.navCtrl.setRoot('ChannelsPage')
   }
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.setRoot('ProfilePage')
   }
   
   signOut() {

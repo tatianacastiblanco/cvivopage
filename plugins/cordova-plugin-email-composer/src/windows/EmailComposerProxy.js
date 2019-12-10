@@ -23,7 +23,7 @@ var WinLauncher = Windows.System.Launcher,
     WinMail     = Windows.ApplicationModel.Email;
 
 /**
- * Tries to find out if the device has an configured email account.
+ * Verifies if sending emails is supported on the device.
  *
  * @param [ Function ] success Success callback
  * @param [ Function ] error   Error callback
@@ -31,21 +31,8 @@ var WinLauncher = Windows.System.Launcher,
  *
  * @return [ Void ]
  */
-exports.account = function (success, error, args) {
-    success(null);
-};
-
-/**
- * Tries to find out if the device has an installed email client.
- *
- * @param [ Function ] success Success callback
- * @param [ Function ] error   Error callback
- * @param [ Array ]    args    Interface arguments
- *
- * @return [ Void ]
- */
-exports.client = function (success, error, args) {
-    success(args[0] === 'mailto:' ? true : null);
+exports.isAvailable = function (success, error, args) {
+    success(true);
 };
 
 /**

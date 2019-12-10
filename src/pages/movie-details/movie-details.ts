@@ -22,6 +22,7 @@ import { Movie } from "../../data/Movie";
 import { Helper } from "../../data/Helper";
 import { DownloadService } from "../../services/DownloadService";
 import { HomeScreenGroup } from '../../data/HomeScreenGroup';
+import { ImageLoaderConfig } from 'ionic-image-loader';
 
 @IonicPage()
 @Component({
@@ -46,7 +47,9 @@ export class MovieDetailsPage {
 
   isDownloading = false;
   isDownloaded = false;
-
+  menu:boolean;
+  private width:number;
+ private heigth:number;
   constructor(
     private navCtrl: NavController,
     private navParams: NavParams,
@@ -58,27 +61,34 @@ export class MovieDetailsPage {
     private alertController: AlertController,
     private platform: Platform,
     private vimeoService:VimeoService,
-    private authService: AuthService
+    private authService: AuthService,
+    private imageLoaderConfig: ImageLoaderConfig
   ) {
+
+    platform.ready().then(() => {
+      this.width = platform.width();
+      this.heigth = platform.height();
+      
+      if(this.width <= 992){
+        this.menu = true
+      
+      } else{
+        this.menu = false
+      }
+      
+    });
+    this.imageLoaderConfig.enableDebugMode();
+    this.imageLoaderConfig.setCacheDirectoryName('my-custom-cache-directory-name');
+
     this.authService.afAuth.user.subscribe(user => {
       this.userId = user.uid;
     });
 
     this.movie = this.navParams.get("movieId");
-
-    // if (this.movieId == undefined) {
-    //   this.movieId = "";
-    // } else {
-    //   this.downloadService
-    //     .isMovieDownloaded(this.movieId)
-    //     .then((result: any) => {
-    //       this.isDownloaded = result.isDownloaded;
-    //     });
-    // }
+   
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad MovieDetailsPage");
 
     this.getMovie();
      this.getRecentlyAddedMovies();
@@ -96,15 +106,12 @@ export class MovieDetailsPage {
      this.getIsPartOfMyList();
   }
 
-  getCategoryMovies(){
-    this.vimeoService.getHomeScreenGroups().subscribe(result => {
-      this.homeScreenGroups = []
-      let category:any = result;
-
-      console.log(category);
-      
-    })
-  }
+  // getCategoryMovies(){
+  //   this.vimeoService.getHomeScreenGroups().subscribe(result => {
+  //     this.homeScreenGroups = []
+  //     let category:any = result;      
+  //   })
+  // }
   getRecentlyAddedMovies() {
 
     this.vimeoService.getAllVideos().subscribe(result =>{      
@@ -115,7 +122,7 @@ export class MovieDetailsPage {
           video.name = item.name;
           video.picture = item.files[2].link;
           video.description = item.description;
-          video.detailsPicture = item.pictures.sizes[3].link;
+          video.detailsPicture = item.pictures.sizes[6].link;
           video.movieId = item.uri.split('/')[2];
       
   
@@ -125,18 +132,11 @@ export class MovieDetailsPage {
        
       });
       this.loaded = true;
-    },err => console.log(err))
-    // this.moviesService.getRecentlyAddedMovies().then((result: any) => {
-    //   this.recentlyAddedMovies = Helper.shuffle(result.movies);
-    // 
-    // });
+    },err => console.log(err));
    
   }
 
-  getIsPartOfMyList() {
-
-
-    console.log('test')
+  getIsPartOfMyList() {  
     
     this.userService
       .getIsMoviePartOfMyList(this.userId, this.movieId)

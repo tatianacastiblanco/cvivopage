@@ -34,6 +34,14 @@
   "cordova-plugin-ionic-keyboard": {
     "source": {
       "type": "registry",
+      "id": "cordova-plugin-ionic-keyboard@^2.1.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.moust.cordova.videoplayer": {
+    "source": {
+      "type": "registry",
       "id": "https://github.com/moust/cordova-plugin-videoplayer.git"
     },
     "is_top_level": true,
@@ -50,7 +58,7 @@
   "cordova-plugin-facebook4": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-file-transfer@^1.7.1"
+      "id": "cordova-plugin-facebook4@^2.4.0"
     },
     "is_top_level": true,
     "variables": {
@@ -58,6 +66,14 @@
       "APP_NAME": "ionNetflix",
       "ANDROID_SDK_VERSION": "4.+"
     }
+  },
+  "cordova-plugin-file-transfer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file-transfer@^1.7.1"
+    },
+    "is_top_level": true,
+    "variables": {}
   },
   "cordova-plugin-file": {
     "source": {
@@ -75,30 +91,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-file-transfer": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-transfer@^1.7.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "com.moust.cordova.videoplayer": {
-    "source": {
-      "type": "registry",
-      "id": "https://github.com/moust/cordova-plugin-videoplayer.git"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "es6-promise-plugin": {
-    "source": {
-      "type": "registry",
-      "id": "es6-promise-plugin@^4.1.0"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
   "cordova-plugin-camera": {
     "source": {
       "type": "registry",
@@ -110,7 +102,7 @@
   "cordova-plugin-nativestorage": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-nativestorage"
+      "id": "cordova-plugin-nativestorage@2.3.2"
     },
     "is_top_level": true,
     "variables": {}
@@ -118,15 +110,17 @@
   "cordova-plugin-email-composer": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-email-composer"
+      "id": "cordova-plugin-email-composer@^0.8.15"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+"
+    }
   },
   "cordova-plugin-speechrecognition": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-speechrecognition"
+      "id": "cordova-plugin-speechrecognition@1.2.0"
     },
     "is_top_level": true,
     "variables": {}
@@ -134,7 +128,7 @@
   "com-badrit-base64": {
     "source": {
       "type": "registry",
-      "id": "com-badrit-base64"
+      "id": "com-badrit-base64@0.2.0"
     },
     "is_top_level": true,
     "variables": {}
@@ -145,6 +139,8 @@
       "id": "cordova-plugin-google-analytics@1.8.6"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "GMS_VERSION": "11.0.1"
+    }
   }
 }

@@ -1,0 +1,56 @@
+
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons start>
+        <button ion-button icon-only (click)="close()" >
+          <ion-icon name="close"></ion-icon>
+        </button>        
+      </ion-buttons>     
+      <ion-title>Chat</ion-title>  
+    </ion-navbar>
+  </ion-header>
+<ion-content >
+  <div *ngIf="isLoading">
+      <div *ngFor="let i of [1,2,3,4]">
+          <skeleton-item  height="100px"  class="right-bubble-skeleton " ></skeleton-item>
+          <skeleton-item  height="100px"  class="left-bubble-skeleton "> </skeleton-item>
+      </div>
+  </div>  
+    
+  
+  <div *ngFor="let message of messages" >
+      <div class="chat-message" text-right  *ngIf="message?.from === nickname" >
+          <div class="right-bubble">
+            <span class="msg-name">{{message.from}}</span>
+            <span class="msg-date">{{message.created | date:' h:mm' }}</span>
+            <span><img [src]="message.picture" class="msg-img"></span>
+            <p text-wrap><a >  {{message.text}} </a></p>
+          </div>
+        </div>
+        <div class="chat-message" text-left  *ngIf="message?.from !== nickname" >
+          <div class="left-bubble">
+              <span class="msg-name">{{message.from}}</span>
+            <span class="msg-date">{{message.created | date:' h:mm' }}</span>
+            <span><img [src]="message.picture" class="msg-img"></span>
+            <p text-wrap><a >  {{message.text}} </a></p>
+          </div>
+      </div>
+  </div>
+   
+   
+  </ion-content>
+  <ion-footer>   
+   
+    <ion-toolbar>
+        <ion-note> <span *ngIf="isTyping !== ''" > <i> {{isTyping}} esta escribiendo </i>
+        </span>  </ion-note>  
+      <ion-item class="chat-item">    
+        <ion-input class="chat-input" [disabled]="isLoading"  [(ngModel)]="message" type="text" placeholder="Escribe tu mensaje"  (keypress)="keyPress($event.keyCode)" (input)="isEmpty($event)"></ion-input>
+      </ion-item>
+      <ion-buttons end>
+        <button ion-button icon-right color="netflixBlue" (click)="sendMessage()" [disabled]="isLoading">
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

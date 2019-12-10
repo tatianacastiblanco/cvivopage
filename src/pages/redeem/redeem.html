@@ -1,0 +1,51 @@
+<ion-header  >
+  <ion-navbar  class="test">
+    <ion-title >
+      <img src="assets/imgs/netflix-logo.png">     
+      </ion-title>   
+      <ion-buttons end>
+        <button color="netflixWhite" ion-button round  (click)="signIn()" >Iniciar sesión</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <video *ngIf="!menu" autoplay loop [muted]="true"  [src]="urlVideo"></video>
+  
+  <ion-row > 
+    <ion-col col-md-3>
+      
+    </ion-col>
+  <ion-col col-12  col-md-6>
+      <form (ngSubmit)="checkCoupon()" >
+    <br>
+    <br>
+    <br>
+      <div text-center>
+          <h2 class="principalText" text-center>Canjea tu código</h2>
+          <p class="principalText" text-center>Ingresa el código para empezar.</p>
+          
+        </div>
+       
+      <ion-item>
+          <ion-label floating>Código o PIN</ion-label>
+          <ion-input type="text" [(ngModel)]="coupon.text" name="id" (input)="checkRegex(coupon.text)" ></ion-input>
+        </ion-item>  
+        <button color="netflixRed" ion-button round full [disabled]=" validRegex == false "  (click)="checkCoupon($event)" >CANJEAR</button>
+        <div style="color: #CA5F45" class="alert alert-danger">
+            <div *ngIf="coupon.text == ''"  >
+              *Ingresa un código.
+            </div>    
+            <div  >
+                {{coupon.error}}
+              </div>       
+          </div>
+        </form>
+  </ion-col>
+  <ion-col col-md-3>
+      
+    </ion-col>
+</ion-row>
+ 
+</ion-content>

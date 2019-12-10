@@ -17,8 +17,8 @@
  under the License.
  */
 
-var proxy   = require('cordova-plugin-email-composer.EmailComposerProxy'),
-    impl    = proxy.impl = {},
+var proxy = require('cordova-plugin-email-composer.EmailComposerProxy'),
+    impl  = proxy.impl = {},
     WinMail = Windows.ApplicationModel.Email;
 
 /**
@@ -34,11 +34,9 @@ impl.getDraftWithProperties = function (props) {
     return new WinJS.Promise(function (complete) {
         var mail = new WinMail.EmailMessage();
 
-        // From sender
-        me.setSendingEmailAddress(props.from, mail);
-        // Subject
+        // subject
         me.setSubject(props.subject, mail);
-        // Body
+        // body
         me.setBody(props.body, props.isHtml, mail);
         // To recipients
         me.setRecipients(props.to, mail.to);
@@ -63,27 +61,31 @@ impl.getDraftWithProperties = function (props) {
  * @return [ Windows.Foundation.Uri ]
  */
 impl.getMailTo = function (props) {
-    var uri   = 'mailto:' + props.to,
-        query = '';
+    // The URI to launch
+    var uriToLaunch = "mailto:" + props.to;
 
+    var options = '';
     if (props.subject !== '') {
-        query = query + '&subject=' + props.subject;
+        options = options + '&subject=' + props.subject;
     }
     if (props.body !== '') {
-        query = query + '&body=' + props.body;
+        options = options + '&body=' + props.body;
     }
     if (props.cc !== '') {
-        query = query + '&cc=' + props.cc;
+        options = options + '&cc=' + props.cc;
     }
     if (props.bcc !== '') {
-        query = query + '&bcc=' + props.bcc;
+        options = options + '&bcc=' + props.bcc;
     }
-    if (query !== '') {
-        query = '?' + query.substring(1);
-        uri   = uri + query;
+    if (options !== '') {
+        options = '?' + options.substring(1);
+        uriToLaunch = uriToLaunch + options;
     }
 
-    return new Windows.Foundation.Uri(uri);
+    // Create a Uri object from a URI string
+    var uri = new Windows.Foundation.Uri(uriToLaunch);
+
+    return uri;
 };
 
 /**
@@ -101,7 +103,7 @@ impl.setSubject = function (subject, draft) {
 /**
  * Setter for the body.
  *
- * @param [ String ]  body   The email body.
+ * @param [ String ]  body
  * @param [ Boolean ] isHTML Indicates the encoding (HTML or plain text)
  * @param [ Email.EmailMessage ] draft
  *
@@ -109,18 +111,6 @@ impl.setSubject = function (subject, draft) {
  */
 impl.setBody = function (body, isHTML, draft) {
     draft.body = body;
-};
-
-/**
- * Setter for the sending email address.
- *
- * @param [ String ]             from  The sending email address.
- * @param [ Email.EmailMessage ] draft
- *
- * @return [ Void ]
- */
-impl.setSendingEmailAddress = function (from, draft) {
-    draft.sender = new WinMail.EmailRecipient(from);
 };
 
 /**

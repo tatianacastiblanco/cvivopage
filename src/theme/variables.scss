@@ -68,6 +68,8 @@ $searchbar-ios-input-text-color: map_get($colors, netflixWhite);
 $searchbar-ios-input-clear-icon-color: map_get($colors, netflixRed);
 $searchbar-ios-input-search-icon-color: map_get($colors, netflixRed);
 
+$searchbar-md-input-background-color:map_get($colors, netflixLightGrey);
+
 $loading-ios-background: transparent;
 $loading-ios-spinner-color: map_get($colors, netflixRed);
 $loading-ios-box-shadow: 0px;
@@ -93,6 +95,13 @@ $refresher-icon-color:map_get($colors,netflixRed);
 $refresher-border-color:transparent;
 
 $text-input-md-highlight-color:	color($colors, netflixBlue);
+
+$modal-inset-box-shadow-color:black;
+$modal-inset-box-shadow:0 5px 30px $modal-inset-box-shadow-color;
+
+$segment-button-ios-border-width:0;
+$segment-button-ios-text-color:map_get($colors,netflixRed);
+$segment-button-ios-background-color-activated:map_get($colors,netflixWhite);
 
 // App Windows Variables
 // --------------------------------------------------

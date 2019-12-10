@@ -1,6 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { EmailComposer } from '@ionic-native/email-composer';
 import { AboutUsPage } from './../about-us/about-us';
 import { Component, NgZone, ViewChild, ElementRef } from "@angular/core";
 import {
@@ -11,7 +10,6 @@ import {
   AlertController,
   Loading
 } from "ionic-angular";
-import { SignInPage } from "../sign-in/sign-in";
 import firebase from "firebase";
 import { AuthService } from "../../services/AuthService";
 import { Camera, CameraOptions } from '@ionic-native/camera';
@@ -20,10 +18,6 @@ import { Platform } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Base64 } from '@ionic-native/base64';
 import { Events } from 'ionic-angular';
-import { HomePage } from '../home/home';
-import { ComingSoonPage } from '../coming-soon/coming-soon';
-import { SearchPage } from '../search/search';
-import { TermsPage } from '../terms/terms';
 
 
 declare global {
@@ -56,6 +50,7 @@ export class ProfilePage {
   private heigth:number;
   menu = true;
   menuhead = 'perfil';
+  segment ="Perfil";
  
   constructor(
     private navCtrl: NavController,
@@ -71,14 +66,24 @@ export class ProfilePage {
     private alertCtrl: AlertController,
     private base64: Base64,
     private _DomSanitizationService: DomSanitizer,
-    public events: Events
+    public events: Events,
   ) { 
+
+    this.authService.afAuth.authState.subscribe((user: firebase.User) => {
+
+      if (user === null) {      
+        this.navCtrl.setRoot('SignInPage')
+        
+      }
+    }, error => {
+      console.error(JSON.stringify(error));
+    });
+
+    
 
     Platform.ready().then(() => {
       this.width = Platform.width();
       this.heigth = Platform.height();
-      console.log(this.width);
-      console.log(this.heigth +'height');
       
       if(this.width <= 992){
         this.menu = true
@@ -272,7 +277,7 @@ export class ProfilePage {
         options
       );
     } else{
-      this.navCtrl.push(AboutUsPage);
+      this.navCtrl.push('AboutUsPage');
     } 
   };
     
@@ -404,18 +409,20 @@ export class ProfilePage {
    * Slair de sesion en firebase
    */
   home() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
   }
   
   parrilla() {
-    this.navCtrl.push(ComingSoonPage)
+    this.navCtrl.setRoot('ComingSoonPage')
   }
-  
+  canales() {
+    this.navCtrl.setRoot('ChannelsPage')
+  }
   buscar() {
-    this.navCtrl.push(SearchPage)
+    this.navCtrl.setRoot('SearchPage')
   }
   perfil() {
-    this.navCtrl.push(ProfilePage)
+    this.navCtrl.setRoot('ProfilePage')
   }
   
 
@@ -435,14 +442,14 @@ export class ProfilePage {
         .signOut()
         .then(() => {
           this.zone.run(() => {
-            this.app.getRootNav().setRoot(SignInPage);
+            this.app.getRootNav().setRoot('SignInPage');
           });
         });
     }, 500);
   };
 
   terminos() {
-    this.navCtrl.push(TermsPage)
+    this.navCtrl.push('TermsPage')
   }
 
 }

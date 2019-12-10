@@ -1,3 +1,4 @@
+import { Socket } from 'ng-socket-io';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable, observable } from 'rxjs';
 import { AlertController, ToastController } from 'ionic-angular';
@@ -5,15 +6,20 @@ import { UserService } from './UserService';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Socket } from 'ng-socket-io';
 import { UserInfo } from '../data/UserInfo';
+// import * as io from 'socket.io-client/dist/socket.io.js'
+import io from 'socket.io-client';
 
 @Injectable()
 export class ChatService {
    private uid:any;
-  constructor(private socket: Socket,
+private emprende:any;
+
+
+  constructor(
               private afAuth:AngularFireAuth,
               private db :AngularFirestore,
+              private ng_socket:Socket,
               private UserService:UserService,
               private alertCtrl: AlertController,
               private toastCtrl: ToastController) {
@@ -21,8 +27,19 @@ export class ChatService {
    
   };
 
-   joinChat(){
-    this.socket.connect();
+   joinChat(room){
+
+      this.emprende = io.connect(`https://chatcvivotest.herokuapp.com/${room}`);
+
+ 
+
+    
+     
+    
+    // this.ng_socket.connect();
+    
+    // this.ng_socket.emit('room',room)    
+
     const promise = new Promise((resolve,reject)=>{
 
       this.afAuth.authState.subscribe((user: firebase.User) => {
@@ -31,7 +48,12 @@ export class ChatService {
           this.uid = user.uid;
           this.UserService.getUserInfo(this.uid).then((userInfo:UserInfo)=>{
             
-          this.socket.emit('set-nickname',userInfo.name)
+          this.emprende.emit('set-nickname',userInfo.name)
+          this.emprende.on('users-changed',(data)=>{            
+             
+          })
+         
+          sessionStorage.setItem('userInfo',JSON.stringify(userInfo));
           resolve({email:userInfo.email, name:userInfo.name})
            
           },err =>{
@@ -46,23 +68,37 @@ export class ChatService {
     })   
     return promise; 
    };
-getUsers(){
+
+
+
+// getUsers(){
+//     let observable = new Observable(observer =>{
+//       this.socket.on('users-changed',data =>{
+//         observer.next(data);        
+//       })
+//     })
+//     return observable
+//   };
+
+  sendMessage(message:string,room){
+    
+  
+    this.emprende.emit('add-message',{text:message,room:room})
+
+    // this.message = '';
     let observable = new Observable(observer =>{
-      this.socket.on('users-changed',data =>{
-        observer.next(data);        
+      this.emprende.on('message',(data) =>{  
+        observer.next(data);
       })
     })
     return observable
   };
 
-  sendMessage(message:string){
-    this.socket.emit('add-message',{text:message});
-    // this.message = '';
-  };
-
-  getMessages(){
+  getMessages(room){
+   
+this.emprende = io.connect(`https://chatcvivotest.herokuapp.com/${room}`);
     let observable = new Observable(observer =>{
-      this.socket.on('message',data =>{
+      this.emprende.on('message',data =>{
         observer.next(data);
       })
     })
@@ -93,10 +129,27 @@ getUsers(){
     //   }    
     // })
     // return photo
+
+    isTyping(nickname,room){
+  
+        this.emprende.emit('typing',{nickname:nickname,room:room})
+    
+        let observable = new Observable(observer =>{
+          this.emprende.on('isTyping',(info)=>{
+              observer.next(info)
+          })
+        })
+      
+      
+      return observable
+    }
   
 
   disconnect(){
-    this.socket.disconnect();
+    
+    // var socket = io(`http://localhost:3001/Emprendimiento`);
+     
+    
   }
 
   showToast(msg){

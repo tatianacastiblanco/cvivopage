@@ -9,5 +9,6 @@
     "type": "image/png"
   }],
   "background_color": "#221f1f",
-  "theme_color": "#221f1f"
+  "theme_color": "#221f1f",
+  "orientation": "portrait"
 }

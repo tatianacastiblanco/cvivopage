@@ -1,0 +1,144 @@
+page-chat {
+
+    .skeletonChat{
+       width: 80%;
+       left:15%;
+    }
+    .test {
+        height: 160px !important;
+        scroll-snap-points-y: 100%;
+
+        ion-list,ion-item {
+            padding: 0;margin: 0;
+        }       
+    }
+
+    a{
+        color: whitesmoke
+    }
+    .left-bubble a {
+        color: black;
+    }
+
+    .chat-message {
+        width: 80%;
+        min-height: 40px;
+        margin: 10px;
+        .right-bubble {
+            position: relative;
+            background:color($colors,netflixBlue);
+            border-top-left-radius: .4em;
+          border-bottom-left-radius: .4em;
+          border-bottom-right-radius: .4em;
+          padding: 5px 10px 10px;
+          left: 15%;
+          span.msg-name {
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+          }
+          span.msg-date {
+            font-size: 10px;
+          }
+          span img.msg-img{
+              width: 30px;
+              height: 30px;
+              position: relative;
+              top: 10px;
+              border-radius: 50%;
+          }
+          
+        }
+    }
+
+    .right-bubble:after {
+        content: '';
+        position: absolute;
+        right: 1;
+        top: 16px;
+        width: 0;
+        height: 0;
+        border: 27px solid transparent;
+        border-left-color: color($colors,netflixBlue);
+        border-right: 0;
+        border-top: 0;
+        margin-top: -15.5px;
+        margin-right: -27px;
+    }
+
+    .left-bubble {
+        position: relative;
+        background: #ffffff;
+      border-top-right-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 5%;
+      span.msg-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: color($colors,netflixRed);
+      }
+      span.msg-date {
+        font-size: 10px;
+      }
+      span img.msg-img{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 10px;
+        border-radius: 50%;
+    }
+    }
+
+    .left-bubble:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 14px;
+        width: 0;
+        height: 0;
+        border: 27px solid transparent;
+        border-right-color: #ffffff;
+        border-left: 0;
+        border-top: 0;
+        margin-top: -13.5px;
+        margin-left: -27px;
+    }
+
+    .chat-input{
+        background-color: #ffffff
+    }
+    ion-item{
+        border-radius: 50px !important;
+        background-color: transparent
+    }
+
+    ion-spinner{
+        left:45%;
+    }
+
+    .right-bubble-skeleton {
+        
+        position: relative;
+        border-top-left-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 18%;
+      width: 80%; 
+     }
+
+     .left-bubble-skeleton {
+        
+        position: relative;
+      border-top-right-radius: .4em;
+      border-bottom-left-radius: .4em;
+      border-bottom-right-radius: .4em;
+      padding: 5px 10px 10px;
+      left: 5%;
+      width: 80%; 
+     }
+    
+    
+}

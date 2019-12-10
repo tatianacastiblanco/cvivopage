@@ -1,25 +1,23 @@
+import { HomeScreenGroupItem } from './../data/HomeScreenGroupItem';
+import { Helper } from './../data/Helper';
+import { HomeScreenGroup } from './../data/HomeScreenGroup';
 import { Component, NgZone, ViewChild } from '@angular/core';
 import { Platform, AlertController, NavController, Nav  } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
-import { SignInPage } from "../pages/sign-in/sign-in";
-
 import { AuthService } from "../services/AuthService";
 import { UserService } from "../services/UserService";
 import { DownloadService } from "../services/DownloadService";
-
 import { TabsPage } from "../pages/tabs/tabs";
 import { AnalyticsProvider } from '../providers/analytics/analytics';
-
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-
 @Component({
   templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = SignInPage;
-
+  rootPage: any = 'SignInPage';
+  homeScreenGroups: HomeScreenGroup[] = [];
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,
@@ -41,24 +39,21 @@ export class MyApp {
       this.splashScreen.hide();
     });
 
-    this.downloadService.load();
+    // this.downloadService.load();
 
     this.authService.afAuth.authState.subscribe((user: firebase.User) => {
 
-
       if (user.emailVerified === true) {
         let dataToPost = {email:user.email,timestamp:new Date().toLocaleString()}
-        this.userService.postLog(dataToPost).subscribe(res=>{
-          console.log(res)
-        })
+        this.userService.postLog(dataToPost) 
 
-         this.rootPage = TabsPage;
+         this.rootPage = 'ChannelsPage';
 
         // this.userService.addUser(user);
     
-        this.zone.run(() => {
-          this.rootPage = TabsPage;
-        });
+        // this.zone.run(() => {
+        //   this.rootPage = TabsPage;
+        // });
       }
     }, error => {
       console.error(JSON.stringify(error));
