@@ -67,7 +67,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var RedeemPage = /** @class */ (function () {
-    function RedeemPage(navCtrl, navParams, Platform, authServie, viewCtrl, alertCtrl) {
+    function RedeemPage(navCtrl, navParams, Platform, authServie, viewCtrl, alertCtrl, toastCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -75,7 +75,8 @@ var RedeemPage = /** @class */ (function () {
         this.authServie = authServie;
         this.viewCtrl = viewCtrl;
         this.alertCtrl = alertCtrl;
-        this.coupon = { text: '', error: '' };
+        this.toastCtrl = toastCtrl;
+        this.coupon = { text: "", error: "" };
         this.validRegex = false;
         Platform.ready().then(function () {
             var width = Platform.width();
@@ -93,45 +94,112 @@ var RedeemPage = /** @class */ (function () {
             this.viewCtrl.dismiss();
         }
         else {
-            this.navCtrl.setRoot('SignInPage');
+            this.navCtrl.setRoot("SignInPage");
         }
     };
-    ;
     RedeemPage.prototype.checkRegex = function (input) {
-        var regex = new RegExp('CP[0-9]+[A-Za-z0-9]+20+[0-9]');
-        regex.test(input) == true ? this.validRegex = true : this.validRegex = false;
+        var regex = new RegExp("CP[0-9]+[A-Za-z0-9]+20+[0-9]");
+        regex.test(input) === true ? this.validRegex = true : this.validRegex = false;
+    };
+    RedeemPage.prototype.checkData = function (data) {
+        var pass = data.password;
+        var confirmPass = data.password2;
+        var regex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
+        if (!regex.test(data.email)) {
+            this.createToast(" Tu correo tiene que tener el siguiente formato ejemplo@dominio.com");
+            return false;
+        }
+        if (!data.email || !data.name || !data.password || !data.password2) {
+            this.createToast("Llena todos los campos");
+            return false;
+        }
+        if (pass.length < 6) {
+            this.createToast("la contraseña debe tener minimo 6 caracteres");
+            return false;
+        }
+        if (pass !== confirmPass) {
+            this.createToast("Las contraseñas no coinciden");
+            return false;
+        }
+        // return pass === confirmPass ? true : false;
+        return true;
     };
     RedeemPage.prototype.checkCoupon = function (e) {
+        var _this = this;
         e.preventDefault();
         e.stopPropagation();
-        this.navCtrl.push('SignUpPage', { coupon: this.coupon.text });
-        // this.authServie.checkCoupon(this.coupon.text).subscribe((res:any)=>{
-        //   let couponRes:Coupon = res;
-        //   if(res.length == 0){
-        //     this.coupon.error = 'Este código no existe.'
-        //   }else{
-        //     if(couponRes[0].used || couponRes[0].finished){
-        //       this.coupon.error = 'Este código ya se usó.'
-        //     }else{
-        //       this.navCtrl.pop().then(()=>{
-        //         this.navCtrl.push('SignUpPage',{isCoupon:true,coupon:this.coupon.text});
-        //       });
-        //     }; 
-        //   }
-        // })
+        // this.navCtrl.push('SignUpPage',{coupon:this.coupon.text});
+        this.authServie.checkCoupon(this.coupon.text).subscribe(function (res) {
+            var couponRes = res;
+            if (res.length === 0) {
+                _this.coupon.error = "Este código no existe.";
+            }
+            else {
+                if (couponRes[0].used || couponRes[0].finished) {
+                    _this.coupon.error = "Este código ya se usó.";
+                }
+                else {
+                    var alert = _this.alertCtrl.create({
+                        title: "Registro",
+                        inputs: [
+                            {
+                                name: "email",
+                                placeholder: "Correo",
+                                type: "email"
+                            },
+                            {
+                                name: "name",
+                                placeholder: "Nombre completo",
+                                type: "text"
+                            },
+                            {
+                                name: "password",
+                                placeholder: "Contraseña"
+                            },
+                            {
+                                name: "password2",
+                                placeholder: "Confirmar contraseña"
+                            }
+                        ],
+                        buttons: [
+                            {
+                                text: "Cancelar",
+                                role: "cancel",
+                                cssClass: "btnalert-cancel"
+                            },
+                            {
+                                text: "Registrar",
+                                cssClass: "btnalert-ok",
+                                handler: function (data) {
+                                    if (_this.checkData(data)) {
+                                        console.log('bien');
+                                    }
+                                    else {
+                                        console.log('mal');
+                                    }
+                                }
+                            }
+                        ]
+                    }).present();
+                }
+            }
+        });
+    };
+    RedeemPage.prototype.createToast = function (message) {
+        this.toastCtrl.create({
+            message: message,
+            duration: 3000,
+            position: "bottom"
+        }).present();
     };
     RedeemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-redeem',template:/*ion-inline-start:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\redeem\redeem.html"*/'<ion-header  >\n  <ion-navbar  class="test">\n    <ion-title >\n      <img src="assets/imgs/netflix-logo.png">     \n      </ion-title>   \n      <ion-buttons end>\n        <button color="netflixWhite" ion-button round  (click)="signIn()" >Iniciar sesión</button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <video *ngIf="!menu" autoplay loop [muted]="true"  [src]="urlVideo"></video>\n  \n  <ion-row > \n    <ion-col col-md-3>\n      \n    </ion-col>\n  <ion-col col-12  col-md-6>\n      <form (ngSubmit)="checkCoupon()" >\n    <br>\n    <br>\n    <br>\n      <div text-center>\n          <h2 class="principalText" text-center>Canjea tu código</h2>\n          <p class="principalText" text-center>Ingresa el código para empezar.</p>\n          \n        </div>\n       \n      <ion-item>\n          <ion-label floating>Código o PIN</ion-label>\n          <ion-input type="text" [(ngModel)]="coupon.text" name="id" (input)="checkRegex(coupon.text)" ></ion-input>\n        </ion-item>  \n        <button color="netflixRed" ion-button round full [disabled]=" validRegex == false "  (click)="checkCoupon($event)" >CANJEAR</button>\n        <div style="color: #CA5F45" class="alert alert-danger">\n            <div *ngIf="coupon.text == \'\'"  >\n              *Ingresa un código.\n            </div>    \n            <div  >\n                {{coupon.error}}\n              </div>       \n          </div>\n        </form>\n  </ion-col>\n  <ion-col col-md-3>\n      \n    </ion-col>\n</ion-row>\n \n</ion-content>\n'/*ion-inline-end:"C:\Users\CUN\Desktop\PROYECTOSCEBIAC\CVIVO\cvivo2019\cvivopage2\cvivopage\src\pages\redeem\redeem.html"*/,
+            selector: "page-redeem",template:/*ion-inline-start:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\redeem\redeem.html"*/'<ion-header  >\n\n  <ion-navbar  class="test">\n\n    <ion-title >\n\n      <img src="assets/imgs/netflix-logo.png">     \n\n      </ion-title>   \n\n      <ion-buttons end>\n\n        <button color="netflixWhite" ion-button round  (click)="signIn()" >Iniciar sesión</button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <video *ngIf="!menu" autoplay loop [muted]="true"  [src]="urlVideo"></video>\n\n  \n\n  <ion-row > \n\n    <ion-col col-md-3>\n\n      \n\n    </ion-col>\n\n  <ion-col col-12  col-md-6>\n\n      <form (ngSubmit)="checkCoupon()" >\n\n    <br>\n\n    <br>\n\n    <br>\n\n      <div text-center>\n\n          <h2 class="principalText" text-center>Canjea tu código</h2>\n\n          <p class="principalText" text-center>Ingresa el código para empezar.</p>\n\n          \n\n        </div>\n\n       \n\n      <ion-item>\n\n          <ion-label floating>Código o PIN</ion-label>\n\n          <ion-input type="text" clearInput=true [(ngModel)]="coupon.text" name="id" (input)="checkRegex(coupon.text)" ></ion-input>\n\n        </ion-item>  \n\n        <button color="netflixRed" ion-button round full [disabled]=" validRegex == false "  (click)="checkCoupon($event)" >CANJEAR</button>\n\n        <div style="color: #CA5F45" class="alert alert-danger">\n\n            <div *ngIf="coupon.text == \'\'"  >\n\n              *Ingresa un código.\n\n            </div>    \n\n            <div  >\n\n                {{coupon.error}}\n\n              </div>       \n\n          </div>\n\n        </form>\n\n  </ion-col>\n\n  <ion-col col-md-3>\n\n      \n\n    </ion-col>\n\n</ion-row>\n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\PC\Desktop\cvivo2019\cvivopage\src\pages\redeem\redeem.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1__services_AuthService__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["s" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_AuthService__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_AuthService__["a" /* AuthService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["s" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["s" /* ViewController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["r" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["r" /* ToastController */]) === "function" && _g || Object])
     ], RedeemPage);
     return RedeemPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=redeem.js.map

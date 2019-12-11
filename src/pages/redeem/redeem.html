@@ -30,7 +30,7 @@
        
       <ion-item>
           <ion-label floating>Código o PIN</ion-label>
-          <ion-input type="text" [(ngModel)]="coupon.text" name="id" (input)="checkRegex(coupon.text)" ></ion-input>
+          <ion-input type="text" clearInput=true [(ngModel)]="coupon.text" name="id" (input)="checkRegex(coupon.text)" ></ion-input>
         </ion-item>  
         <button color="netflixRed" ion-button round full [disabled]=" validRegex == false "  (click)="checkCoupon($event)" >CANJEAR</button>
         <div style="color: #CA5F45" class="alert alert-danger">

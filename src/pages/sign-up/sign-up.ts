@@ -1,4 +1,4 @@
-import { TabsPage } from './../tabs/tabs';
+
 import { Component, SimpleChanges, Input, ɵConsole} from "@angular/core";
 import {
   IonicPage,
@@ -12,13 +12,14 @@ import { AuthService } from "../../services/AuthService";
 import { AngularFireAuth } from "angularfire2/auth";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { SQLite, SQLiteObject  } from "@ionic-native/sqlite";
-import { AngularFirestore } from 'angularfire2/firestore';
-import { TermsPage } from '../terms/terms';
-import undefined from 'firebase/empty-import';
+import { AngularFirestore } from "angularfire2/firestore";
+import { TermsPage } from "../terms/terms";
+import undefined from "firebase/empty-import";
 
 
 
-export interface user {
+// tslint:disable-next-line: interface-name
+export interface User {
   name:string;
   email:string;
   password: string;
@@ -28,16 +29,16 @@ export interface user {
 @IonicPage()
 @Component({
   selector: "page-sign-up",
-  templateUrl: "sign-up.html",  
+  templateUrl: "sign-up.html"
 })
 export class SignUpPage   {
   signUpSegment: string = "cancel";
-  passwordType: string = 'password';
-  passwordIcon: string = 'eye-off';
+  passwordType: string = "password";
+  passwordIcon: string = "eye-off";
   public signUpForm : FormGroup;
-  errors = {correo:false,confirmPass:false,minLength:false}
+  errors = {correo:false,confirmPass:false,minLength:false};
   emailPattern: string;
- 
+
   constructor(
     private navCtrl: NavController,
     private alertCtrl: AlertController,
@@ -48,167 +49,152 @@ export class SignUpPage   {
     private loadingCtrl: LoadingController,
     private formBuilder: FormBuilder,
     private navParams: NavParams
-    
+
   ) {
 
-    let navparam = this.navParams.get('coupon');
+    this.emailPattern = "^[a-zA-Z0-9._%+-]+@cun.edu.co";
 
-    if(navparam){
-      this.emailPattern = "";
-      console.log(navparam + ' ' + this.emailPattern)
-    }else{
-      this.emailPattern = "^[a-zA-Z0-9._%+-]+@cun.edu.co";
-      console.log(this.emailPattern)
-    }
-   
-    
-
-   
-   
-   
-
-    this.signUpForm = this.formBuilder.group({
-      name:['',Validators.required],
+ this.signUpForm = this.formBuilder.group({
+      name:["",Validators.required],
       email:["",[Validators.required, Validators.pattern(this.emailPattern)]],
-      password: ['', Validators.required],
-      password2: ['', Validators.required],
+      password: ["", Validators.required],
+      password2: ["", Validators.required],
       checked:[ false, Validators.requiredTrue]
     },{validator:this.checkPasswords});
-   
+
   }
 
- 
 
-  goToHelp(){  
+
+  goToHelp():void {
       this.navCtrl.push("HelpPage");
-   
+
   }
 
 
-  showAlert(message,title){
-    let alert = this.alertCtrl.create({
+  showAlert(message:string,title:string):void {
+    let alert:any = this.alertCtrl.create({
       title:title,
       message:message,
       buttons :[
         {
-          text: 'Cancelar',
-          role: 'cancel',
-          cssClass:'btnalert-cancel',
+          text: "Cancelar",
+          role: "cancel",
+          cssClass:"btnalert-cancel",
           handler: data => {
-            console.log('Cancel clicked');
+            console.log("Cancel clicked");
           }
         },
         {
-          text: 'Ok',  
-          cssClass: 'btnalert-ok',
-          handler: data =>{            
-          }
+          text: "Ok",
+          cssClass: "btnalert-ok",
+
          }
       ]
     }).present();
-  };
-
-
-  checkPasswords(group: FormGroup) { 
-  let pass = group.controls.password.value;
-  let confirmPass = group.controls.password2.value;
-
-    return pass === confirmPass ? true : { notSame: true }     
   }
 
-  hideShowPassword() {
-     this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
-     this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+
+  checkPasswords(group: FormGroup):any {
+  let pass:string = group.controls.password.value;
+  let confirmPass:string = group.controls.password2.value;
+
+    return pass === confirmPass ? true : { notSame: true };
   }
 
-  signIn() {
-    this.navCtrl.pop().then(()=>{
+  hideShowPassword():void {
+     this.passwordType = this.passwordType === "text" ? "password" : "text";
+     this.passwordIcon = this.passwordIcon === "eye-off" ? "eye" : "eye-off";
+  }
+
+  signIn():void {
+    this.navCtrl.pop().then(()=> {
       this.navCtrl.setRoot("SignInPage");
     });
-  
+
   }
- 
+
 /**
- * Funcion para crear un registro de nuevo usuario en firebase, 
+ * Funcion para crear un registro de nuevo usuario en firebase,
  * dentro de esta funcion se encuentran subfunciones para realizar el regstro
  */
-  async signUp(){
+  async signUp():Promise<any> {
 
-    let user:user = this.signUpForm.value;
+    let user:User = this.signUpForm.value;
 
-  var loading = this.loadingCtrl.create({
+  var loading:any = this.loadingCtrl.create({
       spinner: "bubbles",
       content: "Registrando..."
     });
     loading.present();
-  
-    try{
+
+    try {
 
       /**
-       * funcion de angularFirebase para crear un nuevo usuario con email / password 
-       */      
-      this.afAuth.auth   
+       * funcion de angularFirebase para crear un nuevo usuario con email / password
+       */
+      this.afAuth.auth
       .createUserWithEmailAndPassword( user.email, user.password)
-        .then(userResult =>{
+        .then(userResult => {
           loading.dismiss();
-          let email = user.email;
-          let name = user.name;
-          let uid = userResult.user.uid;
-          let newUser = userResult.additionalUserInfo.isNewUser;
+          let email:any = user.email;
+          let name:any = user.name;
+          let uid:any = userResult.user.uid;
+          let newUser:any= userResult.additionalUserInfo.isNewUser;
 
 
-       
-         
+
+
           /**
-           * Funcion para crear documento en firebase 
+           * Funcion para crear documento en firebase
            * con los datos del nuevo usuario (nombre, email, uid).
            */
-          this.afs.collection('users')
+          this.afs.collection("users")
           .doc(uid).set({email,name,uid})
-          .then(fsRes=>{
-            console.log(fsRes)       
+          .then(fsRes=> {
+            console.log(fsRes);
 
-            if(newUser){
+            if(newUser) {
 
-              this.afAuth.auth.currentUser.sendEmailVerification().then(res =>{
-                this.showAlert('Hemos enviado un link al correo '+ email + ' para verificar tu cuenta','Verfica tu Email');
+              this.afAuth.auth.currentUser.sendEmailVerification().then(res => {
+                this.showAlert("Hemos enviado un link al correo "+ email + " para verificar tu cuenta","Verfica tu Email");
               });
-              this.navCtrl.push("SignInPage");   
+              this.navCtrl.push("SignInPage");
               // this.navCtrl.insert(0,TabsPage);
               // this.navCtrl.popToRoot();
             }
-          },err =>{
+          },err => {
             loading.dismiss();
-            this.showAlert(err,'Error AFST')
-          })
+            this.showAlert(err,"Error AFST");
+          });
 
-        },err =>{
+        },err => {
           loading.dismiss();
           switch (err.code) {
-            case 'auth/invalid-email':
-            this.showAlert('Revisa el formato del correo ejemplo@cun.edu.co','Correo Invalido')
+            case "auth/invalid-email":
+            this.showAlert("Revisa el formato del correo ejemplo@cun.edu.co","Correo Invalido");
             break;
-              case 'auth/email-already-in-use':
-              this.showAlert('Este correo ya se encuentra registrado','Correo en uso')
+              case "auth/email-already-in-use":
+              this.showAlert("Este correo ya se encuentra registrado","Correo en uso");
               break;
-             case 'auth/operation-not-allowed':
-              this.showAlert('Este usuario se encuetra inactivo. ','Usuario inactivo')
+             case "auth/operation-not-allowed":
+              this.showAlert("Este usuario se encuetra inactivo. ","Usuario inactivo");
               break;
-            case 'auth/weak-password':
-              this.showAlert('Esta contraseña no cumple con los requerimientos de seguridad  . ','Contraseña Insegura')
-              break;        
+            case "auth/weak-password":
+              this.showAlert("Esta contraseña no cumple con los requerimientos de seguridad  . ","Contraseña Insegura");
+              break;
             default:
               break;
           }
-         })
+         });
 
-    }catch(err){
-      this.showAlert(err,'Error FnSgup');
+    } catch(err) {
+      this.showAlert(err,"Error FnSgup");
     }
-    
-  };
 
-  terminos() {
-    this.navCtrl.push('TermsPage')
+  }
+
+  terminos():void {
+    this.navCtrl.push("TermsPage");
   }
 }
