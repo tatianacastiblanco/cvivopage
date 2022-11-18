@@ -12,7 +12,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
-    "@angular-devkit/build-optimizer": "^0.13.9",
+    "@angular-devkit/build-optimizer": "^0.1302.1",
     "@angular/animations": "5.2.11",
     "@angular/cdk": "^8.2.2",
     "@angular/common": "5.2.11",
